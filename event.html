@@ -21,40 +21,6 @@
 </head>
 
 <body>
-    <!-- nav -->
-    <!-- <div class="navbar-wrap sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
-            <a class="navbar-brand" href="#"><img src="./assets/img/sugarmancargo_logo_wh.png"
-                    alt="sugarmancargo_logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">슈가맨카고</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">이벤트</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">지점</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">가맹</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">문의</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-bar-btn" style="background-color:#E8464D; color: #fff;">방문예약</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div> -->
-    <!-- scroll nav -->
     <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
         <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
             <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png"
@@ -91,7 +57,9 @@
     <div class="event_wrap" style="margin-top: 45px; margin-bottom: 150px;">
         <div class="container main-container">
             <h2 class="main-title">이벤트</h2>
-            <div class="row mt-5">
+            <div class="row mt-5 " id="listPlace">
+
+                
                 <div class="col-md-3 mb-4">
                     <div class="card shadow-sm border-0">
                         <a href="#">
@@ -210,3 +178,23 @@
 </body>
 
 </html>
+
+<script>
+$.get( "http://localhost:7070/cargo/event", function( data ) {
+  console.log(data);
+  var html = '';
+  for(var idx= 0; idx <data.length; idx++) {
+    console.log(data.title)
+    var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
+
+    html = '<div class="col-md-3 mb-4">';
+            html += '<div class="card shadow-sm border-0">';
+            html += '<a href="./eventDetail.html?idx='+data[idx].idx+'">';
+            html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
+            html += '</a>';
+            html += '</div>';
+            html += '</div>';
+    }
+    $('#listPlace').append(html)
+},'json');
+</script>

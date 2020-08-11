@@ -61,23 +61,18 @@
             <h3 class="main_title">이벤트</h3>
             <div class="row mt-5">
                 <div class="col-xl-7 col-xs-6 mb-4">
-                    <img src="./assets/img/event_detail.jpg" class="shadow-sm" alt="event_banner"
-                        style="max-width:100%; min-width:50%;">
+                    <img id="eventImage" src="./assets/img/event_detail.jpg" class="shadow-sm" alt="event_banner" style="max-width:100%; min-width:50%;display:none">
                 </div>
                 <div class="col-xl-5 col-xs-6">
                     <div class="title-box pb-3">
-                        <h3 class="mb-2 main-title">슈가맨카고 안산점 얼리버드</h3>
-                        <span class="mb-1" style="color:#888; font-size: 0.9375rem;">이벤트 기간</span>
-                        <span class="mb-1" style="color:#888; font-size: 0.9375rem;"">2020.06.05 - 2020.09.05</span>
+                        <h3 class="mb-2 main-title" id="eventTitle">슈가맨카고 안산점 얼리버드</h3>
+                        <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;">이벤트 기간</span> -->
+                        <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;"">2020.06.05 - 2020.09.05</span> -->
                     </div>
-                    <div class=" text-box pt-3 pb-3"
-                            style="border-bottom: 1px solid #e1e1e1; border-top: 1px solid #e1e1e1;">
-                            <p>안녕하세요! 행복한 소호사무실 슈가맨워크입니다.<br>
-                                슈가맨워크 안산점 오픈 기념 얼리버드 이벤트를 진행합니다.<br>
-                                이벤트 참여하고 저렴하게 사무실을 이용해보세요!<br>
-                                *본 이벤트는 꼭 신청서를 작성해야 사용이 가능합니다.</p>
+                    <div class=" text-box pt-3 pb-3" style="border-bottom: 1px solid #e1e1e1; border-top: 1px solid #e1e1e1;" id="eventDesc">
+                  
                     </div>
-                    <div class="event-form mt-3">
+                    <div class="event-form mt-3" id="openPromoForm" style="display:none;">
                         <h5 class="">이벤트 신청</h5>
                         <div class=" form-title form-group mt-3">
                             <label for="eventInputName">이름</label>
@@ -214,3 +209,35 @@
 </body>
 
 </html>
+<script>
+
+$(document).ready(function(){
+  var idx = gup('idx',window.location.href)
+  $.get( "http://localhost:7070/cargo/event/"+idx, function( data ) {
+    var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data.image;
+    $('#eventImage').attr('src',imgURL);
+    $('#eventImage').show();
+    $('#eventTitle').html(data.title)
+    $('#eventDesc').html(data.content)
+
+    if(data.formYN =='Y'){
+      $('#openPromoForm').show();
+    }
+    else {
+      $('#openPromoForm').remove();
+    }
+  },'json');
+});
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+
+</script>
