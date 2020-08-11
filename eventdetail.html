@@ -93,64 +93,44 @@
                     </div>
                     <div class="event-form mt-3" id="openPromoForm" style="display:none;">
                         <h5 class="">이벤트 신청</h5>
-                        <div class=" form-title form-group mt-3">
-                            <label for="eventInputName">이름</label>
-                            <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" require>
+                        <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
+                          <div class=" form-title form-group mt-3">
+                              <label for="eventInputName">이름</label>
+                              <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" id="name" require>
+                            </div>
+                            <div class="form-title form-group">
+                              <label for="eventInputPhone">연락처</label>
+                              <input type="text" class="visitInputPhone visit" value="010-" name="phone" id="phone" required>
+                            </div>
+                            <div class="form-title form-group">
+                              <label for="inquiryInputEmail">이메일주소</label>
+                              <input type="text" class="visitInputEmail visit" placeholder="" value="" name="email" id="email" required>
                           </div>
-                          <div class="form-title form-group">
-                            <label for="eventInputPhone">연락처</label>
-                            <input type="text" class="visitInputPhone visit" value="010-" name="phone" required>
+                            <div class="form-title form-group">
+                              <label for="eventInputCourse">알게 된 경로</label>
+                              <div class="form-title mb-2">
+                                  <select name="route" id="route" class="form-control" style="border:1px solid #e1e1e1;">
+                                      <option selected>선택</option>
+                                      <option vlaue="9">인스타그램</option>
+                                      <option vlaue="10">페이스북</option>
+                                      <option vlaue="11">지인추천</option>
+                                      <option vlaue="13">구글</option>
+                                      <option vlaue="14">기타</option>
+                                  </select>
+                              </div>
                           </div>
-                          <div class="form-title form-group">
-                            <label for="eventInputCourse">알게 된 경로</label>
-                            <div class="form-title mb-2">
-                                <select name="course" id="course" class="form-control" style="border:1px solid #e1e1e1;">
-                                    <option selected>선택</option>
-                                    <option vlaue="9">인스타그램</option>
-                                    <option vlaue="10">페이스북</option>
-                                    <option vlaue="11">지인추천</option>
-                                    <option vlaue="13">구글</option>
-                                    <option vlaue="14">기타</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-title form-group">
-                            <label for="eventInputsize">알게 된 경로</label>
-                            <div class="form-title mb-2">
-                                <select name="course" id="size" class="form-control" style="border:1px solid #e1e1e1;">
-                                    <option selected>선택</option>
-                                    <option vlaue="9">큐브</option>
-                                    <option vlaue="10">스몰</option>
-                                    <option vlaue="11">미디엄</option>
-                                    <option vlaue="13">라지</option>
-                                    <option vlaue="14">엑스라지</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                style="background-color:#fff; color:#888; border:1px solid #e1e1e1; padding: 14px 20px;">
-                                알게 된 경로
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item disabled" href="#">블로그</a>
-                                <a class="dropdown-item" href="#">인스타그램</a>
-                                <a class="dropdown-item" href="#">페이스북</a>
-                                <a class="dropdown-item" href="#">지인추천</a>
-                                <a class="dropdown-item" href="#">구글</a>
-                                <a class="dropdown-item" href="#">기타</a>
-                            </div>
-                        </div> -->
-                        <div class="form-group col-md-12 mt-4 d-felx align-items-center" style="padding: 0;">
-                            <input type="checkbox" name="agree" id="agree" required>
-                            <label for="agree" style="margin-bottom:0px;"></label>
-                            <span style="font-size: 0.95rem; margin-left: 5px; margin-top: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
-                                    href="#"><u class="under">이용 동의</u></a>합니다.</span>
-                        </div>
-                        <button class="btn mobile_hide submit-form mt-2" type="submit">제출하기</button>
-                    </div>
-                </div>
+                          
+                        
+                          <div class="form-group col-md-12 mt-4 d-felx align-items-center" style="padding: 0;">
+                              <input type="checkbox" name="checkYN" id="checkYN" required>
+                              <label for="agree" style="margin-bottom:0px;"></label>
+                              <span style="font-size: 0.95rem; margin-left: 5px; margin-top: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
+                                      href="#"><u class="under">이용 동의</u></a>합니다.</span>
+                          </div>
+                          <button class="btn mobile_hide submit-form mt-2" type="submit">제출하기</button>
+                      </div>
+                  </div>
+                        </for>
             </div>
         </div>
     </div>
@@ -256,6 +236,40 @@ function gup( name, url ) {
     var results = regex.exec( url );
     return results == null ? null : results[1];
 }
+
+
+function checkForm() {
+
+if (confirm('저장하시겠습니까?') == true){
+
+  $('.submit-form').attr('disabled',true);
+
+  var form = $('#formData')[0];
+  var formData = new FormData(form);
+
+  $.ajax({
+      type : 'post',
+      url : '',
+      data : queryString,
+      dataType : 'json',
+      success: function(data){
+          console.log(data);
+          if(data.success){
+            location.reqlace('');
+          } else{
+            alert('문제가 발생했습니다.\n다시 시도해주세요.')
+          }
+      },
+      error: function(e){
+          $('.submit-form').attr('disabled',false);
+      }
+});
+
+
+}
+return false;
+}
+
 
 
 

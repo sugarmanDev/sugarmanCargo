@@ -1811,6 +1811,7 @@ input[id="privacy"]+label {
   align-items: center;
   justify-content: center;
   z-index: 99;
+  display: none;
 }
 
 .mobile-menu ul{

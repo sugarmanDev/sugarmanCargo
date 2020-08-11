@@ -21,8 +21,6 @@
 </head>
 
 <body>
-    
-    <!-- scroll nav -->
     <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
         <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
             <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png"
@@ -78,7 +76,9 @@
     <div class="event_wrap" style="margin-top: 45px; margin-bottom: 150px;">
         <div class="container main-container">
             <h2 class="main-title">이벤트</h2>
-            <div class="row mt-5">
+            <div class="row mt-5 " id="listPlace">
+
+
                 <div class="col-md-3 mb-4">
                     <div class="card shadow-sm border-0">
                         <a href="#">
@@ -159,7 +159,7 @@
                 </li>
                </ul>
               </div>
-  
+
               <div class="col-md-3">
                 <div class="footer-right">
                   <h6>문의전화 032-504-2327</h6>
@@ -169,12 +169,12 @@
             </div>
           </div>
         </div>
-  
-  
+
+
         <div class="footer-m footer container-fluid p-0">
           <div class="footer-line"></div>
         </div>
-     
+
         <div class="col-md-12 footer ">
           <div class="container-fluid main-container footer-bottom">
             <div class="row">
@@ -192,8 +192,28 @@
             </div>
           </div>
         </div>
-  
+
       </div>
 </body>
 
 </html>
+
+<script>
+$.get( "http://localhost:7070/cargo/event", function( data ) {
+  console.log(data);
+  var html = '';
+  for(var idx= 0; idx <data.length; idx++) {
+    console.log(data.title)
+    var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
+
+    html = '<div class="col-md-3 mb-4">';
+            html += '<div class="card shadow-sm border-0">';
+            html += '<a href="./eventDetail.html?idx='+data[idx].idx+'">';
+            html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
+            html += '</a>';
+            html += '</div>';
+            html += '</div>';
+    }
+    $('#listPlace').append(html)
+},'json');
+</script>
