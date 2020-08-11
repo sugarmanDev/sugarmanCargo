@@ -1800,3 +1800,51 @@ input[id="privacy"]+label {
   padding: 22px;
   width: 100%;
 }
+
+.mobile-menu{
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 0px);
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.mobile-menu ul{
+  padding-left: 0 !important;
+}
+
+.mobile-menu .mobile-menu-list {
+  width: 50%;
+  text-align: center;
+  height: 70%;
+  margin-top: 100px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.mobile-menu .mobile-menu-list a{
+  color: #000;
+}
+
+.mobile-menu .mobile-menu-list li {
+  margin-bottom: 7%;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.mobile-menu .mobile-menu-list button {
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  border: 3px solid #E8464D;
+  background-color: transparent;
+  color: #E8374A;
+  font-weight: 600;
+}
