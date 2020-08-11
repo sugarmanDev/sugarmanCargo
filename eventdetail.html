@@ -246,24 +246,26 @@ if (confirm('저장하시겠습니까?') == true){
 
   var form = $('#formData')[0];
   var formData = new FormData(form);
+  var queryString = $('#formData').serialize();
+        console.log(queryString);
 
-  $.ajax({
-      type : 'post',
-      url : '',
-      data : queryString,
-      dataType : 'json',
-      success: function(data){
-          console.log(data);
-          if(data.success){
-            location.reqlace('');
-          } else{
-            alert('문제가 발생했습니다.\n다시 시도해주세요.')
-          }
-      },
-      error: function(e){
-          $('.submit-form').attr('disabled',false);
-      }
-});
+        $.ajax({
+            type : 'post',
+            url : 'http://localhost:7070/cargo/event',
+            data : queryString,
+            dataType : 'json',
+            success: function(data){
+                console.log(data);
+                if(data.success){
+                  location.reqlace('');
+                } else{
+                  alert('문제가 발생했습니다.\n다시 시도해주세요.')
+                }
+            },
+            error: function(e){
+                $('.submit-form').attr('disabled',false);
+            }
+        });
 
 
 }

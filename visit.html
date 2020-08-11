@@ -353,10 +353,12 @@
 
       var form = $('#formData')[0];
       var formData = new FormData(form);
+      var queryString = $('#formData').serialize();
+        console.log(queryString);
 
-      $.ajax({
+        $.ajax({
             type : 'post',
-            url : '',
+            url : 'http://localhost:7070/cargo/visit',
             data : queryString,
             dataType : 'json',
             success: function(data){
@@ -371,6 +373,7 @@
                 $('.submit-form').attr('disabled',false);
             }
         });
+
     }
     return false;
   }

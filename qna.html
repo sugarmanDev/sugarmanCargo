@@ -283,10 +283,12 @@
 
         var form = $('#formData')[0];
         var formData = new FormData(form);
+        var queryString = $('#formData').serialize();
+        console.log(queryString);
 
         $.ajax({
             type : 'post',
-            url : '',
+            url : 'http://localhost:7070/cargo/request',
             data : queryString,
             dataType : 'json',
             success: function(data){
@@ -300,7 +302,8 @@
             error: function(e){
                 $('.submit-form').attr('disabled',false);
             }
-      });
+        });
+
 
 
 }
