@@ -106,56 +106,57 @@
     <div class="row" style="margin-top: 50px; padding: 0 10px;">
         <div class="col-md-6">
             <p style="font-size: 18px;" class="mb-5">가맹 개설과 관련해 궁금한 점이 있다면<br>
-                무엇이든 문의주세요. 
+                무엇이든 문의주세요.
                 빠른 답변 드리도록 노력하겠습니다.</p>
         </div>
         <div class="col-md-6">
             <div class="event-form">
                 <h5>문의하기</h5>
-                <div class=" form-title form-group mt-3">
-                    <label for="inquiryInputName">이름</label>
-                    <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" require>
-                </div>
-                <div class="form-title form-group">
-                    <label for="inquiryInputPhone">연락처</label>
-                    <input type="text" class="visitInputPhone visit" value="010-" name="phone" required>
-                </div>
-                <div class="form-title form-group">
-                    <label for="inquiryInputEmail">이메일주소</label>
-                    <input type="text" class="visitInputEmail visit" placeholder="" value="" name="email" required>
-                </div>
-                <div class="form-title form-group">
-                    <label for="inquiryInputCourse">알게 된 경로</label>
-                    <div class="mt-2 form-title mb-2">
-                        <select name="course" id="course" class="form-control" style="border:1px solid #e1e1e1;">
-                            <option selected>선택</option>
-                            <option vlaue="9">인스타그램</option>
-                            <option vlaue="10">페이스북</option>
-                            <option vlaue="11">지인추천</option>
-                            <option vlaue="13">구글</option>
-                            <option vlaue="14">기타</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-title form-group">
-                    <label for="inquiryInputInquiry">문의 내용</label>
-                    <textarea  class="visitInputInquiry visit" placeholder="문의 내용을 입력해주세요."></textarea>
-                    <div class="form-title form-group mt-4">
-                        <input type="checkbox" name="agree" id="agree">
-                        <label for="agree" style="margin-bottom:0px;"></label>
-                        <span style="font-size: 0.95rem; margin-left: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
-                                href="#"><u class="under">이용 동의</u></a>합니다.</span>
-                    </div>
-                    <button class="btn mobile_hide submit-form mt-2" type="submit">문의하기</button>
-                </div>
+                <form  method="post" onsubmit="return checkForm();" id="formData">
+                  <div class=" form-title form-group mt-3">
+                      <label for="inquiryInputName">이름</label>
+                      <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" id="name" require>
+                  </div>
+                  <div class="form-title form-group">
+                      <label for="inquiryInputPhone">연락처</label>
+                      <input type="text" class="visitInputPhone visit" value="010-" name="phone" id="phone" required>
+                  </div>
+                  <div class="form-title form-group">
+                      <label for="inquiryInputEmail">이메일주소</label>
+                      <input type="text" class="visitInputEmail visit" placeholder="" value="" name="email" id="email" required>
+                  </div>
+                  <div class="form-title form-group">
+                      <label for="inquiryInputCourse">알게 된 경로</label>
+                      <div class="mt-2 form-title mb-2">
+                          <select name="route" id="route" class="form-control" style="border:1px solid #e1e1e1;">
+                              <option selected>선택</option>
+                              <option vlaue="9">인스타그램</option>
+                              <option vlaue="10">페이스북</option>
+                              <option vlaue="11">지인추천</option>
+                              <option vlaue="13">구글</option>
+                              <option vlaue="14">기타</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="form-title form-group">
+                      <label for="inquiryInputInquiry">문의 내용</label>
+                      <textarea  class="visitInputInquiry visit" placeholder="문의 내용을 입력해주세요." id="description" name="description"></textarea>
+                      <div class="form-title form-group mt-4">
+                          <input type="checkbox" name="checkYN" id="checkYN">
+                          <label for="agree" style="margin-bottom:0px;"></label>
+                          <span style="font-size: 0.95rem; margin-left: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
+                                  href="#"><u class="under">이용 동의</u></a>합니다.</span>
+                      </div>
+                      <button class="btn mobile_hide submit-form mt-2 ajaxsend" type="submit">문의하기</button>
+                  </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-  
 
-  <!-- 푸터 시작 -->
+
   <!-- 푸터 시작 -->
   <div class="content-section bg-footer footer-t footer ">
     <div class="container-fluid main-container">
@@ -205,7 +206,7 @@
     <div class="footer-m footer container-fluid p-0">
       <div class="footer-line"></div>
     </div>
- 
+
     <div class="col-md-12 footer ">
       <div class="container-fluid main-container footer-bottom">
         <div class="row">
@@ -239,13 +240,13 @@
     var resultWidth = imgWidth + marginWidth;
     var currentPosition = 0;
 
-    $(document).ready(function () {
-      var scrollableElement = document.getElementById('qwe');
-      scrollableElement.addEventListener('wheel', function (ev) {
-        ev.preventDefault();
-        scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
-      });
-    });
+    // $(document).ready(function () {
+    //   var scrollableElement = document.getElementById('qwe');
+    //   scrollableElement.addEventListener('wheel', function (ev) {
+    //     ev.preventDefault();
+    //     scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
+    //   });
+    // });
 
     // 슬라이드 도트버튼 클릭시
     $(document).on('click', '.slide-dot', function () {
@@ -301,6 +302,41 @@
       $('.slide-wrapper-f').scrollLeft(targetPosition);
       $('.slide-dot').removeClass('active');
       $('.slide-dot').eq(side_count).addClass('active');
+    }
+
+    function checkForm() {
+
+
+      if (confirm('저장하시겠습니까?') == true){
+
+        $('.submit-form').attr('disabled',true);
+
+        var form = $('#formData')[0];
+        var formData = new FormData(form);
+        var queryString = $('#formData').serialize();
+        console.log(queryString);
+
+        $.ajax({
+            type : 'post',
+            url : 'http://localhost:7070/cargo/request',
+            data : queryString,
+            dataType : 'json',
+            success: function(data){
+                console.log(data);
+                if(data.success){
+                  location.reqlace('');
+                } else{
+                  alert('문제가 발생했습니다.\n다시 시도해주세요.')
+                }
+            },
+            error: function(e){
+                $('.submit-form').attr('disabled',false);
+            }
+        });
+
+
+      }
+      return false;
     }
   </script>
 

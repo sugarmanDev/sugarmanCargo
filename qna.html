@@ -105,57 +105,59 @@
         </div>
         <div class="row">
           <div class="qna-box">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                  <div class="row mg-20 mb-3">
-                    <div class="col-2 mg-13">이름</div>
-                    <div class="col-10">
-                      <input type="text" class="qna-input name" placeholder="이름" name="name" required="">
-                    </div>
-                  </div>
-
-                  <div class="row mg-20 mb-3">
-                    <div class="col-2">문의 내용</div>
-                    <div class="col-10">
-                      <textarea class="qna-input ask" placeholder="문의 내용을 입력해주세요." name="description" required=""></textarea>
-                    </div>
-                  </div>
-
-                  <div class="row mg-20 mb-3">
-                    <div class="col-2 mg-13">전화번호</div>
-                    <div class="col-10">
-                      <input type="text" class="qna-input name" placeholder="010-" name="phone" required="">
-                    </div>
-                  </div>
-                  <div class="row mg-20 mb-3">
-                      <div class="col-2 mg-13">알게 된 경로</div>
+            <form  method="post" onsubmit="return checkForm();" id="formData">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <div class="row mg-20 mb-3">
+                      <div class="col-2 mg-13">이름</div>
                       <div class="col-10">
-                          <select name="route" class="partner-form1" required___off="">
-                              <option value="" disabled="" selected="" hidden="">알게 된 경로 선택</option>
-                              <option value="1">인스타그램</option>
-                              <option value="2">페이스북</option>
-                              <option value="3">블로그</option>
-                              <option value="4">구글</option>
-                              <option value="5">지인소개</option>
-                              <option value="6">기타</option>
-                          </select>
+                        <input type="text" class="qna-input name" placeholder="이름" name="name" required="">
                       </div>
+                    </div>
+  
+                    <div class="row mg-20 mb-3">
+                      <div class="col-2">문의 내용</div>
+                      <div class="col-10">
+                        <textarea class="qna-input ask" placeholder="문의 내용을 입력해주세요." name="description" required=""></textarea>
                       </div>
-                  <div class="row mt-4">
-                    <div class="col-2"></div>
-                    <div class="col-10 qna-agree">
-                      <input type="checkbox" name="agree" id="agree" required="">
-                      <label for="agree"></label>
-                      <p class="agree-txt">(필수)슈가맨워크 방문예약을 위한 <b>개인정보 수집</b>및 <b>이용 동의</b>합니다.</p>
-                      <button class="btn mobile_hide submit-form" type="submit">예약하기</button>
+                    </div>
+  
+                    <div class="row mg-20 mb-3">
+                      <div class="col-2 mg-13">전화번호</div>
+                      <div class="col-10">
+                        <input type="text" class="qna-input name" placeholder="010-" name="phone" required="">
+                      </div>
+                    </div>
+                    <div class="row mg-20 mb-3">
+                        <div class="col-2 mg-13">알게 된 경로</div>
+                        <div class="col-10">
+                            <select name="route" class="partner-form1" required___off="">
+                                <option value="" disabled="" selected="" hidden="">알게 된 경로 선택</option>
+                                <option value="1">인스타그램</option>
+                                <option value="2">페이스북</option>
+                                <option value="3">블로그</option>
+                                <option value="4">구글</option>
+                                <option value="5">지인소개</option>
+                                <option value="6">기타</option>
+                            </select>
+                        </div>
+                        </div>
+                    <div class="row mt-4">
+                      <div class="col-2"></div>
+                      <div class="col-10 qna-agree">
+                        <input type="checkbox" name="agree" id="agree" required="">
+                        <label for="agree"></label>
+                        <p class="agree-txt">(필수)슈가맨워크 방문예약을 위한 <b>개인정보 수집</b>및 <b>이용 동의</b>합니다.</p>
+                        <button class="btn mobile_hide submit-form" type="submit">예약하기</button>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-md-3"></div>
               </div>
-              <div class="col-md-3"></div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -179,162 +181,6 @@
   </div>
  </div>
 
-  <!-- <section class="front front-join">
-    <div class="content bg-transparent">
-      <div class="container main-container ">
-        <div class="row join-guide">
-          <div class="col-md-12 join-g-title">
-            <h3 class="main_title">고객센터</h3>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="customer">
-      <div class="container main-container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="col-md-12 pd-0">
-              <div class="row">
-                <p class="help mt-3">무엇을 도와드릴까요?</p>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-6 cs-box mb-3">
-                <div class="row align-items-center">
-                  <div class="col-md-6 img-area">
-                    <div class="faq-img"></div>
-                  </div>
-                  <div class="col-md-6 info-area">
-                    <p class="cs-title">FAQ</p>
-                      <p class="cs-txt">
-                        자주 묻는 질문을 통해<br>
-                        쉽고 빠르게 답변을 확인해 보세요.
-                      </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 cs-box mb-3">
-                <div class="row align-items-center">
-                  <div class="col-md-6 img-area">
-                    <div class="qna-img"></div>
-                  </div>
-                  <div class="col-md-6 info-area">
-                    <p class="cs-title">1:1문의</p>
-                      <p class="cs-txt">
-                        문의를 남겨주시면 궁금한 점을<br>
-                        담당자가 직접 해결해드리겠습니다.
-                      </p>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          
-            <div class="row">
-              <div class="col-md-6 cs-box mg-r-30">
-                <a href="/support/faq">
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 img-area">
-                      <div class="faq-img"></div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 info-area">
-                      <p class="cs-title">FAQ</p>
-                      <p class="cs-txt">
-                        자주 묻는 질문을 통해<br>
-                        쉽고 빠르게 답변을 확인해 보세요.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 cs-box mg-auto">
-                <a href="/support/qna">
-                  <div class="row box-click">
-                    <div class="col-xl-6 col-sm-6 img-area">
-                      <div class="qna-img"></div>
-                    </div>
-                    <div class="col-xl-6 col-sm-6 info-area">
-                      <p class="cs-title">1:1문의</p>
-                      <p class="cs-txt">
-                        문의를 남겨주시면 궁금한 점을<br>
-                        담당자가 직접 해결해드리겠습니다.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div> 
-
-            
-
-            <form action="/support/qna_write" method="post" onsubmit="return checkForm();" id="formData" enctype='multipart/form-data'>
-              <div class="row mg-t-30">
-                <div class="col-md-12">
-                  <div class="row">
-                    <div class="qna-box">
-                      <div class="col-md-12">
-                        <div class="row">
-                          <div class="col-md-3"></div>
-                          <div class="col-md-6">
-                            <div class="row mg-20 mb-3">
-                              <div class="col-2 mg-13">이름</div>
-                              <div class="col-10">
-                                <input type="text" class="qna-input name" placeholder="이름" name="name" required>
-                              </div>
-                            </div>
-
-                            <div class="row mg-20 mb-3">
-                              <div class="col-2">문의 내용</div>
-                              <div class="col-10">
-                                <textarea class="qna-input ask" placeholder="문의 내용을 입력해주세요." name="description" required></textarea>
-                              </div>
-                            </div>
-
-                            <div class="row mg-20 mb-3">
-                              <div class="col-2 mg-13">전화번호</div>
-                              <div class="col-10">
-                                <input type="text" class="qna-input name" placeholder="010-" name="phone" required>
-                              </div>
-                            </div>
-                            <div class="row mg-20 mb-3">
-                                <div class="col-2 mg-13">알게 된 경로</div>
-                                <div class="col-10">
-                                    <select name="route" class="partner-form1" required___OFF>
-                                        <option value="" disabled selected hidden>알게 된 경로 선택</option>
-                                        <option value="1">인스타그램</option>
-                                        <option value="2">페이스북</option>
-                                        <option value="3">블로그</option>
-                                        <option value="4">구글</option>
-                                        <option value="5">지인소개</option>
-                                        <option value="6">기타</option>
-                                    </select>
-                                </div>
-                                </div>
-                            <div class="row mt-4">
-                              <div class="col-2"></div>
-                              <div class="col-10 qna-agree">
-                                <input type="checkbox" name="agree" id="agree" required="">
-                                <label for="agree"></label>
-                                <p class="agree-txt">(필수)슈가맨워크 방문예약을 위한 <b>개인정보 수집</b>및 <b>이용 동의</b>합니다.</p>
-                                <button class="btn mobile_hide submit-form" type="submit">예약하기</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- </div>
-  </section> -->
 
   <style>
     .spinner-border {
@@ -360,35 +206,36 @@
 
   <script>
     function checkForm() {
-      if (confirm('저장하시겠습니까?') == true) {
 
-        $('.submit-form').attr('disabled', true);
-
-        var form = $("#formData")[0];
+      if (confirm('저장하시겠습니까?') == true){
+      
+        $('.submit-form').attr('disabled',true);
+      
+        var form = $('#formData')[0];
         var formData = new FormData(form);
-
+      
         $.ajax({
-          type: "POST",
-          url: "/support/qna_write",
-          data: formData,
-          contentType: false,
-          processData: false,
-          cache: false,
-          success: function(data) {
-            console.log(data);
-            if (data.success) {
-              location.replace('/success/s_qna');
-            } else {
-              alert('문제가 발생했습니다.\n다시 시도해주세요.')
+            type : 'post',
+            url : '',
+            data : queryString,
+            dataType : 'json',
+            success: function(data){
+                console.log(data);
+                if(data.success){
+                  location.reqlace('');
+                } else{
+                  alert('문제가 발생했습니다.\n다시 시도해주세요.')
+                }
+            },
+            error: function(e){
+                $('.submit-form').attr('disabled',false);
             }
-          },
-          error: function(e) {
-            $('.submit-form').attr('disabled', false);
-          }
-        });
-      }
-      return false;
-    }
+      });
+
+
+}
+return false;
+}
   </script>
 
   <script>

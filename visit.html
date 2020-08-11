@@ -306,61 +306,7 @@
 
 
   <script>
-    // set_date_picker('#datepicker');
-    //
-    // function checkForm() {
-    //   if (confirm('저장하시겠습니까?') == true) {
-    //
-    //     var hour = $('#hour').val();
-    //     var minute = $('#minute').val();
-    //
-    //     var visitDate = $('#datepicker').val();
-    //     var visitTime = hour + minute;
-    //
-    //     if ($('#datepicker').val() == '') {
-    //       targetTime = '방문일자 상담후 결정';
-    //     }
-    //
-    //     if (hour == 'notDecided') {
-    //       if ($('#datepicker').val() == '') {
-    //         targetTime = '방문일자 상담후 결정';
-    //       } else {
-    //         targetTime = $('#datepicker').val() + '시간 미정';
-    //       }
-    //     }
-    //
-    //     $('#visitDate').val(visitDate);
-    //     $('#visitTime').val(visitTime);
-    //
-    //     $('.submit-form').attr('disabled', true);
-    //
-    //     var form = $("#formData")[0];
-    //     var formData = new FormData(form);
-    //
-    //     $.ajax({
-    //       type: "POST",
-    //       url: "/visit/branch_visit",
-    //       data: formData,
-    //       contentType: false,
-    //       processData: false,
-    //       cache: false,
-    //       success: function (data) {
-    //         console.log(data);
-    //         if (data.success) {
-    //           location.replace('/success/visit_main');
-    //         } else {
-    //           alert('문제가 발생했습니다.\n다시 시도해주세요.')
-    //         }
-    //       },
-    //       error: function (e) {
-    //         $('.submit-form').attr('disabled', false);
-    //       }
-    //     });
-    //   }
-    //   return false;
-    // }
-    //
-    //
+    
 
   function checkForm() {
 
@@ -390,24 +336,22 @@
       var formData = new FormData(form);
 
       $.ajax({
-        type:"POST",
-        url:"",
-        data: formData.
-        contentType:false,
-        processData: false,
-        cache: false,
-        success: function(data){
-          console.log(data);
-          if(data.success){
-            location.reqlace('');
-          } else{
-            alert('문제가 발생했습니다.\n다시 시도해주세요.')
-          }
-        },
-        error: function(e){
-          $('.submit-form').attr('disabled',false);
-        }
-      });
+            type : 'post',
+            url : '',
+            data : queryString,
+            dataType : 'json',
+            success: function(data){
+                console.log(data);
+                if(data.success){
+                  location.reqlace('');
+                } else{
+                  alert('문제가 발생했습니다.\n다시 시도해주세요.')
+                }
+            },
+            error: function(e){
+                $('.submit-form').attr('disabled',false);
+            }
+        });
     }
     return false;
   }
