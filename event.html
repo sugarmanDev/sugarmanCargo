@@ -162,20 +162,18 @@
 
 <script>
 $.get( "http://localhost:80/cargo/event", function( data ) {
-  console.log(data);
   var html = '';
   for(var idx= 0; idx <data.length; idx++) {
-    console.log(data.title)
     var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
 
     html = '<div class="col-md-3 mb-4">';
-            html += '<div class="card shadow-sm border-0">';
-            html += '<a href="./eventDetail.html?idx='+data[idx].idx+'">';
-            html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
-            html += '</a>';
-            html += '</div>';
-            html += '</div>';
-    }
-    $('#listPlace').append(html)
+    html += '<div class="card shadow-sm border-0">';
+    html += '<a href="./eventdetail.html?idx='+data[idx].idx+'">';
+    html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
+    html += '</a>';
+    html += '</div>';
+    html += '</div>';
+  }
+  $('#listPlace').append(html)
 },'json');
 </script>
