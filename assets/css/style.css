@@ -857,7 +857,7 @@ ul {
   display: inline-block;
   padding: 0 !important;
   margin-top: 10px;
-  
+
 }
 
 .footer .social{
@@ -887,7 +887,7 @@ ul {
 }
 
 @media (min-width:415px) and (max-width:768px){
-  
+
   .footer-logo{
     margin-bottom: 20px;
   }
@@ -930,16 +930,16 @@ ul {
   .footer-con-3 strong {
     display: none;
   }
-  
+
   .footer .footer-con li{
     padding: 0;
-    margin: 0 ;  
+    margin: 0 ;
   }
   .footer-logo{
     margin-bottom: 20px;
   }
-  
-  
+
+
   .footer .footer-con-3 li{
     border-style: none;
     margin-bottom: 0;
@@ -951,12 +951,12 @@ ul {
   .footer-bottom-text{
     margin-top: 0 !important;
   }
-  
+
   .footer-bottom-text li:nth-child(2){
     margin-right: 15px !important;
     margin-top: 24px;
   }
-  
+
   .footer-bottom-text li:nth-child(3){
     margin-top: 24px;
     margin-right: 0 !important;
@@ -1357,7 +1357,7 @@ input[type="checkbox"] {
   height: 1px;
 }
 
-input[id="agree"]+label {
+input[id="checkYN"]+label {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1367,7 +1367,7 @@ input[id="agree"]+label {
 }
 
 input[type="checkbox"]:checked+label {
-  background: url(../img/check2x.png) no-repeat center/16px 16px;
+  background-color: #E8374A;
 }
 
 .interval a:hover {
@@ -1799,4 +1799,53 @@ input[id="privacy"]+label {
   color: #fff;
   padding: 22px;
   width: 100%;
+}
+
+.mobile-menu{
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 0px);
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  display: none;
+}
+
+.mobile-menu ul{
+  padding-left: 0 !important;
+}
+
+.mobile-menu .mobile-menu-list {
+  width: 50%;
+  text-align: center;
+  height: 70%;
+  margin-top: 100px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.mobile-menu .mobile-menu-list a{
+  color: #000;
+}
+
+.mobile-menu .mobile-menu-list li {
+  margin-bottom: 7%;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.mobile-menu .mobile-menu-list button {
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  border: 3px solid #E8464D;
+  background-color: transparent;
+  color: #E8374A;
+  font-weight: 600;
 }
