@@ -161,7 +161,7 @@
 </html>
 
 <script>
-$.get( "http://localhost:80/cargo/event", function( data ) {
+$.get( targetDomain, function( data ) {
   var html = '';
   for(var idx= 0; idx <data.length; idx++) {
     var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
