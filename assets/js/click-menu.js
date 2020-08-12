@@ -30,13 +30,18 @@ $(document).ready(function(){
   $('body').append(mobileMenu);
 })
 
+$(document).on('click', '.event-banner-btn', function() {
+  $('.event-banner').remove();
+  $('.top-nav').css('top','0px')
+});
+
 var getDomain = window.location.hostname;
+
 var targetDomain = '';
 
-if(getDomain =='sugarmanCargo.com') {
+if(getDomain =='sugarmanCargo' || getDomain == 'sugarmandev.github.io') {
   targetDomain = 'http://api.sugarmanwork.com/cargo';
 }
 else {
   targetDomain = 'http://localhost/cargo';
 }
-
