@@ -515,6 +515,7 @@ ul {
 .navbar-wrap {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0 2%;
+  z-index: 9999;
 }
 
 .navbar .nav-link {
@@ -565,7 +566,7 @@ ul {
 .fixed-head-white {
   background: #fff;
   color: #000;
-  z-index: 2
+  z-index: 9999
 }
 
 .fixed-head-white .nav-link {
@@ -1855,20 +1856,10 @@ a:visited {
 }
 
 /* 문의 성공 페이지 */
-.confetti-gif {
-  background: url('/img/lottie/confetti.gif');
-  width: 100%;
-  height: 640px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-  margin-top: 100px;
-}
+
 
 .check-gif {
   background: url('/img/lottie/check-success.gif');
-  width: 80px;
-  height: 80px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -1878,51 +1869,37 @@ a:visited {
   width: 80px;
   height: 80px;
   margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 190px;
 }
 
 .success-page {
   padding: 0px;
+  min-height: 650px;
 }
 
-.success-img {
-  width: 1000px;
-  height: 800px;
-}
-
-.success-txt {
-  font-size: 40px;
-  font-weight: 500;
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #e1e1e1;
-}
 
 .success-txt2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.success-btn-box{
   text-align: center;
 }
 
-.success-btn-box {
-  position: absolute;
-  top: 70%;
-  left: 20%;
-  width: 640px;
-}
 
 .success-btn {
   border: 1px solid #E8374A;
-  padding: 20px 93px;
   color: #0e1726;
   font-size: 18px;
-  margin: 0px 10px;
   font-weight: 500;
   border-radius: 5px;
-  width: 450px;
-  margin: 0 auto;
+  width: 40%;
+  height: 50px;
+  margin: 15px auto;
 }
 
 .return {
@@ -1938,73 +1915,15 @@ a:visited {
   border: 1.5px solid #E8374A;
 }
 
-@media (min-width:415px) and (max-width:1024px) {
-  .success-btn-box {
-    top: 80%;
-    left: 19%;
-  }
-  .success-img {
-    width: 100%;
-  }
-
-  .success-txt {
-    font-size: 35px;
-    left: 18%;
-  }
-
-  .success-btn {
-    padding: 20px 81px;
-    font-size: 17px;
-    width: 400px;
+@media (max-width:1000px) {
+  .success-btn{
+    width: 60%;
   }
 }
 
-@media (min-width:415px) and (max-width:768px) {
-  .success-img {
-    width: 100%;
-    height: 600px;
-  }
-
-  .success-txt {
-    font-size: 28px;
-    left: 16%;
-  }
-
-  .success-btn-box {
-    top: 74%;
-    left: 19%;
-  }
-
-  .success-btn {
-    padding: 20px 52px;
-    font-size: 17px;
-    width: 300px;
+@media (max-width:740px) {
+  .success-btn{
+    width: 80%;
   }
 }
 
-@media (min-width:0px) and (max-width:414px) {
-  .success-img {
-    width: 345px;
-    height: 500px;
-  }
-
-  .success-txt {
-    font-size: 22px;
-    left: 7%;
-  }
-
-  .success-txt2 {
-    font-size: 17px;
-  }
-
-  .success-btn {
-    padding: 10px 35px;
-    font-size: 16px;
-    width: 200px;
-  }
-
-  .success-btn-box {
-    top: 85%;
-    left: 10%;
-  }
-}
