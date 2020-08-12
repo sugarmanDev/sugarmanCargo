@@ -399,7 +399,7 @@
 
         $.ajax({
             type : 'post',
-            url : 'http://localhost:80/cargo/visit',
+            url : targetDomain + '/visit',
             data : queryString,
             dataType : 'json',
             success: function(data){

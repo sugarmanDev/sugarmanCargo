@@ -336,7 +336,7 @@
 
         $.ajax({
             type : 'post',
-            url : 'http://localhost:80/cargo/request',
+            url : targetDomain + '/franchise',
             data : queryString,
             dataType : 'json',
             success: function(data){
