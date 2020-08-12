@@ -17,6 +17,10 @@
   direction: ltr;
 }
 
+.event-banner.intro{
+  display: none;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
   letter-spacing: -.02em;
