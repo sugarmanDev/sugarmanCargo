@@ -22,7 +22,7 @@
   <script src="./assets/js/click.js" charset="utf-8"></script>
 </head>
 
-<body onload="showImage()">
+<body >
 
   <!-- 이벤트 띠배너 -->
   <div class="event-banner d-flex pt-3 pb-2">
@@ -76,21 +76,29 @@
   </div>
 
 
-  <div class="success-page">
+  <div class="">
     <div class="container">
       <div class="row">
         <div class="col-md-1"></div>
+
+
         <div class="col-md-10">
-          <div class=" success-txt">
-            <div id="lottie_player2"></div>
-            <p class="success-txt2">
-              정상적으로 등록되었습니다!
-            </p>
-          </div>
-          <div class="success-btn-box">
-            <a href="./index.html"><button class="success-btn return">HOME</button></a>
+
+          <div style="margin-bottom:50px;">
+            <div class="success-txt">
+              <div id="lottie_player2" style="height:150px;display: none"></div>
+              <lottie-player id="ll-player" src="https://assets6.lottiefiles.com/packages/lf20_rSH8or.json" class="check-lottie" background="transparent" speed="1" autoplay></lottie-player>
+              <p class="success-txt2">
+                정상적으로 등록되었습니다!
+              </p>
+            </div>
+            <div class="success-btn-box">
+              <a href="./index.html"><button class="success-btn return">HOME</button></a>
+            </div>
           </div>
         </div>
+
+
         <div class="col-md-1"></div>
       </div>
     </div>
@@ -166,19 +174,17 @@
   </div>
 
   <script>
+$(document).ready(function(){
     var browse = navigator.userAgent.toLowerCase();
     if ((navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1)) {
-      function showImage() {
-        $('#lottie_player2').addClass('check-gif');
-      }
+      $('#lottie_player2').show();
+      $('#lottie_player2').addClass('check-gif');
     } else {
-      function showImage() {
-        var url2 = 'https://assets6.lottiefiles.com/packages/lf20_rSH8or.json';
-        var player_html2 = '<lottie-player src="' + url2 + '" class="check-lottie" background="transparent" speed="1" autoplay></lottie-player>';
-        $('#lottie_player2').html(player_html2);
-      }
+      var url2 = 'https://assets6.lottiefiles.com/packages/lf20_rSH8or.json';
+      var player_html2 = '<lottie-player src="' + url2 + '" class="check-lottie" background="transparent" speed="1" autoplay></lottie-player>';
     }
-  </script>
+})
+</script>
 
 </body>
 
