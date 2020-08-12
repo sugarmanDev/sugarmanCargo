@@ -857,7 +857,7 @@ ul {
   display: inline-block;
   padding: 0 !important;
   margin-top: 10px;
-  
+
 }
 
 .footer .social{
@@ -887,7 +887,7 @@ ul {
 }
 
 @media (min-width:415px) and (max-width:768px){
-  
+
   .footer-logo{
     margin-bottom: 20px;
   }
@@ -930,16 +930,16 @@ ul {
   .footer-con-3 strong {
     display: none;
   }
-  
+
   .footer .footer-con li{
     padding: 0;
-    margin: 0 ;  
+    margin: 0 ;
   }
   .footer-logo{
     margin-bottom: 20px;
   }
-  
-  
+
+
   .footer .footer-con-3 li{
     border-style: none;
     margin-bottom: 0;
@@ -951,12 +951,12 @@ ul {
   .footer-bottom-text{
     margin-top: 0 !important;
   }
-  
+
   .footer-bottom-text li:nth-child(2){
     margin-right: 15px !important;
     margin-top: 24px;
   }
-  
+
   .footer-bottom-text li:nth-child(3){
     margin-top: 24px;
     margin-right: 0 !important;
@@ -1357,7 +1357,7 @@ input[type="checkbox"] {
   height: 1px;
 }
 
-input[id="agree"]+label {
+input[id="checkYN"]+label {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1367,7 +1367,7 @@ input[id="agree"]+label {
 }
 
 input[type="checkbox"]:checked+label {
-  background: url(../img/check2x.png) no-repeat center/16px 16px;
+  background-color: #E8374A;
 }
 
 .interval a:hover {

@@ -239,8 +239,8 @@
               <input type="text" class="visitInputPhone visit" value="010-" name="phone" required>
             </div>
             <div class="form-group col-md-12 mt-4">
-              <input type="checkbox" name="agree" id="agree" required>
-                    <label for="agree" style="margin-bottom:0px;"></label>
+              <input type="checkbox" name="checkYN" id="checkYN" required>
+                    <label for="checkYN" style="margin-bottom:0px;"></label>
                     <span style="font-size: 0.95rem; margin-left: 5px; margin-top: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
                             href="#"><u class="under">이용 동의</u></a>합니다.</span>
                 </div>
@@ -325,7 +325,7 @@
 
 
   <script>
-    
+
 
   function checkForm() {
 
@@ -358,12 +358,12 @@
 
         $.ajax({
             type : 'post',
-            url : 'http://localhost:7070/cargo/visit',
+            url : 'http://localhost:80/cargo/visit',
             data : queryString,
             dataType : 'json',
             success: function(data){
                 console.log(data);
-                if(data.success){
+                if(data.result == 'success'){
                   location.reqlace('');
                 } else{
                   alert('문제가 발생했습니다.\n다시 시도해주세요.')

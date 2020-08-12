@@ -89,11 +89,12 @@
                         <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;"">2020.06.05 - 2020.09.05</span> -->
                     </div>
                     <div class=" text-box pt-3 pb-3" style="border-bottom: 1px solid #e1e1e1; border-top: 1px solid #e1e1e1;" id="eventDesc">
-                  
+
                     </div>
                     <div class="event-form mt-3" id="openPromoForm" style="display:none;">
                         <h5 class="">이벤트 신청</h5>
                         <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
+                          <input type="hidden" name="promoIdx" id="promoIdx" value="">
                           <div class=" form-title form-group mt-3">
                               <label for="eventInputName">이름</label>
                               <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" id="name" require>
@@ -119,11 +120,11 @@
                                   </select>
                               </div>
                           </div>
-                          
-                        
+
+
                           <div class="form-group col-md-12 mt-4 d-felx align-items-center" style="padding: 0;">
                               <input type="checkbox" name="checkYN" id="checkYN" required>
-                              <label for="agree" style="margin-bottom:0px;"></label>
+                              <label for="checkYN" style="margin-bottom:0px;"></label>
                               <span style="font-size: 0.95rem; margin-left: 5px; margin-top: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
                                       href="#"><u class="under">이용 동의</u></a>합니다.</span>
                           </div>
@@ -185,7 +186,7 @@
     <div class="footer-m footer container-fluid p-0">
       <div class="footer-line"></div>
     </div>
- 
+
     <div class="col-md-12 footer ">
       <div class="container-fluid main-container footer-bottom">
         <div class="row">
@@ -210,9 +211,11 @@
 </html>
 <script>
 
+var idx = gup('idx',window.location.href)
+
 $(document).ready(function(){
-  var idx = gup('idx',window.location.href)
-  $.get( "http://localhost:7070/cargo/event/"+idx, function( data ) {
+
+  $.get( "http://localhost:80/cargo/event/"+idx, function( data ) {
     var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data.image;
     $('#eventImage').attr('src',imgURL);
     $('#eventImage').show();
@@ -242,6 +245,8 @@ function checkForm() {
 
 if (confirm('저장하시겠습니까?') == true){
 
+  $('#promoIdx').val(idx);
+
   $('.submit-form').attr('disabled',true);
 
   var form = $('#formData')[0];
@@ -251,12 +256,12 @@ if (confirm('저장하시겠습니까?') == true){
 
         $.ajax({
             type : 'post',
-            url : 'http://localhost:7070/cargo/event',
+            url : 'http://localhost:80/cargo/event',
             data : queryString,
             dataType : 'json',
             success: function(data){
                 console.log(data);
-                if(data.success){
+                if(data.result == 'success'){
                   location.reqlace('');
                 } else{
                   alert('문제가 발생했습니다.\n다시 시도해주세요.')

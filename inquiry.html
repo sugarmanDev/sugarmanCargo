@@ -162,7 +162,7 @@
                       <textarea  class="visitInputInquiry visit" placeholder="문의 내용을 입력해주세요." id="description" name="description"></textarea>
                       <div class="form-title form-group mt-4">
                           <input type="checkbox" name="checkYN" id="checkYN">
-                          <label for="agree" style="margin-bottom:0px;"></label>
+                          <label for="checkYN" style="margin-bottom:0px;"></label>
                           <span style="font-size: 0.95rem; margin-left: 5px;">(필수)슈가맨워크 방문예약을 위한 <a href="#"><u class="under">개인정보 수집</u></a> 및 <a
                                   href="#"><u class="under">이용 동의</u></a>합니다.</span>
                       </div>
@@ -259,7 +259,7 @@
     var resultWidth = imgWidth + marginWidth;
     var currentPosition = 0;
 
-    
+
 
     // 슬라이드 도트버튼 클릭시
     $(document).on('click', '.slide-dot', function () {
@@ -331,12 +331,12 @@
 
         $.ajax({
             type : 'post',
-            url : 'http://localhost:7070/cargo/request',
+            url : 'http://localhost:80/cargo/request',
             data : queryString,
             dataType : 'json',
             success: function(data){
                 console.log(data);
-                if(data.success){
+                if(data.result == 'success'){
                   location.reqlace('');
                 } else{
                   alert('문제가 발생했습니다.\n다시 시도해주세요.')
