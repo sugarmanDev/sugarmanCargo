@@ -24,7 +24,6 @@ mobileMenu += '</div>';
 
 $(document).on('click', '.toggle-mobile-menu', function() {
   $('.mobile-menu').toggle();
-  $('.top-nav').css('top','0px')
 });
 
 $(document).ready(function(){
@@ -32,9 +31,8 @@ $(document).ready(function(){
 })
 
 $(document).on('click', '.event-banner-btn', function() {
-
-
   $('.event-banner').remove();
+  $('.top-nav').css('top','0px')
 });
 
 var getDomain = window.location.hostname;
