@@ -39,12 +39,9 @@ var getDomain = window.location.hostname;
 
 var targetDomain = '';
 
-if(getDomain =='sugarmanCargo') {
+if(getDomain =='sugarmanCargo' || getDomain == 'sugarmandev.github.io') {
   targetDomain = 'http://api.sugarmanwork.com/cargo';
 }
 else {
   targetDomain = 'http://localhost/cargo';
 }
-
-console.log(getDomain)
-console.log(targetDomain)
