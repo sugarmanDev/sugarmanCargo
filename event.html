@@ -161,19 +161,29 @@
 </html>
 
 <script>
-$.get( targetDomain, function( data ) {
+$(document).ready(function(){
+$.get( targetDomain + '/event', function( data ) {
   var html = '';
-  for(var idx= 0; idx <data.length; idx++) {
-    var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
+  if(data.length > 0 ) {
+    console.log('2')
+    for(var idx= 0; idx <data.length; idx++) {
+      var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data[idx].image;
 
-    html = '<div class="col-md-3 mb-4">';
-    html += '<div class="card shadow-sm border-0">';
-    html += '<a href="./eventdetail.html?idx='+data[idx].idx+'">';
-    html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
-    html += '</a>';
-    html += '</div>';
-    html += '</div>';
+      html = '<div class="col-md-3 mb-4">';
+      html += '<div class="card shadow-sm border-0">';
+      html += '<a href="./eventdetail.html?idx='+data[idx].idx+'">';
+      html += '<img src="'+ imgURL +'" class="card-img-top" alt="...">';
+      html += '</a>';
+      html += '</div>';
+      html += '</div>';
+    }
+  }
+  else {
+    console.log('1')
+    html = '<div style="margin-top:30px;"><p>아직 등록된 이벤트가 없습니다.</p></div>';
   }
   $('#listPlace').append(html)
 },'json');
+
+})
 </script>
