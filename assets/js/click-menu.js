@@ -24,19 +24,29 @@ mobileMenu += '</div>';
 
 $(document).on('click', '.toggle-mobile-menu', function() {
   $('.mobile-menu').toggle();
+  $('.top-nav').css('top','0px')
 });
 
 $(document).ready(function(){
   $('body').append(mobileMenu);
 })
 
+$(document).on('click', '.event-banner-btn', function() {
+
+
+  $('.event-banner').remove();
+});
+
 var getDomain = window.location.hostname;
+
 var targetDomain = '';
 
-if(getDomain =='sugarmanCargo.com') {
+if(getDomain =='sugarmanCargo') {
   targetDomain = 'http://api.sugarmanwork.com/cargo';
 }
 else {
   targetDomain = 'http://localhost/cargo';
 }
 
+console.log(getDomain)
+console.log(targetDomain)
