@@ -21,7 +21,7 @@
     <script src="./assets/js/click-menu.js" charset="utf-8"></script>
     <script src="./assets/js/click.js" charset="utf-8"></script>
   </head>
-  
+
   <body>
     <!-- 이벤트 띠배너 -->
     <div class="event-banner d-flex pt-3 pb-2">
@@ -342,7 +342,7 @@
             success: function(data){
                 console.log(data);
                 if(data.result == 'success'){
-                  location.href = './success.html';
+                  location.replace('./success.html');
                 } else{
                   alert('문제가 발생했습니다.\n다시 시도해주세요.')
                 }
