@@ -74,18 +74,18 @@
     </nav>
   </div>
 
+ <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
   <div class="container-fulid package-wrap" style="padding: 0;">
     <div class="row">
-      <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
-        <div class="col-sm-2" style="border: 1px solid red;"></div>
-        <div class="col-sm-4 package-con">
+        <div class="col-lg-2" style="border: 1px solid red;"></div>
+        <div class="col-lg-4 package-con">
           <h2>택배 문의하기</h2>
           <p>
             슈가맨카고 지점과 거리가 멀어 고민되시나요?<br />
             슈가맨카고는 택배 픽업서비스도 함께 제공합니다.<br />
             문의 남겨주시면 담당자가 연락드리겠습니다. 감사합니다!<br />
           </p>
-          <div class="row" style="width:90%">
+          <div class="row form-row">
             <div class="form-group col-md-6">
               <label for="name">이름</label>
               <input type="text" name="name" id="name" required>
@@ -123,13 +123,12 @@
                             href="#"><u class="under">이용 동의</u></a>합니다.</span>
                 </div>
                 <button class="btn submit-form mt-2" type="submit">문의하기</button>
-              </form>
           </div>
         </div>
-        <div class="col-sm-6 package-img"></div>
-      </for>
+        <div class="col-lg-6 package-img"></div>
     </div>
   </div>
+ </form>
 
 
 
@@ -218,7 +217,7 @@
 
 
 
-  <script>
+ <script>
 
 
 function checkForm() {

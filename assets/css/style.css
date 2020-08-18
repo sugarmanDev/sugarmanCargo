@@ -1971,3 +1971,30 @@ a:visited {
   height: 50px;
   border: 1px solid #e5e5e5;
 }
+
+.package-con .form-con{
+  widows: 90%;
+}
+
+
+@media(max-width:990px){
+  .package-con .form-row{
+    width: 100%;
+    padding: 15px;
+  }
+
+  .package-con h2{
+    margin-left: 15px;
+  }
+
+  .package-con p{
+    margin-left: 15px;
+  }
+
+  .package-img{
+    display: none;
+  }
+  .package-con{
+    padding-bottom: 100px;
+  }
+}
