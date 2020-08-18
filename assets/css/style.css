@@ -30,6 +30,11 @@ ul {
   list-style: none;
 }
 
+.main-logo{
+  width: 120px !important;
+  height: 50px;
+}
+
 /* media */
 @media (min-width:1010px) {
   .storage-box {
@@ -249,10 +254,6 @@ ul {
     font-size: 2rem !important;
   }
 
-  .main-logo {
-    width: 200px;
-  }
-
   .mobile_hide {
     display: none;
   }
@@ -331,9 +332,6 @@ ul {
     font-size: 2rem !important;
   }
 
-  .main-logo {
-    width: 200px;
-  }
 
   .about-sub {
     font-size: 1rem !important;
@@ -446,9 +444,6 @@ ul {
     font-size: 1.5rem !important;
   }
 
-  .main-logo {
-    width: 200px;
-  }
 
   .about-sub {
     font-size: 1rem !important;
@@ -760,12 +755,15 @@ ul {
   margin-right: 40px;
 }
 
-.footer .footer-con-1{
+.footer-con-1{
   font-size: 0.875rem;
   font-weight: 500;
   margin-top: 5px;
-  padding: 0;
   padding-bottom: 40px;
+}
+
+.footer-con-1 span a{
+  color: #000;
 }
 
 .footer-con li {
@@ -810,10 +808,6 @@ ul {
 }
 
 
-.footer .footer-con-1 li a strong{
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 .footer .footer-con-3 li:nth-child(2){
   margin-right: 0;
@@ -847,10 +841,7 @@ ul {
   float: right;
 }
 
-.footer .footer-1{
-  margin: 0 auto;
-  margin-bottom: 90px;
-}
+
 
 .footer .footer-bottom{
   bottom: 0;
@@ -912,7 +903,16 @@ ul {
   .footer-con-3 strong {
     display: none;
   }
+  .footer-con-1{
+    padding-left: 0 !important;
+  }
+  
+}
 
+@media(max-width:750px){
+  .fooger-con-1{
+    padding: 0 !important;
+  }
 }
 
 @media (min-width:0px) and (max-width:414px){
@@ -1798,7 +1798,7 @@ input[id="privacy"]+label {
 .mobile-menu{
   position: fixed;
   width: 100vw;
-  height: calc(100vh - 0px);
+  height: 100vh;
   background-color: #fff;
   color: #000;
   z-index: 99;
@@ -1827,7 +1827,7 @@ input[id="privacy"]+label {
   
   text-align: center;
   height: 70%;
-  margin-top: 100px;
+  margin-top: 250px;
   font-size: 1.6rem;
   font-weight: 500;
   color: #000;
