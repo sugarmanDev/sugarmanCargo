@@ -26,7 +26,6 @@
     <script src="./assets/js/datepicker/LunarCalculator.js"></script>
     <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
     <script src="./assets/js/click-menu.js" charset="utf-8"></script>
-    <script src="./assets/js/click.js" charset="utf-8"></script>
   </head>
 
   <body>
@@ -175,10 +174,11 @@
         <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px;">
           <div class="form-row">
             <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
+            <input type="hidden" name="visitTime" id="targetTime">
             <h2 class="mb-4 main-title">방문 예약</h2>
             <div class="form-group col-md-12 visitStoreMobile mobile_hide">
               <label for="visitInputstore">방문지점</label>
-              <select name="branch_desktop" id="visitInputstore2" class=" form-control visit-sel" required>
+              <select name="visitBranch" id="visitInputstore2" class=" form-control visit-sel" required>
                 <option selected disabled>방문지점 선택</option>
                 <option value="99">[1호점] 인천 부평점</option>
                 <option value="100">[2호점] 서울 군자점</option>
@@ -187,7 +187,7 @@
 
             <div class="form-group col-md-12">
               <label for="visitInputdate">방문날짜</label>
-              <input type="text" class="form-control" id="datepicker">
+              <input type="text" class="form-control" id="datepicker" name="visitDate">
             </div>
 
             <div class="form-group col-md-6 visit-time">
@@ -327,18 +327,14 @@
       var hour = $('#hour').val();
       var minute = $('#minute').val();
 
-      var targetTime = $('#datepicker').val() + ' '+ hour + '시'+ minute + '분';
+      var targetTime = hour + '시'+ minute + '분';
 
       if ($('#datepicker').val() == ''){
         targetTime = '방문일자 상담후 결정';
       }
 
-      if (hour == 'notDecided') {
-        targetTime = '방문일자 상담후 결정';
-      } else {
-         {
-           targetTime = $('#datepicker').val() + '시간 미정';
-         }
+      if (hour == '') {
+           targetTime = '시간 미정';
       }
 
       $('#targetTime').val(targetTime);
@@ -372,7 +368,6 @@
     return false;
   }
 
-  set_date_picker('#datepicker');
 
 
 
