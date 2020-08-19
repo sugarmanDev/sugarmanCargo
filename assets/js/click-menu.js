@@ -38,7 +38,7 @@ var getDomain = window.location.hostname;
 var targetDomain = '';
 
 if(getDomain =='sugarmanCargo' || getDomain == 'sugarmandev.github.io') {
-  targetDomain = 'http://api.sugarmanwork.com/cargo';
+  targetDomain = 'https://gimyo.co.kr/cargo';
 }
 else {
   targetDomain = 'http://localhost/cargo';
