@@ -45,33 +45,34 @@
         </div>
       </div>
     </div>
-  <!-- scroll nav -->
-   <div class="navbar-wrap shadow-sm sticky-top scroll-nav"
-    style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
-    <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
-      <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo" class="main-logo"></a>
+    <!-- scroll nav -->
+    <div class="navbar-wrap shadow-sm sticky-top scroll-nav"
+      style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
+      <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
+        <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo" class="main-logo"></a>
 
-      <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button" >
-          <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./package.html">택배문의</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./branch_list.html">지점안내</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./franchise.html">가맹문의</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="nav-bar-btn" style="background-color:#E8464D; color: #fff;" onclick="location.href='./visit.html' ">방문예약</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color:#000;" href="./package.html">택배문의</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:#000;" href="./branch_list.html">지점안내</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:#000;" href="./franchise.html">가맹문의</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-bar-btn" style="background-color:#E8464D; color: #fff;" onclick="location.href='./visit.html' ">방문예약</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
 
 
@@ -327,7 +328,7 @@
       var hour = $('#hour').val();
       var minute = $('#minute').val();
 
-      var targetTime = hour + '시'+ minute + '분';
+      var targetTime = hour + minute;
 
       if ($('#datepicker').val() == ''){
         targetTime = '방문일자 상담후 결정';

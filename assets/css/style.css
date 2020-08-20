@@ -886,6 +886,7 @@ ul {
 
   .footer-logo{
     margin-bottom: 20px;
+    
   }
   .footer-con-1 li{
     margin-right: 0;
@@ -944,6 +945,9 @@ ul {
     margin-bottom: 20px;
   }
 
+  .fooger-con-1{
+    padding: 0 !important;
+  }
 
   .footer .footer-con-3 li{
     border-style: none;
@@ -969,6 +973,9 @@ ul {
   }
   .footer-bottom{
     padding-bottom: 0 !important;
+  }
+  .footer-con-1{
+    padding-left: 0 !important;
   }
 
 }
