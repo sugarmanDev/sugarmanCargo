@@ -67,39 +67,51 @@
 
   <div class="Customer_wrap" style="margin-top: 45px; margin-bottom: 150px;">
     <div class="container main-container">
-      <h2 class="main-title">고객센터</h2>
-      <p class="help mt-4">무엇을 도와드릴까요?</p>
       <div class="row">
-        <div class="col-md-6 mb-3 customer_box" onclick="location.href='./faq.html' ">
-          <div class="row align-items-center">
-            <div class="col-md-6 img-area">
-              <div class="faq-img"></div>
+        <h2 class="main-title">고객센터</h2>
+      </div>
+
+      <div class="row">
+        <p class="help mt-4">무엇을 도와드릴까요?</p>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 cs-box mg-r-30">
+              <a href="./faq.html">
+                <div class="row box-click">
+                  <div class="col-6 img-area">
+                    <div class="faq-img"></div>
+                  </div>
+                  <div class="col-6 info-area">
+                    <p class="cs-title">FAQ</p>
+                    <p class="cs-txt">
+                      자주 묻는 질문을 통해<br>
+                      쉽고 빠르게 답변을 확인해 보세요.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-            <div class="col-md-6 info-area">
-              <p class="cs-title mt-2">FAQ</p>
-              <p class="cs-txt">
-                자주 묻는 질문을 통해<br>
-                쉽고 빠르게 답변을 확인해 보세요.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3 customer_box" onclick="location.href='./qna.html' ">
-          <div class="row align-items-center">
-            <div class="col-md-6 img-area">
-              <div class="qna-img"></div>
-            </div>
-            <div class="col-md-6 info-area">
-              <p class="cs-title mt-2">1:1문의</p>
-              <p class="cs-txt">
-                문의를 남겨주시면 궁금한 점을<br>
-                담당자가 직접 해결해드리겠습니다.
-              </p>
+            <div class="col-md-6 cs-box mg-auto">
+              <a href="./qna.html">
+                <div class="row">
+                  <div class="col-6 img-area">
+                    <div class="qna-img"></div>
+                  </div>
+                  <div class="col-6 info-area">
+                    <p class="cs-title">1:1문의</p>
+                    <p class="cs-txt">
+                      문의를 남겨주시면 궁금한 점을<br>
+                      담당자가 직접 해결해드리겠습니다.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mg-t-30">
+
+      <div class="row mg-t-30 mb-200">
         <div class="col-md-12">
           <div class="row">
             <div class="faq-box">
@@ -108,211 +120,180 @@
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                네, 슈가맨워크는 월 단위로도 계약이 가능합니다.
+                계약은 최소 한 달부터 가능합니다.
               </div>
-
-            </div>
-            <div class="faq-box">
               <div class="questions">
-                계약 시작, 종료 기간을 조정할 수 있나요?
+                계약 시작, 종료 기간을 조절할 수 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                최소 계약 단위는 1개월입니다.
+                담당 매니저님들과 상담을 통해 계약 시작과 종료 기간을 조율할 수 있습니다.(최소 한 달 계약은 필수이며, 한 달 이후 자유롭게 종료 기간을 설정할 수 있습니다.)
               </div>
-
-            </div>
-            <div class="faq-box">
               <div class="questions">
                 보증금이 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                보증금은 한 달치 이용료를 받고 있습니다. (예를 들어 월 38만원 방을 이용하시는 분은 38만원이 보증금입니다. ) 보증금은 퇴실 한 달 전 말해주시면 원상복구를 기준으로 전액 돌려드립니다.
+                보증금은 월 이용료를 기준으로 받고 있습니다.(한 달 이용료 10만원 스토리지를 이용한다면 보증금은 10만원입니다.)
+                퇴실 한 달 전 퇴실 통보를 해주시면 전액 반환해드립니다.
               </div>
-
-            </div>
-            <div class="faq-box">
               <div class="questions">
                 24시간 이용할 수 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                <%=data.content%>
+                슈가맨카고는 365일 24시간 언제든지 이용할 수 있습니다.
               </div>
-
-            </div>
-            <div class="faq-box">
               <div class="questions">
                 계약하고 바로 이용할 수 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                <%=data.content%>
+                빈 스토리지라면 계약 후, 바로 이용 가능합니다.
               </div>
-
-            </div>
-            <div class="faq-box">
+              <div class="questions">
+                장기 이용 할인 혜택이 있나요?
+                <span class="material-icons arrowDown">keyboard_arrow_down</span>
+              </div>
+              <div class="answered">
+                장기 이용 시 특별 할인 적용 가능하며 자세한 내용은 담당 매니저님에게 문의 주시기 바랍니다.
+              </div>
               <div class="questions">
                 개인 택배도 받을 수 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                <%=data.content%>
+                개인 택배도 받을 수 있습니다.
               </div>
-
-            </div>
-            <div class="faq-box">
-              <div class="questions">
-                비밀번호를 잃어버렸을 경우 어떻게 하나요?
-                <span class="material-icons arrowDown">keyboard_arrow_down</span>
-              </div>
-              <div class="answered">
-                <%=data.content%>
-              </div>
-
-            </div>
-            <div class="faq-box">
-              <div class="questions">
-                개인 택배도 보낼 수 있나요?
-                <span class="material-icons arrowDown">keyboard_arrow_down</span>
-              </div>
-              <div class="answered">
-                <%=data.content%>
-              </div>
-
-            </div>
-            <div class="faq-box">
               <div class="questions">
                 방문 상담 받을 수 있는 시간이 정해져 있나요?
                 <span class="material-icons arrowDown">keyboard_arrow_down</span>
               </div>
               <div class="answered">
-                방문 상담은 홈페이지 혹은 전화로 방문 예약을 해 주신 후, 가능합니다.
-                상담 가능 시간은 평일 오전 9시~오후 6시까지입니다. (점심시간 오후 12시~1시 , 주말 및 공휴일 제외)
+                방문 상담 시간은 평일 오전 9시부터 6시(점심시간 12시 ~ 1시, 주말 및 공휴일 제외)까지 가능합니다.
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- </div> -->
+      <!-- </div> -->
+
+
+
     </div>
-  </div>
 
 
-  <!-- 푸터 시작 -->
-  <div class="content-section bg-footer footer-t footer ">
-    <div class="container-fluid main-container">
-      <div class="row">
-        <div class="col-md-2">
-          <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo">
-        </div>
-        <div class="col-md-7 footer-con">
-          <ul class="footer-con-1">
-            <li>
-              <span><a href="./about.html">회사소개</a></span>
-            </li>
-            <li>
-              <span><a href="./event.html">이벤트</a></span>
-            </li>
-            <li>
-              <span><a href="./faq.html">고객센터</a></span>
-            </li>
-          </ul>
-          <ul class="footer-con-2">
-            <li>
-              <span>(주)슈가맨카고</span><strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>대표이사 </span> 최성원
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>사업자등록번호
-              </span>1489-85-01325
-            </li>
-          </ul>
-          <ul class="footer-con-3">
-            <li>
-              <span>주소
-              </span>인천시 부평구 대정로66 5층 502-1호
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>
-                이메일
-              </span>sugarmancargo@gmail.com
-            </li>
-          </ul>
-        </div>
+    <!-- 푸터 시작 -->
+    <div class="content-section bg-footer footer-t footer ">
+      <div class="container-fluid main-container">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo">
+          </div>
+          <div class="col-md-7 footer-con">
+            <ul class="footer-con-1">
+              <li>
+                <span><a href="./about.html">회사소개</a></span>
+              </li>
+              <li>
+                <span><a href="./event.html">이벤트</a></span>
+              </li>
+              <li>
+                <span><a href="./faq.html">고객센터</a></span>
+              </li>
+            </ul>
+            <ul class="footer-con-2">
+              <li>
+                <span>(주)슈가맨카고</span><strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li>
+                <span>대표이사 </span> 최성원
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li>
+                <span>사업자등록번호
+                </span>1489-85-01325
+              </li>
+            </ul>
+            <ul class="footer-con-3">
+              <li>
+                <span>주소
+                </span>인천시 부평구 대정로66 5층 502-1호
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li>
+                <span>
+                  이메일
+                </span>sugarmancargo@gmail.com
+              </li>
+            </ul>
+          </div>
 
-        <div class="col-md-3">
-          <div class="footer-right">
-            <h6>문의전화 032-504-2327</h6>
-            <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
+          <div class="col-md-3">
+            <div class="footer-right">
+              <h6>문의전화 032-504-2327</h6>
+              <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="footer-m footer container-fluid p-0">
-    <div class="footer-line"></div>
-  </div>
-
-  <div class="footer">
-    <div class="container-fluid main-container footer-bottom">
-      <div class="row">
-        <div class="col-md-6 footer-bottom-text">
-          <!-- <ul>
-                  <li>© 2020 sugarmancargo, All rights reserved</li>
-                  <li>개인정보취급방침</li>
-                  <li>이용약관</li>
-                </ul> -->
-
-          <p>© 2020 sugarmancargo, All rights reserved</p>
-        </div>
-        <div class="col-md-6 social">
-          <div class="so naver"><img src="./assets/img/footer_icon_1.png" alt="blog"></div>
-          <div class="so instar"><img src="./assets/img/footer_icon_2.png" alt="Instagram"></div>
-          <div class="so facebook"><img src="./assets/img/footer_icon_3.png" alt="facebook"></div>
-        </div>
-      </div>
+    <div class="footer-m footer container-fluid p-0">
+      <div class="footer-line"></div>
     </div>
 
-  </div>
+    <div class="footer">
+      <div class="container-fluid main-container footer-bottom">
+        <div class="row">
+          <div class="col-md-6 footer-bottom-text">
+            <p>© 2020 sugarmancargo, All rights reserved</p>
+            <a href="./privacy.html">개인정보취급방침</a>
+            <a href="./terms.html">이용약관</a>
+          </div>
+          <div class="col-md-6 social">
+            <div class="so naver"><img src="./assets/img/footer_icon_1.png" alt="blog"></div>
+            <div class="so instar"><img src="./assets/img/footer_icon_2.png" alt="Instagram"></div>
+            <div class="so facebook"><img src="./assets/img/footer_icon_3.png" alt="facebook"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
 
 
-  <style>
-    .spinner-border {
-      opacity: 0;
-      margin-bottom: 3px;
-      margin-right: 10px;
-    }
+    <style>
+      .spinner-border {
+        opacity: 0;
+        margin-bottom: 3px;
+        margin-right: 10px;
+      }
 
-    .empty-spinner {
-      width: 1rem;
-      height: 1rem;
-      display: inline-block;
-    }
+      .empty-spinner {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+      }
 
-    button[type="submit"]:disabled .spinner-border {
-      opacity: 1;
-    }
+      button[type="submit"]:disabled .spinner-border {
+        opacity: 1;
+      }
 
-    button[type="submit"]:disabled>* {
-      color: #fff;
-    }
-  </style>
+      button[type="submit"]:disabled>* {
+        color: #fff;
+      }
+    </style>
 
-  <script>
-    $(document).on('click', '.questions', function() {
-      var answerTarget = $(this).next();
-      answerTarget.toggleClass('open-a');
-      $(this).children().toggleClass('up');
-    });
-  </script>
+    <script>
+      $(document).on('click', '.questions', function() {
+        var answerTarget = $(this).next();
+        answerTarget.toggleClass('open-a');
+        $(this).children().toggleClass('up');
+      });
+    </script>
 
 </body>
 

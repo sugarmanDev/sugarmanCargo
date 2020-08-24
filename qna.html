@@ -68,38 +68,51 @@
 
   <div class="Customer_wrap" style="margin-top: 45px; margin-bottom: 150px;">
     <div class="container main-container">
-      <h2 class="main-title">고객센터</h2>
-      <p class="help mt-4">무엇을 도와드릴까요?</p>
       <div class="row">
-        <div class="col-md-6 mb-3 customer_box" onclick="location.href='./faq.html' ">
-          <div class="row align-items-center">
-            <div class="col-md-6 img-area">
-              <div class="faq-img"></div>
+        <h2 class="main-title">고객센터</h2>
+      </div>
+
+      <div class="row">
+        <p class="help mt-4">무엇을 도와드릴까요?</p>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 cs-box mg-r-30">
+              <a href="./faq.html">
+                <div class="row">
+                  <div class="col-6 img-area">
+                    <div class="faq-img"></div>
+                  </div>
+                  <div class="col-6 info-area">
+                    <p class="cs-title">FAQ</p>
+                    <p class="cs-txt">
+                      자주 묻는 질문을 통해<br>
+                      쉽고 빠르게 답변을 확인해 보세요.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-            <div class="col-md-6 info-area">
-              <p class="cs-title mt-2">FAQ</p>
-              <p class="cs-txt">
-                자주 묻는 질문을 통해<br>
-                쉽고 빠르게 답변을 확인해 보세요.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3 customer_box" onclick="location.href='./qna.html' ">
-          <div class="row align-items-center">
-            <div class="col-md-6 img-area">
-              <div class="qna-img"></div>
-            </div>
-            <div class="col-md-6 info-area">
-              <p class="cs-title mt-2">1:1문의</p>
-              <p class="cs-txt">
-                문의를 남겨주시면 궁금한 점을<br>
-                담당자가 직접 해결해드리겠습니다.
-              </p>
+            <div class="col-md-6 cs-box mg-auto">
+              <a href="./qna.html">
+                <div class="row box-click">
+                  <div class="col-6 img-area">
+                    <div class="qna-img"></div>
+                  </div>
+                  <div class="col-6 info-area">
+                    <p class="cs-title">1:1문의</p>
+                    <p class="cs-txt">
+                      문의를 남겨주시면 궁금한 점을<br>
+                      담당자가 직접 해결해드리겠습니다.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+
       <div class="row">
         <div class="qna-box">
           <form method="post" onsubmit="return checkForm();" id="formData">
@@ -227,13 +240,9 @@
     <div class="container-fluid main-container footer-bottom">
       <div class="row">
         <div class="col-md-6 footer-bottom-text">
-          <!-- <ul>
-                <li>© 2020 sugarmancargo, All rights reserved</li>
-                <li>개인정보취급방침</li>
-                <li>이용약관</li>
-              </ul> -->
-
           <p>© 2020 sugarmancargo, All rights reserved</p>
+          <a href="./privacy.html">개인정보취급방침</a>
+          <a href="./terms.html">이용약관</a>
         </div>
         <div class="col-md-6 social">
           <div class="so naver"><img src="./assets/img/footer_icon_1.png" alt="blog"></div>
