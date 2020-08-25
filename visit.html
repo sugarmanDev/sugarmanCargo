@@ -170,7 +170,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px;">
           <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
-            <input type="hidden" name="visitTime" id="targetTime">
+            <input type="hidden" name="visitTime" id="visitTime">
             <h2 class="mb-4 main-title">방문예약</h2>
             <div class="form-row">
 
@@ -185,7 +185,7 @@
 
               <div class="form-group col-md-12 visitStoreMobile mobile_hide">
                 <label for="visitInputstore">지점 선택</label>
-                <select name="branch_desktop" id="visitInputstore2" class="form-control visit-sel" required="">
+                <select name="visitBranch" id="visitInputstore2" class="form-control visit-sel" required="">
                   <option selected="" disabled="">지점</option>
                   <option value="1">[1호점] 인천 부평점</option>
                   <option value="2">[2호점] 서울 군자점</option>
@@ -213,8 +213,8 @@
 
               <div class="form-group col-md-6 visit-time">
                 <label for="visitInputTime">방문 시간</label>
-                <select name="visitTime" id="visitTime" class="form-control">
-                  <option selected>시간</option>
+                <select name="hour" id="hour" class="form-control">
+                  <option selected value="">시간</option>
                   <option value="9">9시</option>
                   <option value="10">10시</option>
                   <option value="11">11시</option>
@@ -228,8 +228,8 @@
 
               <div class="form-group col-md-6 visit-time visit-down">
                 <label for="visitInputTime"></label>
-                <select name="visitTime" id="visitTime" class="form-control">
-                  <option selected>분</option>
+                <select name="minute" id="minute" class="form-control">
+                  <option selected value="">분</option>
                   <option value="00">00분</option>
                   <option value="30">30분</option>
                 </select>
@@ -348,18 +348,24 @@
       if (confirm('저장하시겠습니까?') == true) {
         var hour = $('#hour').val();
         var minute = $('#minute').val();
+        var visitTime = $('#visitTime').val();
 
-        var targetTime = hour + minute;
+        visitTime = hour + '시' + minute + '분' ;
+
+        var visitDate = $('#datepicker').val();
+
 
         if ($('#datepicker').val() == '') {
-          targetTime = '방문일자 상담후 결정';
+          visitDate = '방문일자 상담후 결정';
         }
 
         if (hour == '') {
-          targetTime = '시간 미정';
+          visitTime = '시간 미정';
         }
 
-        $('#targetTime').val(targetTime);
+        $('#visitTime').val(visitTime);
+        $('#datepicker').val(visitDate);
+
 
         $('.submit-form').attr('disabled', true);
 
@@ -379,6 +385,7 @@
               location.replace('./success.html');
             } else {
               alert('문제가 발생했습니다.\n다시 시도해주세요.')
+              $('.submit-form').attr('disabled', false);
             }
           },
           error: function(e) {
