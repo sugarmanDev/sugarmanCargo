@@ -1984,6 +1984,10 @@ a:visited {
     padding: 15px;
   }
 
+  .modal-body {
+    padding: 50px 20px !important;
+  }
+
   .footer-right {
     float: left;
   }
