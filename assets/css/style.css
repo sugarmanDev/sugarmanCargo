@@ -507,7 +507,7 @@ ul {
 .navbar-wrap {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0 2%;
-  z-index: 9999;
+  z-index: 1019;
 }
 
 .navbar .nav-link {
@@ -1202,6 +1202,7 @@ ul {
 
 .faq-box {
   border: 1px solid #E1E1E1;
+  border-bottom: 0;
   width: 100%;
   border-radius: 5px;
 }
@@ -1932,8 +1933,6 @@ a:visited {
   margin-bottom: 2px;
 }
 
-
-
 .line {
   line-height: 30px;
 }
@@ -2007,7 +2006,6 @@ a:visited {
 }
 
 /* privacy */
-
 .privacy {
   font-size: 13px;
   font-weight: 500;
@@ -2304,9 +2302,11 @@ select::-ms-expand {
   .half {
     width: 100%;
   }
+
   .right-area {
     display: none;
   }
+
   .form-12 {
     width: 80%;
   }
@@ -2314,5 +2314,4 @@ select::-ms-expand {
   .form-box h2 {
     padding-left: 20px;
   }
-
 }
