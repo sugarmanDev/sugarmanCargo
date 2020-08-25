@@ -1859,10 +1859,12 @@ a:visited {
 
 /* 문의 성공 페이지 */
 .check-gif {
-  background: url('/img/lottie/check-success.gif');
+  background: url('../img/check-success.gif');
+  width: 80px;
+  height: 80px !important;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  margin: 200px auto 0px;
 }
 
 .check-lottie {
