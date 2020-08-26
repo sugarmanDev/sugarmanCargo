@@ -177,17 +177,17 @@
             <div class="form-row">
 
               <div class="form-group col-md-12">
-                <label for="visitInputName">이름</label>
-                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required="">
+                <label for="visitInputName">이름<span style="color: #E8464D;">*</span></label>
+                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required>
               </div>
               <div class="form-group col-md-12">
-                <label for="visitInputPhone">연락처</label>
-                <input type="text" class="visitInputPhone form-control" value="010-" name="phone" required="">
+                <label for="visitInputPhone">연락처<span style="color: #E8464D;">*</span></label>
+                <input type="text" class="visitInputPhone form-control" value="010-" name="phone" required>
               </div>
 
               <div class="form-group col-md-12 visitStoreMobile mobile_hide">
-                <label for="visitInputstore">지점 선택</label>
-                <select name="visitBranch" id="visitInputstore2" class="form-control visit-sel" required="">
+                <label for="visitInputstore">지점 선택<span style="color: #E8464D;">*</span></label>
+                <select name="visitBranch" id="visitInputstore2" class="form-control visit-sel" required>
                   <option selected="" disabled="">지점</option>
                   <option value="1">[1호점] 인천 부평점</option>
                   <option value="2">[2호점] 서울 군자점</option>
@@ -195,8 +195,8 @@
               </div>
 
               <div class="form-group col-md-12 visitStoreMobile mobile_hide">
-                <label for="visitInputstore">원하는 스토리지 사이즈</label>
-                <select name="storageSize" id="visitInputstore2" class="form-control visit-sel" required="">
+                <label for="visitInputstore">원하는 스토리지 사이즈<span style="color: #E8464D;">*</span></label>
+                <select name="storageSize" id="visitInputstore2" class="form-control visit-sel" required>
                   <option selected="" disabled="">사이즈 선택</option>
                   <option value="cb">큐브</option>
                   <option value="sm">스몰</option>
@@ -209,14 +209,14 @@
 
 
               <div class="form-group col-md-12 visit-time">
-                <label for="visitInputTime">방문 날짜</label>
-                <input type="text" name="visitDate" id="datepicker" autocomplete="off" class="form-control visit-sel">
+                <label for="visitInputTime">방문 날짜<span style="color: #E8464D;">*</span></label>
+                <input type="text" name="visitDate" id="datepicker" autocomplete="off" class="form-control visit-sel" required>
               </div>
 
               <div class="form-group col-md-6 visit-time">
-                <label for="visitInputTime">방문 시간</label>
-                <select name="hour" id="hour" class="form-control">
-                  <option selected value="">시간</option>
+                <label for="visitInputTime">방문 시간<span style="color: #E8464D;">*</span></label>
+                <select name="hour" id="hour" class="form-control" required>
+                  <option selected disabled value="">시간</option>
                   <option value="9">9시</option>
                   <option value="10">10시</option>
                   <option value="11">11시</option>
@@ -230,16 +230,16 @@
 
               <div class="form-group col-md-6 visit-time visit-down">
                 <label for="visitInputTime"></label>
-                <select name="minute" id="minute" class="form-control">
-                  <option selected value="">분</option>
+                <select name="minute" id="minute" class="form-control" required>
+                  <option selected disabled value="">분</option>
                   <option value="00">00분</option>
                   <option value="30">30분</option>
                 </select>
               </div>
 
               <div class="form-group col-md-12 visitStoreMobile mobile_hide">
-                <label for="visitInputstore">알게 된 경로</label>
-                <select name="branch_desktop" id="visitInputstore2" class="form-control visit-sel" required="">
+                <label for="visitInputstore">알게 된 경로<span style="color: #E8464D;">*</span></label>
+                <select name="branch_desktop" id="visitInputstore2" class="form-control visit-sel" required>
                   <option selected disabled>선택</option>
                   <option vlaue="1">인스타그램</option>
                   <option vlaue="2">페이스북</option>
@@ -251,7 +251,7 @@
 
 
               <div class="form-group col-md-12 mt-4">
-                <input type="checkbox" name="checkYN" id="checkYN" required="">
+                <input type="checkbox" name="checkYN" id="checkYN" required>
                 <label for="checkYN"></label>
                 <p class="agree-txt">
                   (필수) 슈가맨카고 필수<button type="button" class="btn-privacy" data-toggle="modal" data-target="#exampleModal">
@@ -280,7 +280,7 @@
 
                         <p class="privacy-num1">2. 개인정보의 수집 필수 항목</p>
                         <p class="privacy-info1">
-                          - 이름, 연락처
+                          - 이름, 연락처, 지점, 원하는 스토리지 사이즈, 방문 날짜, 방문 시간, 알게 된 경로
                         </p>
 
                         <p class="privacy-num1">3. 개인정보의 보유 • 이용 기간</p>

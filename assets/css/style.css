@@ -23,6 +23,10 @@ html.prevent-scroll, body.prevent-scroll {
   overflow: hidden;
 }
 
+.event-form span {
+  color: #E8464D;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
   letter-spacing: -.02em;
@@ -43,7 +47,7 @@ ul {
 }
 
 .navbar-light .navbar-toggler {
-  border-color: #fff;
+  border: none;
 }
 
 /* media */
@@ -571,6 +575,14 @@ ul {
   color: #000 !important;
 }
 
+.pd-7 {
+  padding-bottom: 0.7rem;
+}
+
+.top-pd {
+  padding: 15px 0px;
+}
+
 .top-nav {
   position: fixed;
   top: 55px;
@@ -685,6 +697,10 @@ ul {
 .form-title {
   font-size: 1rem;
   font-weight: 500;
+}
+
+.form-title span {
+  color: #E8464D;
 }
 
 .filebox label {
@@ -1315,6 +1331,10 @@ ul {
   border-radius: 5px;
   padding: 64px 0px;
   margin: 30px 0px;
+}
+
+.qna-box span {
+  color: #E8464D;
 }
 
 .qna-input {
