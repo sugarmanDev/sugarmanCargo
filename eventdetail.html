@@ -90,21 +90,21 @@
             <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
               <input type="hidden" name="promoIdx" id="promoIdx" value="">
               <div class=" form-title form-group mt-3">
-                <label for="eventInputName">이름</label>
+                <label for="eventInputName">이름<span>*</span></label>
                 <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" id="name" require>
               </div>
               <div class="form-title form-group">
-                <label for="eventInputPhone">연락처</label>
+                <label for="eventInputPhone">연락처<span>*</span></label>
                 <input type="text" class="visitInputPhone visit" value="010-" name="phone" id="phone" required>
               </div>
               <div class="form-title form-group">
-                <label for="inquiryInputEmail">이메일주소</label>
+                <label for="inquiryInputEmail">이메일<span>*</span></label>
                 <input type="text" class="visitInputEmail visit" placeholder="" value="" name="email" id="email" required>
               </div>
               <div class="form-title form-group">
-                <label for="eventInputCourse">알게 된 경로</label>
+                <label for="eventInputCourse">알게 된 경로<span>*</span></label>
                 <div class="form-title mb-2">
-                  <select name="route" id="route" class="form-control" style="border:1px solid #e1e1e1;">
+                  <select name="route" id="route" class="form-control" required style="border:1px solid #e1e1e1;">
                     <option selected>선택</option>
                     <option vlaue="9">인스타그램</option>
                     <option vlaue="10">페이스북</option>
@@ -146,7 +146,7 @@
 
                         <p class="privacy-num1">2. 개인정보의 수집 필수 항목</p>
                         <p class="privacy-info1">
-                          - 이름, 연락처, 이메일
+                          - 이름, 연락처, 이메일, 알게 된 경로
                         </p>
 
                         <p class="privacy-num1">3. 개인정보의 보유 • 이용 기간</p>
