@@ -1189,7 +1189,7 @@ ul {
 }
 
 .mg-r-30 {
-  margin-right: 30px;
+  margin-right: 30px !important;
 }
 
 .mg-t-30 {
@@ -1549,6 +1549,12 @@ input[id="privacy"]+label {
 
 .qna-img {
   background-image: url(../img/qna.png);
+}
+
+@media (max-width:1229px){
+  .cs-box{
+    max-width: 100%;
+  }
 }
 
 /* 프렌차이즈 가맹 */
