@@ -2455,6 +2455,15 @@ select::-ms-expand {
   color:  #888;
 }
 
+@media (max-width:1248px){
+  .Customer_wrap .main-title{
+    padding-left: 15px;
+  }
+  .help{
+    padding-left: 15px;
+  }
+}
+
 @media (max-width:767px){
   .service-box.left{
     padding-right: 0px; 
