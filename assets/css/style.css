@@ -1199,8 +1199,14 @@ ul {
 .cs-box {
   border-radius: 5px;
   box-shadow: 0px 3px 6px #dedede;
-  max-width: 600px !important;
-  height: 202px;
+}
+
+.cs-box:nth-child(1){
+  padding-right: 10px;
+}
+
+.cs-box:nth-child(2){
+  padding-left: 10px;
 }
 
 .customer_box {
@@ -1215,11 +1221,10 @@ ul {
 .box-click {
   border: 1px solid #E8464D;
   border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.mg-r-30 {
-  margin-right: 30px;
-}
 
 .mg-t-30 {
   margin-top: 30px;
@@ -1584,6 +1589,12 @@ input[id="privacy"]+label {
   background-image: url(../img/qna.png);
 }
 
+@media (max-width:1229px){
+  .cs-box{
+    max-width: 100%;
+  }
+}
+
 /* 프렌차이즈 가맹 */
 .mh {
   margin-top: 230px;
@@ -1721,11 +1732,7 @@ input[id="privacy"]+label {
   max-width: 100%;
 }
 
-/* .col-img{
-  background: url(../img/franchise_3\ \(2\).jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
+
 /* 가맹-지점안내 */
 .branch-title {
   font-size: 1.125rem;
@@ -2410,3 +2417,51 @@ select::-ms-expand {
     text-align: center;
   }
 }
+
+
+/* qna & faq page */
+.service-box img {
+  height: 100px;
+  max-width: 186px;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box .card-body{
+  max-width: 270px;
+  word-break: keep-all;
+}
+
+.service-box.left{
+  padding-left: 0; 
+}
+
+.service-box.right{
+  padding-right: 0; 
+}
+
+.service-box .card-title{
+  font-size: 20px;
+  font-weight: 400 !important;
+  color:  #333;
+}
+
+.service-box .card-text{
+  font-size: 14px;
+  color:  #888;
+}
+
+@media (max-width:767px){
+  .service-box.left{
+    padding-right: 0px; 
+  }
+  .service-box.right{
+    padding-left: 0px; 
+    margin-top: 15px;
+  }
+}
+
