@@ -19,6 +19,10 @@
   display: none;
 }
 
+html.prevent-scroll, body.prevent-scroll {
+  overflow: hidden;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
   letter-spacing: -.02em;
@@ -36,6 +40,10 @@ ul {
 .about-logo {
   width: 296px;
   height: 174px;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #fff;
 }
 
 /* media */
@@ -883,6 +891,10 @@ ul {
     margin-bottom: 20px;
   }
 
+  .branch-list-box {
+    margin-left: 0px !important;
+  }
+
   .footer-con-1 li {
     margin-right: 0;
   }
@@ -928,7 +940,7 @@ ul {
 
   .footer-con-3 {
     padding-left: 0 !important;
-    padding-bottom: 60px !important;
+    padding-bottom: 80px !important;
   }
 
   .footer-con-2 strong {
@@ -942,6 +954,7 @@ ul {
   .footer .footer-con li {
     padding: 0;
     margin: 0;
+    margin-bottom: 3px;
   }
 
   .footer-logo {
@@ -1565,6 +1578,23 @@ input[id="privacy"]+label {
   background-size: cover;
 }
 
+.ft-14 {
+  font-size: 1.4rem !important;
+}
+
+.mg-t-3 {
+  margin-top: 3rem;
+}
+
+.franchise-topbox {
+  background-color: #fff;
+  top: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 37px 10px;
+  margin: 0;
+}
+
 .join-guide {
   padding-top: 80px !important;
   padding-left: 0 !important;
@@ -1805,7 +1835,7 @@ input[id="privacy"]+label {
   height: 100vh;
   background-color: #fff;
   color: #000;
-  z-index: 99;
+  z-index: 1033;
   top: 0px;
   left: 0px;
   display: none;
@@ -1840,8 +1870,12 @@ input[id="privacy"]+label {
   color: #000;
 }
 
+.mobile-menu .mobile-menu-list a:hover {
+  text-decoration: none;
+}
+
 .mobile-menu .mobile-menu-list li {
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 }
 
 a:visited {
@@ -2195,6 +2229,13 @@ a:visited {
   margin: 150px 0px;
 }
 
+.package-p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
 .form-box h2 {
   margin-bottom: 35px;
   font-weight: 500;
@@ -2303,8 +2344,38 @@ select::-ms-expand {
 }
 
 @media (max-width:991px) {
+  .mg-r-30 {
+    margin-right: 0px;
+  }
+
   .half {
     width: 100%;
+  }
+
+  .footer-con-1 span a {
+    margin-right: 15px;
+  }
+
+  .navbar-wrap {
+    padding: 0 5%;
+  }
+
+  .franchise-topbox {
+    padding: 30px 10px;
+  }
+
+  .mg-t-3 {
+    margin-top: 25px;
+  }
+
+  .form-box .form-btn {
+    margin-top: 35px;
+  }
+
+  .package-p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px !important;
   }
 
   .right-area {
@@ -2316,6 +2387,6 @@ select::-ms-expand {
   }
 
   .form-box h2 {
-    padding-left: 20px;
+    text-align: center;
   }
 }
