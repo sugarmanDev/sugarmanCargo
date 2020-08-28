@@ -232,5 +232,32 @@
 
 </body>
 
+<script>
+  var bottom_position, bottom_position1, bottom_position2, bottom_position3;
+
+$(function() {
+	bottom_position = $('.footer').position().top - $('.footer').height()
+	bottom_position1 = bottom_position + 70;
+	bottom_position2 = bottom_position + 140;
+	bottom_position3 = $(document).height() - 100;
+
+});
+
+$(window).scroll(function() {
+	set_scroll($(window).scrollTop());
+});
+
+function set_scroll (scroll) {
+  console.log($('.footer').height());
+  console.log($('.footer').height());
+  console.log(bottom_position);
+  console.log(bottom_position1);
+  console.log(bottom_position2);
+  console.log(bottom_position3);
+  console.log($(window).scrollTop());
+
+}
+</script>
+
 
 </html>
