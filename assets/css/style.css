@@ -2420,6 +2420,10 @@ select::-ms-expand {
 
 
 /* qna & faq page */
+.service-box{
+  height: 202px;
+}
+
 .service-box img {
   height: 100px;
   max-width: 186px;
@@ -2464,13 +2468,24 @@ select::-ms-expand {
   }
 }
 
-@media (max-width:767px){
-  .service-box.left{
-    padding-right: 0px; 
+@media(max-width: 767px){
+  .col-md-5.Aligner{
+    display: none;
   }
-  .service-box.right{
-    padding-left: 0px; 
-    margin-top: 15px;
+}
+
+@media(max-width:401px){
+  .col-md-7.Aligner .card-text{
+    display: none;
+  }
+  .col-md-7.Aligner .card-title{
+    text-align: center;
+  }
+  .service-box{
+    height: 50px;
+  }
+  .service-box .card-body{
+    padding-top: 10px;
   }
 }
 
