@@ -6,16 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>슈가맨카고</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153851611-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    gtag('config', 'UA-153851611-1');
+  </script>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script src="./assets/js/click-menu.js" charset="utf-8"></script>
 
@@ -39,9 +52,11 @@
     </div>
   </div>
   <!-- scroll nav -->
-  <div class="navbar-wrap shadow-sm sticky-top scroll-nav" style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
+  <div class="navbar-wrap shadow-sm sticky-top scroll-nav"
+    style="border-bottom:1px solid #e1e1e1;background-color: #fff;">
     <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
-      <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo" class="main-logo"></a>
+      <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo"
+          class="main-logo"></a>
 
       <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -59,7 +74,8 @@
             <a class="nav-link" style="color:#000;" href="./franchise.html">가맹안내</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="nav-bar-btn shadow" style="background-color:#E8464D; color: #fff;" onclick="location.href='./visit.html' ">방문예약</button>
+            <button type="button" class="nav-bar-btn shadow" style="background-color:#E8464D; color: #fff;"
+              onclick="location.href='./visit.html' ">방문예약</button>
           </li>
         </ul>
       </div>
@@ -77,9 +93,12 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-6 service-box left">
-              <div class="card" style="height: 100%;  border: 1px solid #E8464D; box-shadow: 0px 3px 6px #00000029; cursor: pointer;" onclick="location.href='./faq.html' ">
+              <div class="card"
+                style="height: 100%;  border: 1px solid #E8464D; box-shadow: 0px 3px 6px #00000029; cursor: pointer;"
+                onclick="location.href='./faq.html' ">
                 <div class="row no-gutters" style="height: 100%;">
-                  <div class="col-md-5 Aligner" style="background: #FFF6F7; height: 100%; padding: 10px; border-radius: 5px;">
+                  <div class="col-md-5 Aligner"
+                    style="background: #FFF6F7; height: 100%; padding: 10px; border-radius: 5px;">
                     <img src="./assets/img/faq.png" class="card-img" alt="...">
                   </div>
                   <div class="col-md-7 Aligner">
@@ -93,9 +112,11 @@
             </div>
 
             <div class="col-6 service-box right">
-              <div class="card" style="height: 100%; box-shadow: 0px 3px 6px #00000029; cursor: pointer;" onclick="location.href='./qna.html' ">
+              <div class="card" style="height: 100%; box-shadow: 0px 3px 6px #00000029; cursor: pointer;"
+                onclick="location.href='./qna.html' ">
                 <div class="row no-gutters" style="height: 100%;">
-                  <div class="col-md-5 Aligner" style="background: #FFF6F7; height: 100%;  padding: 10px; border-radius: 5px;">
+                  <div class="col-md-5 Aligner"
+                    style="background: #FFF6F7; height: 100%;  padding: 10px; border-radius: 5px;">
                     <img src="./assets/img/qna.png" class="card-img" alt="...">
                   </div>
                   <div class="col-md-7 Aligner">
@@ -290,7 +311,7 @@
     </style>
 
     <script>
-      $(document).on('click', '.questions', function() {
+      $(document).on('click', '.questions', function () {
         var answerTarget = $(this).next();
         answerTarget.toggleClass('open-a');
         $(this).children().toggleClass('up');
