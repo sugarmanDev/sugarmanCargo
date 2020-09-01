@@ -8,7 +8,7 @@ mobileMenu += '  </button>';
 mobileMenu += '  <div class="mobile-menu-list">';
 mobileMenu += '<ul>';
 mobileMenu += '      <li><a href="./package.html">택배문의</a></li>';
-mobileMenu += '      <li><a href="./branch.html">지점안내</a></li>';
+mobileMenu += '      <li><a href="./branch_list.html">지점안내</a></li>';
 mobileMenu += '      <li><a href="./franchise.html">가맹문의</a></li>';
 mobileMenu += '    </ul>';
 mobileMenu += '    <a href="./visit.html">';
