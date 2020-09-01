@@ -2252,9 +2252,6 @@ a:visited {
   background-size: cover;
 }
 
-.form-box {
-  margin: 150px 0px;
-}
 
 .package-p {
   font-size: 18px;
@@ -2276,31 +2273,13 @@ a:visited {
   margin-bottom: 6px;
 }
 
-.form-row {
-  width: 100%;
-}
-
-.form-6 {
-  margin: 0 auto;
-  width: 47%;
-  display: inline-block;
-  min-width: 280px;
-  max-width: 100%;
-}
-
-.form-12 {
-  margin: 0 auto;
-  width: 97%;
-  display: inline-block;
-  min-width: 280px;
-  max-width: 100%;
-}
 
 .form-input {
   width: 100%;
   height: 50px;
   border: 1px solid #E5E5E5;
   margin-bottom: 15px;
+  padding: 15px;
 }
 
 .form-box .form-btn {
