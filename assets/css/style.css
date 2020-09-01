@@ -2312,7 +2312,7 @@ input[id="agree"]+label {
 }
 
 input[type="checkbox"]:checked+label {
-  background: url(../img/check_box.png) no-repeat center/25px 25px;
+  background: url(../img/check2x.png) no-repeat center/25px 25px;
 }
 
 .agree-txt {
