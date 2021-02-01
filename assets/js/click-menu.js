@@ -43,7 +43,7 @@ var targetDomain = '';
 console.log(getDomain);
 
 if (getDomain == 'sugarmancargo.com' || getDomain == 'sugarmandev.github.io') {
-  targetDomain = 'https://gimyo.co.kr/cargo';
+  targetDomain = 'https://sugarmancargo.com';
 } else {
   targetDomain = 'http://localhost/cargo';
 }
