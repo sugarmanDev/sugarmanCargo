@@ -91,8 +91,8 @@
       <div class="row">
         <div class="col">
           <div class="text-box">
-            <h1 class="main-banner-subtext">도심 속 공유 창고</h1>
-            <h3 class="main-banner-text">슈가맨카고와 함께<br>
+            <h1 class="main-banner-subtext" style="word-break: keep-all;">도심 속 공유 창고</h1>
+            <h3 class="main-banner-text" style="word-break: keep-all;">슈가맨카고와 함께<br>
               비즈니스와 일상의 효율을 높여 보세요</h3>
             <button type="button" class="main-banner-btn mt-5 d-flex align-items-center"
               onclick="location.href='./visit.html' ">방문예약 하러가기
@@ -452,12 +452,13 @@
     </script>
      -->
   <script>
+
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
       // 48
       if (scroll > 48) {
         $('.top-nav').addClass('fixed-head');
-        if (scroll > 950) {
+        if (scroll > 350) {
           $('.top-nav').addClass('fixed-head-white');
         } else {
           $('.top-nav').removeClass('fixed-head-white');
