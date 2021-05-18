@@ -2363,7 +2363,7 @@ select::-ms-expand {
   }
 
   .navbar-wrap {
-    padding: 0 5%;
+    padding: 0 15px;
   }
 
   .franchise-topbox {
@@ -2436,6 +2436,11 @@ select::-ms-expand {
 .service-box .card-text{
   font-size: 14px;
   color:  #888;
+}
+
+.navbar{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 @media (max-width:1248px){
