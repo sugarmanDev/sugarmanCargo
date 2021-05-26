@@ -519,7 +519,7 @@ ul {
 .navbar-wrap {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0 2%;
-  z-index: 1019;
+  z-index: 99;
 }
 
 .navbar .nav-link {
@@ -568,7 +568,7 @@ ul {
 .fixed-head-white {
   background: #fff;
   color: #000;
-  z-index: 9999
+  z-index: 99
 }
 
 .fixed-head-white .nav-link {
@@ -2473,3 +2473,202 @@ select::-ms-expand {
   }
 }
 
+
+.main_inquiry_btn{
+	text-align: center;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #E8464D;
+    border-radius: 50%;
+    color: #E8464D;
+	line-height: 1;
+    padding-bottom: 3px;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.main_inquiry_bg{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: #000000 0% 0% no-repeat padding-box;
+	opacity: 0.5;
+	z-index: 99;
+}
+
+.main_inquiry .form_box{
+	width: 390px;
+	height: 872px;
+	position: fixed;
+	bottom: 20px;
+	right: 48px;
+	z-index: 999;
+	background: linear-gradient(180deg, #E8464D 200px, 0, #EEEEEE);
+	border-radius: 8px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 0px 3px 6px #00000029;
+}
+
+.main_inquiry .form_box .top{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main_inquiry_close{
+	color: #fff;
+	font-weight: 500;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+.main_inquiry_logo{
+	width: 105px;
+	height: auto;
+}
+
+.main_inquiry .form_box .form{
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #ADADAD59;
+	border-radius: 8px;
+	padding: 16px 10px 6px 10px;
+}
+
+.main_inquiry .form_box label{
+	width: 100%;
+	margin-bottom: 6px;
+	font-weight: 500;
+}
+
+.main_inquiry .form_box .in_form_con{
+	width: 100%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E1E1E1;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	padding-left: 12px;
+	padding-right: 12px;
+	height: 50px;
+	font-weight: 400;
+}
+
+.main_inquiry .form_box .in_form_con::placeholder{
+	color: #888888;
+}
+
+.main_inquiry .form_box .form .col-12{
+	margin-bottom: 12px;
+}
+
+.main_inquiry .form_box .form textarea{
+	height: 140px;
+	border: 1px solid #E1E1E1;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.main_inquiry .form_box .form .check{
+	border: 1px solid #888888;
+	border-radius: 3px;
+	width: 18px;
+	height: 18px;
+}
+
+.main_inquiry .form_box .form .agree-txt {
+    margin-top: -31px;
+    margin-left: 20px;
+    font-size: 13px;
+	color: #888888;
+    margin-bottom: 4px;
+}
+
+.main_inquiry .form_box .form button{
+	width: 100%;
+	height: 48px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #E8464D;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #E8464D;
+	font-weight: 500;
+}
+
+.main_inquiry .form_box .form button:hover{
+	background: #E8464D 0% 0% no-repeat padding-box;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+@media (max-width:492px) {
+	.main_inquiry_btn{
+		width: 80px;
+		height: 80px;
+		font-size: 14px;
+		right: 30px;
+	}
+	.main_inquiry .form_box {
+		width: 100vw;
+		left: 0;
+	}
+}
+
+@media (max-width:450px) {
+	.main_inquiry .form_box {
+		height: 100vh;
+		top: 0;
+		border-radius: 0;
+	}
+	.main_inquiry .form_box .form{
+		height: 87vh;
+		overflow-y: auto;
+		padding-bottom: 35px;
+	}
+
+}
+
+@media (max-width:391px) {
+	.main_inquiry_btn{
+		width: 75px;
+		height: 75px;
+		right: 15px;
+		bottom: 15px;
+	}
+	.main_inquiry .form_box .form{
+		height: 87vh;
+		overflow-y: auto;
+		padding-bottom: 55px;
+	}
+
+	.main_inquiry .form_box .form button{
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width:380px) {
+	.main_inquiry .form_box .form .agree-txt {
+		margin-top: -30px;
+		margin-left: 25px;
+		font-size: 13px;
+		padding-right: 15px;
+		word-break: keep-all;
+		margin-bottom: 10px;
+	}
+	.main_inquiry .form_box .form button{
+		margin-top: 10px;
+	}
+}
