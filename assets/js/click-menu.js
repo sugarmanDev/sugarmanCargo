@@ -43,7 +43,7 @@ var targetDomain = '';
 console.log(getDomain);
 
 if (getDomain == 'sugarmancargo.com' || getDomain == 'sugarmandev.github.io') {
-  targetDomain = 'http://54.180.162.123/cargo';
+  targetDomain = 'http://sugarmango.co.kr/cargo';
 } else {
   targetDomain = 'http://localhost/cargo';
 }
