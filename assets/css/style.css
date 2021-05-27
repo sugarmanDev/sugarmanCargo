@@ -2634,8 +2634,8 @@ select::-ms-expand {
 	.main_inquiry_btn{
 		width: 80px;
 		height: 80px;
-		font-size: 13px;
-		right: 30px;
+		font-size: 14px;
+		right: 20px;
 	}
 	.main_inquiry .form_box {
 		width: 100vw;
@@ -2658,11 +2658,12 @@ select::-ms-expand {
 }
 
 @media (max-width:391px) {
-	.main_inquiry_btn{
+	.main_inquiry_btn {
 		width: 75px;
 		height: 75px;
 		right: 15px;
 		bottom: 15px;
+		font-size: 13px;
 	}
 	.main_inquiry .form_box .form{
 		height: 87vh;
