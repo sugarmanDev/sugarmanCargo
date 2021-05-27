@@ -2659,8 +2659,6 @@ select::-ms-expand {
 
 @media (max-width:391px) {
 	.main_inquiry_btn {
-		width: 75px;
-		height: 75px;
 		right: 15px;
 		bottom: 15px;
 		font-size: 13px;
@@ -2691,13 +2689,13 @@ select::-ms-expand {
 }
 
 
-.top-nav .toggle-mobile-menu span{
-	color: #fff;
+.toggle-mobile-menu span{
+	color: #555;
 	font-size: 36px;
 }
 
-.navbar-light .toggle-mobile-menu span{
-	color: #555;
+.toggle-mobile-menu .main_menu{
+	color: #fff;
 	font-size: 36px;
 }
 
