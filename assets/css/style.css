@@ -15,6 +15,14 @@
   direction: ltr;
 }
 
+.num{
+	color: #000 !important;
+}
+
+.num a{
+	color: #000 !important;
+}
+
 .desk_hide{
 	display: none;
 }
