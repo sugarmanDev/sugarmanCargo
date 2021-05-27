@@ -2696,6 +2696,11 @@ select::-ms-expand {
 	font-size: 36px;
 }
 
+.navbar-light .toggle-mobile-menu span{
+	color: #555;
+	font-size: 36px;
+}
+
 .top-nav.fixed-head .toggle-mobile-menu span{
 	color: #555;
 }
