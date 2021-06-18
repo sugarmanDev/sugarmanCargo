@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+/* .Customer_wrap .row{
+  padding: 15px;
+} */
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -2471,11 +2475,12 @@ select::-ms-expand {
 }
 
 @media (max-width:1248px){
-  .Customer_wrap .main-title{
+  /* .Customer_wrap .main-title{
     padding-left: 15px;
-  }
+  } */
+
   .help{
-    padding-left: 15px;
+    /* padding-left: 15px; */
   }
 }
 
