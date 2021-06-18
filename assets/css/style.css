@@ -786,8 +786,8 @@ ul {
 }
 
 .footer .footer-logo {
-  width: 150px;
-  margin-right: 40px;
+  width: 100%;
+  /* margin-right: 40px; */
 }
 
 .footer-con-1 {
@@ -998,6 +998,7 @@ ul {
   }
 
   .footer-logo {
+    width: 50% !important;
     margin-bottom: 20px;
   }
 
@@ -1398,6 +1399,8 @@ ul {
 
 .mg-13 {
   margin: 13px 0px;
+  white-space: pre-line;
+  word-break: keep-all;
 }
 
 .btn-qna-area {
@@ -1523,7 +1526,7 @@ input[type="checkbox"]:checked+label {
 .partner-form1 {
   display: block;
   width: 100%;
-  max-width: 495px;
+  /* max-width: 495px; */
   height: 50px !important;
   font-weight: 400;
   line-height: 1.5;
@@ -2428,7 +2431,7 @@ select::-ms-expand {
 }
 
 .service-box img {
-  height: 100px;
+  height: 50%;
   max-width: 186px;
 }
 
@@ -2733,4 +2736,8 @@ select::-ms-expand {
 	.desk_hide .mo_hide{
 		display: none;
 	}
+}
+
+select {
+  background:url('../img/arrow-down.png') no-repeat right 9px center;
 }
