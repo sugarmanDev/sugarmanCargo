@@ -931,6 +931,10 @@ ul {
 }
 
 @media (min-width:415px) and (max-width:768px) {
+  .service-box img {
+    height: 40% !important;
+  }
+
   .footer-logo {
     margin-bottom: 20px;
   }
