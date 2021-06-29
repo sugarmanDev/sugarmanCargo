@@ -221,20 +221,31 @@
 	$('body').toggleClass('prevent-scroll')
   });
 
-  $(document).on('click','.main_inquiry_btn',function(){
-	  $('.main_inquiry').toggle();
-	  $('html, body').addClass('hidden');
-  })
+  $('.main_inquiry_btn').click(function(){
+    window.location.hash = "mainInquiry"; //set hash
+    return false; //disables browser anchor jump behavior
+	});
 
-  $(document).on('click','.main_inquiry_close',function(){
-	  $('.main_inquiry').hide();
-	  $('html, body').removeClass('hidden');
-  })
+	function locationHashChanged() {
+		if (location.hash === '#mainInquiry') {
+			$('.main_inquiry').toggle();
+		 	$('html, body').addClass('hidden');
+ 		}else{
+			$('.main_inquiry').hide();
+			$('html, body').removeClass('hidden');
+		 }
+	}
 
-  $(document).on('click','.main_inquiry_bg',function(){
-	  $('.main_inquiry').hide();
-	  $('html, body').removeClass('hidden');
-  })
+	window.onhashchange = locationHashChanged;
+
+
+	$(document).on('click','.main_inquiry_close',function(){
+		window.history.back();
+	})
+
+	$(document).on('click','.main_inquiry_bg',function(){
+		window.history.back();
+	})
 
   
   function checkForm() {
