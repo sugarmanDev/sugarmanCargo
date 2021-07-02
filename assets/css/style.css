@@ -972,11 +972,14 @@ ul {
 }
 
 @media (min-width:415px) and (max-width:768px) {
+  .footer .footer-logo {
+    width: 50%;
+  }
 
   .fail-h1 {
     font-size: 7rem;
   }
-  
+
   .service-box img {
     height: 40% !important;
   }
