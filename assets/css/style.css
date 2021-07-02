@@ -4,6 +4,38 @@
   padding: 15px;
 } */
 
+.fail-body {
+  width: 100%;
+  height: 100vh;
+}
+
+.fail-h1 {
+  font-size: 12rem;
+  text-align: center;
+  font-weight: 600;
+  color: #545454;
+}
+
+.fail-h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: #000;
+}
+
+.fail-btn {
+  background-color: #fff;
+  border: 1px solid #E8464D;
+  color: #E8464D;
+  font-size: 1.063rem;
+  border-radius: 500px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -298,6 +330,11 @@ ul {
 }
 
 @media (min-width:341px) and (max-width:467px) {
+
+  .fail-h1 {
+    font-size: 7rem;
+  }
+
   .min-half {
     max-width: 33.333%;
   }
@@ -391,6 +428,10 @@ ul {
 }
 
 @media (min-width:0px) and (max-width:334px) {
+  .fail-h1 {
+    font-size: 7rem;
+  }
+
   .storage-box.normal-box {
     width: 50%;
     max-width: 50%;
@@ -931,6 +972,11 @@ ul {
 }
 
 @media (min-width:415px) and (max-width:768px) {
+
+  .fail-h1 {
+    font-size: 7rem;
+  }
+  
   .service-box img {
     height: 40% !important;
   }
