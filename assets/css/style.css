@@ -2416,6 +2416,12 @@ input[type="checkbox"]:checked+label {
   text-decoration: underline;
 }
 
+select {
+    -webkit-appearance:none; /* 크롬 화살표 없애기 */
+    -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
+    appearance:none /* 화살표 없애기 */
+}
+
 .form-select {
   width: 100%;
   height: 50px;
@@ -2430,7 +2436,7 @@ input[type="checkbox"]:checked+label {
 }
 
 select::-ms-expand {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width:991px) {
