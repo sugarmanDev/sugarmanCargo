@@ -855,6 +855,7 @@ ul {
 
 .footer-con-1 span a {
   color: #000;
+  font-size: 15px;
 }
 
 .footer-con li {
@@ -906,11 +907,12 @@ ul {
 }
 
 .footer .footer-right h6 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .footer .footer-right p {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
 }
 
 .footer-m .footer-line {
@@ -1036,10 +1038,28 @@ ul {
 }
 
 @media (min-width:0px) and (max-width:414px) {
+  .visit_wrap .join-g-faq-left{
+    margin-top: 60px !important;
+  }
+  .storage-wrap .storage-box{
+    padding-bottom: 1rem !important;
+  }
+  .storage-box img{
+    max-width: 45% !important;
+  }
+  .join-guide .main_title{
+    margin-bottom: 26px;
+  }
+
+  .join-guide{
+    padding-top: 40px !important;
+  }
+
   .footer-t {
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 36px !important;
+    padding-top: 30px !important;
   }
 
   .footer-con-2 {
@@ -1066,7 +1086,7 @@ ul {
   }
 
   .footer-logo {
-    width: 50% !important;
+    width: 40% !important;
     margin-bottom: 20px;
   }
 
@@ -1722,7 +1742,7 @@ input[id="privacy"]+label {
 }
 
 .join-guide {
-  padding-top: 80px !important;
+  padding-top: 80px;
   padding-left: 0 !important;
 }
 
@@ -1806,10 +1826,6 @@ input[id="privacy"]+label {
   margin-right: 0;
 }
 
-.join-guide {
-  padding-top: 140px;
-  padding-left: 0 !important;
-}
 
 .slide-wrapper {
   overflow-x: auto;
@@ -2006,7 +2022,7 @@ a:visited {
 
 .mobile-menu .mobile-menu-list button {
   width: 70%;
-  height: 10%;
+  /* height: 10%; */
   border-radius: 20px;
   border: 3px solid #E8464D;
   background-color: transparent;
@@ -2288,6 +2304,17 @@ a:visited {
 }
 
 @media (min-width:0px) and (max-width:414px) {
+  .main_wrap .row{
+    padding:100px !important;
+  }
+  .about-logo{
+    width: 190px;
+    height: auto;
+  }
+  .visit_form .col-md-4{
+    margin-bottom: 80px !important;
+  }
+
   .privacy-wrap {
     padding: 100px 0px;
   }
@@ -2730,6 +2757,10 @@ select::-ms-expand {
 		width: 100vw;
 		left: 0;
 	}
+  .navbar-brand img, .main-logo{
+    width: 110px !important;
+    height: auto;
+  }
 }
 
 @media (max-width:450px) {
@@ -2814,6 +2845,12 @@ select::-ms-expand {
 	.desk_hide .mo_hide{
 		display: none;
 	}
+  .event-banner a u{
+    font-size: 13px !important;
+  }
+  .main-banner-subtext{
+    font-size: 1.2rem;
+  }
 }
 
 select {
