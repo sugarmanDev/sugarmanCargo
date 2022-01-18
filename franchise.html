@@ -397,46 +397,46 @@
     }
 
   </script>
-  <!--<script>-->
+  <script>
 
 
-    <!--const x = window.matchMedia("screen and (min-width:500px)");-->
+    const x = window.matchMedia("screen and (min-width:500px)");
 
-    <!--x.addListener((a)=>{-->
-      <!--$(window).scroll(function () {-->
-        <!--var scroll = $(window).scrollTop();-->
-        <!--// 48-->
-        <!--if (scroll > 48) {-->
-          <!--$('.top-nav').addClass('fixed-head');-->
-          <!--if (scroll > 200) {-->
-            <!--$('.top-nav').addClass('fixed-head-white');-->
-          <!--} else {-->
-            <!--$('.top-nav').removeClass('fixed-head-white');-->
-          <!--}-->
-        <!--} else {-->
-          <!--$('.top-nav').removeClass('fixed-head');-->
-        <!--}-->
-        <!--console.log(scroll);-->
-      <!--})-->
-    <!--})-->
+    x.addListener((a)=>{
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        // 48
+        if (scroll > 48) {
+          $('.top-nav').addClass('fixed-head');
+          if (scroll > 200) {
+            $('.top-nav').addClass('fixed-head-white');
+          } else {
+            $('.top-nav').removeClass('fixed-head-white');
+          }
+        } else {
+          $('.top-nav').removeClass('fixed-head');
+        }
+        console.log(scroll);
+      })
+    })
 
 
-    <!--$(window).scroll(function () {-->
-      <!--var scroll = $(window).scrollTop();-->
-      <!--// 48-->
-      <!--if (scroll > 48) {-->
-        <!--$('.top-nav').addClass('fixed-head');-->
-        <!--if (scroll > 350) {-->
-          <!--$('.top-nav').addClass('fixed-head-white');-->
-        <!--} else {-->
-          <!--$('.top-nav').removeClass('fixed-head-white');-->
-        <!--}-->
-      <!--} else {-->
-        <!--$('.top-nav').removeClass('fixed-head');-->
-      <!--}-->
-      <!--console.log(scroll);-->
-    <!--})-->
-  <!--</script>-->
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      // 48
+      if (scroll > 48) {
+        $('.top-nav').addClass('fixed-head');
+        if (scroll > 350) {
+          $('.top-nav').addClass('fixed-head-white');
+        } else {
+          $('.top-nav').removeClass('fixed-head-white');
+        }
+      } else {
+        $('.top-nav').removeClass('fixed-head');
+      }
+      console.log(scroll);
+    })
+  </script>
   <style>
     a:hover {
       text-decoration: none;
