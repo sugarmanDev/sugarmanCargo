@@ -88,7 +88,7 @@ html.prevent-scroll, body.prevent-scroll {
 
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
-  letter-spacing: -.02em;
+  letter-spacing: -.01em;
 }
 
 ul {
@@ -564,7 +564,7 @@ ul {
 
   .branch-title {
     font-size: 1rem !important;
-    color: #E8464D;
+ 
   }
 
   .visit_wrap {
@@ -605,6 +605,7 @@ ul {
 .navbar .nav-link {
   color: #fff;
   font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .navbar .nav-bar-btn {
@@ -911,6 +912,10 @@ ul {
   font-weight: bold;
 }
 
+.footer .footer-right h6 a{
+  color: #000;
+}
+
 .footer .footer-right p {
   font-size: 0.9375rem;
 }
@@ -986,7 +991,7 @@ ul {
 
 @media (min-width:415px) and (max-width:768px) {
   .footer .footer-logo {
-    width: 50%;
+    width: 30% !important;
   }
 
   .fail-h1 {
@@ -1846,19 +1851,20 @@ input[id="privacy"]+label {
 
 /* 가맹-지점안내 */
 .branch-title {
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 400;
   /* display: inline; */
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .branch-title span {
-  font-size: 1.125rem;
-  color: #888;
-  font-weight: 400;
-  margin-left: 10px;
+  margin: 0 5px;
+  color: #e1e1e1;
 }
 
+.branch-title a{
+  color:#000;
+}
 .branch-box {
   margin-left: 40px;
 }
@@ -1867,8 +1873,8 @@ input[id="privacy"]+label {
   content: '';
   display: block;
   position: relative;
-  top: 14px;
-  width: 32px;
+  top: 12px;
+  width: 26px;
   height: 3px;
   background-color: #E8464D;
 }
@@ -1928,12 +1934,34 @@ input[id="privacy"]+label {
 }
 
 /* 지점 */
+
+.branch-list-address span{
+  margin: 0 5px;
+  color: #e1e1e1;
+}
+.branch-list-address a{
+  color: #555;
+}
+
 .branch-list-address {
   font-size: 1.063rem;
+  font-weight: 400;
+  color: #888;
+  display: inline-block;
+  margin-bottom:2px !important;
+}
+
+.preparing-area{
+  width: 100%;
+  max-width: 705px;
+  line-height: 400px;
+  text-align: center;
+  font-size: 30px;
   font-weight: 500;
-  color: #888888;
-  display: inline;
-  margin-right: 10px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  background-color: #dedede;
+  opacity: 0.5;
 }
 
 /* .branch-address {
@@ -2761,6 +2789,10 @@ select::-ms-expand {
     width: 110px !important;
     height: auto;
   }
+  .preparing-area{
+    line-height:262px;
+    font-size: 26px;
+  }
 }
 
 @media (max-width:450px) {
@@ -2774,6 +2806,10 @@ select::-ms-expand {
 		overflow-y: auto;
 		padding-bottom: 35px;
 	}
+  .preparing-area{
+    line-height:230px;
+    font-size: 24px;
+  }
 
 }
 
