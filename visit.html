@@ -1,673 +1,660 @@
 <!DOCTYPE html>
 <html lang="kr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-	<link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
-
-	<!-- Apple Touch Icons -->
-	<link rel="apple-touch-icon" href="https://sugarmancargo.com/assets/57@2x.png">
-	<link rel="apple-touch-icon-precomposed" href="https://sugarmancargo.com/assets/57@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://sugarmancargo.com/assets/57@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://sugarmancargo.com/assets/72@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://sugarmancargo.com/assets/60@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://sugarmancargo.com/assets/76@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://sugarmancargo.com/assets/114@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://sugarmancargo.com/assets/120@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sugarmancargo.com/assets/144@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://sugarmancargo.com/assets/152@2x.png">
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://sugarmancargo.com/assets/180@2x.png"/>
-
-	<link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/96@2x.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/128@2x.png" sizes="128x128">
-	<link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/196@2x.png" sizes="196x196">
-
-	<!-- Windows 8 Tiles -->
-	<meta name="msapplication-TileImage" content="https://sugarmancargo.com/assets/144@2x.png"/>
-
-
-	<!-- Internet Explorer 11 Tiles -->
-	<meta name="msapplication-square70x70logo" content="https://sugarmancargo.com/assets/70@2x.png">
-	<meta name="msapplication-square150x150logo" content="https://sugarmancargo.com/assets/150@2x.png">
-	<meta name="msapplication-square310x150logo" content="https://sugarmancargo.com/assets/310x150_2@2x.png">
-	<meta name="msapplication-square310x310logo" content="https://sugarmancargo.com/assets/310@2x.png">
-
-
-  <title>슈가맨카고</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153851611-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-153851611-1');
-  </script>
-
-<meta name="keywords" content="도심 속 공유 창고"/>
-<meta name="description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요."/>
-
-<meta property="og:locale" content="ko_KR"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="슈가맨카고"/>
-<meta property="og:description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요."/>
-<meta property="og:url" content="https://sugarmancargo.com/"/>
-<meta property="og:site_name" content="슈가맨카고"/>
-<meta property="og:image" content="https://sugarmancargo.com/assets/800@2x.jpg"/>
-<meta property="og:image:secure_url" content="https://sugarmancargo.com/assets/800@2x.jpg" />
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico"> -->
-
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-
-  <!-- datepicker -->
-  <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css">
-  <script src="./assets/js/datepicker/datepicker.min.js"></script>
-  <script src="./assets/js/datepicker/datepicker.ko.js"></script>
-  <script src="./assets/js/datepicker/LunarCalculator.js"></script>
-  <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
-  <script src="./assets/js/click-menu.js" charset="utf-8"></script>
-</head>
-
-<body>
-  <!-- 이벤트 띠배너 -->
-  <div class="event-banner d-flex pt-3 pb-2">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="flex-fill text-center event-text">
-          <span class="new">NEW</span>
-          <span><a href="./event.html"><u style="color: #000; font-weight: 500; font-size: 16px;">슈가맨카고 이벤트 소식을 만나보세요!</u>&nbsp;🎉</a></span>
-        </div>
-        <button class="event-banner-btn" style="border-style: none; background: transparent;">
-          <span class="material-icons ml-auto" style="cursor: pointer;">close</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- scroll nav -->
-  <div class="navbar-wrap shadow-sm sticky-top scroll-nav"
-    style="border-bottom:1px solid #e1e1e1; background-color: #fff;">
-    <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
-      <a class="navbar-brand" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo"
-          class="main-logo"></a>
-
-      <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
-        <span class="material-icons">menu</span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./branch_list.html">지점안내</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./franchise.html">가맹문의</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="nav-bar-btn" style="background-color:#E8464D; color: #fff;"
-              onclick="location.href='./visit.html' ">방문예약</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-
-  <button class="main_inquiry_btn">
-	<span class="material-icons">forum</span><br/>
-	문의하기
-  </button>
-
-
-  <div class="main_inquiry">
-	<div class="main_inquiry_bg"></div>
-	<div class="form_box">
-		<form method="post" onsubmit="return inquiryForm();" id="inquiryData">
-			<input type="hidden" name="type" value="main">
-			<div class="row" style="margin: 0;">
-				<div class="col-12 top" style="height: 80px;">
-					<img class="main_inquiry_logo" src="./assets/cargo@2x.png" alt="main_inquiry_logo">
-					<span class="material-icons main_inquiry_close">clear</span>
-				</div>
-				<div class="col-12 form" style="overflow-x: hidden;">
-					  <div class="row">
-						  <div class="col-12">
-							  <label for="in_name">이름/업체명</label>
-							  <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required>
-						  </div>
-
-						  <div class="col-12">
-							  <label for="in_phone">연락처</label>
-							  <input type="text" name="phone" placeholder="010" class="in_form_con" id="in_phone" required>
-						  </div>
-
-						  <div class="col-12">
-							  <label for="in_branch">문의 지점</label>
-							  <select id="in_branch" name="branch" class="in_form_con" required>
-								  <option selected value="" disabled>지점 선택</option>
-								  <option value="1">[1호점] 인천 부평점</option>
-								  <option value="2">[2호점] 서울 군자점</option>
-							  </select>
-						  </div>
-
-						  <div class="col-12">
-							<label for="visitInputstore2">스토리지 사이즈</label>
-							<select name="storageSize" id="visitInputstore2" class="in_form_con" required>
-							  <option selected="" disabled="">사이즈 선택</option>
-							  <option value="cb">큐브</option>
-							  <option value="sm">스몰</option>
-							  <option value="md">미디엄</option>
-							  <option value="lg">라지</option>
-							  <option value="xl">엑스라지</option>
-							  <option value="etc">상담 후 결정</option>
-							</select>
-						  </div>
-
-						  <div class="col-12">
-							  <label for="in_content">문의 내용</label>
-							  <textarea id="in_content" name="subject" required></textarea>
-						  </div>
-
-						  <div class="col-12">
-							  <label for="in_path">알게 된 경로</label>
-							  <select id="in_path" name="route" class="in_form_con" required>
-								  <option selected value="" disabled>선택</option>
-								  <option value="1">인스타그램</option>
-								  <option value="2">페이스북</option>
-								  <option value="3">블로그</option>
-								  <option value="4">구글</option>
-								  <option value="5">지인소개</option>
-								  <option value="6">기타</option>
-							  </select>
-						  </div>
-
-						  <div class="col-12">
-							  <input type="checkbox" name="agree" id="check"  name="checkYN" required>
-							  <label for="check" class="check"></label>
-							  <p class="agree-txt">(필수) 슈가맨카고 <a href="./privacy.html">개인정보 수집</a> 및 활용에 동의합니다.</p>
-						  </div>
-
-						  <div class="col-12">
-							  <button class="submit_form">
-								  문의하기
-							  </button>
-						  </div>
-					  </div>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-
-
-<style>
-	.main_inquiry{
-		display: none;
-	}
-</style>
-
-<script>
-  $(document).on('click', '.mobile-menu-place-i', function() {
-	$('#mobile').toggle();
-	$('.mobile-menu-place-i').toggleClass('opened')
-	$('html').toggleClass('prevent-scroll')
-	$('body').toggleClass('prevent-scroll')
-  });
-
-  $(document).on('click','.main_inquiry_btn',function(){
-	  $('.main_inquiry').toggle();
-	  $('html, body').addClass('hidden');
-  })
-
-  $(document).on('click','.main_inquiry_close',function(){
-	  $('.main_inquiry').hide();
-	  $('html, body').removeClass('hidden');
-  })
-
-  $(document).on('click','.main_inquiry_bg',function(){
-	  $('.main_inquiry').hide();
-	  $('html, body').removeClass('hidden');
-  })
-
-
-function inquiryForm() {
-
-if (confirm('저장하시겠습니까?') == true) {
-
-  $('.submit_form').attr('disabled', true);
-
-  var form = $('#inquiryData')[0];
-  var formData = new FormData(form);
-  var queryString = $('#inquiryData').serialize();
-  console.log(queryString);
-
-  $.ajax({
-	type: 'post',
-	url: targetDomain + '/request',
-	data: queryString,
-	dataType: 'json',
-	success: function (data) {
-	  console.log(data);
-	  if (data.result == 'success') {
-		location.replace('./success.html');
-	  } else {
-		alert('문제가 발생했습니다.\n다시 시도해주세요.')
-	  }
-	},
-	error: function (e) {
-	  $('.submit_form').attr('disabled', false);
-	}
-  });
-
-	}
-	return false;
-    }
-</script>
-
-
-
-  <div class="visit_wrap">
-    <section class="container main-container front-join">
-      <div class="row">
-        <div class="col-md-5 join-g-faq-left text-center mb-1" style="margin-top: 130px;">
-          <img src="./assets/img/mini_box.png" alt="">
-          <div class="cargor-box" style="width:100%; text-align:center; margin-top:50px;">
-            <div style="width:100px; margin:0 auto;">
-              <div class="line-box d"></div>
-              <div class="line-box w"></div>
-              <div class="line-box h"></div>
-
-              <div class="line-box-letter d red">D</div>
-              <div class="line-box-letter w red">W</div>
-              <div class="line-box-letter h red">H</div>
-            </div>
-          </div>
-
-          <div class="row text-left pb-2" style="font-weight:500; font-size:1rem; border-bottom:1.5px solid #E8464D">
-            <div class="col-lg-3">
-              타입
-            </div>
-            <div class="col-lg-9">
-              사이즈 ( D / W / H )
-            </div>
-          </div>
-
-          <div class="row border-bottom-thin pt-3">
-            <div class="col-lg-3 text-left">
-              <img src="./assets/img/reservation_c.png" alt="">
-              <span class="article-title">큐브</span>
-            </div>
-            <div class="col-lg-5">
-              <span class="article-title">0.8m x 1.0m x 1.2m</span>
-            </div>
-            <div class="col-lg-4">
-              <img src="./assets/img/reservation_right.png" style="margin-right: 3px;" alt="">
-              <span class="article-title">5호 박스 12개</span>
-            </div>
-          </div>
-
-          <div class="row border-bottom-thin pt-3">
-            <div class="col-lg-3 text-left">
-              <img src="./assets/img/reservation_s.png" alt="">
-              <span class="article-title">스몰</span>
-            </div>
-            <div class="col-lg-5">
-              <span class="article-title">0.8m x 1.0m x 2.4m</span>
-            </div>
-            <div class="col-lg-4">
-              <img src="./assets/img/reservation_right.png" style="margin-right: 3px;" alt="">
-              <span class="article-title">5호 박스 28개</span>
-            </div>
-          </div>
-          <div class="row border-bottom-thin pt-3">
-            <div class="col-lg-3 text-left">
-              <img src="./assets/img/reservation_m.png" alt="">
-              <span class="article-title">미디엄</span>
-            </div>
-            <div class="col-lg-5">
-              <span class="article-title">1.2m x 1.0m x 2.4m</span>
-            </div>
-            <div class="col-lg-4">
-              <img src="./assets/img/reservation_right.png" style="margin-right: 3px;" alt="">
-              <span class="article-title">5호 박스 42개</span>
-            </div>
-          </div>
-          <div class="row border-bottom-thin pt-3">
-            <div class="col-lg-3 text-left">
-              <img src="./assets/img/reservation_l.png" alt="">
-              <span class="article-title">라지</span>
-            </div>
-            <div class="col-lg-5">
-              <span class="article-title">1.2m x 1.5m x 2.4m</span>
-            </div>
-            <div class="col-lg-4">
-              <img src="./assets/img/reservation_right.png" style="margin-right: 3px;" alt="">
-              <span class="article-title">5호 박스 63개</span>
-            </div>
-          </div>
-          <div class="row border-bottom-thin pt-3">
-            <div class="col-lg-3 text-left">
-              <img src="./assets/img/reservation_xl.png" alt="">
-              <span class="article-title" style="font-size: 1rem;">엑스라지</span>
-            </div>
-            <div class="col-lg-5">
-              <span class="article-title">1.2m x 2.0m x 2.4m</span>
-            </div>
-            <div class="col-lg-4">
-              <img src="./assets/img/reservation_right.png" style="margin-right: 3px;" alt="">
-              <span class="article-title">5호 박스 84개</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px;">
-          <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
-            <input type="hidden" name="visitTime" id="visitTime">
-            <h2 class="mb-4 main-title">방문예약</h2>
-            <div class="form-row">
-
-              <div class="form-group col-md-12">
-                <label for="visitInputName">이름<span style="color: #E8464D;">*</span></label>
-                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required>
-              </div>
-              <div class="form-group col-md-12">
-                <label for="visitInputPhone">연락처<span style="color: #E8464D;">*</span></label>
-                <input type="text" class="visitInputPhone form-control" value="010-" name="phone" required>
-              </div>
-
-              <div class="form-group col-md-12 visitStoreMobile">
-                <label for="visitInputstore1">지점 선택<span style="color: #E8464D;">*</span></label>
-                <select name="visitBranch" id="visitInputstore1" class="form-control visit-sel" required>
-                  <option selected="" disabled="">지점</option>
-                  <option value="슈가맨카고 부평점">[1호점] 인천 부평점</option>
-                  <option value="슈가맨카고 군자역점">[2호점] 서울 군자점</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-12 visitStoreMobile">
-                <label for="visitInputstore2">원하는 스토리지 사이즈<span style="color: #E8464D;">*</span></label>
-                <select name="storageSize" id="visitInputstore2" class="form-control visit-sel" required>
-                  <option selected="" disabled="">사이즈 선택</option>
-                  <option value="cb">큐브</option>
-                  <option value="sm">스몰</option>
-                  <option value="md">미디엄</option>
-                  <option value="lg">라지</option>
-                  <option value="xl">엑스라지</option>
-                  <option value="etc">상담 후 결정</option>
-                </select>
-              </div>
-
-
-              <div class="form-group col-md-12 visit-time">
-                <label for="visitInputTime">방문 날짜<span style="color: #E8464D;">*</span></label>
-                <input type="text" name="visitDate" id="datepicker" autocomplete="off" class="form-control visit-sel"
-                  required>
-              </div>
-
-              <div class="form-group col-md-6 visit-time">
-                <label for="visitInputTime">방문 시간<span style="color: #E8464D;">*</span></label>
-                <select name="hour" id="hour" class="form-control" required>
-                  <option selected disabled value="">시간</option>
-                  <option value="9">9시</option>
-                  <option value="10">10시</option>
-                  <option value="11">11시</option>
-                  <option value="13">13시</option>
-                  <option value="14">14시</option>
-                  <option value="15">15시</option>
-                  <option value="16">16시</option>
-                  <option value="17">17시</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-6 visit-time visit-down">
-                <label for="visitInputTime"></label>
-                <select name="minute" id="minute" class="form-control" required>
-                  <option selected disabled value="">분</option>
-                  <option value="00">00분</option>
-                  <option value="30">30분</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-12 visitStoreMobile mobile_hide">
-                <label for="visitInputstore3">알게 된 경로<span style="color: #E8464D;">*</span></label>
-                <select name="branch_desktop" id="visitInputstore3" class="form-control visit-sel" required>
-                  <option selected disabled>선택</option>
-                  <option vlaue="1">인스타그램</option>
-                  <option vlaue="2">페이스북</option>
-                  <option vlaue="3">지인추천</option>
-                  <option vlaue="4">구글</option>
-                  <option vlaue="5">기타</option>
-                </select>
-              </div>
-
-
-              <div class="form-group col-md-12 mt-4">
-                <input type="checkbox" name="checkYN" id="checkYN" required>
-                <label for="checkYN"></label>
-                <p class="agree-txt">
-                  (필수) 슈가맨카고 필수<button type="button" class="btn-privacy" data-toggle="modal"
-                    data-target="#exampleModal">
-                    개인정보 수집
-                  </button>및 활용에 동의합니다.
-                </p>
-                <br>
-
-
-                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <div class="modal-body">
-
-                        <div class="modal-title">슈가맨카고 개인정보처리방침</div>
-
-                        <div class="privacy-line"></div>
-
-                        <p class="privacy-num1">1. 개인정보의 수집 • 이용 목적</p>
-                        <p class="privacy-info1">
-                          - 본인 확인, 상담, 문의에 대한 답변 및 정보 전달, 각종 서비스 및 혜택 안내
-                        </p>
-
-                        <p class="privacy-num1">2. 개인정보의 수집 필수 항목</p>
-                        <p class="privacy-info1">
-                          - 이름, 연락처, 지점, 원하는 스토리지 사이즈, 방문 날짜, 방문 시간, 알게 된 경로
-                        </p>
-
-                        <p class="privacy-num1">3. 개인정보의 보유 • 이용 기간</p>
-                        <p class="privacy-info1">
-                          - 승인하신 때로부터 1년
-                        </p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="form-group col-md-12">
-                <button class="btn submit-form mt-2" type="submit">예약하기</button>
-			  </div>
-              </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- 푸터 시작 -->
-  <div class="content-section bg-footer footer-t footer ">
-    <div class="container-fluid main-container">
-      <div class="row">
-        <div class="col-md-2">
-          <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo">
-        </div>
-        <div class="col-md-7 footer-con">
-          <ul class="footer-con-1">
-            <li>
-              <span><a href="./about.html">회사소개</a></span>
-            </li>
-            <li>
-              <span><a href="./event.html">이벤트</a></span>
-            </li>
-            <li>
-              <span><a href="./faq.html">고객센터</a></span>
-            </li>
-          </ul>
-          <ul class="footer-con-2">
-            <li>
-              <span>(주)슈가맨</span><strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>대표이사 </span> 최성원
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>사업자등록번호
-              </span>155-87-01085
-            </li>
-          </ul>
-          <ul class="footer-con-3">
-            <li>
-              <span>주소
-              </span>경기도 부천시 중동로 254번길 78 6F
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li>
-              <span>
-                이메일
-              </span>sugarmancargo@gmail.com
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-3">
-          <div class="footer-right">
-            <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
-            <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="footer-m footer container-fluid p-0">
-    <div class="footer-line"></div>
-  </div>
-
-  <div class="footer">
-    <div class="container-fluid main-container footer-bottom">
-      <div class="row">
-        <div class="col-md-6 footer-bottom-text">
-          <p>© 2020 sugarmancargo, All rights reserved</p>
-          <a href="./privacy.html">개인정보취급방침</a>
-        </div>
-        <div class="col-md-6 social">
-          <a href="https://blog.naver.com/sugarmancargo" target="_blank">
-            <div class="so naver"><img src="./assets/img/footer_icon_1.png" alt="blog"></div>
-          </a>
-          <div class="so instar"><img src="./assets/img/footer_icon_2.png" alt="Instagram"></div>
-          <div class="so facebook"><img src="./assets/img/footer_icon_3.png" alt="facebook"></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    set_date_picker('#datepicker');
-
-    function checkForm() {
-
-      if (confirm('저장하시겠습니까?') == true) {
-        var hour = $('#hour').val();
-        var minute = $('#minute').val();
-        var visitTime = $('#visitTime').val();
-
-        visitTime = hour + '시' + minute + '분';
-
-        var visitDate = $('#datepicker').val();
-
-
-        if ($('#datepicker').val() == '') {
-          visitDate = '방문일자 상담후 결정';
-        }
-
-        if (hour == '') {
-          visitTime = '시간 미정';
-        }
-
-        $('#visitTime').val(visitTime);
-        $('#datepicker').val(visitDate);
-
-
-        $('.submit-form').attr('disabled', true);
-
-        var form = $('#formData')[0];
-        var formData = new FormData(form);
-        var queryString = $('#formData').serialize();
-        console.log(queryString);
-
-        $.ajax({
-          type: 'post',
-          url: targetDomain + '/visit',
-          data: queryString,
-          dataType: 'json',
-          success: function (data) {
-            console.log(data);
-            if (data.result == 'success') {
-              location.replace('./success.html');
-            } else {
-              alert('문제가 발생했습니다.\n다시 시도해주세요.')
-              $('.submit-form').attr('disabled', false);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+        <link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
+
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" href="https://sugarmancargo.com/assets/57@2x.png" />
+        <link rel="apple-touch-icon-precomposed" href="https://sugarmancargo.com/assets/57@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://sugarmancargo.com/assets/57@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://sugarmancargo.com/assets/72@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://sugarmancargo.com/assets/60@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://sugarmancargo.com/assets/76@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://sugarmancargo.com/assets/114@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://sugarmancargo.com/assets/120@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sugarmancargo.com/assets/144@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://sugarmancargo.com/assets/152@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://sugarmancargo.com/assets/180@2x.png" />
+
+        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/96@2x.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/128@2x.png" sizes="128x128" />
+        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/196@2x.png" sizes="196x196" />
+
+        <!-- Windows 8 Tiles -->
+        <meta name="msapplication-TileImage" content="https://sugarmancargo.com/assets/144@2x.png" />
+
+        <!-- Internet Explorer 11 Tiles -->
+        <meta name="msapplication-square70x70logo" content="https://sugarmancargo.com/assets/70@2x.png" />
+        <meta name="msapplication-square150x150logo" content="https://sugarmancargo.com/assets/150@2x.png" />
+        <meta name="msapplication-square310x150logo" content="https://sugarmancargo.com/assets/310x150_2@2x.png" />
+        <meta name="msapplication-square310x310logo" content="https://sugarmancargo.com/assets/310@2x.png" />
+
+        <title>슈가맨카고</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153851611-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-          },
-          error: function (e) {
-            $('.submit-form').attr('disabled', false);
-          }
-        });
+            gtag("js", new Date());
 
-      }
-      return false;
-    }
+            gtag("config", "UA-153851611-1");
+        </script>
 
+        <meta name="keywords" content="도심 속 공유 창고" />
+        <meta name="description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
 
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="슈가맨카고" />
+        <meta property="og:description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
+        <meta property="og:url" content="https://sugarmancargo.com/" />
+        <meta property="og:site_name" content="슈가맨카고" />
+        <meta property="og:image" content="https://sugarmancargo.com/assets/800@2x.jpg" />
+        <meta property="og:image:secure_url" content="https://sugarmancargo.com/assets/800@2x.jpg" />
 
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
 
-    $(function () {
-      $(window).scroll(function () {
-        if (scroll = $(window).scrollTop() > 575) {
-          $('.bottom-fix2').removeClass('bottom-sticky');
-        } else {
-          $('.bottom-fix2').addClass('bottom-sticky');
-        }
-      });
-    });
-  </script>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico"> -->
 
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+        ></script>
 
+        <!-- datepicker -->
+        <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
+        <script src="./assets/js/datepicker/datepicker.min.js"></script>
+        <script src="./assets/js/datepicker/datepicker.ko.js"></script>
+        <script src="./assets/js/datepicker/LunarCalculator.js"></script>
+        <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
+        <script src="./assets/js/click-menu.js" charset="utf-8"></script>
+    </head>
 
-</body>
+    <body>
+        <!-- 이벤트 띠배너 -->
+        <div class="event-banner d-flex pt-3 pb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="flex-fill text-center event-text">
+                        <span class="new">NEW</span>
+                        <span
+                            ><a href="./event.html"
+                                ><u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을 만나보세요!</u
+                                >&nbsp;🎉</a
+                            ></span
+                        >
+                    </div>
+                    <button class="event-banner-btn" style="border-style: none; background: transparent">
+                        <span class="material-icons ml-auto" style="cursor: pointer">close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- scroll nav -->
+        <div class="navbar-wrap shadow-sm sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
+            <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
+                <a class="navbar-brand" href="./index.html"
+                    ><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo" class="main-logo"
+                /></a>
 
+                <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                type="button"
+                                class="nav-bar-btn"
+                                style="background-color: #e8464d; color: #fff"
+                                onclick="location.href='./visit.html' "
+                            >
+                                방문예약
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <button class="main_inquiry_btn">
+            <span class="material-icons">forum</span><br />
+            문의하기
+        </button>
+
+        <div class="main_inquiry">
+            <div class="main_inquiry_bg"></div>
+            <div class="form_box">
+                <form method="post" onsubmit="return inquiryForm();" id="inquiryData">
+                    <input type="hidden" name="type" value="main" />
+                    <div class="row" style="margin: 0">
+                        <div class="col-12 top" style="height: 80px">
+                            <img class="main_inquiry_logo" src="./assets/cargo@2x.png" alt="main_inquiry_logo" />
+                            <span class="material-icons main_inquiry_close">clear</span>
+                        </div>
+                        <div class="col-12 form" style="overflow-x: hidden">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="in_name">이름/업체명</label>
+                                    <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="in_phone">연락처</label>
+                                    <input type="text" name="phone" placeholder="010" class="in_form_con" id="in_phone" required />
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="in_branch">문의 지점</label>
+                                    <select id="in_branch" name="branch" class="in_form_con" required>
+                                        <option selected value="" disabled>지점 선택</option>
+                                        <option value="1">[1호점] 인천 부평점</option>
+                                        <option value="2">[2호점] 서울 군자점</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="visitInputstore2">스토리지 사이즈</label>
+                                    <select name="storageSize" id="visitInputstore2" class="in_form_con" required>
+                                        <option selected="" disabled="">사이즈 선택</option>
+                                        <option value="cb">큐브</option>
+                                        <option value="sm">스몰</option>
+                                        <option value="md">미디엄</option>
+                                        <option value="lg">라지</option>
+                                        <option value="xl">엑스라지</option>
+                                        <option value="etc">상담 후 결정</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="in_content">문의 내용</label>
+                                    <textarea id="in_content" name="subject" required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="in_path">알게 된 경로</label>
+                                    <select id="in_path" name="route" class="in_form_con" required>
+                                        <option selected value="" disabled>선택</option>
+                                        <option value="1">인스타그램</option>
+                                        <option value="2">페이스북</option>
+                                        <option value="3">블로그</option>
+                                        <option value="4">구글</option>
+                                        <option value="5">지인소개</option>
+                                        <option value="6">기타</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <input type="checkbox" name="agree" id="check" name="checkYN" required />
+                                    <label for="check" class="check"></label>
+                                    <p class="agree-txt">
+                                        (필수) 슈가맨카고 <a href="./privacy.html">개인정보 수집</a> 및 활용에 동의합니다.
+                                    </p>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="submit_form">문의하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <style>
+            .main_inquiry {
+                display: none;
+            }
+        </style>
+
+        <script>
+            $(document).on("click", ".mobile-menu-place-i", function () {
+                $("#mobile").toggle();
+                $(".mobile-menu-place-i").toggleClass("opened");
+                $("html").toggleClass("prevent-scroll");
+                $("body").toggleClass("prevent-scroll");
+            });
+
+            $(document).on("click", ".main_inquiry_btn", function () {
+                $(".main_inquiry").toggle();
+                $("html, body").addClass("hidden");
+            });
+
+            $(document).on("click", ".main_inquiry_close", function () {
+                $(".main_inquiry").hide();
+                $("html, body").removeClass("hidden");
+            });
+
+            $(document).on("click", ".main_inquiry_bg", function () {
+                $(".main_inquiry").hide();
+                $("html, body").removeClass("hidden");
+            });
+
+            function inquiryForm() {
+                if (confirm("저장하시겠습니까?") == true) {
+                    $(".submit_form").attr("disabled", true);
+
+                    var form = $("#inquiryData")[0];
+                    var formData = new FormData(form);
+                    var queryString = $("#inquiryData").serialize();
+                    console.log(queryString);
+
+                    $.ajax({
+                        type: "post",
+                        url: targetDomain + "/request",
+                        data: queryString,
+                        dataType: "json",
+                        success: function (data) {
+                            console.log(data);
+                            if (data.result == "success") {
+                                location.replace("./success.html");
+                            } else {
+                                alert("문제가 발생했습니다.\n다시 시도해주세요.");
+                            }
+                        },
+                        error: function (e) {
+                            $(".submit_form").attr("disabled", false);
+                        },
+                    });
+                }
+                return false;
+            }
+        </script>
+
+        <div class="visit_wrap">
+            <section class="container main-container front-join">
+                <div class="row">
+                    <div class="col-md-5 join-g-faq-left text-center mb-1" style="margin-top: 130px">
+                        <img src="./assets/img/mini_box.png" alt="" />
+                        <div class="cargor-box" style="width: 100%; text-align: center; margin-top: 50px">
+                            <div style="width: 100px; margin: 0 auto">
+                                <div class="line-box d"></div>
+                                <div class="line-box w"></div>
+                                <div class="line-box h"></div>
+
+                                <div class="line-box-letter d red">D</div>
+                                <div class="line-box-letter w red">W</div>
+                                <div class="line-box-letter h red">H</div>
+                            </div>
+                        </div>
+
+                        <div class="row text-left pb-2" style="font-weight: 500; font-size: 1rem; border-bottom: 1.5px solid #e8464d">
+                            <div class="col-lg-3">타입</div>
+                            <div class="col-lg-9">사이즈 ( W / D / H )</div>
+                        </div>
+
+                        <div class="row border-bottom-thin pt-3">
+                            <div class="col-lg-3 text-left">
+                                <img src="./assets/img/reservation_c.png" alt="" />
+                                <span class="article-title">큐브</span>
+                            </div>
+                            <div class="col-lg-5">
+                                <span class="article-title">1.0m x 1.0m x 1.2m</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="./assets/img/reservation_right.png" style="margin-right: 3px" alt="" />
+                                <span class="article-title">5호 박스 12개</span>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom-thin pt-3">
+                            <div class="col-lg-3 text-left">
+                                <img src="./assets/img/reservation_s.png" alt="" />
+                                <span class="article-title">스몰</span>
+                            </div>
+                            <div class="col-lg-5">
+                                <span class="article-title">1.0m x 1.0m x 2.4m</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="./assets/img/reservation_right.png" style="margin-right: 3px" alt="" />
+                                <span class="article-title">5호 박스 28개</span>
+                            </div>
+                        </div>
+                        <div class="row border-bottom-thin pt-3">
+                            <div class="col-lg-3 text-left">
+                                <img src="./assets/img/reservation_m.png" alt="" />
+                                <span class="article-title">미디엄</span>
+                            </div>
+                            <div class="col-lg-5">
+                                <span class="article-title">1.3m x 1.3m x 2.4m</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="./assets/img/reservation_right.png" style="margin-right: 3px" alt="" />
+                                <span class="article-title">5호 박스 49개</span>
+                            </div>
+                        </div>
+                        <div class="row border-bottom-thin pt-3">
+                            <div class="col-lg-3 text-left">
+                                <img src="./assets/img/reservation_l.png" alt="" />
+                                <span class="article-title">라지</span>
+                            </div>
+                            <div class="col-lg-5">
+                                <span class="article-title">1.8m x 1.3m x 2.4m</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="./assets/img/reservation_right.png" style="margin-right: 3px" alt="" />
+                                <span class="article-title">5호 박스 70개</span>
+                            </div>
+                        </div>
+                        <div class="row border-bottom-thin pt-3">
+                            <div class="col-lg-3 text-left">
+                                <img src="./assets/img/reservation_xl.png" alt="" />
+                                <span class="article-title" style="font-size: 1rem">엑스라지</span>
+                            </div>
+                            <div class="col-lg-5">
+                                <span class="article-title">1.6m x 1.8m x 2.4m</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="./assets/img/reservation_right.png" style="margin-right: 3px" alt="" />
+                                <span class="article-title">5호 박스 98개</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px">
+                        <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
+                            <input type="hidden" name="visitTime" id="visitTime" />
+                            <h2 class="mb-4 main-title">방문예약</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="visitInputName">이름<span style="color: #e8464d">*</span></label>
+                                    <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required />
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="visitInputPhone">연락처<span style="color: #e8464d">*</span></label>
+                                    <input type="text" class="visitInputPhone form-control" value="010-" name="phone" required />
+                                </div>
+
+                                <div class="form-group col-md-12 visitStoreMobile">
+                                    <label for="visitInputstore1">지점 선택<span style="color: #e8464d">*</span></label>
+                                    <select name="visitBranch" id="visitInputstore1" class="form-control visit-sel" required>
+                                        <option selected="" disabled="">지점</option>
+                                        <option value="슈가맨카고 부평점">[1호점] 인천 부평점</option>
+                                        <option value="슈가맨카고 군자역점">[2호점] 서울 군자점</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-12 visitStoreMobile">
+                                    <label for="visitInputstore2">원하는 스토리지 사이즈<span style="color: #e8464d">*</span></label>
+                                    <select name="storageSize" id="visitInputstore2" class="form-control visit-sel" required>
+                                        <option selected="" disabled="">사이즈 선택</option>
+                                        <option value="cb">큐브</option>
+                                        <option value="sm">스몰</option>
+                                        <option value="md">미디엄</option>
+                                        <option value="lg">라지</option>
+                                        <option value="xl">엑스라지</option>
+                                        <option value="etc">상담 후 결정</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-12 visit-time">
+                                    <label for="visitInputTime">방문 날짜<span style="color: #e8464d">*</span></label>
+                                    <input
+                                        type="text"
+                                        name="visitDate"
+                                        id="datepicker"
+                                        autocomplete="off"
+                                        class="form-control visit-sel"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group col-md-6 visit-time">
+                                    <label for="visitInputTime">방문 시간<span style="color: #e8464d">*</span></label>
+                                    <select name="hour" id="hour" class="form-control" required>
+                                        <option selected disabled value="">시간</option>
+                                        <option value="9">9시</option>
+                                        <option value="10">10시</option>
+                                        <option value="11">11시</option>
+                                        <option value="13">13시</option>
+                                        <option value="14">14시</option>
+                                        <option value="15">15시</option>
+                                        <option value="16">16시</option>
+                                        <option value="17">17시</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6 visit-time visit-down">
+                                    <label for="visitInputTime"></label>
+                                    <select name="minute" id="minute" class="form-control" required>
+                                        <option selected disabled value="">분</option>
+                                        <option value="00">00분</option>
+                                        <option value="30">30분</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-12 visitStoreMobile mobile_hide">
+                                    <label for="visitInputstore3">알게 된 경로<span style="color: #e8464d">*</span></label>
+                                    <select name="branch_desktop" id="visitInputstore3" class="form-control visit-sel" required>
+                                        <option selected disabled>선택</option>
+                                        <option vlaue="1">인스타그램</option>
+                                        <option vlaue="2">페이스북</option>
+                                        <option vlaue="3">지인추천</option>
+                                        <option vlaue="4">구글</option>
+                                        <option vlaue="5">기타</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-12 mt-4">
+                                    <input type="checkbox" name="checkYN" id="checkYN" required />
+                                    <label for="checkYN"></label>
+                                    <p class="agree-txt">
+                                        (필수) 슈가맨카고 필수<button
+                                            type="button"
+                                            class="btn-privacy"
+                                            data-toggle="modal"
+                                            data-target="#exampleModal"
+                                        >
+                                            개인정보 수집</button
+                                        >및 활용에 동의합니다.
+                                    </p>
+                                    <br />
+
+                                    <div
+                                        class="modal fade"
+                                        id="exampleModal"
+                                        tabindex="-1"
+                                        aria-labelledby="exampleModalLabel"
+                                        aria-hidden="true"
+                                    >
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <div class="modal-body">
+                                                    <div class="modal-title">슈가맨카고 개인정보처리방침</div>
+
+                                                    <div class="privacy-line"></div>
+
+                                                    <p class="privacy-num1">1. 개인정보의 수집 • 이용 목적</p>
+                                                    <p class="privacy-info1">
+                                                        - 본인 확인, 상담, 문의에 대한 답변 및 정보 전달, 각종 서비스 및 혜택 안내
+                                                    </p>
+
+                                                    <p class="privacy-num1">2. 개인정보의 수집 필수 항목</p>
+                                                    <p class="privacy-info1">
+                                                        - 이름, 연락처, 지점, 원하는 스토리지 사이즈, 방문 날짜, 방문 시간, 알게 된 경로
+                                                    </p>
+
+                                                    <p class="privacy-num1">3. 개인정보의 보유 • 이용 기간</p>
+                                                    <p class="privacy-info1">- 승인하신 때로부터 1년</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <button class="btn submit-form mt-2" type="submit">예약하기</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 푸터 시작 -->
+        <div class="content-section bg-footer footer-t footer">
+            <div class="container-fluid main-container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo" />
+                    </div>
+                    <div class="col-md-7 footer-con">
+                        <ul class="footer-con-1">
+                            <li>
+                                <span><a href="./about.html">회사소개</a></span>
+                            </li>
+                            <li>
+                                <span><a href="./event.html">이벤트</a></span>
+                            </li>
+                            <li>
+                                <span><a href="./faq.html">고객센터</a></span>
+                            </li>
+                        </ul>
+                        <ul class="footer-con-2">
+                            <li><span>(주)슈가맨</span><strong style="color: #e1e1e1"> | </strong></li>
+                            <li>
+                                <span>대표이사 </span> 최성원
+                                <strong style="color: #e1e1e1"> | </strong>
+                            </li>
+                            <li><span>사업자등록번호 </span>155-87-01085</li>
+                        </ul>
+                        <ul class="footer-con-3">
+                            <li>
+                                <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
+                                <strong style="color: #e1e1e1"> | </strong>
+                            </li>
+                            <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="footer-right">
+                            <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
+                            <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-m footer container-fluid p-0">
+            <div class="footer-line"></div>
+        </div>
+
+        <div class="footer">
+            <div class="container-fluid main-container footer-bottom">
+                <div class="row">
+                    <div class="col-md-6 footer-bottom-text">
+                        <p>© 2020 sugarmancargo, All rights reserved</p>
+                        <a href="./privacy.html">개인정보취급방침</a>
+                    </div>
+                    <div class="col-md-6 social">
+                        <a href="https://blog.naver.com/sugarmancargo" target="_blank">
+                            <div class="so naver"><img src="./assets/img/footer_icon_1.png" alt="blog" /></div>
+                        </a>
+                        <div class="so instar"><img src="./assets/img/footer_icon_2.png" alt="Instagram" /></div>
+                        <div class="so facebook"><img src="./assets/img/footer_icon_3.png" alt="facebook" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            set_date_picker("#datepicker");
+
+            function checkForm() {
+                if (confirm("저장하시겠습니까?") == true) {
+                    var hour = $("#hour").val();
+                    var minute = $("#minute").val();
+                    var visitTime = $("#visitTime").val();
+
+                    visitTime = hour + "시" + minute + "분";
+
+                    var visitDate = $("#datepicker").val();
+
+                    if ($("#datepicker").val() == "") {
+                        visitDate = "방문일자 상담후 결정";
+                    }
+
+                    if (hour == "") {
+                        visitTime = "시간 미정";
+                    }
+
+                    $("#visitTime").val(visitTime);
+                    $("#datepicker").val(visitDate);
+
+                    $(".submit-form").attr("disabled", true);
+
+                    var form = $("#formData")[0];
+                    var formData = new FormData(form);
+                    var queryString = $("#formData").serialize();
+                    console.log(queryString);
+
+                    $.ajax({
+                        type: "post",
+                        url: targetDomain + "/visit",
+                        data: queryString,
+                        dataType: "json",
+                        success: function (data) {
+                            console.log(data);
+                            if (data.result == "success") {
+                                location.replace("./success.html");
+                            } else {
+                                alert("문제가 발생했습니다.\n다시 시도해주세요.");
+                                $(".submit-form").attr("disabled", false);
+                            }
+                        },
+                        error: function (e) {
+                            $(".submit-form").attr("disabled", false);
+                        },
+                    });
+                }
+                return false;
+            }
+
+            $(function () {
+                $(window).scroll(function () {
+                    if ((scroll = $(window).scrollTop() > 575)) {
+                        $(".bottom-fix2").removeClass("bottom-sticky");
+                    } else {
+                        $(".bottom-fix2").addClass("bottom-sticky");
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
