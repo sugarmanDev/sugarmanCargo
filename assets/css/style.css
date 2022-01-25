@@ -1747,6 +1747,16 @@ input[id="privacy"] + label {
     background-size: cover;
 }
 
+.franchise_main_wrap .frabchuse-btn{
+    background: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e8464d;
+    border: 1.5px solid #e8464d;
+    border-radius: 500px;
+    padding: 10px 16px;
+}
+
 .ft-14 {
     font-size: 1.4rem !important;
 }
@@ -3088,7 +3098,7 @@ select::-ms-expand {
     .frabchuse-btn {
         font-size: 17px !important;
         font-weight: 500;
-        color: #333 !important;
+        color: #e8464d !important;
     }
     .frabchuse-btn .material-icons {
         font-size: 22px !important;
