@@ -1740,7 +1740,7 @@ input[id="privacy"] + label {
 }
 
 .franchise_main_wrap {
-    background: url(../img/franchise_main_banner.jpg);
+    background: url(../img/franchise_main_banner@2x.jpg);
     height: 550px;
     background-position: center;
     background-repeat: no-repeat;
@@ -1758,7 +1758,8 @@ input[id="privacy"] + label {
 }
 
 .ft-14 {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
+    line-height: 1.4em;;
 }
 
 .mg-t-3 {
@@ -2192,12 +2193,14 @@ a:visited {
 .size-name {
     color: #e8464d;
     font-size: 20px;
+    font-weight: 500;
     margin-bottom: 4px;
 }
 
 .size-price {
     color: #333333;
     font-size: 18px;
+    font-weight: 500;
     margin-bottom: 4px;
 }
 
