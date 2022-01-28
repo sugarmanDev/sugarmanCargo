@@ -430,10 +430,12 @@ ul {
         font-size: 0.8rem;
     }
 
-    .main-text {
+    .main-text, .size-name {
         font-size: 1.063rem !important;
     }
-
+    .size-price{
+        font-size: 17px !important;
+    }
     .sub-text {
         font-size: 0.9375rem !important;
     }
@@ -443,7 +445,6 @@ ul {
     .fail-h1 {
         font-size: 7rem;
     }
-
     .storage-box.normal-box {
         width: 50%;
         max-width: 50%;
@@ -1062,6 +1063,15 @@ ul {
 }
 
 @media (min-width: 0px) and (max-width: 414px) {
+    .main-text, .size-name {
+        font-size: 1.063rem !important;
+    }
+    .size-price{
+        font-size: 17px !important;
+    }
+    .sub-text {
+        font-size: 0.9375rem !important;
+    }
     .visit_wrap .join-g-faq-left {
         margin-top: 60px !important;
     }
@@ -2144,7 +2154,7 @@ a:visited {
 }
 
 .slide-elements {
-    max-width: 95%;
+    max-width: 96%;
 }
 
 .slide-hide {
@@ -2185,7 +2195,7 @@ a:visited {
 }
 
 .cs-num {
-    font-size: 1.215rem;
+    font-size: 1.35rem;
     font-weight: 600;
     margin-top: 30px;
 }
@@ -2207,6 +2217,11 @@ a:visited {
 .size-info {
     color: #666666;
     font-size: 1rem;
+}
+
+.storage-info .storage-type-pic img{
+    max-width: 100%;
+    width: 120px;
 }
 
 .storage-img {
@@ -2578,19 +2593,52 @@ a:visited {
     text-decoration: underline;
 }
 
-@media (min-width: 0px) and (max-width: 414px) {
+/* branch-1 */
+@media (min-width: 0px) and (max-width: 320px) {
     .branch-1 {
-        width: 315px !important;
-        height: 205px !important;
+        width: 288px !important;
+        height: 175px !important;
     }
+    .mg-t-30{
+        margin-top: 0px !important;
+    }
+    .storage-txt div{
+        padding-left: 0px !important;
+    }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+    .branch-1 {
+        width: 330px !important;
+        height: 215px !important;
+    }
+    .mg-t-30{
+        margin-top: 15px !important;
+    }
+}
+@media (min-width: 376px) and (max-width: 450px) {
+    .branch-1 {
+        width: 370px !important;
+        height: 230px !important;
+    }
+    .mg-t-30{
+        margin-top: 15px !important;
+    }
+}
 
+
+@media (min-width: 0px) and (max-width: 414px) {
+    .wrap_map, .map-overlay{
+        height: 210px !important;
+    }
     .storage-img {
         margin: 10px auto;
     }
 
     .storage-txt {
         margin-top: 10px;
-        text-align: center;
+    }
+    .storage-txt div{
+        padding-left: 12px;
     }
 
     .join-guide .join-g-title h3 {
@@ -3108,6 +3156,15 @@ select::-ms-expand {
     }
     .event-banner-btn .material-icons {
         color: #333 !important;
+    }
+    .branch-wrap .main-slide-next.next-slide{
+        display: none !important;
+    }
+    .branch-wrap .main-slide-next.prev-slide{
+        display: none !important;
+    }
+    .detail-title{
+        font-size: 23px;
     }
 }
 
