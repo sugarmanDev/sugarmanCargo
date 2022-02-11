@@ -221,12 +221,14 @@
                 if (data.length > 0) {
                     console.log("2");
                     for (var idx = 0; idx < data.length; idx++) {
-                        var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
+                        //var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
 
                         html = '<div class="col-md-3 mb-4">';
                         html += '<div class="card shadow-sm border-0">';
                         html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
-                        html += '<img src="' + imgURL + '" class="card-img-top" alt="...">';
+                        html += '<img src="/assets/img/220208_event.jpg" class="card-img-top" alt="...">';
+                        html += '<div>부천 상동점 오픈 기념 할인<br>' +
+                            '모든 스토리지 30% 할인</div>';
                         html += "</a>";
                         html += "</div>";
                         html += "</div>";
