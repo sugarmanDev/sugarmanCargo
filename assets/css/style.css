@@ -3158,10 +3158,10 @@ select::-ms-expand {
         color: #333 !important;
     }
     .branch-wrap .main-slide-next.next-slide{
-        display: none !important;
+        /*display: none !important;*/
     }
     .branch-wrap .main-slide-next.prev-slide{
-        display: none !important;
+        /*display: none !important;*/
     }
     .detail-title{
         font-size: 23px;
