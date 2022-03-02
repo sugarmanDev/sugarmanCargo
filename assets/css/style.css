@@ -3347,9 +3347,89 @@ select {
   }
 }
 
-/* event card */
-.event-title {
+.popup-layer {
+  background-color: #000;
+  opacity: 0.5;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  position: fixed;
+  display: none;
 }
 
-.event-content {
+.popup {
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  z-index: 10001;
+  display: none;
+  bottom: 0px;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+.popup img {
+  width: 100% !important;
+  height: inherit !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.popup .close-popup {
+  position: absolute;
+  right: 30px;
+  margin-top: 28px;
+  color: #5e798c;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+/* event */
+.event-card-body {
+  padding: 0px 0px 15px 20px;
+}
+
+.event-card-body {
+  padding: 0px 0px 15px 20px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-text {
+  font-size: 0.8125rem;
+  color: #888;
 }

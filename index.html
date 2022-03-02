@@ -598,16 +598,91 @@
       </div>
     </div>
 
+    <div class="popup-layer"></div>
+    <div class="popup">
+      <span class="material-icons close-popup" data-banner="event_202108"
+      >close</span
+      >
+      <a href="/eventdetail.html?idx=78">
+        <!-- <img src="https://test.sugarmanwork.com/stuff/hwaseong_popup.jpg"/> -->
+        <!-- <img src="/stuff/ruwon_popup.jpg"/> -->
+        <img src="./assets/img/cargo_popup_banner.jpg" />
+      </a>
+      </div>
+    </div> 
     <script>
-        $(document).on("click", ".close-popup-web", function () {
+      $(document).on("click", ".web-popup-layer", function () {
+        $(".web-popup").remove();
+        $(".web-popup-layer").remove();
+        $("html").removeClass("scroll-lock");
+        $("body").removeClass("scroll-lock");
+      });
+      $(document).on("click", ".close-popup-web", function () {
+        var getCookieName = $(this).attr("data-banner");
+        // setCookie(getCookieName, 'N', 1)
+        $(this).parents(".popup-banner").remove();
+        $(".web-popup").remove();
+        $(".web-popup-layer").remove();
+        $("html").removeClass("scroll-lock");
+        $("body").removeClass("scroll-lock");
+      });
+      $(document).on("click", ".popup-layer", function () {
+        $(".popup").remove();
+        $(".popup-layer").remove();
+        $("html").removeClass("scroll-lock");
+        $("body").removeClass("scroll-lock");
+      });
+      $(document).on("click", ".close-popup", function () {
+        // var getCookieName = $(this).attr('data-banner');
+        // setCookie(getCookieName, 'N', 1)
+        $(this).parents(".popup-banner").remove();
+        $(".popup").remove();
+        $(".popup-layer").remove();
+        $("html").removeClass("scroll-lock");
+        $("body").removeClass("scroll-lock");
+      });
+      function setCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie =
+          name +
+          "=" +
+          escape(value) +
+          "; path=/; expires=" +
+          todayDate.toGMTString() +
+          ";";
+      }
+      //쿠키 불러오기
+      function getCookie(name) {
+        var obj = name + "=";
+        var x = 0;
+        while (x <= document.cookie.length) {
+          var y = x + obj.length;
+          if (document.cookie.substring(x, y) == obj) {
+            if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+              endOfCookie = document.cookie.length;
+            return unescape(document.cookie.substring(y, endOfCookie));
+          }
+          x = document.cookie.indexOf(" ", x) + 1;
+          if (x == 0) break;
+        }
+        return "";
+      }
+      $(function () {
+        console.log($(window).width());
+        if ($(window).width() < 415) {
+          $(".close-popup").each(function () {
             var getCookieName = $(this).attr("data-banner");
-            // setCookie(getCookieName, 'N', 1)
-            $(this).parents(".popup-banner").remove();
-            $(".web-popup").remove();
-            $(".web-popup-layer").remove();
-            $("html").removeClass("scroll-lock");
-            $("body").removeClass("scroll-lock");
-        });
+            if (getCookie(getCookieName) != "N") {
+              $(this).parents(".popup").show();
+              $(".popup-layer").show();
+              $(".web-popup").hide();
+              $("html").addClass("scroll-lock");
+              $("body").addClass("scroll-lock");
+            }
+          });
+        }
+      });
     </script>
 
     <!-- 스토리지사이즈 시작 -->
