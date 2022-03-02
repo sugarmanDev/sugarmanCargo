@@ -586,6 +586,8 @@
     </div>
 
     <!-- 팝업 -->
+
+    <!-- web-popup -->
     <div class="web-popup">
       <span class="material-icons close-popup-web" data-banner="event_202108"
         >close</span
@@ -598,6 +600,7 @@
       </div>
     </div>
 
+    <!-- mobile-popup -->
     <div class="popup-layer"></div>
     <div class="popup">
       <span class="material-icons close-popup" data-banner="event_202108"
@@ -609,7 +612,8 @@
         <img src="./assets/img/cargo_popup_banner.jpg" />
       </a>
       </div>
-    </div> 
+    </div>
+
     <script>
       $(document).on("click", ".web-popup-layer", function () {
         $(".web-popup").remove();
@@ -626,12 +630,14 @@
         $("html").removeClass("scroll-lock");
         $("body").removeClass("scroll-lock");
       });
+
       $(document).on("click", ".popup-layer", function () {
         $(".popup").remove();
         $(".popup-layer").remove();
         $("html").removeClass("scroll-lock");
         $("body").removeClass("scroll-lock");
       });
+
       $(document).on("click", ".close-popup", function () {
         // var getCookieName = $(this).attr('data-banner');
         // setCookie(getCookieName, 'N', 1)
@@ -641,6 +647,7 @@
         $("html").removeClass("scroll-lock");
         $("body").removeClass("scroll-lock");
       });
+
       function setCookie(name, value, expiredays) {
         var todayDate = new Date();
         todayDate.setDate(todayDate.getDate() + expiredays);
@@ -652,6 +659,7 @@
           todayDate.toGMTString() +
           ";";
       }
+      
       //쿠키 불러오기
       function getCookie(name) {
         var obj = name + "=";
@@ -668,6 +676,7 @@
         }
         return "";
       }
+      
       $(function () {
         console.log($(window).width());
         if ($(window).width() < 415) {

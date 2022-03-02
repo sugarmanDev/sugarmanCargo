@@ -3421,8 +3421,15 @@ select {
   padding: 0px 0px 15px 20px;
 }
 
+.card-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #000;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem !important;
+  margin-top: 1rem;
 }
 
 .card-text:last-child {
