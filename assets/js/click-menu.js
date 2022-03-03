@@ -7,8 +7,8 @@ mobileMenu += '      </span>';
 mobileMenu += '  </button>';
 mobileMenu += '  <div class="mobile-menu-list">';
 mobileMenu += '<ul>';
-mobileMenu += '      <li><a href="./branch_list.html">지점안내</a></li>';
-mobileMenu += '      <li><a href="./franchise.html">가맹문의</a></li>';
+mobileMenu += '      <li><a href="./branch_list.html">지점찾기</a></li>';
+mobileMenu += '      <li><a href="./franchise.html">가맹안내</a></li>';
 mobileMenu += '    </ul>';
 mobileMenu += '    <a href="./visit.html">';
 mobileMenu += '      <button type="button">';
@@ -21,7 +21,7 @@ mobileMenu += '</div>';
 
 $(document).on('click', '.toggle-mobile-menu', function() {
   $('.mobile-menu').toggle();
-
+  $('.web-popup').hide();
   $('html').toggleClass('prevent-scroll')
   $('body').toggleClass('prevent-scroll')
 });
