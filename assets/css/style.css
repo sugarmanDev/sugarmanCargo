@@ -1542,7 +1542,6 @@ ul {
   border: none;
 }
 
-
 .agree-txt {
   color: #888888;
   font-size: 0.95rem;
@@ -3759,4 +3758,17 @@ body.scroll-lock {
 .swiper-button-next-mobile::after,
 .swiper-button-prev-mobile::after {
   display: none;
+}
+
+/* 지점 찾기 페이지 */
+.detail-a-title {
+  color: black;
+}
+
+.detail-a-title:hover {
+  color: black;
+}
+
+.detail-a {
+  color: transparent;
 }
