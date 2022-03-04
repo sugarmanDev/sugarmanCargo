@@ -188,6 +188,15 @@
 
     <!-- 모바일 nav -->
     <script src="./assets/js/click-menu.js" charset="utf-8"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="/plugins/swiper/swiper.min.css" />
+    <script src="/plugins/swiper/swiper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -594,27 +603,203 @@
       <span class="material-icons close-popup-web" data-banner="event_202108"
         >close</span
       >
-      <a href="/eventdetail.html?idx=78">
-        <!-- <img src="https://test.sugarmanwork.com/stuff/hwaseong_popup.jpg"/> -->
-        <!-- <img src="/stuff/ruwon_popup.jpg"/> -->
-        <img src="./assets/img/cargo_popup_banner.jpg" />
-      </a>
+      <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+          <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
+          <div class="swiper-slide">
+            <a href="/promo/jihaeng_open_promotion"
+              ><img
+                class="visit-slide-img-web"
+                src="./assets/img/cargo_popup_banner.jpg"
+            /></a>
+          </div>
+          <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
+          <div class="swiper-slide">
+            <a href="/promo/jihaeng_open_promotion"
+              ><img
+                class="visit-slide-img-web"
+                src="./assets/img/cargo_popup_banner2.jpg"
+            /></a>
+          </div>
+
+          <div class="swiper-container gallery-thumbs"></div>
+        </div>
+
+        <div class="swiper-button-prev swiper-button-prev-web">
+          <svg
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+            aria-labelledby="chevronLeftIconTitle"
+            stroke="black"
+            stroke-width="1.8"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            color="black"
+          >
+            <title id="chevronLeftIconTitle">Chevron Left</title>
+            <polyline points="14 18 8 12 14 6 14 6" />
+          </svg>
+        </div>
+        <div class="swiper-button-next swiper-button-next-web">
+          <svg
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+            aria-labelledby="chevronRightIconTitle"
+            stroke="black"
+            stroke-width="1.8"
+            stroke-radius="100"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            color="black"
+          >
+            <title id="chevronRightIconTitle">Chevron Right</title>
+            <polyline points="10 6 16 12 10 18 10 18" />
+          </svg>
+        </div>
+
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <!-- web-swiper -->
+    <script>
+      var galleryThumbsMobile = new Swiper(".gallery-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+      var galleryTopMobile = new Swiper(".gallery-top", {
+        spaceBetween: 0,
+        speed: 500, // 넘어가는 시간
+        autoplay: {
+          delay: 3500, // 머무는 시간
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        thumbs: {
+          swiper: galleryThumbsMobile,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-web",
+          prevEl: ".swiper-button-prev-web",
+        },
+      });
+    </script>
 
     <!-- mobile-popup -->
     <div class="popup-layer"></div>
     <div class="popup">
       <span class="material-icons close-popup" data-banner="event_202108"
-      >close</span
+        >close</span
       >
-      <a href="/eventdetail.html?idx=78">
-        <!-- <img src="https://test.sugarmanwork.com/stuff/hwaseong_popup.jpg"/> -->
-        <!-- <img src="/stuff/ruwon_popup.jpg"/> -->
-        <img src="./assets/img/cargo_popup_banner.jpg" />
-      </a>
+      <div class="swiper-container gallery-top-mobile">
+        <div class="swiper-wrapper">
+          <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
+          <div class="swiper-slide">
+            <a href="/eventdetail.html?idx=78"
+              ><img
+                class="visit-slide-img"
+                src="./assets/img/cargo_popup_banner.jpg"
+            /></a>
+          </div>
+          <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
+          <div class="swiper-slide">
+            <a href="/eventdetail.html?idx=78"
+              ><img
+                class="visit-slide-img"
+                src="./assets/img/cargo_popup_banner2.jpg"
+            /></a>
+          </div>
+
+          <div class="swiper-container gallery-thumbs-mobile"></div>
+        </div>
+
+        <div class="swiper-button-prev swiper-button-prev-mobile">
+          <svg
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30px"
+            height="30px"
+            viewBox="0 0 24 24"
+            aria-labelledby="chevronLeftIconTitle"
+            stroke="black"
+            stroke-width="1.8"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            color="black"
+          >
+            <title id="chevronLeftIconTitle">Chevron Left</title>
+            <polyline points="14 18 8 12 14 6 14 6" />
+          </svg>
+        </div>
+        <div class="swiper-button-next swiper-button-next-mobile">
+          <svg
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30px"
+            height="30px"
+            viewBox="0 0 24 24"
+            aria-labelledby="chevronRightIconTitle"
+            stroke="black"
+            stroke-width="1.8"
+            stroke-radius="100"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            color="black"
+          >
+            <title id="chevronRightIconTitle">Chevron Right</title>
+            <polyline points="10 6 16 12 10 18 10 18" />
+          </svg>
+        </div>
+
+        <div class="swiper-pagination swiper-pagination-mobile"></div>
       </div>
     </div>
+
+    <!-- mobile-swiper -->
+    <script>
+      var galleryThumbsMobile = new Swiper(".gallery-thumbs-mobile", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+      var galleryTopMobile = new Swiper(".gallery-top-mobile", {
+        spaceBetween: 0,
+        speed: 500,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination-mobile",
+          clickable: true,
+        },
+        thumbs: {
+          swiper: galleryThumbsMobile,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-mobile",
+          prevEl: ".swiper-button-prev-mobile",
+        },
+      });
+    </script>
 
     <script>
       $(document).on("click", ".web-popup-layer", function () {
@@ -623,6 +808,7 @@
         $("html").removeClass("scroll-lock");
         $("body").removeClass("scroll-lock");
       });
+
       $(document).on("click", ".close-popup-web", function () {
         var getCookieName = $(this).attr("data-banner");
         // setCookie(getCookieName, 'N', 1)
@@ -661,7 +847,7 @@
           todayDate.toGMTString() +
           ";";
       }
-      
+
       //쿠키 불러오기
       function getCookie(name) {
         var obj = name + "=";
@@ -678,7 +864,7 @@
         }
         return "";
       }
-      
+
       $(function () {
         console.log($(window).width());
         if ($(window).width() < 415) {

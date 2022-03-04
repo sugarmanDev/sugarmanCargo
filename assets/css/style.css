@@ -3300,9 +3300,13 @@ select {
 }
 
 /* popup */
+html.scroll-lock,
+body.scroll-lock {
+  overflow: hidden;
+}
 
 .web-popup {
-  width: 500px;
+  width: 500px !important;
   left: 60%;
   position: fixed;
   z-index: 10001;
@@ -3315,7 +3319,7 @@ select {
 }
 
 .web-popup img {
-  width: 500px;
+  width: 500px !important;
   height: auto;
   border-radius: 4px;
 }
@@ -3323,7 +3327,183 @@ select {
 .web-popup .close-popup-web {
   position: absolute;
   margin-top: 15px;
-  margin-left: 455px;
+  margin-left: -45px;
+  color: #5e798c;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes webAnimatebottom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes webAnimatebottom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-layer {
+  background-color: #000;
+  opacity: 0.5;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  position: fixed;
+  display: none;
+}
+
+.popup {
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  z-index: 10001;
+  display: none;
+  bottom: 0px;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+.popup img {
+  width: 100% !important;
+  height: inherit !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.popup .close-popup {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: #5e798c;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+.mid-bannder {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  background-color: #fffdfd;
+  overflow: hidden;
+}
+
+.mid-bannder a {
+  text-decoration: none;
+}
+
+.mid-bannder a:hover {
+  text-decoration: none;
+}
+
+.mid-bannder img {
+  max-width: 100%;
+  width: 450px;
+}
+
+.banner-text {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.banner-pill {
+  border: 1px solid #e9474d;
+  border-radius: 20px;
+  padding: 2px 0px;
+  text-align: center;
+  width: 60px;
+  color: #e9474d;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.banner-sub-title {
+  color: #e9474d;
+}
+
+.banner-sub-title:hover {
+  color: #e9474d;
+}
+
+.banner-title {
+  font-weight: bold;
+  font-size: 28px;
+  color: #000;
+}
+
+.banner-subtitle {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #616161;
+}
+
+/* swiper */
+html.scroll-lock,
+body.scroll-lock {
+  overflow: hidden;
+}
+
+.web-popup {
+  width: 500px !important;
+  overflow: hidden;
+  left: 60%;
+  position: fixed;
+  z-index: 10001;
+  /* display:none; */
+  top: 18%;
+  -webkit-animation-name: webAnimatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: webAnimatebottom;
+  animation-duration: 1s;
+}
+
+.web-popup img {
+  width: 500px !important;
+  height: auto;
+  border-radius: 4px;
+}
+
+.web-popup .close-popup-web {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -45px;
   color: #5e798c;
   font-size: 32px;
   cursor: pointer;
@@ -3412,45 +3592,177 @@ select {
   }
 }
 
-/* event */
-.event-card-body {
-  padding: 0px 0px 15px 20px;
+.mid-bannder {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  background-color: #fffdfd;
+  overflow: hidden;
 }
 
-.event-card-body {
-  padding: 0px 0px 15px 20px;
+.mid-bannder a {
+  text-decoration: none;
 }
 
-.card-title {
-  font-size: 0.9375rem;
-  font-weight: 500;
+.mid-bannder a:hover {
+  text-decoration: none;
+}
+
+.mid-bannder img {
+  max-width: 100%;
+  width: 450px;
+}
+
+.banner-text {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.banner-pill {
+  border: 1px solid #e9474d;
+  border-radius: 20px;
+  padding: 2px 0px;
+  text-align: center;
+  width: 60px;
+  color: #e9474d;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.banner-sub-title {
+  color: #e9474d;
+}
+
+.banner-sub-title:hover {
+  color: #e9474d;
+}
+
+.banner-title {
+  font-weight: bold;
+  font-size: 28px;
   color: #000;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem !important;
-  margin-top: 1rem;
+.banner-subtitle {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #616161;
 }
 
-.card-text:last-child {
-  margin-bottom: 0;
+/* swiper */
+.swiper-container {
+  width: 50%;
+  height: 300px;
+  margin-left: 0;
+  padding-top: 30px;
 }
 
-.card-text {
-  font-size: 0.8125rem;
-  color: #888;
+.close-popup-web {
+  position: absolute;
+  left: 500px;
+  z-index: 2;
 }
 
-/* 지점 찾기 (barnch_list.html) */
-.detail-a,
-.detail-a-title {
-  color: black;
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
 }
 
-.detail-a-title:hover {
-  color: inherit;
+.slide-max {
+  width: 75px !important;
+  height: 48px !important;
 }
 
-.detail-a:hover {
-  color: none;
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.gallery-top {
+  width: 100%;
+  height: inherit;
+  padding-top: 0px;
+}
+
+.swiper-pagination {
+  max-width: 500px !important;
+  position: absolute;
+  margin: auto;
+  bottom: 50px;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+/* mobile-swiper */
+
+.gallery-top-mobile {
+  width: 100%;
+  height: inherit;
+  margin-bottom: -20px !important;
+}
+
+.swiper-pagination-mobile {
+  width: 100% !important;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+}
+
+.gallery-thumbs-mobile .swiper-slide {
+  opacity: 0.4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gallery-thumbs-mobile .swiper-slide-thumb-active {
+  opacity: 1 !important;
+}
+
+.gallery-thumbs-mobile {
+  width: 10px;
+  height: 20%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.swiper-button-prev-web,
+.swiper-button-next-web {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 500px;
+}
+
+.swiper-button-prev-mobile,
+.swiper-button-next-mobile {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 500px;
+
+  margin-top: 5px !important;
+}
+
+.swiper-button-next-web {
+  position: absolute;
+  top: 250px;
+  left: 445px;
+}
+
+.swiper-button-next-web::after,
+.swiper-button-prev-web::after,
+.swiper-button-next-mobile::after,
+.swiper-button-prev-mobile::after {
+  display: none;
 }
