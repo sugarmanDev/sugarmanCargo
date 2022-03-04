@@ -1542,11 +1542,12 @@ ul {
   border: none;
 }
 
+
 .agree-txt {
   color: #888888;
   font-size: 0.95rem;
   position: absolute;
-  margin-top: -5px !important;
+  margin-top: -35px !important;
   margin-left: 35px !important;
   word-break: keep-all;
 }
@@ -2801,13 +2802,6 @@ input[id="agree"] + label {
 
 input[type="checkbox"]:checked + label {
   background: url(../img/check2x.png) no-repeat center/25px 25px;
-}
-
-.agree-txt {
-  position: absolute;
-  margin-top: -35px;
-  margin-left: 35px;
-  font-size: 14px;
 }
 
 .mt-20 {
