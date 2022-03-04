@@ -1547,7 +1547,7 @@ ul {
   font-size: 0.95rem;
   position: absolute;
   margin-top: -5px !important;
-  margin-left: 35px;
+  margin-left: 35px !important;
   word-break: keep-all;
 }
 
@@ -3085,7 +3085,7 @@ select::-ms-expand {
 }
 
 .main_inquiry .form_box .form .agree-txt {
-  margin-top: -31px;
+  margin-top: -31px !important;
   margin-left: 20px;
   font-size: 13px;
   color: #888888;
@@ -3189,7 +3189,7 @@ select::-ms-expand {
 
 @media (max-width: 380px) {
   .main_inquiry .form_box .form .agree-txt {
-    margin-top: -30px;
+    margin-top: -30px !important;
     margin-left: 25px;
     font-size: 13px;
     padding-right: 15px;
