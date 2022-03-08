@@ -738,6 +738,10 @@ ul {
   color: #333;
 }
 
+.card.off-event .event-card-body > a:hover {
+  color: #333;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -2925,12 +2929,6 @@ select::-ms-expand {
   font-size: 20px;
   font-weight: 400 !important;
   color: #333;
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: 400 !important;
-  color: #333 !important;
 }
 
 .service-box .card-text {
