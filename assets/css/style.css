@@ -3784,3 +3784,11 @@ body.scroll-lock {
 .detail-a {
   color: transparent;
 }
+
+/* 이벤트 페이지 */
+.card-title,
+.card-text,
+.card-title:hover,
+.card-text:hover {
+  color: #333 !important;
+}
