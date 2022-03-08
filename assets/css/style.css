@@ -2923,6 +2923,12 @@ select::-ms-expand {
   color: #333;
 }
 
+.card-title {
+  font-size: 20px;
+  font-weight: 400 !important;
+  color: #333 !important;
+}
+
 .service-box .card-text {
   font-size: 14px;
   color: #888;
