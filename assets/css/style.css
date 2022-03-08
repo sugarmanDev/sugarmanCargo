@@ -734,6 +734,10 @@ ul {
   opacity: 0.5;
 }
 
+.card.off-event .event-card-body > a {
+  color: #333;
+}
+
 .overlay {
   position: fixed;
   top: 0;
