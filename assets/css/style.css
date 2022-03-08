@@ -3792,3 +3792,13 @@ body.scroll-lock {
 .card-text:hover {
   color: #333 !important;
 }
+
+.card-title {
+  padding: 0 5px;
+  padding-top: 5px;
+}
+
+.card-text {
+  padding: 0 5px;
+  padding-bottom: 5px;
+}
