@@ -734,11 +734,11 @@ ul {
   opacity: 0.5;
 }
 
-.card.off-event .event-card-body > a {
+.card.off-event .event-card-body .card-title .mb-1 {
   color: #333;
 }
 
-.card.off-event .event-card-body > a:hover {
+.card.off-event .event-card-body .card-text {
   color: #333;
 }
 
