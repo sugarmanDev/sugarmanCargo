@@ -710,13 +710,7 @@ ul {
 }
 
 .storage-btn {
-  background: none;
   border: none;
-}
-
-.float {
-  position: relative;
-  top: -25px;
 }
 
 .label {
