@@ -3785,6 +3785,8 @@ body.scroll-lock {
 .card-title:hover,
 .card-text:hover {
   color: #333 !important;
+  font-size: 0.9375rem;
+  font-weight: 500;
 }
 
 .card-title {
@@ -3795,4 +3797,10 @@ body.scroll-lock {
 .card-text {
   padding: 0 5px;
   padding-bottom: 5px;
+  font-size: 0.8125rem;
+  color: #888 !important;
+}
+
+.event-card-body {
+  padding: 10px 0px 10px 15px;
 }
