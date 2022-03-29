@@ -105,7 +105,7 @@ ul {
 
 .about-logo {
   width: 296px;
-  height: 174px;
+  height: auto;
 }
 
 .navbar-light .navbar-toggler {
@@ -360,7 +360,7 @@ ul {
   }
 
   .mh {
-    margin-top: 5rem !important;
+    margin-top: 3rem !important;
     margin-bottom: 5rem !important;
   }
 
@@ -489,7 +489,7 @@ ul {
   }
 
   .mh {
-    margin-top: 5rem !important;
+    margin-top: 3rem !important;
     margin-bottom: 5rem !important;
   }
 
@@ -653,6 +653,10 @@ ul {
 /* 브랜드 아이덴티티 */
 .wrap-3 .col-md-12 img{
   margin-top: 95px;
+}
+.wrap-1 .col-md-4 img{
+  width: 165px;
+  height: auto;
 }
 .about_brand_1 img{
   max-width: 100% !important;
@@ -867,8 +871,7 @@ ul {
 }
 
 .footer .footer-logo {
-  width: 70%;
-  /* margin-right: 40px; */
+  width: 118px;
 }
 
 .footer-con-1 {
@@ -999,10 +1002,10 @@ ul {
 }
 
 @media (min-width: 415px) and (max-width: 1024px) {
-  .footer {
+  /* .footer {
     padding-left: 3%;
     padding-right: 3%;
-  }
+  } */
 
   .footer-con-2 strong {
     display: none;
@@ -1034,7 +1037,7 @@ ul {
   }
 
   .footer .footer-logo {
-    width: 30% !important;
+    max-width: 95%;
   }
 
   .fail-h1 {
@@ -1341,6 +1344,16 @@ ul {
 
 .form-group {
   margin-bottom: 12px;
+}
+
+.event-form .form-group-virtual{
+  position: relative !important;
+}
+.event-form .form-group-virtual .agree-txt{
+  position: absolute !important;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: -5px;
 }
 
 
@@ -1779,8 +1792,11 @@ input[id="privacy"] + label {
 
 /* 프렌차이즈 가맹 */
 .mh {
-  margin-top: 230px;
-  margin-bottom: 230px;
+  margin-top: 270px;
+  margin-bottom: 270px;
+}
+.franchise_line{
+  margin-top: 30px;
 }
 
 .franchise_main_wrap {
@@ -2684,6 +2700,30 @@ a:visited {
   }
 }
 
+@media (min-width: 768px) and (max-width: 820px) {
+  .main-banner-text{
+    font-size: 2.5rem;
+  }
+  .main-title{
+    font-size: 1.5rem !important;
+  }
+  .margin-tb{
+    margin:120px 0;
+  }
+  .about_brand_2{
+    padding: 150px 0;
+  }
+  .franchise-mt{
+    margin-top:150px !important;
+  }
+  .mh{
+    margin: 180px 0 !important;
+  }
+  .wrap-1.pt-5{
+    padding-top: 0 !important;
+  }
+}
+
 @media (min-width: 0px) and (max-width: 414px) {
   .wrap_map,
   .map-overlay {
@@ -3193,8 +3233,9 @@ select::-ms-expand {
   .wrap-3 .col-md-12 img{
     margin-top: 50px;
   }
-  .wrap-1 img{
-    width: 40% !important;
+  .wrap-1 .col-md-4 img{
+    width: 35% !important;
+    height: auto;
   }
   .about_brand_2 img{
     width: 65%;
@@ -3204,6 +3245,9 @@ select::-ms-expand {
   }
   .mt-m .mt-5{
     margin-top: 1rem !important;
+  }
+  .franchise-mt{
+    margin-top: 100px !important;
   }
 }
 
