@@ -92,7 +92,7 @@ body {
   letter-spacing: -0.01em;
 }
 h3 {
-  line-height: 1.4;
+  line-height: 1.45;
 }
 ul {
   list-style: none;
@@ -110,6 +110,10 @@ ul {
 
 .navbar-light .navbar-toggler {
   border: none;
+}
+
+.wrap-2 p{
+  color: #555;
 }
 
 /* media */
@@ -419,7 +423,7 @@ ul {
   }
 
   .about-sub {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
   .mobile_hide {
@@ -639,12 +643,28 @@ ul {
   background: none;
 }
 
-.margin-tb {
+.sub-text {
+  font-size: 1rem;
+}
+.margin-tb{
   margin: 200px 0;
 }
 
-.sub-text {
-  font-size: 1rem;
+/* 브랜드 아이덴티티 */
+.wrap-3 .col-md-12 img{
+  margin-top: 95px;
+}
+.about_brand_1 img{
+  max-width: 100% !important;
+  height: auto;
+}
+.about_brand_2{
+  background-color: #5D5D5D;
+  padding: 350px 0;
+}
+.about_brand_3 img{
+  max-width: 100% !important;
+  height: auto;
 }
 
 /* nav-scroll */
@@ -1323,6 +1343,7 @@ ul {
   margin-bottom: 12px;
 }
 
+
 /* 고객센터 */
 .customer {
   padding: 0px 0px 150px;
@@ -1548,12 +1569,17 @@ ul {
   border: none;
 }
 
-.agree-txt {
+.form-box{
+  display: relative;
+}
+
+.form-box .agree-txt {
   color: #888888;
   font-size: 0.95rem;
   position: absolute;
+  display: inline-block;
+  margin-left: 10px;
   margin-top: -5px !important;
-  margin-left: 35px !important;
   word-break: keep-all;
 }
 
@@ -1632,7 +1658,7 @@ input[type="checkbox"]:checked + label {
 .main-text {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .sub-text {
@@ -3078,7 +3104,7 @@ select::-ms-expand {
   font-size: 15px;
   padding-left: 12px;
   padding-right: 12px;
-  height: 50px;
+  height: 48px;
   font-weight: 400;
 }
 
@@ -3091,7 +3117,7 @@ select::-ms-expand {
 }
 
 .main_inquiry .form_box .form .col-12 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .main_inquiry .form_box .form textarea {
@@ -3154,6 +3180,30 @@ select::-ms-expand {
   .preparing-area {
     line-height: 262px;
     font-size: 26px;
+  }
+  .wrap-2 .mt-5{
+    margin-top: 1rem !important;
+  }
+  .about-title b{
+    display: block;
+  }
+  .wrap-1.pt-5{
+    padding-top:0px !important;
+  }
+  .wrap-3 .col-md-12 img{
+    margin-top: 50px;
+  }
+  .wrap-1 img{
+    width: 40% !important;
+  }
+  .about_brand_2 img{
+    width: 65%;
+  }
+  .about_brand_2{
+    padding: 80px 0;
+  }
+  .mt-m .mt-5{
+    margin-top: 1rem !important;
   }
 }
 
