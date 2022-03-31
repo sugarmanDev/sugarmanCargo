@@ -738,7 +738,7 @@ ul {
   display: none;
 }
 
-.storage-box div:nth-child(2){
+.storage-box div:nth-child(2) img{
   width: 29px;
   height: auto;
 }
