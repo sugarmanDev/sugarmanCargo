@@ -91,12 +91,11 @@
                 <div class="row">
                     <div class="flex-fill text-center event-text">
                         <span class="new">NEW</span>
-                        <span
-                            ><a href="./event.html"
-                                ><u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을 만나보세요!</u
-                                >&nbsp;🎉</a
-                            ></span
-                        >
+                        <span>
+                            <a href="./event.html">
+                                <u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을 만나보세요!</u>&nbsp;🎉
+                            </a>
+                        </span>
                     </div>
                     <button class="event-banner-btn" style="border-style: none; background: transparent">
                         <span class="material-icons ml-auto" style="cursor: pointer">close</span>
@@ -104,42 +103,49 @@
                 </div>
             </div>
         </div>
-        <!-- scroll nav -->
-        <div class="navbar-wrap shadow-sm sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
-            <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
-                <a class="navbar-brand" href="./index.html"
-                    ><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo" class="main-logo"
-                /></a>
+         <!-- nav -->
+         <div class="navbar-wrap  scroll-nav shadow-sm top-nav">
+            <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
+                <a class="navbar-brand logo-w" href="./index.html"><img src="./assets/img/sugarmancargo_logo_wh.png"
+                    alt="sugarmancargo_logo"></a>
+                <a class="scroll-nav logo-r" href="./index.html"><img src="./assets/img/footer_logo.png" alt="sugarmancargo_logo"
+                    class="main-logo"></a>
 
                 <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
-                    <span class="material-icons">menu</span>
+                    <span class="material-icons main_menu">menu</span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
-                        </li>
-                        <li class="nav-item">
-                            <button
-                                type="button"
-                                class="nav-bar-btn"
-                                style="background-color: #e8464d; color: #fff"
-                                onclick="location.href='./visit.html' "
-                            >
-                                방문예약
-                            </button>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./branch_list.html">지점찾기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./franchise.html">가맹안내</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-bar-btn shadow" onclick="location.href='./visit.html' ">방문예약</button>
+                    </li>
                     </ul>
                 </div>
             </nav>
         </div>
+       
+        <!-- 메인배너 -->
+        <div class="franchise_main_wrap">
+            <div class="container main-container">
+            <h2 class="position-relative" style="color: #fff; top: 390px;">가맹안내</h2>
+            <div class="row position-relative shadow-sm franchise-topbox">
+                <div class="col-md-8">
+                <h2 class="main-title ft-14">슈가맨카고와<br>
+                    성공적인 가맹 창업을 해보세요!</h2>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <!-- 메뉴슬라이드 -->
-        <div class="content bg-white">
+        <!-- <div class="content bg-white">
             <div class="container main-container">
                 <div class="row join-guide">
                     <div class="col-12 join-g-title">
@@ -147,8 +153,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container main-container join-top-main-container">
+        </div> -->
+        
+        <div class="container main-container join-top-main-container franchise-mt" style="margin-top: 160px;">
             <div class="row join-container">
                 <div class="col-12 join-g-menu" id="join-g-menu">
                     <div class="join-g-line">
@@ -190,7 +197,7 @@
                             </div>
                             <div class="form-title form-group">
                                 <label for="inquiryInputCourse">알게 된 경로<span>*</span></label>
-                                <div class="mt-2 form-title mb-2">
+                                <div class="form-title mb-2">
                                     <select name="route" id="route" class="form-control" style="border: 1px solid #e1e1e1" required>
                                         <option value="" selected disabled>선택</option>
                                         <option vlaue="9">인스타그램</option>
@@ -210,7 +217,7 @@
                                     name="description"
                                     required
                                 ></textarea>
-                                <div class="form-group form-group-virtual mt-4">
+                                <div class="form-group form-group-virtual mt-2">
                                     <input type="checkbox" name="checkYN" id="checkYN" required="" />
                                     <label for="checkYN"></label>
                                     <p class="agree-txt">
@@ -257,7 +264,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="btn submit-form mt-2 ajaxsend" type="submit">문의하기</button>
+                                <button class="btn submit-form mt-3 ajaxsend" type="submit">문의하기</button>
                             </div>
                         </form>
                     </div>
@@ -432,6 +439,44 @@
                 }
                 return false;
             }
+        </script>
+        <script>
+            const x = window.matchMedia("screen and (min-width:500px)");
+        
+            x.addListener((a)=>{
+                $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                // 48
+                if (scroll > 48) {
+                    $('.top-nav').addClass('fixed-head');
+                    if (scroll > 200) {
+                    $('.top-nav').addClass('fixed-head-white');
+                    } else {
+                    $('.top-nav').removeClass('fixed-head-white');
+                    }
+                } else {
+                    $('.top-nav').removeClass('fixed-head');
+                }
+                console.log(scroll);
+                })
+            })
+        
+        
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                // 48
+                if (scroll > 48) {
+                $('.top-nav').addClass('fixed-head');
+                if (scroll > 350) {
+                    $('.top-nav').addClass('fixed-head-white');
+                } else {
+                    $('.top-nav').removeClass('fixed-head-white');
+                }
+                } else {
+                $('.top-nav').removeClass('fixed-head');
+                }
+                console.log(scroll);
+            })
         </script>
     </body>
 </html>

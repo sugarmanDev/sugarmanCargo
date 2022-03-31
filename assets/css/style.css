@@ -49,6 +49,7 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  color: #e8464d;
 }
 
 .new {
@@ -97,6 +98,7 @@ h3 {
 ul {
   list-style: none;
 }
+
 
 .main-logo {
   width: 120px !important;
@@ -201,9 +203,20 @@ ul {
   }
 
   .visit_wrap {
-    background: linear-gradient(#fff5f5 52%, #ffffff 50%) !important;
+    background: linear-gradient(#fff5f5 42%, #ffffff 50%) !important;
+  }
+  .border-bottom-thin .col-lg-5,.col-lg-4{
+    text-align: right !important;
+  }
+  .type .col-9{
+    text-align: right !important;
+  }
+  .main-title{
+    font-size: 1.6rem;
+    line-height: 1.35em;
   }
 }
+
 
 @media (min-width: 331px) and (max-width: 600px) {
   .storage-box.normal-box {
@@ -397,10 +410,6 @@ ul {
     font-size: 1.438rem !important;
   }
 
-  .main-banner-text {
-    font-size: 2.188rem !important;
-  }
-
   .branch-list-box {
     margin-left: 0px !important;
   }
@@ -480,10 +489,6 @@ ul {
     font-size: 1.25rem;
   }
 
-  .main-banner-text {
-    font-size: 2.188rem;
-  }
-
   .title-main {
     font-size: 1.625rem;
   }
@@ -510,7 +515,7 @@ ul {
   }
 
   .main-title {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     line-height: 1.35em;
   }
 
@@ -574,7 +579,22 @@ ul {
   }
 
   .visit_wrap {
-    background: linear-gradient(#fff5f5 52%, #ffffff 50%) !important;
+    background: linear-gradient(#fff5f5 40%, #ffffff 50%) !important;
+  }
+  .border-bottom-thin .col-lg-5,.col-lg-4{
+    text-align: right !important;
+  }
+  .type .col-9{
+    text-align: right !important;
+  }
+  .form-group{
+    margin-bottom: 10px;
+  }
+  .visit_wrap .join-g-faq-left {
+    margin-top: 45px !important;
+  }
+  .cargor-box .cargor-sub-box{
+    height: 0px;
   }
 }
 
@@ -782,14 +802,15 @@ ul {
 
 .form-control {
   border-radius: 0;
-  height: calc(2.5rem + 0.75rem + 2px);
+  height: calc(2.5rem + 0.75rem);
   font-size: 0.9375rem;
+  font-weight: 500;
   color: #888;
 }
 
 .visit {
   border: 1px solid #ced4da;
-  padding: 1rem 1rem;
+  padding: 0.91rem 1rem;
   width: 100%;
   font-size: 0.875rem;
   color: #888;
@@ -841,7 +862,7 @@ ul {
   padding: 17px 34px;
   background-color: #fff;
   border: 1px solid #e8464d;
-  color: #e8464d;
+  color: #e8464d !important;
   font-weight: 500;
   border-radius: 0;
   margin-top: 20px;
@@ -849,7 +870,7 @@ ul {
 
 .submit-form:hover {
   background-color: #e8464d;
-  color: #fff;
+  color: #fff !important;
 }
 
 /* footer */
@@ -1099,9 +1120,6 @@ ul {
   .sub-text {
     font-size: 0.9375rem !important;
   }
-  .visit_wrap .join-g-faq-left {
-    margin-top: 60px !important;
-  }
   .storage-wrap .storage-box {
     padding-bottom: 1rem !important;
   }
@@ -1151,7 +1169,7 @@ ul {
   }
 
   .footer-logo {
-    width: 40% !important;
+    width: 35% !important;
     margin-bottom: 20px;
   }
 
@@ -1204,6 +1222,7 @@ ul {
 
 } */
 /* 방문예약 시작reservation_wrap */
+
 .visit_wrap {
   background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
 }
@@ -1264,8 +1283,16 @@ ul {
   color: #e8374a;
 }
 
+.border-bottom-thin .col-lg-3{
+  position: relative;
+}
+
+.border-bottom-thin .col-lg-3 div{
+  position: absolute;
+}
+
 .border-bottom-thin {
-  border-bottom: 1px solid #e8374a;
+  border-bottom: 1px solid #e1e1e1;
   padding-bottom: 21px;
 }
 
@@ -1330,7 +1357,7 @@ ul {
 }
 
 .join-g-inquiry-right label {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   width: 100%;
   margin-bottom: 6px;
@@ -1343,7 +1370,7 @@ ul {
 }
 
 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .event-form .form-group-virtual{
@@ -1358,6 +1385,9 @@ ul {
 
 
 /* 고객센터 */
+.Customer_wrap .card{
+  border-radius: 0.5em;
+}
 .customer {
   padding: 0px 0px 150px;
 }
@@ -1740,9 +1770,12 @@ input[type="checkbox"]:checked + label {
   font-weight: 500;
   text-decoration: underline !important;
 }
+.event-form label{
+  margin-bottom: 6px !important;
+}
 
 .form-title {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 500;
 }
 
@@ -2114,7 +2147,7 @@ input[id="privacy"] + label {
   text-align: center;
   height: 70%;
   margin-top: 250px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #000;
 }
@@ -2136,10 +2169,10 @@ a:visited {
 }
 
 .mobile-menu .mobile-menu-list button {
-  width: 70%;
-  /* height: 10%; */
-  border-radius: 20px;
-  border: 3px solid #e8464d;
+  width: 45%;
+  padding: 10px;
+  border-radius: 100px;
+  border: 2px solid #e8464d;
   background-color: transparent;
   color: #e8374a;
   font-weight: 600;
@@ -2722,6 +2755,18 @@ a:visited {
   .wrap-1.pt-5{
     padding-top: 0 !important;
   }
+  .franchise-mt{
+    margin-top: 100px !important;
+  }
+  .visit_wrap .visit_m{
+    max-width: 12%!important;
+  }
+  .border-bottom-thin .col-lg-5,.col-lg-4{
+    text-align: right !important;
+  }
+  .type .col-9{
+    text-align: right !important;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 414px) {
@@ -3027,10 +3072,6 @@ select::-ms-expand {
 }
 
 @media (max-width: 1248px) {
-  /* .Customer_wrap .main-title{
-    padding-left: 15px;
-  } */
-
   .help {
     /* padding-left: 15px; */
   }
@@ -3039,6 +3080,25 @@ select::-ms-expand {
 @media (max-width: 767px) {
   .col-md-5.Aligner {
     display: none;
+  }
+  .visit_wrap .visit-time-m{
+    margin-top: -25px !important;
+  }
+  .join-g-inquiry-right{
+    margin-top: 50px !important;
+  }
+  .main-banner-text{
+    font-size: 2.5rem;
+  }
+  .arrow-forward{
+    color: #fff!important;
+    font-weight: 500;
+  }
+  .franchise-mt{
+    margin-top: 100px !important;
+  }
+  .storage-wrap .storage-btn{
+    color: #000 !important;
   }
 }
 
@@ -3073,7 +3133,8 @@ select::-ms-expand {
   line-height: 1;
   padding-bottom: 3px;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
+  color: #e8464d !important;
 }
 
 .main_inquiry_bg {
@@ -3246,8 +3307,50 @@ select::-ms-expand {
   .mt-m .mt-5{
     margin-top: 1rem !important;
   }
-  .franchise-mt{
-    margin-top: 100px !important;
+  .border-bottom-thin .col-lg-5,.col-lg-4{
+    text-align: right !important;
+  }
+  .type .col-9{
+    text-align: right !important;
+  }
+  .franchise_main_wrap{
+    height: 400px;
+  }
+  .franchise-topbox{
+    top: 290px;
+  }
+  .franchise_main_wrap h2{
+    top: 275px !important;
+    font-size: 1.6rem;
+  }
+  .franchise-topbox{
+    padding: 25px 10px;
+  }
+  .ft-14{
+    font-size: 1.3rem !important;
+  }
+  .event-form label{
+    margin-bottom: 4px !important;
+  }
+  .event-banner .event-text span{
+    font-size: 11px !important;
+  }
+  .join-g-menu-item{
+    font-size: 1rem;
+  }
+  .visit_wrap .submit-form{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    background-color: #e8464d;
+    color: #fff !important;
+    padding: 21px;
+    font-size: 1.063rem !important;
+    margin-top: 0px !important;
+  }
+  .visit_main_inquiry_btn{
+    bottom: 85px !important;
   }
 }
 
@@ -3291,7 +3394,7 @@ select::-ms-expand {
 @media (max-width: 391px) {
   .main_inquiry_btn {
     right: 15px;
-    bottom: 15px;
+    bottom: 20px;
     font-size: 13px;
   }
   .main_inquiry .form_box .form {

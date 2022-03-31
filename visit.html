@@ -147,7 +147,7 @@
             </nav>
         </div>
 
-        <button class="main_inquiry_btn">
+        <button class="main_inquiry_btn visit_main_inquiry_btn">
             <span class="material-icons">forum</span><br />
             문의하기
         </button>
@@ -157,8 +157,8 @@
             <div class="form_box">
                 <form method="post" onsubmit="return inquiryForm();" id="inquiryData">
                     <input type="hidden" name="type" value="main" />
-                    <div class="row" style="margin: 0">
-                        <div class="col-12 top" style="height: 80px">
+                    <div class="row" style="margin: 0;">
+                        <div class="col-12 top" style="height: 80px;">
                             <img class="main_inquiry_logo" src="./assets/cargo@2x.png" alt="main_inquiry_logo" />
                             <span class="material-icons main_inquiry_close">clear</span>
                         </div>
@@ -299,7 +299,7 @@
                     <div class="col-md-5 join-g-faq-left text-center mb-1" style="margin-top: 130px">
                         <img src="./assets/img/mini_box.png" alt="" />
                         <div class="cargor-box" style="width: 100%; text-align: center; margin-top: 50px">
-                            <div style="width: 100px; margin: 0 auto">
+                            <div class="cargor-sub-box" style="width: 100px; margin: 0 auto">
                                 <div class="line-box d"></div>
                                 <div class="line-box w"></div>
                                 <div class="line-box h"></div>
@@ -310,15 +310,17 @@
                             </div>
                         </div>
 
-                        <div class="row text-left pb-2" style="font-weight: 500; font-size: 1rem; border-bottom: 1.5px solid #e8464d">
-                            <div class="col-lg-3">타입</div>
-                            <div class="col-lg-9">사이즈 ( W / D / H )</div>
+                        <div class="row type text-left pb-2" style="font-weight: 500; font-size: 1rem; border-bottom: 1.5px solid #e8464d">
+                            <div class="col-3">타입</div>
+                            <div class="col-9 pl-4">사이즈 ( W / D / H )</div>
                         </div>
 
                         <div class="row border-bottom-thin pt-3">
                             <div class="col-lg-3 text-left">
-                                <img src="./assets/img/reservation_c.png" alt="" />
-                                <span class="article-title">큐브</span>
+                                <div>
+                                    <img src="./assets/img/reservation_c.png" alt="" />
+                                    <span class="article-title">큐브</span>
+                                </div>
                             </div>
                             <div class="col-lg-5">
                                 <span class="article-title">1.0m x 1.0m x 1.2m</span>
@@ -331,8 +333,10 @@
 
                         <div class="row border-bottom-thin pt-3">
                             <div class="col-lg-3 text-left">
-                                <img src="./assets/img/reservation_s.png" alt="" />
-                                <span class="article-title">스몰</span>
+                                <div>
+                                    <img src="./assets/img/reservation_s.png" alt="" />
+                                    <span class="article-title">스몰</span>
+                                </div>
                             </div>
                             <div class="col-lg-5">
                                 <span class="article-title">1.0m x 1.0m x 2.4m</span>
@@ -344,8 +348,10 @@
                         </div>
                         <div class="row border-bottom-thin pt-3">
                             <div class="col-lg-3 text-left">
-                                <img src="./assets/img/reservation_m.png" alt="" />
-                                <span class="article-title">미디엄</span>
+                                <div>
+                                    <img src="./assets/img/reservation_m.png" alt="" />
+                                    <span class="article-title">미디엄</span>
+                                </div>
                             </div>
                             <div class="col-lg-5">
                                 <span class="article-title">1.3m x 1.3m x 2.4m</span>
@@ -357,8 +363,10 @@
                         </div>
                         <div class="row border-bottom-thin pt-3">
                             <div class="col-lg-3 text-left">
-                                <img src="./assets/img/reservation_l.png" alt="" />
-                                <span class="article-title">라지</span>
+                                <div>
+                                    <img src="./assets/img/reservation_l.png" alt="" />
+                                    <span class="article-title">라지</span>
+                                </div>
                             </div>
                             <div class="col-lg-5">
                                 <span class="article-title">1.8m x 1.3m x 2.4m</span>
@@ -370,8 +378,10 @@
                         </div>
                         <div class="row border-bottom-thin pt-3">
                             <div class="col-lg-3 text-left">
-                                <img src="./assets/img/reservation_xl.png" alt="" />
-                                <span class="article-title" style="font-size: 1rem">엑스라지</span>
+                                <div>
+                                    <img src="./assets/img/reservation_xl.png" alt="" />
+                                    <span class="article-title" style="font-size: 1rem">엑스라지</span>
+                                </div>
                             </div>
                             <div class="col-lg-5">
                                 <span class="article-title">1.4m x 2.0m x 2.4m</span>
@@ -382,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-2 visit_m"></div>
                     <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px">
                         <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
                             <input type="hidden" name="visitTime" id="visitTime" />
@@ -447,7 +457,7 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group col-md-6 visit-time visit-down">
+                                <div class="form-group col-md-6 visit-time visit-down visit-time-m">
                                     <label for="visitInputTime"></label>
                                     <select name="minute" id="minute" class="form-control" required>
                                         <option selected disabled value="">분</option>
@@ -526,6 +536,7 @@
                 </div>
             </section>
         </div>
+
 
         <!-- 푸터 시작 -->
         <div class="content-section bg-footer footer-t footer">
