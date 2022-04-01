@@ -98,12 +98,10 @@ ul {
   list-style: none;
 }
 
-
-.main-logo {
-  width: 120px !important;
-  height: 50px;
+.navbar-wrap img{
+  width: 119px;
+  height: auto;
 }
-
 .about-logo {
   width: 296px;
   height: auto;
@@ -442,13 +440,6 @@ ul {
     font-size: 0.8rem;
   }
 
-  .main-text,
-  .size-name {
-    font-size: 1.063rem !important;
-  }
-  .size-price {
-    font-size: 17px !important;
-  }
   .sub-text {
     font-size: 0.9375rem !important;
   }
@@ -741,6 +732,7 @@ ul {
 .storage-box div:nth-child(2) img{
   width: 29px;
   height: auto;
+  margin-bottom: 2px;
 }
 .storage-box img {
   max-width: 90%;
@@ -1048,13 +1040,13 @@ ul {
   }
 
   .main-slide-next.prev-slide {
-    top: -247px !important;
+    top: -258px !important;
     left: -80px !important;
   }
 
   .main-slide-next.next-slide {
+    top: -258px !important;
     left: 510px !important;
-    top: -245px !important;
   }
 
   .pl-15 {
@@ -1112,14 +1104,101 @@ ul {
     padding: 0 !important;
   }
 }
+@media (min-width: 769px) and (max-width: 990px){
+  .main-slide-next.prev-slide {
+    left: -73px !important;
+    top: -258px !important;
+  }
 
+  .main-slide-next.next-slide {
+    left: 540px !important;
+    top: -258px !important;
+  }
+}
 @media (min-width: 0px) and (max-width: 414px) {
+  .cs{
+    margin-bottom: 70px !important;
+  }
+  .wrap_map,
+  .map-overlay {
+    height: 210px !important;
+  }
+  .storage-img {
+    margin: 10px auto;
+  }
+  .storage-txt {
+    margin-top: 10px;
+  }
+  .storage-txt div {
+    padding-left: 12px;
+  }
+  .join-guide .join-g-title h3 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+  }
+  .address {
+    font-size: 1rem !important;
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+  }
+  .address-info{
+    font-size: 1rem !important;
+  }
+  .main-slide-next.prev-slide {
+    left: -77px !important;
+    top: -158px !important;
+  }
+  .main-slide-next.next-slide {
+    top: -158px !important;
+    left: 340px !important;
+  }
+  .main_wrap .row {
+    padding: 100px !important;
+  }
+  .about-logo {
+    width: 190px;
+    height: auto;
+  }
+  .visit_form .col-md-4 {
+    margin-bottom: 80px !important;
+  }
+  .privacy-wrap {
+    padding: 100px 0px;
+  }
+  .privacy-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .privacy-txt {
+    font-size: 15px;
+  }
+  .privacy-num {
+    font-size: 17px;
+    margin-top: 30px;
+  }
+  .privacy-info {
+    font-size: 15px;
+    margin: 15px 0px;
+  }
+  .privacy-table td,
+  .privacy-table th {
+    padding: 5px;
+  }
+  .privacy-line {
+    margin: 0px 0px 20px;
+  }
+  .size-info{
+    font-size: 15px !important;
+  }
   .main-text,
   .size-name {
-    font-size: 1.063rem !important;
+    font-size: 1rem !important;
   }
   .size-price {
-    font-size: 17px !important;
+    font-size: 16px !important;
   }
   .sub-text {
     font-size: 0.9375rem !important;
@@ -1133,98 +1212,69 @@ ul {
   .join-guide .main_title {
     margin-bottom: 26px;
   }
-
   .join-guide {
     padding-top: 40px !important;
   }
-
   .footer-t {
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 36px !important;
     padding-top: 30px !important;
   }
-
   .footer-con-2 {
     padding-left: 0 !important;
   }
-
   .footer-con-3 {
     padding-left: 0 !important;
     padding-bottom: 80px !important;
   }
-
   .footer-con-2 strong {
     display: none;
   }
-
   .footer-con-3 strong {
     display: none;
   }
-
   .footer .footer-con li {
     padding: 0;
     margin: 0;
     margin-bottom: 3px;
   }
-
   .ceo {
     margin-right: 20px !important;
   }
-
   .footer-logo {
     width: 35% !important;
     margin-bottom: 20px;
   }
-
   .fooger-con-1 {
     padding: 0 !important;
   }
-
   .footer .footer-con-3 li {
     border-style: none;
     margin-bottom: 0;
     /* padding-bottom: 20px; */
   }
-
   .footer-bottom {
     padding-bottom: 0 !important;
   }
-
   .footer-bottom-text {
     margin-top: 0 !important;
   }
-
   .footer-bottom-text li:nth-child(2) {
     margin-right: 15px !important;
     margin-top: 24px;
   }
-
   .footer-bottom-text li:nth-child(3) {
     margin-top: 24px;
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
-
-  .footer-bottom {
-    padding-bottom: 0 !important;
-  }
-
   .footer-con-1 {
     padding-left: 0 !important;
   }
 }
 
-/* .after::after{
-    content: '';
-    width: 2px;
-    height: 10px;
-    background: #000;
-    opacity: .3;
-    position: absolute;
-    margin-top: 5px;
 
-} */
 /* 방문예약 시작reservation_wrap */
 
 .visit_wrap {
@@ -1460,7 +1510,7 @@ ul {
   border: 1px solid #e1e1e1;
   border-bottom: 0;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .info-area {
@@ -1550,7 +1600,7 @@ ul {
   border: 1px solid #e1e1e1;
   background-color: #f7f7f7;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 64px 0px;
   margin: 30px 0px;
 }
@@ -1563,7 +1613,7 @@ ul {
   width: 100%;
   border: 1px solid #e1e1e1;
   padding-left: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .form-select {
@@ -1595,7 +1645,7 @@ ul {
 }
 
 .mg-13 {
-  margin: 13px 0px;
+  margin: 6px 0px;
   white-space: pre-line;
   word-break: keep-all;
 }
@@ -2310,6 +2360,7 @@ a:visited {
   font-size: 1.35rem;
   font-weight: 600;
   margin-top: 30px;
+  color: #000 !important;
 }
 
 .size-name {
@@ -2334,6 +2385,7 @@ a:visited {
 .storage-info .storage-txt img{
   max-width: 100%;
   width: 29px;
+  margin-bottom: 2px;
 }
 
 .storage-info .storage-type-pic img {
@@ -2542,16 +2594,6 @@ a:visited {
     padding-left: 15px;
   }
 
-  .main-slide-next.prev-slide {
-    left: -73px;
-    top: -258px;
-  }
-
-  .main-slide-next.next-slide {
-    left: 528px !important;
-    top: -257px;
-  }
-
   .branch-1 {
     width: 574px !important;
     height: 410px !important;
@@ -2607,9 +2649,9 @@ a:visited {
 
 .privacy-line {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #e9474d;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 20px;
 }
 
 .privacy-title {
@@ -2687,27 +2729,39 @@ a:visited {
 }
 
 .close {
-  width: 6%;
+  width: 10%;
   height: 10%;
   position: absolute;
   right: 15px;
-  top: 15px;
-  font-size: 40px;
-  color: #e9474d;
+  top: 18px;
+  font-size: 30px;
+  color: #888;
   opacity: 1;
   z-index: 999;
 }
 
 .modal-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .btn-privacy {
   border: 0;
-  background-color: #fff;
+  background-color: transparent;
   text-decoration: underline;
+  color: #000 !important;
+}
+
+.qna-agree .wrap {
+  position: relative;
+}
+
+.qna-agree .wrap .agree-txt{
+  position: absolute;
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: -5px;
 }
 
 /* branch-1 */
@@ -2715,9 +2769,6 @@ a:visited {
   .branch-1 {
     width: 288px !important;
     height: 175px !important;
-  }
-  .mg-t-30 {
-    margin-top: 0px !important;
   }
   .storage-txt div {
     padding-left: 0px !important;
@@ -2728,17 +2779,11 @@ a:visited {
     width: 330px !important;
     height: 215px !important;
   }
-  .mg-t-30 {
-    margin-top: 15px !important;
-  }
 }
 @media (min-width: 376px) and (max-width: 450px) {
   .branch-1 {
     width: 370px !important;
     height: 230px !important;
-  }
-  .mg-t-30 {
-    margin-top: 15px !important;
   }
 }
 
@@ -2778,93 +2823,7 @@ a:visited {
   }
 }
 
-@media (min-width: 0px) and (max-width: 414px) {
-  .wrap_map,
-  .map-overlay {
-    height: 210px !important;
-  }
-  .storage-img {
-    margin: 10px auto;
-  }
 
-  .storage-txt {
-    margin-top: 10px;
-  }
-  .storage-txt div {
-    padding-left: 12px;
-  }
-
-  .join-guide .join-g-title h3 {
-    font-weight: 500;
-    font-size: 1.5rem !important;
-    letter-spacing: 0;
-    /* margin-left: 15px; */
-    display: flex;
-    align-items: center;
-  }
-
-  .address {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .main-slide-next.prev-slide {
-    left: -77px;
-    top: -158px;
-  }
-
-  .main-slide-next.next-slide {
-    top: -158px;
-    left: 300px !important;
-  }
-
-  .main_wrap .row {
-    padding: 100px !important;
-  }
-  .about-logo {
-    width: 190px;
-    height: auto;
-  }
-  .visit_form .col-md-4 {
-    margin-bottom: 80px !important;
-  }
-
-  .privacy-wrap {
-    padding: 100px 0px;
-  }
-
-  .privacy-title {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-  }
-
-  .privacy-txt {
-    font-size: 15px;
-  }
-
-  .privacy-num {
-    font-size: 17px;
-    margin-top: 30px;
-  }
-
-  .privacy-info {
-    font-size: 15px;
-    margin: 15px 0px;
-  }
-
-  .privacy-table td,
-  .privacy-table th {
-    padding: 5px;
-  }
-
-  .privacy-line {
-    margin: 0px 0px 30px;
-  }
-  .event-banner .event-text a u {
-    font-size: 13px;
-  }
-}
 
 /* 시작하기 페이지 */
 .full-area {
@@ -2906,7 +2865,7 @@ a:visited {
 }
 
 .form-box span {
-  color: #e9474d;
+  color: #999;
 }
 
 .form-box p {
@@ -3066,7 +3025,7 @@ select::-ms-expand {
 
 .service-box .card-title {
   font-size: 20px;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   color: #333;
 }
 
@@ -3109,6 +3068,13 @@ select::-ms-expand {
   .storage-wrap .storage-btn{
     color: #000 !important;
   }
+  .qna-box{
+    padding: 15px 0;
+    margin-top: 15px !important;
+  }
+  .qna-box .row{
+    margin-bottom: 4px !important;
+  }
 }
 
 @media (max-width: 401px) {
@@ -3117,6 +3083,8 @@ select::-ms-expand {
   }
   .col-md-7.Aligner .card-title {
     text-align: center;
+    padding-top: 3px;
+    font-size: 17px;
   }
   .service-box {
     height: 50px;
@@ -3155,6 +3123,10 @@ select::-ms-expand {
   background: #000000 0% 0% no-repeat padding-box;
   opacity: 0.5;
   z-index: 99;
+}
+
+.form_box .in_form_con option{
+  color: #666 !important;
 }
 
 .main_inquiry .form_box {
@@ -3284,7 +3256,7 @@ select::-ms-expand {
   }
   .navbar-brand img,
   .main-logo {
-    width: 110px !important;
+    width: 105px !important;
     height: auto;
   }
   .preparing-area {
@@ -3361,6 +3333,15 @@ select::-ms-expand {
   .visit_main_inquiry_btn{
     bottom: 85px !important;
   }
+  .event-banner .event-text a u {
+    font-size: 15px!important;
+  }
+  .storage-info .storage-type-pic img{
+    max-width: 90% !important;
+  }
+  .mg-t-30{
+    margin-top: 0px !important;
+  }
 }
 
 @media (max-width: 450px) {
@@ -3414,6 +3395,10 @@ select::-ms-expand {
 
   .main_inquiry .form_box .form button {
     margin-bottom: 20px;
+  }
+  .questions{
+    padding: 20px 16px;
+    font-size: 0.938rem;
   }
 }
 
@@ -3941,7 +3926,6 @@ body.scroll-lock {
 .gallery-top-mobile {
   width: 100%;
   height: inherit;
-  margin-bottom: -20px !important;
 }
 
 .swiper-pagination-mobile {
