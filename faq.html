@@ -78,14 +78,14 @@
 <body>
   <!-- 이벤트 띠배너 -->
   <div class="event-banner d-flex pt-3 pb-2">
-    <div class="container-fluid">
+    <div class="container-fluid top-menu-conainer">
       <div class="row">
         <div class="flex-fill text-center event-text">
           <span class="new">NEW</span>
           <span><a href="./event.html"><u style="color: #000; font-weight: 500; font-size: 16px;">슈가맨카고 이벤트 소식을 만나보세요!</u>&nbsp;🎉</a></span>
         </div>
         <button class="event-banner-btn" style="border-style: none; background: transparent;">
-          <span class="material-icons ml-auto" style="cursor: pointer;">close</span>
+          <span class="material-icons ml-auto close-btn-index" style="cursor: pointer;">close</span>
         </button>
       </div>
     </div>
@@ -95,11 +95,26 @@
     style="border-bottom:1px solid #e1e1e1; background-color: #fff;">
     <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
       <a class="navbar-brand" href="./index.html"><img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo"
-          class="main-logo"></a>
+          class="main-logo main-logo"></a>
 
-      <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
-        <span class="material-icons">menu</span>
-      </button>
+      <!-- <button
+          class="navbar-toggler mobile-menu-place toggle-mobile-menu"
+          type="button"
+        >
+          <span class="material-icons main_menu">menu</span>
+        </button> -->
+
+        <div
+          id="nav_button"
+          class="nav_button material-icons toggle-mobile-menu"
+        >
+          <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+          <label for="menuicon">
+            <span class="span1" style="background-color: rgb(17, 35, 72)"></span>
+            <span class="span2" style="background-color: rgb(17, 35, 72)"></span>
+            <span class="span3" style="background-color: rgb(17, 35, 72)"></span>
+          </label>
+        </div>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav ml-auto">
@@ -322,7 +337,100 @@
 
     </div>
 
+    <script>
+      $(document).on("click", ".close-btn-index", function () {
+        $(".event-text").addClass("close-topbar");
+        $("html").toggleClass("event-banner-close");
+        $(".mobile-menu").css("top", "0px");
+        $(".scroll-nav").css("top", "0px");
+      });
+    </script>
 
+    <script>
+ $(document).on("click", ".mobile-menu-place-i", function () {
+        $(".mobile-menu").toggle();
+        // $(".mobile-menu-place-i").toggleClass("opened");
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          $(".mobile-menu-place-i").removeClass("opened");
+        } else {
+          $(".mobile-menu-place-i").addClass("opened");
+        }
+
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          console.log("열림");
+          $(".scroll-nav").css("padding-right", "10px");
+          $(".logo-w-img").attr(
+            "src",
+            "./assets/img/sugarmancargo_logo@2x.png"
+          );
+
+          // 배너 유무
+          if ($("html").hasClass("event-banner-close")) {
+            console.log("배너 없음");
+            $(".mobile-menu").css("top", "0px");
+          } else {
+            console.log("배너 있음");
+
+            // 스크롤 유무
+            if ($(window).scrollTop() > 0) {
+              console.log("스크롤 있음");
+              $(".scroll-nav").css("top", "0");
+              $(".scroll-nav").css("position", "fixed");
+              $(".scroll-nav").css("width", "100vw");
+              $(".mobile-menu").css("top", "0px");
+            } else {
+              console.log("스크롤 없음");
+              $(".scroll-nav").css("top", "50px");
+              $(".mobile-menu").css("top", "50px");
+            }
+          }
+        } else {
+          // 닫힘
+          console.log("닫힘");
+          $(".scroll-nav").css("padding-right", "10px");
+          $(".logo-w-img").attr(
+            "src",
+            "./assets/img/sugarmancargo_logo@2x.png"
+          );
+        }
+
+        $(".web-popup").hide();
+        $("html").toggleClass("prevent-scroll");
+        $("body").toggleClass("prevent-scroll");
+      });
+
+      $(function () {
+        $(window).scroll(function () {
+          if ((scroll = $(window).scrollTop() > 1700)) {
+            console.log("scroll1");
+            $(".scroll-nav").css("padding-right", "10px");
+          } else {
+            console.log("scroll2");
+
+            // 스크롤 유무
+            if ($(window).scrollTop() > 0) {
+              console.log("스크롤 있음");
+              $(".scroll-nav").css("top", "0");
+              $(".scroll-nav").css("position", "fixed");
+              $(".scroll-nav").css("width", "100%");
+              $(".scroll-nav").css("padding-right", "10px");
+            } else {
+              console.log("스크롤 없음");
+              $(".scroll-nav").css("padding-right", "10px");
+              $(".Customer_wrap").css("margin-top", "100px");
+
+              if ($("html").hasClass("event-banner-close")) {
+                console.log("배너 없음");
+                $(".scroll-nav").css("top", "0");
+              } else {
+                console.log("배너 있음");
+                $(".scroll-nav").css("top", "50px");
+              }
+            }
+          }
+        });
+      });
+    </script>
 
     <style>
       .spinner-border {

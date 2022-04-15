@@ -782,7 +782,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 .top-nav.fixed-head {
-  top: 0px;
+  top: -1px;
 }
 
 .logo-r {
@@ -1193,7 +1193,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 @media (min-width: 0px) and (max-width: 414px) {
   .event-banner {
-    height: 50px !important;
+    height: 51px !important;
   }
   .navbar-brand {
     padding-top: 0 !important;
@@ -4129,5 +4129,17 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 @media screen and (min-width: 992px) {
   #nav_button {
     display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hamBtn {
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hamBtn {
+    padding-right: 15px !important;
   }
 }

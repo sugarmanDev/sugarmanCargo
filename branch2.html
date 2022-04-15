@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   	<link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
 
-	<!-- Apple Touch Icons -->	
+	<!-- Apple Touch Icons -->
 	<link rel="apple-touch-icon" href="https://sugarmancargo.com/assets/57@2x.png">
 	<link rel="apple-touch-icon-precomposed" href="https://sugarmancargo.com/assets/57@2x.png">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://sugarmancargo.com/assets/57@2x.png">
@@ -81,28 +81,41 @@
 <body>
   <!-- 이벤트 띠배너 -->
   <div class="event-banner d-flex pt-3 pb-2">
-    <div class="container-fluid">
+    <div class="container-fluid top-menu-conainer">
       <div class="row">
         <div class="flex-fill text-center event-text">
           <span class="new">NEW</span>
           <span><a href="./event.html"><u style="color: #000; font-weight: 500; font-size: 16px;">슈가맨카고 이벤트 소식을 만나보세요!</u>&nbsp;🎉</a></span>
         </div>
         <button class="event-banner-btn" style="border-style: none; background: transparent;">
-          <span class="material-icons ml-auto" style="cursor: pointer;">close</span>
+          <span class="material-icons ml-auto close-btn-index" style="cursor: pointer;">close</span>
         </button>
       </div>
     </div>
   </div>
   <!-- scroll nav -->
-  <div class="navbar-wrap shadow-sm sticky-top scroll-nav"
+  <!-- <div class="navbar-wrap shadow-sm scroll-nav" -->
+  <div class="navbar-wrap scroll-nav"
     style="border-bottom:1px solid #e1e1e1; background-color: #fff;">
     <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0;">
       <a class="navbar-brand" href="./index.html"><img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo"
           class="main-logo"></a>
 
-      <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
+      <!-- <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
         <span class="material-icons">menu</span>
-      </button>
+      </button> -->
+
+      <div
+      id="nav_button"
+      class="nav_button material-icons toggle-mobile-menu"
+    >
+      <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+      <label for="menuicon">
+        <span class="span1" style="background-color: rgb(17, 35, 72)"></span>
+        <span class="span2" style="background-color: rgb(17, 35, 72)"></span>
+        <span class="span3" style="background-color: rgb(17, 35, 72)"></span>
+      </label>
+    </div>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav ml-auto">
@@ -125,9 +138,9 @@
   <!-- 메인배너 -->
   <div class="content bg-white">
     <div class="container main-container ">
-      <div class="row join-guide">
+      <div class="row join-guide" style="padding-top:40px !important;">
         <div class="col-12 join-g-title">
-          <h3 class="main_title pl-15">서울 군자점 I 2호점</h3>
+            <h3 class="main_title pl-15">서울 군자점 I 2호점</h3>
         </div>
       </div>
     </div>
@@ -161,109 +174,109 @@
 
 
     <div class="storage-info">
-      <h3 class="detail-title">보관 유형</h3>
-      
-      <div class="row">
-          <div class="col-md-6">
-              <div class="row align-items-center mg-t-30 p-15">
-                  <div class="col-4 storage-type-pic text-center">
-                      <img src="./assets/img/space_Detail page/storage_size/c@2x.png" alt="">
-                      <!-- <div class="storage-img storage1-img"></div> -->
-                  </div>
-                  <div class="col-8 storage-txt">
-                    <div>
-                      <img src="./assets/img/reservation_c@2x.png"/>
-                      <p class="size-name">큐브 사이즈</p>
-                      <p class="size-price">월 5만원(VAT 포함)</p>
-                      <p class="size-info">
-                          0.8m x 1.0m x 1.2m <br/>
-                          우체국 5호 박스 기준 12개
-                      </p>
+        <h3 class="detail-title">보관 유형</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center mg-t-30 p-15">
+                    <div class="col-4 storage-type-pic text-center">
+                        <img src="./assets/img/space_Detail page/storage_size/c@2x.png" alt="">
+                        <!-- <div class="storage-img storage1-img"></div> -->
                     </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="row align-items-center mg-t-30 p-15">
-                  <div class="col-4 storage-type-pic text-center">
-                      <img src="./assets/img/space_Detail page/storage_size/s@2x.png" alt="">
-                      <!-- <div class="storage-img storage2-img"></div> -->
-                  </div>
-                  <div class="col-8 storage-txt">
-                    <div>
-                      <img src="./assets/img/reservation_s@2x.png"/>
-                      <p class="size-name">스몰 사이즈</p>
-                      <p class="size-price">월 8만원(VAT 포함)</p>
-                      <p class="size-info">
-                          0.8m x 1.0m x 2.4m <br/>
-                          우체국 5호 박스 기준 28개
-                      </p>
+                    <div class="col-8 storage-txt">
+                      <div>
+                        <img src="./assets/img/reservation_c@2x.png"/>
+                        <p class="size-name">큐브 사이즈</p>
+                        <p class="size-price">월 5만원(VAT 포함)</p>
+                        <p class="size-info">
+                            0.8m x 1.0m x 1.2m <br/>
+                            우체국 5호 박스 기준 12개
+                        </p>
+                      </div>
                     </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-md-6">
-              <div class="row align-items-center mg-t-30 p-15">
-                  <div class="col-4 storage-type-pic text-center">
-                      <img src="./assets/img/space_Detail page/storage_size/m@2x.png" alt="">
-                      <!-- <div class="storage-img storage3-img"></div> -->
-                  </div>
-                  <div class="col-8 storage-txt">
-                    <div>
-                      <img src="./assets/img/reservation_m@2x.png"/>
-                      <p class="size-name">미디움 사이즈</p>
-                      <p class="size-price">월 10만원(VAT 포함)</p>
-                      <p class="size-info">
-                          1.2m x 1.0m x 2.4m <br/>
-                          우체국 5호 박스 기준 42개
-                      </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center mg-t-30 p-15">
+                    <div class="col-4 storage-type-pic text-center">
+                        <img src="./assets/img/space_Detail page/storage_size/s@2x.png" alt="">
+                        <!-- <div class="storage-img storage2-img"></div> -->
                     </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="row align-items-center mg-t-30 p-15">
-                  <div class="col-4 storage-type-pic text-center">
-                      <img src="./assets/img/space_Detail page/storage_size/l@2x.png" alt=""> 
-                      <!-- <div class="storage-img storage4-img"></div> -->
-                  </div>
-                  <div class="col-8 storage-txt">
-                    <div>
-                      <img src="./assets/img/reservation_l@2x.png"/>
-                      <p class="size-name">라지 사이즈</p>
-                      <p class="size-price">월 14만원(VAT 포함)</p>
-                      <p class="size-info">
-                          1.2m x 1.5m x 2.4m <br/>
-                          우체국 5호 박스 기준 63개
-                      </p>
+                    <div class="col-8 storage-txt">
+                      <div>
+                        <img src="./assets/img/reservation_s@2x.png"/>
+                        <p class="size-name">스몰 사이즈</p>
+                        <p class="size-price">월 8만원(VAT 포함)</p>
+                        <p class="size-info">
+                            0.8m x 1.0m x 2.4m <br/>
+                            우체국 5호 박스 기준 28개
+                        </p>
+                      </div>
                     </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-md-6">
-              <div class="row align-items-center mg-t-30 p-15">
-                  <div class="col-4 storage-type-pic text-center">
-                      <img src="./assets/img/space_Detail page/storage_size/xl@2x.png" alt="">
-                      <!-- <div class="storage-img storage5-img"></div> -->
-                  </div>
-                  <div class="col-8 storage-txt">
-                    <div>
-                      <img src="./assets/img/reservation_xl@2x.png"/>
-                      <p class="size-name">엑스라지 사이즈</p>
-                      <p class="size-price">월 18만원(VAT 포함)</p>
-                      <p class="size-info">
-                          1.2m x 2.0m x 2.4m <br/>
-                          우체국 5호 박스 기준 84개
-                      </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center mg-t-30 p-15">
+                    <div class="col-4 storage-type-pic text-center">
+                        <img src="./assets/img/space_Detail page/storage_size/m@2x.png" alt="">
+                        <!-- <div class="storage-img storage3-img"></div> -->
                     </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                    <div class="col-8 storage-txt">
+                      <div>
+                        <img src="./assets/img/reservation_m@2x.png"/>
+                        <p class="size-name">미디움 사이즈</p>
+                        <p class="size-price">월 10만원(VAT 포함)</p>
+                        <p class="size-info">
+                            1.2m x 1.0m x 2.4m <br/>
+                            우체국 5호 박스 기준 42개
+                        </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center mg-t-30 p-15">
+                    <div class="col-4 storage-type-pic text-center">
+                        <img src="./assets/img/space_Detail page/storage_size/l@2x.png" alt=""> 
+                        <!-- <div class="storage-img storage4-img"></div> -->
+                    </div>
+                    <div class="col-8 storage-txt">
+                      <div>
+                        <img src="./assets/img/reservation_l@2x.png"/>
+                        <p class="size-name">라지 사이즈</p>
+                        <p class="size-price">월 14만원(VAT 포함)</p>
+                        <p class="size-info">
+                            1.2m x 1.5m x 2.4m <br/>
+                            우체국 5호 박스 기준 63개
+                        </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center mg-t-30 p-15">
+                    <div class="col-4 storage-type-pic text-center">
+                        <img src="./assets/img/space_Detail page/storage_size/xl@2x.png" alt="">
+                        <!-- <div class="storage-img storage5-img"></div> -->
+                    </div>
+                    <div class="col-8 storage-txt">
+                      <div>
+                        <img src="./assets/img/reservation_xl@2x.png"/>
+                        <p class="size-name">엑스라지 사이즈</p>
+                        <p class="size-price">월 18만원(VAT 포함)</p>
+                        <p class="size-info">
+                            1.2m x 2.0m x 2.4m <br/>
+                            우체국 5호 박스 기준 84개
+                        </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="location">
             <h3 class="detail-title">위치</h3>
@@ -278,50 +291,50 @@
         </div>
 
         <div class="service">
-                <h3 class="main-title">서비스</h3>
-                <div class="row mt-5 text-center service-wrap">
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_3@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">24시간 오픈</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_4@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">자율 냉난방</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_5@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">24시간 CCTV</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_6@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">공용 컴퓨터</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_7@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">무료 주차</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_8@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">도어락</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_9@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">공용 카트</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_10@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">화재 보험</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_11@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">공용 복합기</p>
-                    </div>
-                    <div class="col min-half">
-                        <img src="./assets/img/icon_12@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
-                        <p class="sub-text">택배 서비스</p>
-                    </div>
-            </div>
+            <h3 class="main-title">서비스</h3>
+            <div class="row mt-5 text-center service-wrap">
+                <div class="col min-half">
+                    <img src="./assets/img/icon_3@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">24시간 오픈</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_4@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">자율 냉난방</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_5@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">24시간 CCTV</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_6@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">공용 컴퓨터</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_7@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">무료 주차</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_8@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">도어락</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_9@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">공용 카트</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_10@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">화재 보험</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_11@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">공용 복합기</p>
+                </div>
+                <div class="col min-half">
+                    <img src="./assets/img/icon_12@2x.png" style="width: 110px; height: 110px;" alt="24s-open" />
+                    <p class="sub-text">택배 서비스</p>
+                </div>
         </div>
+    </div>
 
 
 
@@ -599,6 +612,70 @@
     });
 </script>
 
+<script>
+$(document).on("click", ".mobile-menu-place-i", function () {
+        $(".mobile-menu").toggle();
+        // $(".mobile-menu-place-i").toggleClass("opened");
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          $(".mobile-menu-place-i").removeClass("opened");
+        } else {
+          $(".mobile-menu-place-i").addClass("opened");
+        }
+
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          console.log("열림");
+          $(".scroll-nav").css("padding-right", "10px");
+
+          // 배너 유무
+          if ($("html").hasClass("event-banner-close")) {
+            console.log("배너 없음");
+            $(".mobile-menu").css("top", "0px");
+          } else {
+            console.log("배너 있음");
+            
+            if ($(window).scrollTop() > 0) {
+              console.log("스크롤 있음");
+              $(".scroll-nav").css("position", "absolute");
+              $(".scroll-nav").css("width", "100vw");
+            } else {
+              console.log("스크롤 없음");
+              $(".scroll-nav").css("position", "absolute");
+              $(".scroll-nav").css("width", "100vw");
+            }
+          }
+        } else {
+          // 닫힘
+          console.log("닫힘");
+          $(".scroll-nav").css("position", "relative");
+          
+          var m = matchMedia("screen and (max-width: 500px)");
+            console.log(m.matches)
+            if(m.matches) {
+              $(".scroll-nav").css("padding-right", "15px");
+            }else {
+              $(".scroll-nav").css("padding-right", "27px");
+            }
+        }
+
+
+        $(".web-popup").hide();
+        $("html").toggleClass("prevent-scroll");
+        $("body").toggleClass("prevent-scroll");
+      });
+
+      $(function () {
+        $(window).scroll(function () {
+            // 스크롤 유무
+            if ($(window).scrollTop() > 0) {
+              console.log("스크롤 있음");
+
+            } else {
+              console.log("스크롤 없음");
+            }
+          }
+      )});
+</script>
+
 
 <style>
   a:hover {
@@ -627,7 +704,7 @@
     font-weight: bolder;
     color: #fff;
     position: absolute;
-    z-index: 100;
+    z-index: 98;
   }
   
   .root_daum_roughmap .wrap_controllers{

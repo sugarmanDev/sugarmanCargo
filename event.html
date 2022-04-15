@@ -191,17 +191,27 @@
   <body>
     <!-- 이벤트 띠배너 -->
     <div class="event-banner d-flex pt-3 pb-2">
-      <div class="container-fluid">
+      <div class="container-fluid top-menu-conainer">
         <div class="row">
           <div class="flex-fill text-center event-text">
             <span class="new">NEW</span>
             <span>
               <a href="./event.html">
-                <u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을 만나보세요!</u>&nbsp;🎉</a>
+                <u style="color: #000; font-weight: 500; font-size: 16px"
+                  >슈가맨카고 이벤트 소식을 만나보세요!</u
+                >&nbsp;🎉</a
+              >
             </span>
           </div>
-          <button class="event-banner-btn" style="border-style: none; background: transparent">
-            <span class="material-icons ml-auto" style="cursor: pointer">close</span>
+          <button
+            class="event-banner-btn"
+            style="border-style: none; background: transparent"
+          >
+            <span
+              class="material-icons ml-auto close-btn-index"
+              style="cursor: pointer"
+              >close</span
+            >
           </button>
         </div>
       </div>
@@ -210,15 +220,44 @@
     <!-- scroll nav -->
     <div
       class="navbar-wrap sticky-top scroll-nav"
-      style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
+      style="border-bottom: 1px solid #e1e1e1; background-color: #fff"
+    >
       <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
         <a class="navbar-brand" href="./index.html">
-          <img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo"/>
-      </a>
+          <img
+            src="./assets/img/sugarmancargo_logo@2x.png"
+            alt="sugarmancargo_logo"
+            class="main-logo"
+          />
+        </a>
 
-        <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
+        <!-- <button
+          class="navbar-toggler mobile-menu-place toggle-mobile-menu"
+          type="button"
+        >
           <span class="material-icons">menu</span>
-        </button>
+        </button> -->
+
+        <div
+          id="nav_button"
+          class="nav_button material-icons toggle-mobile-menu"
+        >
+          <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+          <label for="menuicon">
+            <span
+              class="span1"
+              style="background-color: rgb(17, 35, 72)"
+            ></span>
+            <span
+              class="span2"
+              style="background-color: rgb(17, 35, 72)"
+            ></span>
+            <span
+              class="span3"
+              style="background-color: rgb(17, 35, 72)"
+            ></span>
+          </label>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav ml-auto">
@@ -254,16 +293,16 @@
         <div class="row mt-5" id="listPlace"></div>
       </div>
     </div>
-    
+
     <!-- 푸터 시작 -->
     <div class="content-section bg-footer footer-t footer">
       <div class="container-fluid main-container">
         <div class="row">
           <div class="col-md-2">
             <img
-            class="footer-logo"
-            src="./assets/img/footer_logo.png"
-            alt="footer-logo"
+              class="footer-logo"
+              src="./assets/img/footer_logo.png"
+              alt="footer-logo"
             />
           </div>
           <div class="col-md-7 footer-con">
@@ -281,24 +320,24 @@
             <ul class="footer-con-2">
               <li>
                 <span>(주)슈가맨</span
-                  ><strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li>
-                  <span>대표이사 </span> 최성원
-                  <strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li><span>사업자등록번호 </span>155-87-01085</li>
-              </ul>
-              <ul class="footer-con-3">
-                <li>
-                  <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
-                  <strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
-              </ul>
-            </div>
-            
-            <div class="col-md-3">
+                ><strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li>
+                <span>대표이사 </span> 최성원
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li><span>사업자등록번호 </span>155-87-01085</li>
+            </ul>
+            <ul class="footer-con-3">
+              <li>
+                <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
             <div class="footer-right">
               <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
               <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
@@ -307,11 +346,11 @@
         </div>
       </div>
     </div>
-      
+
     <div class="footer-m footer container-fluid p-0">
       <div class="footer-line"></div>
     </div>
-    
+
     <div class="footer">
       <div class="container-fluid main-container footer-bottom">
         <div class="row">
@@ -337,6 +376,77 @@
     </div>
   </body>
 </html>
+
+<script>
+  $(document).on("click", ".close-btn-index", function () {
+    $(".event-text").addClass("close-topbar");
+    $("html").toggleClass("event-banner-close");
+    $(".mobile-menu").css("top", "0px");
+    $(".scroll-nav").css("top", "0px");
+  });
+
+  $(document).on("click", ".mobile-menu-place-i", function () {
+    $(".mobile-menu").toggle();
+    // $(".mobile-menu-place-i").toggleClass("opened");
+    if ($(".mobile-menu-place-i").hasClass("opened")) {
+      $(".mobile-menu-place-i").removeClass("opened");
+    } else {
+      $(".mobile-menu-place-i").addClass("opened");
+    }
+
+    if ($(".mobile-menu-place-i").hasClass("opened")) {
+      console.log("열림");
+      $(".logo-w-img").attr("src", "./assets/img/sugarmancargo_logo@2x.png");
+
+      // 배너 유무
+      if ($("html").hasClass("event-banner-close")) {
+        console.log("배너 없음");
+        $(".mobile-menu").css("top", "0px");
+      } else {
+        console.log("배너 있음");
+        $(".mobile-menu").css("top", "50px");
+      }
+    } else {
+      // 닫힘
+      console.log("닫힘");
+
+      $(".logo-w-img").attr("src", "./assets/img/sugarmancargo_logo@2x.png");
+    }
+
+    $(".web-popup").hide();
+    $("html").toggleClass("prevent-scroll");
+    $("body").toggleClass("prevent-scroll");
+  });
+
+  $(function () {
+    $(window).scroll(function () {
+      if ((scroll = $(window).scrollTop() > 575)) {
+        console.log("scroll1");
+
+        // 스크롤 유무
+      }
+    });
+  });
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 0) {
+      console.log("스크롤 있음");
+      $(".scroll-nav").css("top", "0");
+      $(".scroll-nav").css("position", "fixed");
+      $(".scroll-nav").css("width", "100%");
+    } else {
+      console.log("스크롤 없음");
+
+      if ($("html").hasClass("event-banner-close")) {
+        console.log("배너 없음");
+        $(".scroll-nav").css("top", "0");
+      } else {
+        console.log("배너 있음");
+        $(".scroll-nav").css("top", "50px");
+      }
+    }
+  });
+</script>
 
 <script>
   $(document).ready(function () {
