@@ -1,9 +1,9 @@
 var mobileMenu = '<div class="mobile" id="mobile">';
 mobileMenu += '<div class="container-fluid mobile-menu">';
 mobileMenu += '  <button class="close-btn toggle-mobile-menu">';
-mobileMenu += '    <span class="material-icons">';
-mobileMenu += '      clear';
-mobileMenu += '      </span>';
+// mobileMenu += '    <span class="material-icons">';
+// mobileMenu += '      clear';
+// mobileMenu += '      </span>';
 mobileMenu += '  </button>';
 mobileMenu += '  <div class="mobile-menu-list">';
 mobileMenu += '<ul>';
