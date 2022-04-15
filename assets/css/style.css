@@ -611,6 +611,7 @@ ul {
   cursor: pointer;
   padding: 0 2%;
   font-size: 0.9rem;
+  height: 50px;
 }
 
 /* nav */
@@ -1192,8 +1193,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 @media (min-width: 0px) and (max-width: 414px) {
   .event-banner {
-    padding-top: 8px !important;
-    padding-bottom: 2px !important;
+    height: 50px !important;
   }
   .navbar-brand {
     padding-top: 0 !important;
@@ -2261,7 +2261,7 @@ input[id="privacy"] + label {
   background-color: #fff;
   color: #000;
   z-index: 98;
-  top: 54px;
+  top: 50px;
   /* top: 41px */
   left: 0px;
   display: none;
@@ -4123,4 +4123,11 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .mobile-menu-scroll {
   background: tomato;
+}
+
+/* 햄버거 버튼(nav button) media CSS */
+@media screen and (min-width: 992px) {
+  #nav_button {
+    display: none;
+  }
 }
