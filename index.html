@@ -202,7 +202,7 @@
   <body>
     <!-- 이벤트 띠배너 -->
     <div class="event-banner d-flex pt-3 pb-2">
-      <div class="container-fluid">
+      <div class="container-fluid top-menu-conainer">
         <div class="row">
           <div class="flex-fill text-center event-text">
             <span class="new">NEW</span>
@@ -218,7 +218,9 @@
             class="event-banner-btn"
             style="border-style: none; background: transparent"
           >
-            <span class="material-icons ml-auto" style="cursor: pointer"
+            <span
+              class="material-icons ml-auto close-btn-index"
+              style="cursor: pointer"
               >close</span
             >
           </button>
@@ -230,27 +232,39 @@
     <div class="navbar-wrap scroll-nav top-nav">
       <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
         <a class="navbar-brand logo-w" href="./index.html">
-          <img src="./assets/img/sugarmancargo_logo_wh@2x.png" alt="sugarmancargo_logo"/>
+          <img
+            class="logo-w-img"
+            src="./assets/img/sugarmancargo_logo_wh@2x.png"
+            alt="sugarmancargo_logo"
+          />
         </a>
         <a class="scroll-nav logo-r" href="./index.html">
-          <img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo"/>
+          <img
+            class="logo-w-img"
+            src="./assets/img/sugarmancargo_logo@2x.png"
+            alt="sugarmancargo_logo"
+            class="main-logo"
+          />
         </a>
 
-        <button
+        <!-- <button
           class="navbar-toggler mobile-menu-place toggle-mobile-menu"
           type="button"
         >
           <span class="material-icons main_menu">menu</span>
-        </button>
-        
-        <!-- <div id="nav_button" class="nav_button material-icons toggle-mobile-menu">
-          <input type="checkbox" id="menuicon" class="mobile-menu-place-i">
+        </button> -->
+
+        <div
+          id="nav_button"
+          class="nav_button material-icons toggle-mobile-menu"
+        >
+          <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
           <label for="menuicon">
             <span class="span1"></span>
             <span class="span2"></span>
             <span class="span3"></span>
           </label>
-        </div> -->
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav ml-auto">
@@ -401,6 +415,14 @@
       </div>
     </div>
 
+    <script>
+      $(document).on("click", ".close-btn-index", function () {
+        $(".event-text").addClass("close-topbar");
+        $("html").toggleClass("event-banner-close");
+        $(".mobile-menu").css("top", "0px");
+      });
+    </script>
+
     <style>
       .main_inquiry {
         display: none;
@@ -408,9 +430,79 @@
     </style>
 
     <script>
+      // $(document).on("click", ".mobile-menu-place-i", function () {
+      //   $("#mobile").toggle();
+      //   $(".mobile-menu-place-i").toggleClass("opened");
+      //   $("html").toggleClass("prevent-scroll");
+      //   $("body").toggleClass("prevent-scroll");
+      // });
+
       $(document).on("click", ".mobile-menu-place-i", function () {
-        $("#mobile").toggle();
-        $(".mobile-menu-place-i").toggleClass("opened");
+        $(".mobile-menu").toggle();
+        // $(".mobile-menu-place-i").toggleClass("opened");
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          $(".mobile-menu-place-i").removeClass("opened");
+        } else {
+          $(".mobile-menu-place-i").addClass("opened");
+        }
+
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+          // 열림
+          console.log("열림");
+
+          if ($(".top-nav").hasClass("fixed-head-white")) {
+            // 배경 하얀색
+            console.log("배경 하얀색");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo@2x.png"
+            );
+          } else if ($(".top-nav").hasClass("fixed-head")) {
+            // 배경 투명
+            console.log("배경 투명함");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo@2x.png"
+            );
+          } else {
+            // 배경 투명
+            console.log("배경 투명함");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo@2x.png"
+            );
+
+            // 배너 유무
+            if ($("html").hasClass("event-banner-close")) {
+              console.log("배너 없음");
+              $(".mobile-menu").css("top", "0px");
+            } else {
+              console.log("배너 있음");
+              $(".mobile-menu").css("top", "55px");
+            }
+          }
+        } else {
+          // 닫힘
+          console.log("닫힘");
+
+          if ($(".top-nav").hasClass("fixed-head-white")) {
+            // 배경 하얀색
+            console.log("배경 하얀색");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo@2x.png"
+            );
+          } else {
+            // 배경 투명
+            console.log("배경 투명함");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo_wh@2x.png"
+            );
+          }
+        }
+
+        $(".web-popup").hide();
         $("html").toggleClass("prevent-scroll");
         $("body").toggleClass("prevent-scroll");
       });
@@ -507,7 +599,11 @@
         </h3>
         <div class="row mt-m">
           <div class="col-md-4">
-            <img src="./assets/img/cargo_1@2x.jpg" class="img-fluid mt-5" alt="" />
+            <img
+              src="./assets/img/cargo_1@2x.jpg"
+              class="img-fluid mt-5"
+              alt=""
+            />
             <h6 class="main-text mt-4">물품 보관</h6>
             <p class="sub-text">
               집이나 사무실에 물건이 많아 공간이 부족하신가요?<br
@@ -519,7 +615,11 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img src="./assets/img/cargo_2@2x.jpg" class="img-fluid mt-5" alt="" />
+            <img
+              src="./assets/img/cargo_2@2x.jpg"
+              class="img-fluid mt-5"
+              alt=""
+            />
             <h6 class="main-text mt-4">택배 서비스</h6>
             <p class="sub-text">
               슈가맨카고에서 바로 택배 발송이 가능합니다.<br
@@ -532,7 +632,11 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img src="./assets/img/cargo_3@2x.jpg" class="img-fluid mt-5" alt="" />
+            <img
+              src="./assets/img/cargo_3@2x.jpg"
+              class="img-fluid mt-5"
+              alt=""
+            />
             <h6 class="main-text mt-4">비상주 사무실 등록</h6>
             <p class="sub-text">
               창고 이용만으로 사업자 주소지 등록이<br
@@ -896,14 +1000,19 @@
             </h3>
           </div>
           <div class="col-md-6 d-none d-sm-block" style="text-align: center">
-            <img src="./assets/img/cargo_8@2x.png" alt="" style="max-width: 90%; width:315px;"/>
+            <img
+              src="./assets/img/cargo_8@2x.png"
+              alt=""
+              style="max-width: 90%; width: 315px"
+            />
           </div>
         </div>
 
         <div class="row float">
           <div
             class="col storage-box pb-2 pt-2 box-start border-0"
-            style="background-color: #e9474d">
+            style="background-color: #e9474d"
+          >
             <div style="margin-top: 70%">
               <h3 class="main-title text-white">다양한<br />스토리지 사이즈</h3>
               <img
@@ -1042,7 +1151,10 @@
               />
               <div class="box mt-3">
                 <span class="label mr-1">01</span>
-                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
+                <p
+                  class="sub-text"
+                  style="display: inline; color: #000; font-weight: 500"
+                >
                   방문 상담 예약하기
                 </p>
               </div>
@@ -1058,7 +1170,10 @@
               />
               <div class="box mt-3">
                 <span class="label mr-1">02</span>
-                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
+                <p
+                  class="sub-text"
+                  style="display: inline; color: #000; font-weight: 500"
+                >
                   나에게 맞는 스토리지 찾기
                 </p>
               </div>
@@ -1074,7 +1189,10 @@
               />
               <div class="box mt-3">
                 <span class="label mr-1">03</span>
-                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
+                <p
+                  class="sub-text"
+                  style="display: inline; color: #000; font-weight: 500"
+                >
                   계약기간 설정 및 계약하기
                 </p>
               </div>
@@ -1090,7 +1208,10 @@
               />
               <div class="box mt-3">
                 <span class="label mr-1">04</span>
-                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
+                <p
+                  class="sub-text"
+                  style="display: inline; color: #000; font-weight: 500"
+                >
                   슈가맨카고 자유롭게 이용하기
                 </p>
               </div>
@@ -1206,14 +1327,50 @@
           var scroll = $(window).scrollTop();
           // 48
           if (scroll > 48) {
+            console.log("scroll > 48");
             $(".top-nav").addClass("fixed-head");
+            $(".span1").css("background-color", "#112348");
+            $(".span2").css("background-color", "#112348");
+            $(".span3").css("background-color", "#112348");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo_wh@2x.png"
+            );
+            $(".mobile-menu").css("top", "0px");
+
             if (scroll > 200) {
+              console.log("scroll > 200");
               $(".top-nav").addClass("fixed-head-white");
+              $(".span1").css("background-color", "#112348");
+              $(".span2").css("background-color", "#112348");
+              $(".span3").css("background-color", "#112348");
+              $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo@2x.png"
+              );
+              $(".mobile-menu").css("top", "55px");
             } else {
+              console.log("scroll <= 200");
               $(".top-nav").removeClass("fixed-head-white");
+              $(".span1").css("background-color", "white");
+              $(".span2").css("background-color", "white");
+              $(".span3").css("background-color", "white");
+              $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo_wh@2x.png"
+              );
+              $(".mobile-menu").css("top", "0px");
             }
           } else {
+            console.log("scroll <= 48");
             $(".top-nav").removeClass("fixed-head");
+            $(".span1").css("background-color", "white");
+            $(".span2").css("background-color", "white");
+            $(".span3").css("background-color", "white");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo_wh@2x.png"
+            );
           }
           console.log(scroll);
         });
@@ -1223,14 +1380,51 @@
         var scroll = $(window).scrollTop();
         // 48
         if (scroll > 48) {
+          console.log("scroll > 48");
           $(".top-nav").addClass("fixed-head");
+          $(".span1").css("background-color", "#112348");
+          $(".span2").css("background-color", "#112348");
+          $(".span3").css("background-color", "#112348");
+          $(".logo-w-img").attr(
+            "src",
+            "./assets/img/sugarmancargo_logo_wh@2x.png"
+          );
+          $(".mobile-menu").css("top", "0");
+
           if (scroll > 350) {
+            console.log("scroll > 350");
             $(".top-nav").addClass("fixed-head-white");
+            $(".span1").css("background-color", "#112348");
+            $(".span2").css("background-color", "#112348");
+            $(".span3").css("background-color", "#112348");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo@2x.png"
+            );
+            $(".mobile-menu").css("top", "55px");
           } else {
+            console.log("scroll <= 350");
             $(".top-nav").removeClass("fixed-head-white");
+            $(".span1").css("background-color", "white");
+            $(".span2").css("background-color", "white");
+            $(".span3").css("background-color", "white");
+            $(".logo-w-img").attr(
+              "src",
+              "./assets/img/sugarmancargo_logo_wh@2x.png"
+            );
+            $(".mobile-menu").css("top", "0");
           }
         } else {
+          console.log("scroll <= 48");
           $(".top-nav").removeClass("fixed-head");
+          $(".span1").css("background-color", "white");
+          $(".span2").css("background-color", "white");
+          $(".span3").css("background-color", "white");
+          $(".logo-w-img").attr(
+            "src",
+            "./assets/img/sugarmancargo_logo_wh@2x.png"
+          );
+          $(".mobile-menu").css("top", "55px");
         }
         console.log(scroll);
       });
