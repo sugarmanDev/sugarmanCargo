@@ -430,7 +430,7 @@ ul {
   }
 
   .about-sub {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .mobile_hide {
@@ -618,7 +618,7 @@ ul {
 .navbar-wrap {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0 2%;
-  z-index: 99;
+  z-index: 99999998 !important;
 }
 
 .navbar .nav-link {
@@ -758,6 +758,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background: #fff;
   color: #000;
   z-index: 99;
+  border-bottom: 1px solid #e1e1e1;
+
 }
 
 .fixed-head-white .nav-link {
@@ -774,7 +776,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .top-nav {
   position: fixed;
-  border-bottom: 1px solid #e1e1e1;
   /* top: 55px; */
   left: 0px;
   width: 100%;
@@ -1234,19 +1235,26 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .address-info {
     font-size: 1rem !important;
   }
+  .main-slide-next .material-icons{
+    font-size: 30px !important;
+  }
   .main-slide-next.prev-slide {
-    left: -77px !important;
+    left: -50px !important;
     top: -158px !important;
+    width: 45px;
+    height: 45px;
   }
   .main-slide-next.next-slide {
     top: -158px !important;
-    left: 340px !important;
+    left: 315px !important;
+    width: 45px !important;
+    height: 45px !important;
   }
   .main_wrap .row {
     padding: 100px !important;
   }
   .about-logo {
-    width: 190px;
+    width: 148px;
     height: auto;
   }
   .visit_form .col-md-4 {
@@ -2321,6 +2329,9 @@ a:visited {
 }
 
 /* 지점 상세페이지 */
+.root_daum_roughmap{
+  width: 100% !important;
+}
 .branch-1 {
   width: 1096px;
   height: 670px;
@@ -2864,13 +2875,13 @@ a:visited {
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .branch-1 {
-    width: 330px !important;
+    width: 345px !important;
     height: 215px !important;
   }
 }
 @media (min-width: 376px) and (max-width: 450px) {
   .branch-1 {
-    width: 370px !important;
+    width: 350px !important;
     height: 230px !important;
   }
 }
