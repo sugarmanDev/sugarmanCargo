@@ -219,7 +219,7 @@
     </div>
 
     <!-- nav -->
-    <div class="navbar-wrap scroll-nav shadow-sm top-nav" style="width: 100vw">
+    <div class="navbar-wrap scroll-nav top-nav" style="width: 100vw">
       <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
         <a class="navbar-brand logo-w" href="./index.html"
           ><img
@@ -244,7 +244,6 @@
         <div
           id="nav_button"
           class="nav_button material-icons toggle-mobile-menu"
-          style="margin-right: 17px"
         >
           <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
           <label for="menuicon">
@@ -653,7 +652,7 @@
         if ($(".mobile-menu-place-i").hasClass("opened")) {
           // 열림
           console.log("열림");
-          $("#nav_button").css("margin-right", "0px");
+          $("#nav_button").css("padding-right", "0px");
 
           if ($(".top-nav").hasClass("fixed-head-white")) {
             // 배경 하얀색
@@ -691,7 +690,7 @@
         } else {
           // 닫힘
           console.log("닫힘");
-          $("#nav_button").css("margin-right", "17px");
+          $("#nav_button").css("padding-right", "0px");
 
           if ($(".top-nav").hasClass("fixed-head-white")) {
             // 배경 하얀색
