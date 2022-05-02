@@ -1097,7 +1097,10 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .footer .col-md-6 {
   font-size: 0.8125rem;
 }
-
+.footer .so img{
+  width: 40px;
+  height: 40px;
+}
 @media (min-width: 415px) and (max-width: 1024px) {
   /* .footer {
     padding-left: 3%;
@@ -1196,6 +1199,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .footer .footer-bottom{
+    padding: 15px 15px 150px 15px !important;
+  }
   .navbar-wrap img{
     width: 105px !important;
     height: auto !important;
