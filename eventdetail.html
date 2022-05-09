@@ -513,7 +513,12 @@
     $.get(targetDomain + "/event/" + idx, function (data) {
 
       //var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data.image;
-      $('#eventImage').attr('src', '/assets/img/220322_event.jpg');
+      if(data.idx === 78) {
+        $('#eventImage').attr('src', '/assets/img/220322_event.jpg');
+      }else if(
+        data.idx === 86) {
+        $('#eventImage').attr('src', '/assets/img/220509_event.jpg');
+      }
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
       $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 86 && "2022.5.6")
