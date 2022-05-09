@@ -165,7 +165,7 @@
             <h3 class="mb-2 main-title" id="eventTitle">슈가맨카고 안산점 얼리버드</h3>
             <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;">이벤트 기간</span> -->
             <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;"">2020.06.05 - 2020.09.05</span> -->
-            <div className="pt-3 pb-3">등록일 <span id="eventDate"></span></div>
+            <div className="pt-3 pb-3">등록일: <span id="eventDate"></span></div>
           </div>
           <div class=" text-box pt-3 pb-3" style="border-bottom: 1px solid #e1e1e1; border-top: 1px solid #e1e1e1;"
             id="eventDesc">
@@ -206,7 +206,7 @@
               <div class="form-group col-md-12 mt-4 d-felx align-items-center" style="padding: 0;">
                 <input type="checkbox" name="checkYN" id="checkYN" required>
                 <label for="checkYN" style="margin-bottom:18px;"></label>
-                <p class="agree-txt">
+                <p class="agree-txt" style="margin-top: 6px; margin-left: 10px;">
                   (필수) 슈가맨카고 필수<button type="button" class="btn-privacy" data-toggle="modal"
                     data-target="#exampleModal">
                     개인정보 수집
@@ -516,7 +516,7 @@
       $('#eventImage').attr('src', '/assets/img/220322_event.jpg');
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
-      $('#eventDate').html(data.date ? data.date : data.idx === 78 && "2022.2.8.")
+      $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 86 && "2022.5.6")
       $('#eventDesc').html(data.content)
 
       if (data.formYN == 'Y') {

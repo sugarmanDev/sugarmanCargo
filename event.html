@@ -463,10 +463,13 @@
             html = '<div class="col-md-3 mb-4">';
             html += '<div class="card shadow-sm border-0">';
             html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
+            // 부천 상동점
             if (data[idx].idx === 78) {
               html +=
                 "<img src='/assets/img/220322_event.jpg' class='card-img-top' alt='...'/>";
-            } else if (data[idx].idx === 79) {
+            }
+            // 부평점
+            else if (data[idx].idx === 86) {
               html +=
                 "<img src='/assets/img/220509_event.jpg' class='card-img-top' alt='...'/>";
             }
@@ -480,13 +483,16 @@
             html += "</a>";
             html += "</div>";
             html += "</div>";
+
+            $("#listPlace").append(html);
           }
         } else {
           console.log("1");
           html =
             '<div style="margin-top:30px;margin-left: 15px;"><p>아직 등록된 이벤트가 없습니다.</p></div>';
+
+          $("#listPlace").append(html);
         }
-        $("#listPlace").append(html);
       },
       "json"
     );
