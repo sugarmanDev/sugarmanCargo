@@ -326,8 +326,12 @@
                 <span>대표이사 </span> 최성원
                 <strong style="color: #e1e1e1"> | </strong>
               </li>
-              <li class="num"><span>사업자등록번호 </span>155-87-01085
-                <a href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"><u>사업자 정보확인</u></a>
+              <li class="num">
+                <span>사업자등록번호 </span>155-87-01085
+                <a
+                  href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"
+                  ><u>사업자 정보확인</u></a
+                >
               </li>
             </ul>
             <ul class="footer-con-3">
@@ -363,7 +367,10 @@
           <div class="col-md-6 social">
             <a href="https://sugarmanwork.com" target="_blank">
               <div class="so sugarmanwok">
-                <img src="./assets/img/sugarmanwork@2x.png" alt="sugarmanwork" />
+                <img
+                  src="./assets/img/sugarmanwork@2x.png"
+                  alt="sugarmanwork"
+                />
               </div>
             </a>
             <a href="https://salk.co.kr" target="_blank">
@@ -471,36 +478,44 @@
           for (var idx = 0; idx < data.length; idx++) {
             //var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
 
-            html = '<div class="col-md-3 mb-4">';
-            html += '<div class="card shadow-sm border-0">';
-            html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
-            html +=
-              '<img src="/assets/img/220322_event.jpg" class="card-img-top" alt="...">';
-            html +=
-              "<div class='event-card-body'><h5 class='card-title mb-1'>부천 상동점 오픈 기념 할인</h5>" +
-              "<p class='card-text'>모든 스토리지 30% 할인</p></div>";
-            html += "</a>";
-            html += "</div>";
-            html += "</div>";
+            if (idx === 0) {
+              html = '<div class="col-md-3 mb-4">';
+              html += '<div class="card shadow-sm border-0">';
+              html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
+              html +=
+                '<img src="/assets/img/220322_event.jpg" class="card-img-top" alt="...">';
+              html +=
+                "<div class='event-card-body'><h5 class='card-title mb-1'>부천 상동점 오픈 기념 할인</h5>" +
+                "<p class='card-text'>모든 스토리지 30% 할인</p></div>";
+              html += "</a>";
+              html += "</div>";
+              html += "</div>";
+              $("#listPlace").append(html);
+            }
 
-            html = '<div class="col-md-3 mb-4">';
-            html += '<div class="card shadow-sm border-0">';
-            html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
-            html +=
-              '<img src="/assets/img/220509_event.jpg" class="card-img-top" alt="...">';
-            html +=
-              "<div class='event-card-body'><h5 class='card-title mb-1'>인천 부평점 가정의 달 이벤트</h5>" +
-              "<p class='card-text'>모든 스토리지 20% 할인</p></div>";
-            html += "</a>";
-            html += "</div>";
-            html += "</div>";
+            if (idx === 1) {
+              html = '<div class="col-md-3 mb-4">';
+              html += '<div class="card shadow-sm border-0">';
+              html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
+              html +=
+                '<img src="/assets/img/220509_event.jpg" class="card-img-top" alt="...">';
+              html +=
+                "<div class='event-card-body'><h5 class='card-title mb-1'>인천 부평점 가정의 달 이벤트</h5>" +
+                "<p class='card-text'>모든 스토리지 20% 할인</p></div>";
+              html += "</a>";
+              html += "</div>";
+              html += "</div>";
+
+              $("#listPlace").append(html);
+            }
           }
         } else {
           console.log("1");
           html =
             '<div style="margin-top:30px;margin-left: 15px;"><p>아직 등록된 이벤트가 없습니다.</p></div>';
+
+          $("#listPlace").append(html);
         }
-        $("#listPlace").append(html);
       },
       "json"
     );
