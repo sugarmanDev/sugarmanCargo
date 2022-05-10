@@ -457,7 +457,7 @@
         if (data.length > 0) {
           console.log("data : ", data);
           console.log("2");
-          for (var idx = 0; idx < data.length; idx++) {
+          for (var idx = data.length - 1; idx >= 0; idx--) {
             //var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
 
             html = '<div class="col-md-3 mb-4">';
