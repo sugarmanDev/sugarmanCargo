@@ -87,7 +87,7 @@
 
     <body style="overflow-x: hidden">
         <!-- 이벤트 띠배너 -->
-        <div class="event-banner d-flex pt-3 pb-2">
+        <div class="event-banner d-flex pt-2 pb-2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="flex-fill text-center event-text">
@@ -106,40 +106,71 @@
             </div>
         </div>
         <!-- scroll nav -->
-        <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
-            <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
-                <a class="navbar-brand" href="./index.html"
-                    ><img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo"
-                /></a>
+        <div
+        class="navbar-wrap sticky-top scroll-nav"
+        style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
+          <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
+          <a class="navbar-brand" href="./index.html">
+              <img
+              src="./assets/img/sugarmancargo_logo@2x.png"
+              alt="sugarmancargo_logo"
+              class="main-logo"
+              />
+          </a>
 
-                <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
-                    <span class="material-icons">menu</span>
-                </button>
+          <!-- <button
+              class="navbar-toggler mobile-menu-place toggle-mobile-menu"
+              type="button"
+          >
+              <span class="material-icons">menu</span>
+          </button> -->
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav ml-auto">
-                        <!-- <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./package.html">택배문의</a>
-          </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
-                        </li>
-                        <li class="nav-item">
-                            <button
-                                type="button"
-                                class="nav-bar-btn"
-                                style="background-color: #e9474d; color: #fff"
-                                onclick="location.href='./visit.html' "
-                            >
-                                방문예약
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+          <div
+              id="nav_button"
+              class="nav_button material-icons toggle-mobile-menu"
+          >
+              <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+              <label for="menuicon">
+              <span
+                  class="span1"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              <span
+                  class="span2"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              <span
+                  class="span3"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              </label>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" style="color: #000" href="./branch_list.html"
+                  >지점찾기</a
+                  >
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" style="color: #000" href="./franchise.html"
+                  >가맹안내</a
+                  >
+              </li>
+              <li class="nav-item">
+                  <button
+                  type="button"
+                  class="nav-bar-btn"
+                  style="background-color: #e9474d; color: #fff"
+                  onclick="location.href='./visit.html' "
+                  >
+                  방문예약
+                  </button>
+              </li>
+              </ul>
+          </div>
+          </nav>
         </div>
 
         <div class="privacy-wrap">
