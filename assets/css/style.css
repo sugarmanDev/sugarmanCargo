@@ -1207,6 +1207,10 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .min-half img{
+    width: 85px !important;
+    height: auto !important;
+  }
   .qna-agree .wrap .agree-txt, .agree-txt{
     font-size: 14px;
   }
