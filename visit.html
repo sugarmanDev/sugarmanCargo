@@ -204,7 +204,7 @@
 
   <body>
     <!-- 이벤트 띠배너 -->
-    <div class="event-banner d-flex pt-3 pb-2">
+    <div class="event-banner d-flex pt-2 pb-2">
       <div class="container-fluid top-menu-conainer">
         <div class="row">
           <div class="flex-fill text-center event-text">
@@ -482,8 +482,8 @@
               $(".mobile-menu").css("top", "0px");
             } else {
               console.log("스크롤 없음");
-              $(".scroll-nav").css("top", "50px");
-              $(".mobile-menu").css("top", "50px");
+              $(".scroll-nav").css("top", "40px");
+              $(".mobile-menu").css("top", "40px");
             }
           }
         } else {
@@ -500,6 +500,7 @@
         $("html").toggleClass("prevent-scroll");
         $("body").toggleClass("prevent-scroll");
       });
+      
 
       $(document).on("click", ".main_inquiry_btn", function () {
         $(".main_inquiry").toggle();
@@ -516,20 +517,6 @@
         $("html, body").removeClass("hidden");
       });
 
-      $(document).on("click", ".main_inquiry_btn", function () {
-        $(".main_inquiry").toggle();
-        $("html, body").addClass("hidden");
-      });
-
-      $(document).on("click", ".main_inquiry_close", function () {
-        $(".main_inquiry").hide();
-        $("html, body").removeClass("hidden");
-      });
-
-      $(document).on("click", ".main_inquiry_bg", function () {
-        $(".main_inquiry").hide();
-        $("html, body").removeClass("hidden");
-      });
 
       function inquiryForm() {
         if (confirm("저장하시겠습니까?") == true) {
@@ -575,17 +562,17 @@
               $(".scroll-nav").css("top", "0");
               $(".scroll-nav").css("position", "fixed");
               $(".scroll-nav").css("width", "100%");
-              $(".scroll-nav").css("padding-right", "10px");
+              $(".scroll-nav").css("padding-right", "50px");
             } else {
               console.log("스크롤 없음");
-              $(".scroll-nav").css("padding-right", "10px");
+              $(".scroll-nav").css("padding-right", "50px");
 
               if ($("html").hasClass("event-banner-close")) {
                 console.log("배너 없음");
                 $(".scroll-nav").css("top", "0");
               } else {
                 console.log("배너 있음");
-                $(".scroll-nav").css("top", "50px");
+                $(".scroll-nav").css("top", "40px");
               }
             }
           }

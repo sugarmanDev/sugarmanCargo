@@ -87,7 +87,7 @@
 
     <body style="overflow-x: hidden">
         <!-- 이벤트 띠배너 -->
-        <div class="event-banner d-flex pt-3 pb-2">
+        <div class="event-banner d-flex pt-2 pb-2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="flex-fill text-center event-text">
@@ -106,40 +106,71 @@
             </div>
         </div>
         <!-- scroll nav -->
-        <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
-            <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
-                <a class="navbar-brand" href="./index.html"
-                    ><img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo"
-                /></a>
+        <div
+        class="navbar-wrap sticky-top scroll-nav"
+        style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
+          <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
+          <a class="navbar-brand" href="./index.html">
+              <img
+              src="./assets/img/sugarmancargo_logo@2x.png"
+              alt="sugarmancargo_logo"
+              class="main-logo"
+              />
+          </a>
 
-                <button class="navbar-toggler mobile-menu-place toggle-mobile-menu" type="button">
-                    <span class="material-icons">menu</span>
-                </button>
+          <!-- <button
+              class="navbar-toggler mobile-menu-place toggle-mobile-menu"
+              type="button"
+          >
+              <span class="material-icons">menu</span>
+          </button> -->
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav ml-auto">
-                        <!-- <li class="nav-item">
-            <a class="nav-link" style="color:#000;" href="./package.html">택배문의</a>
-          </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
-                        </li>
-                        <li class="nav-item">
-                            <button
-                                type="button"
-                                class="nav-bar-btn"
-                                style="background-color: #e9474d; color: #fff"
-                                onclick="location.href='./visit.html' "
-                            >
-                                방문예약
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+          <div
+              id="nav_button"
+              class="nav_button material-icons toggle-mobile-menu"
+          >
+              <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+              <label for="menuicon">
+              <span
+                  class="span1"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              <span
+                  class="span2"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              <span
+                  class="span3"
+                  style="background-color: rgb(17, 35, 72)"
+              ></span>
+              </label>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" style="color: #000" href="./branch_list.html"
+                  >지점찾기</a
+                  >
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" style="color: #000" href="./franchise.html"
+                  >가맹안내</a
+                  >
+              </li>
+              <li class="nav-item">
+                  <button
+                  type="button"
+                  class="nav-bar-btn"
+                  style="background-color: #e9474d; color: #fff"
+                  onclick="location.href='./visit.html' "
+                  >
+                  방문예약
+                  </button>
+              </li>
+              </ul>
+          </div>
+          </nav>
         </div>
 
         <div class="privacy-wrap">
@@ -394,6 +425,100 @@
                     }
                 });
             });
+        </script>
+        <script>
+          $(document).on("click", ".close-btn-index", function () {
+            $(".event-text").addClass("close-topbar");
+            $("html").toggleClass("event-banner-close");
+            $(".mobile-menu").css("top", "0px");
+            $(".scroll-nav").css("top", "0px");
+          });
+        </script>
+    
+        <script>
+          $(document).on("click", ".mobile-menu-place-i", function () {
+            $(".mobile-menu").toggle();
+            // $(".mobile-menu-place-i").toggleClass("opened");
+            if ($(".mobile-menu-place-i").hasClass("opened")) {
+              $(".mobile-menu-place-i").removeClass("opened");
+            } else {
+              $(".mobile-menu-place-i").addClass("opened");
+            }
+    
+            if ($(".mobile-menu-place-i").hasClass("opened")) {
+              console.log("열림");
+              $(".scroll-nav").css("padding-right", "15px");
+              $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo@2x.png"
+              );
+    
+              // 배너 유무
+              if ($("html").hasClass("event-banner-close")) {
+                console.log("배너 없음");
+                $(".mobile-menu").css("top", "0px");
+              } else {
+                console.log("배너 있음");
+    
+                // 스크롤 유무
+                if ($(window).scrollTop() > 0) {
+                  console.log("스크롤 있음");
+                  $(".scroll-nav").css("top", "0");
+                  $(".scroll-nav").css("position", "fixed");
+                  $(".scroll-nav").css("width", "100vw");
+                  $(".mobile-menu").css("top", "0px");
+                } else {
+                  console.log("스크롤 없음");
+                  $(".scroll-nav").css("top", "40px");
+                  $(".mobile-menu").css("top", "40px");
+                }
+              }
+            } else {
+              // 닫힘
+              console.log("닫힘");
+              $(".scroll-nav").css("padding-right", "15px");
+              $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo@2x.png"
+              );
+            }
+    
+            $(".web-popup").hide();
+            $("html").toggleClass("prevent-scroll");
+            $("body").toggleClass("prevent-scroll");
+          });
+    
+          $(function () {
+            $(window).scroll(function () {
+              if ((scroll = $(window).scrollTop() > 1700)) {
+                console.log("scroll1");
+                $(".scroll-nav").css("padding-right", "10px");
+              } else {
+                console.log("scroll2");
+    
+                // 스크롤 유무
+                if ($(window).scrollTop() > 0) {
+                  console.log("스크롤 있음");
+                  $(".scroll-nav").css("top", "0");
+                  $(".scroll-nav").css("position", "fixed");
+                  $(".scroll-nav").css("width", "100%");
+                  $(".scroll-nav").css("padding-right", "50px");
+                } else {
+                  console.log("스크롤 없음");
+                  $(".scroll-nav").css("padding-right", "50px");
+                  $(".Customer_wrap").css("margin-top", "100px");
+    
+                  if ($("html").hasClass("event-banner-close")) {
+                    console.log("배너 없음");
+                    $(".scroll-nav").css("top", "0");
+                  } else {
+                    console.log("배너 있음");
+                    $(".scroll-nav").css("top", "40px");
+                  }
+                }
+              }
+            });
+          });
         </script>
     </body>
 </html>
