@@ -1207,6 +1207,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .event_wrap{
+    margin-top:85px !important;
+  }
   .min-half img{
     width: 85px !important;
     height: auto !important;
