@@ -476,7 +476,7 @@
           console.log("data : ", data);
           console.log("2");
           for (var idx = data.length - 1; idx >= 0; idx--) {
-            //var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
+            var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
 
             html = '<div class="col-md-3 mb-4">';
             html += '<div class="card shadow-sm border-0">';
@@ -485,11 +485,9 @@
             if (data[idx].idx === 78) {
               html +=
                 "<img src='/assets/img/220322_event.jpg' class='card-img-top' alt='...'/>";
-            }
-            // 안양 명학점
-            else if (data[idx].idx === 89) {
+            } else {
               html +=
-                "<img src='/assets/img/20220712_event.jpg' class='card-img-top' alt='...'/>";
+                "<img src='" + imgURL + "' class='card-img-top' alt='...'/>";
             }
             html +=
               "<div class='event-card-body'><h5 class='card-title mb-1'>" +
