@@ -481,15 +481,14 @@
             html = '<div class="col-md-3 mb-4">';
             html += '<div class="card shadow-sm border-0">';
             html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
-            // 부평점
-            if (data[idx].idx === 86) {
-              html +=
-                "<img src='/assets/img/220509_event.jpg' class='card-img-top' alt='...'/>";
-            }
             // 부천 상동점
-            else if (data[idx].idx === 78) {
+            if (data[idx].idx === 78) {
               html +=
                 "<img src='/assets/img/220322_event.jpg' class='card-img-top' alt='...'/>";
+            }
+            // 안양 명학점
+            else if (data[idx].idx === 89) {
+              ("<img src='/assets/img/20220712_event.jpg' class='card-img-top' alt='...'/>");
             }
             html +=
               "<div class='event-card-body'><h5 class='card-title mb-1'>" +
