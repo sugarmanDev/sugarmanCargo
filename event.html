@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-    />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>슈가맨카고</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -472,6 +469,7 @@
       targetDomain + "/event",
       function (data) {
         var html = "";
+        console.log("???", data)
         if (data.length > 0) {
           console.log("data : ", data);
           console.log("2");
