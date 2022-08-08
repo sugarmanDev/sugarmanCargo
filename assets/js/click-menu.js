@@ -42,7 +42,7 @@ var targetDomain = "";
 console.log(getDomain);
 
 if (getDomain == "sugarmancargo.com" || getDomain == "sugarmandev.github.io") {
-    targetDomain = "https://sugarmancargo.co.kr/cargo";
+    targetDomain = "https://sugarmancargo.com/cargo";
 } else {
     targetDomain = "http://localhost/cargo";
 }
