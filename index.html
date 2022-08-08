@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="kr">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -202,8 +201,8 @@
 
   <body>
     <!-- 이벤트 띠배너 -->
-    <div class="event-banner d-flex pt-2 pb-2">
-      <div class="container-fluid top-menu-conainer">
+    <div class="event-banner d-flex pt-3 pb-2">
+      <div class="container-fluid">
         <div class="row">
           <div class="flex-fill text-center event-text">
             <span class="new">NEW</span>
@@ -219,9 +218,7 @@
             class="event-banner-btn"
             style="border-style: none; background: transparent"
           >
-            <span
-              class="material-icons ml-auto close-btn-index"
-              style="cursor: pointer"
+            <span class="material-icons ml-auto" style="cursor: pointer"
               >close</span
             >
           </button>
@@ -229,281 +226,182 @@
       </div>
     </div>
 
-   <!-- nav -->
-   <div class="navbar-wrap scroll-nav top-nav">
-    <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
-      <a class="navbar-brand logo-w" href="./index.html">
-        <img
-          class="logo-w-img"
-          src="./assets/img/sugarmancargo_logo_wh@2x.png"
-          alt="sugarmancargo_logo"
-        />
-      </a>
-      <a class="scroll-nav logo-r" href="./index.html">
-        <img
-          class="logo-w-img"
-          src="./assets/img/sugarmancargo_logo@2x.png"
-          alt="sugarmancargo_logo"
-          class="main-logo"
-        />
-      </a>
+    <!-- nav -->
+    <div class="navbar-wrap scroll-nav shadow-sm top-nav">
+      <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2">
+        <a class="navbar-brand logo-w" href="./index.html">
+          <img src="./assets/img/sugarmancargo_logo_wh@2x.png" alt="sugarmancargo_logo"/>
+        </a>
+        <a class="scroll-nav logo-r" href="./index.html">
+          <img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo"/>
+        </a>
 
-      <!-- <button
-        class="navbar-toggler mobile-menu-place toggle-mobile-menu"
-        type="button"
-      >
-        <span class="material-icons main_menu">menu</span>
-      </button> -->
+        <button
+          class="navbar-toggler mobile-menu-place toggle-mobile-menu"
+          type="button"
+        >
+          <span class="material-icons main_menu">menu</span>
+        </button>
 
-      <div
-        id="nav_button"
-        class="nav_button material-icons toggle-mobile-menu"
-      >
-        <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
-        <label for="menuicon">
-          <span class="span1"></span>
-          <span class="span2"></span>
-          <span class="span3"></span>
-        </label>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./branch_list.html">지점찾기</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./franchise.html">가맹안내</a>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-bar-btn shadow"
+                onclick="location.href='./visit.html' "
+              >
+                방문예약
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./branch_list.html">지점찾기</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./franchise.html">가맹안내</a>
-          </li>
-          <li class="nav-item">
-            <button
-              type="button"
-              class="nav-bar-btn shadow"
-              onclick="location.href='./visit.html' "
-            >
-              방문예약
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    <button class="main_inquiry_btn">
+      <span class="material-icons">forum</span><br />
+      문의하기
+    </button>
 
-  <button class="main_inquiry_btn">
-    <span class="material-icons">forum</span><br />
-    문의하기
-  </button>
+    <div class="main_inquiry">
+      <div class="main_inquiry_bg"></div>
+      <div class="form_box">
+        <form method="post" onsubmit="return checkForm();" id="formData">
+          <input type="hidden" name="type" value="main" />
+          <div class="row" style="margin: 0">
+            <div class="col-12 top" style="height: 80px">
+              <img
+                class="main_inquiry_logo"
+                src="./assets/cargo@2x.png"
+                alt="main_inquiry_logo"
+              />
+              <span class="material-icons main_inquiry_close">clear</span>
+            </div>
+            <div class="col-12 form" style="overflow-x: hidden">
+              <div class="row">
+                <div class="col-12">
+                  <label for="in_name">이름/업체명</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="이름/업체명"
+                    class="in_form_con"
+                    id="in_name"
+                    required
+                  />
+                </div>
 
-  <div class="main_inquiry">
-    <div class="main_inquiry_bg"></div>
-    <div class="form_box">
-      <form method="post" onsubmit="return checkForm();" id="formData">
-        <input type="hidden" name="type" value="main" />
-        <div class="row" style="margin: 0">
-          <div class="col-12 top" style="height: 80px">
-            <img
-              class="main_inquiry_logo"
-              src="./assets/cargo@2x.png"
-              alt="main_inquiry_logo"
-            />
-            <span class="material-icons main_inquiry_close">clear</span>
-          </div>
-          <div class="col-12 form" style="overflow-x: hidden">
-            <div class="row">
-              <div class="col-12">
-                <label for="in_name">이름/업체명</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="이름/업체명"
-                  class="in_form_con"
-                  id="in_name"
-                  required
-                />
-              </div>
+                <div class="col-12">
+                  <label for="in_phone">연락처</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="010"
+                    class="in_form_con"
+                    id="in_phone"
+                    required
+                  />
+                </div>
 
-              <div class="col-12">
-                <label for="in_phone">연락처</label>
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="010"
-                  class="in_form_con"
-                  id="in_phone"
-                  required
-                />
-              </div>
+                <div class="col-12">
+                  <label for="in_branch">문의 지점</label>
+                  <select
+                    id="in_branch"
+                    name="branch"
+                    class="in_form_con arrow"
+                    required
+                  >
+                    <option selected value="" disabled>지점 선택</option>
+                    <option value="1">[1호점] 인천 부평점</option>
+                    <option value="2">[2호점] 서울 군자점</option>
+                    <option value="3">[3호점] 부천 상동점</option>
+                  </select>
+                </div>
 
-              <div class="col-12">
-                <label for="in_branch">문의 지점</label>
-                <select
-                  id="in_branch"
-                  name="branch"
-                  class="in_form_con arrow"
-                  required
-                >
-                  <option selected value="" disabled>지점 선택</option>
-                  <option value="1">[1호점] 인천 부평점</option>
-                  <option value="2">[2호점] 서울 군자점</option>
-                  <option value="3">[3호점] 부천 상동점</option>
-                </select>
-              </div>
+                <div class="col-12">
+                  <label for="visitInputstore2">스토리지 사이즈</label>
+                  <select
+                    name="storageSize"
+                    id="visitInputstore2"
+                    class="in_form_con"
+                    required
+                  >
+                    <option selected="" disabled="">사이즈 선택</option>
+                    <option value="cb">큐브</option>
+                    <option value="sm">스몰</option>
+                    <option value="md">미디엄</option>
+                    <option value="lg">라지</option>
+                    <option value="xl">엑스라지</option>
+                    <option value="etc">상담 후 결정</option>
+                  </select>
+                </div>
 
-              <div class="col-12">
-                <label for="visitInputstore2">스토리지 사이즈</label>
-                <select
-                  name="storageSize"
-                  id="visitInputstore2"
-                  class="in_form_con"
-                  required
-                >
-                  <option selected="" disabled="">사이즈 선택</option>
-                  <option value="cb">큐브</option>
-                  <option value="sm">스몰</option>
-                  <option value="md">미디엄</option>
-                  <option value="lg">라지</option>
-                  <option value="xl">엑스라지</option>
-                  <option value="etc">상담 후 결정</option>
-                </select>
-              </div>
+                <div class="col-12">
+                  <label for="in_content">문의 내용</label>
+                  <textarea id="in_content" name="subject" required></textarea>
+                </div>
 
-              <div class="col-12">
-                <label for="in_content">문의 내용</label>
-                <textarea id="in_content" name="subject" required></textarea>
-              </div>
+                <div class="col-12">
+                  <label for="in_path">알게 된 경로</label>
+                  <select
+                    id="in_path"
+                    name="route"
+                    class="in_form_con"
+                    required
+                  >
+                    <option selected value="" disabled>선택</option>
+                    <option value="1">인스타그램</option>
+                    <option value="2">페이스북</option>
+                    <option value="3">블로그</option>
+                    <option value="4">구글</option>
+                    <option value="5">지인소개</option>
+                    <option value="6">기타</option>
+                  </select>
+                </div>
 
-              <div class="col-12">
-                <label for="in_path">알게 된 경로</label>
-                <select
-                  id="in_path"
-                  name="route"
-                  class="in_form_con"
-                  required
-                >
-                  <option selected value="" disabled>선택</option>
-                  <option value="1">인스타그램</option>
-                  <option value="2">페이스북</option>
-                  <option value="3">블로그</option>
-                  <option value="4">구글</option>
-                  <option value="5">지인소개</option>
-                  <option value="6">기타</option>
-                </select>
-              </div>
+                <div class="col-12 mt-1">
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    id="check"
+                    name="checkYN"
+                    required
+                  />
+                  <label for="check" class="check"></label>
+                  <p class="agree-txt">
+                    (필수) 슈가맨카고
+                    <a href="./privacy.html">개인정보 수집</a> 및 활용에
+                    동의합니다.
+                  </p>
+                </div>
 
-              <div class="col-12 mt-1">
-                <input
-                  type="checkbox"
-                  name="agree"
-                  id="check"
-                  name="checkYN"
-                  required
-                />
-                <label for="check" class="check"></label>
-                <p class="agree-txt">
-                  (필수) 슈가맨카고
-                  <a href="./privacy.html">개인정보 수집</a> 및 활용에
-                  동의합니다.
-                </p>
-              </div>
-
-              <div class="col-12">
-                <button>문의하기</button>
+                <div class="col-12">
+                  <button>문의하기</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script>
-    $(document).on("click", ".close-btn-index", function () {
-      $(".event-text").addClass("close-topbar");
-      $("html").toggleClass("event-banner-close");
-      $(".mobile-menu").css("top", "0px");
-    });
-  </script>
-
-  <style>
-    .main_inquiry {
-      display: none; }
+    <style>
+      .main_inquiry {
+        display: none;
+      }
     </style>
 
     <script>
-      // $(document).on("click", ".mobile-menu-place-i", function () {
-      //   $("#mobile").toggle();
-      //   $(".mobile-menu-place-i").toggleClass("opened");
-      //   $("html").toggleClass("prevent-scroll");
-      //   $("body").toggleClass("prevent-scroll");
-      // });
-
       $(document).on("click", ".mobile-menu-place-i", function () {
-        $(".mobile-menu").toggle();
-        // $(".mobile-menu-place-i").toggleClass("opened");
-        if ($(".mobile-menu-place-i").hasClass("opened")) {
-          $(".mobile-menu-place-i").removeClass("opened");
-        } else {
-          $(".mobile-menu-place-i").addClass("opened");
-        }
-
-        if ($(".mobile-menu-place-i").hasClass("opened")) {
-          // 열림
-          console.log("열림");
-
-          if ($(".top-nav").hasClass("fixed-head-white")) {
-            // 배경 하얀색
-            console.log("배경 하얀색");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo@2x.png"
-            );
-            $(".mobile-menu").css("top", "0px");
-          } else if ($(".top-nav").hasClass("fixed-head")) {
-            // 배경 투명
-            console.log("배경 투명색임");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo@2x.png"
-            );
-          } else {
-            // 배경 투명
-            console.log("배경 투명");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo@2x.png"
-            );
-
-            // 배너 유무
-            if ($("html").hasClass("event-banner-close")) {
-              console.log("배너 없음");
-              $(".mobile-menu").css("top", "0px");
-            } else {
-              console.log("배너 있음");
-              $(".mobile-menu").css("top", "50px");
-            }
-          }
-        } else {
-          // 닫힘
-          console.log("닫힘");
-
-          if ($(".top-nav").hasClass("fixed-head-white")) {
-            // 배경 하얀색
-            console.log("배경 하얀색");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo@2x.png"
-            );
-          } else {
-            // 배경 투명
-            console.log("배경 투명함");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo_wh@2x.png"
-            );
-          }
-        }
-
-        $(".web-popup").hide();
+        $("#mobile").toggle();
+        $(".mobile-menu-place-i").toggleClass("opened");
         $("html").toggleClass("prevent-scroll");
         $("body").toggleClass("prevent-scroll");
       });
@@ -600,11 +498,7 @@
         </h3>
         <div class="row mt-m">
           <div class="col-md-4">
-            <img
-              src="./assets/img/cargo_1@2x.jpg"
-              class="img-fluid mt-5"
-              alt=""
-            />
+            <img src="./assets/img/cargo_1@2x.jpg" class="img-fluid mt-5" alt="" />
             <h6 class="main-text mt-4">물품 보관</h6>
             <p class="sub-text">
               집이나 사무실에 물건이 많아 공간이 부족하신가요?<br
@@ -616,11 +510,7 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img
-              src="./assets/img/cargo_2@2x.jpg"
-              class="img-fluid mt-5"
-              alt=""
-            />
+            <img src="./assets/img/cargo_2@2x.jpg" class="img-fluid mt-5" alt="" />
             <h6 class="main-text mt-4">택배 서비스</h6>
             <p class="sub-text">
               슈가맨카고에서 바로 택배 발송이 가능합니다.<br
@@ -633,11 +523,7 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img
-              src="./assets/img/cargo_3@2x.jpg"
-              class="img-fluid mt-5"
-              alt=""
-            />
+            <img src="./assets/img/cargo_3@2x.jpg" class="img-fluid mt-5" alt="" />
             <h6 class="main-text mt-4">비상주 사무실 등록</h6>
             <p class="sub-text">
               창고 이용만으로 사업자 주소지 등록이<br
@@ -714,13 +600,6 @@
       >
       <div class="swiper-container gallery-top">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://sugarmancargo.com/eventdetail.html?idx=89"
-              ><img
-                class="visit-slide-img-web"
-                src="./assets/img/20220712_event.jpg"
-            /></a>
-          </div>
           <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
           <div class="swiper-slide">
             <a href="https://sugarmancargo.com/eventdetail.html?idx=78"
@@ -823,13 +702,6 @@
       >
       <div class="swiper-container gallery-top-mobile">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://sugarmancargo.com/eventdetail.html?idx=89"
-              ><img
-                class="visit-slide-img-web"
-                src="./assets/img/20220712_event.jpg"
-            /></a>
-          </div>
           <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
           <div class="swiper-slide">
             <a href="https://sugarmancargo.com/eventdetail.html?idx=78"
@@ -969,26 +841,26 @@
           "; path=/; expires=" +
           todayDate.toGMTString() +
           ";";
+      }
+
+      //쿠키 불러오기
+      function getCookie(name) {
+        var obj = name + "=";
+        var x = 0;
+        while (x <= document.cookie.length) {
+          var y = x + obj.length;
+          if (document.cookie.substring(x, y) == obj) {
+            if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+              endOfCookie = document.cookie.length;
+            return unescape(document.cookie.substring(y, endOfCookie));
+          }
+          x = document.cookie.indexOf(" ", x) + 1;
+          if (x == 0) break;
         }
+        return "";
+      }
 
-//쿠키 불러오기
-function getCookie(name) {
-  var obj = name + "=";
-  var x = 0;
-  while (x <= document.cookie.length) {
-    var y = x + obj.length;
-    if (document.cookie.substring(x, y) == obj) {
-      if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
-        endOfCookie = document.cookie.length;
-      return unescape(document.cookie.substring(y, endOfCookie));
-    }
-    x = document.cookie.indexOf(" ", x) + 1;
-    if (x == 0) break;
-  }
-  return "";
-}
-
-$(function () {
+      $(function () {
         console.log($(window).width());
         if ($(window).width() < 415) {
           $(".close-popup").each(function () {
@@ -1015,19 +887,14 @@ $(function () {
             </h3>
           </div>
           <div class="col-md-6 d-none d-sm-block" style="text-align: center">
-            <img
-              src="./assets/img/cargo_8@2x.png"
-              alt=""
-              style="max-width: 90%; width: 315px"
-            />
+            <img src="./assets/img/cargo_8@2x.png" alt="" style="max-width: 90%; width:315px;"/>
           </div>
         </div>
 
         <div class="row float">
           <div
             class="col storage-box pb-2 pt-2 box-start border-0"
-            style="background-color: #e9474d"
-          >
+            style="background-color: #e9474d">
             <div style="margin-top: 70%">
               <h3 class="main-title text-white">다양한<br />스토리지 사이즈</h3>
               <img
@@ -1046,7 +913,7 @@ $(function () {
             <div><img src="./assets/img/label_c@2x.png" alt="label_c" /></div>
             <div class="text-box">
               <h6 class="main-text mt-1" style="color: #e9474d">큐브 사이즈</h6>
-              <p class="sub-text mb-3">
+              <p class="sub-text mb-4">
                 1.0m x 1.0m x 1.2m<br />우체국 5호 박스 기준 12개
               </p>
               <button
@@ -1066,7 +933,7 @@ $(function () {
             <div><img src="./assets/img/label_s@2x.png" alt="label_s" /></div>
             <div class="text-box">
               <h6 class="main-text mt-1" style="color: #e9474d">스몰 사이즈</h6>
-              <p class="sub-text mb-3">
+              <p class="sub-text mb-4">
                 1.0m x 1.0m x 2.4m<br />우체국 5호 박스 기준 28개
               </p>
               <button
@@ -1088,7 +955,7 @@ $(function () {
               <h6 class="main-text mt-1" style="color: #e9474d">
                 미디엄 사이즈
               </h6>
-              <p class="sub-text mb-3">
+              <p class="sub-text mb-4">
                 1.3m x 1.3m x 2.4m<br />우체국 5호 박스 기준 49개
               </p>
               <button
@@ -1108,7 +975,7 @@ $(function () {
             <div><img src="./assets/img/label_l@2x.png" alt="label_l" /></div>
             <div class="text-box">
               <h6 class="main-text mt-1" style="color: #e9474d">라지 사이즈</h6>
-              <p class="sub-text mb-3">
+              <p class="sub-text mb-4">
                 1.8m x 1.3m x 2.4m<br />우체국 5호 박스 기준 70개
               </p>
               <button
@@ -1130,7 +997,7 @@ $(function () {
               <h6 class="main-text mt-1" style="color: #e9474d">
                 엑스라지 사이즈
               </h6>
-              <p class="sub-text mb-3">
+              <p class="sub-text mb-4">
                 1.4m x 2.0m x 2.4m<br />우체국 5호 박스 기준 98개
               </p>
               <button
@@ -1166,10 +1033,7 @@ $(function () {
               />
               <div class="box mt-3">
                 <span class="label mr-1">01</span>
-                <p
-                  class="sub-text"
-                  style="display: inline; color: #000; font-weight: 500"
-                >
+                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
                   방문 상담 예약하기
                 </p>
               </div>
@@ -1185,10 +1049,7 @@ $(function () {
               />
               <div class="box mt-3">
                 <span class="label mr-1">02</span>
-                <p
-                  class="sub-text"
-                  style="display: inline; color: #000; font-weight: 500"
-                >
+                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
                   나에게 맞는 스토리지 찾기
                 </p>
               </div>
@@ -1204,10 +1065,7 @@ $(function () {
               />
               <div class="box mt-3">
                 <span class="label mr-1">03</span>
-                <p
-                  class="sub-text"
-                  style="display: inline; color: #000; font-weight: 500"
-                >
+                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
                   계약기간 설정 및 계약하기
                 </p>
               </div>
@@ -1223,10 +1081,7 @@ $(function () {
               />
               <div class="box mt-3">
                 <span class="label mr-1">04</span>
-                <p
-                  class="sub-text"
-                  style="display: inline; color: #000; font-weight: 500"
-                >
+                <p class="sub-text" style="display: inline; color: #000; font-weight: 500;">
                   슈가맨카고 자유롭게 이용하기
                 </p>
               </div>
@@ -1236,114 +1091,105 @@ $(function () {
       </div>
     </div>
 
-  <!-- 푸터 시작 -->
-  <div class="content-section bg-footer footer-t footer">
-    <div class="container-fluid main-container">
-      <div class="row">
-        <div class="col-md-2">
-          <img
-            class="footer-logo"
-            src="./assets/img/footer_logo.png"
-            alt="footer-logo"
-          />
-        </div>
-        <div class="col-md-7 footer-con">
-          <ul class="footer-con-1">
-            <li>
-              <span><a href="./about.html">회사소개</a></span>
-            </li>
-            <li>
-              <span><a href="./event.html">이벤트</a></span>
-            </li>
-            <li>
-              <span><a href="./faq.html">고객센터</a></span>
-            </li>
-          </ul>
-          <ul class="footer-con-2">
-            <li>
-              <span>(주)슈가맨</span
-              ><strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li class="ceo">
-              <span>대표이사 </span> 최성원
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li class="num">
-              <span>사업자등록번호 </span>155-87-01085
-              <a
-                href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"
-                ><u>사업자 정보확인</u></a
-              >
-            </li>
-          </ul>
-          <ul class="footer-con-3">
-            <li>
-              <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
-              <strong style="color: #e1e1e1"> | </strong>
-            </li>
-            <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
-          </ul>
-        </div>
+    <!-- 푸터 시작 -->
+    <div class="content-section bg-footer footer-t footer">
+      <div class="container-fluid main-container">
+        <div class="row">
+          <div class="col-md-2">
+            <img
+              class="footer-logo"
+              src="./assets/img/footer_logo.png"
+              alt="footer-logo"
+            />
+          </div>
+          <div class="col-md-7 footer-con">
+            <ul class="footer-con-1">
+              <li>
+                <span><a href="./about.html">회사소개</a></span>
+              </li>
+              <li>
+                <span><a href="./event.html">이벤트</a></span>
+              </li>
+              <li>
+                <span><a href="./faq.html">고객센터</a></span>
+              </li>
+            </ul>
+            <ul class="footer-con-2">
+              <li>
+                <span>(주)슈가맨</span
+                ><strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li class="ceo">
+                <span>대표이사 </span> 최성원
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li class="num"><span>사업자등록번호 </span>155-87-01085</li>
+            </ul>
+            <ul class="footer-con-3">
+              <li>
+                <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
+                <strong style="color: #e1e1e1"> | </strong>
+              </li>
+              <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
+            </ul>
+          </div>
 
-        <div class="col-md-3">
-          <div class="footer-right">
-            <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
-            <p>월~금 9:00~18:00 (공휴일 · 주말 휴무)</p>
+          <div class="col-md-3">
+            <div class="footer-right">
+              <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
+              <p>월~금 : 9:00 ~ 18:00 (공휴일 · 주말 휴무)</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-m footer container-fluid p-0">
-    <div class="footer-line"></div>
-  </div>
+    <div class="footer-m footer container-fluid p-0">
+      <div class="footer-line"></div>
+    </div>
 
-  <div class="footer">
-    <div class="container-fluid main-container footer-bottom">
-      <div class="row">
-        <div class="col-md-6 footer-bottom-text">
-          <p>© 2020 sugarmancargo All rights reserved</p>
-          <a href="./privacy.html">개인정보취급방침</a>
-        </div>
-        <div class="col-md-6 social">
-          <a href="https://sugarmanwork.com" target="_blank">
-            <div class="so sugarmanwok">
-              <img
-                src="./assets/img/sugarmanwork@2x.png"
-                alt="sugarmanwork"
-              />
+    <div class="footer">
+      <div class="container-fluid main-container footer-bottom">
+        <div class="row">
+          <div class="col-md-6 footer-bottom-text">
+            <p>© 2020 sugarmancargo, All rights reserved</p>
+            <a href="./privacy.html">개인정보취급방침</a>
+          </div>
+          <div class="col-md-6 social">
+            <a href="https://blog.naver.com/sugarmancargo" target="_blank">
+              <div class="so naver">
+                <img src="./assets/img/footer_icon_1.png" alt="blog" />
+              </div>
+            </a>
+            <div class="so instar">
+              <img src="./assets/img/footer_icon_2.png" alt="Instagram" />
             </div>
-          </a>
-          <a href="https://salk.co.kr" target="_blank">
-            <div class="so salk">
-              <img src="./assets/img/salk@2x.png" alt="salk" />
+            <div class="so facebook">
+              <img src="./assets/img/footer_icon_3.png" alt="facebook" />
             </div>
-          </a>
-          <a href="https://prop-landlord-web.vercel.app" target="_blank">
-            <div class="so prop">
-              <img src="./assets/img/prop@2x.png" alt="prop" />
-            </div>
-          </a>
-          <a href="https://blog.naver.com/sugarmancargo" target="_blank">
-            <div class="so naver">
-              <img src="./assets/img/footer_icon_1.png" alt="blog" />
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <script>
+    <!-- <script>
     $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-	@@ -1352,63 +990,10 @@ <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
+        if (scroll > 100) {
+            $(".scroll-nav").css("background" , "#fff"), $(".nav-link").css("color" , "#000"),
+            $(".navbar-brand").css("display" , "none");
+        }
+
+        else{
+            $(".scroll-nav").css("background" , "none"),
+            $(".nav-link").css("color" , "#fff");
+        }
+    })
     })
     </script>
      -->
-     <script>
+    <script>
       const x = window.matchMedia("screen and (min-width:500px)");
 
       x.addListener((a) => {
@@ -1351,134 +1197,34 @@ $(function () {
           var scroll = $(window).scrollTop();
           // 48
           if (scroll > 48) {
-            console.log("scroll > 48");
             $(".top-nav").addClass("fixed-head");
-            $(".span1").css("background-color", "#112348");
-            $(".span2").css("background-color", "#112348");
-            $(".span3").css("background-color", "#112348");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo_wh@2x.png"
-            );
-            $(".mobile-menu").css("top", "0px");
-
             if (scroll > 200) {
-              console.log("scroll > 200");
               $(".top-nav").addClass("fixed-head-white");
-              $(".span1").css("background-color", "#112348");
-              $(".span2").css("background-color", "#112348");
-              $(".span3").css("background-color", "#112348");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-              $(".mobile-menu").css("top", "50px");
             } else {
-              console.log("scroll <= 200");
               $(".top-nav").removeClass("fixed-head-white");
-              $(".span1").css("background-color", "white");
-              $(".span2").css("background-color", "white");
-              $(".span3").css("background-color", "white");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo_wh@2x.png"
-              );
-              $(".mobile-menu").css("top", "0px");
             }
           } else {
-            console.log("scroll <= 48");
             $(".top-nav").removeClass("fixed-head");
-            $(".span1").css("background-color", "white");
-            $(".span2").css("background-color", "white");
-            $(".span3").css("background-color", "white");
-            $(".logo-w-img").attr(
-              "src",
-              "./assets/img/sugarmancargo_logo_wh@2x.png"
-            );
           }
           console.log(scroll);
         });
       });
 
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
-      // 48
-      if (scroll > 48) {
-        console.log("scroll > 48");
-        $(".top-nav").addClass("fixed-head");
-        $(".span1").css("background-color", "#112348");
-        $(".span2").css("background-color", "#112348");
-        $(".span3").css("background-color", "#112348");
-        $(".logo-w-img").attr(
-          "src",
-          "./assets/img/sugarmancargo_logo_wh@2x.png"
-        );
-        $(".mobile-menu").css("top", "0");
-
-        if (scroll > 350) {
-          console.log("scroll > 350");
-          $(".top-nav").addClass("fixed-head-white");
-          $(".span1").css("background-color", "#112348");
-          $(".span2").css("background-color", "#112348");
-          $(".span3").css("background-color", "#112348");
-          $(".logo-w-img").attr(
-            "src",
-            "./assets/img/sugarmancargo_logo@2x.png"
-          );
-          $(".mobile-menu").css("top", "50px");
-        } else {
-          console.log("scroll <= 350");
-          $(".top-nav").removeClass("fixed-head-white");
-          $(".span1").css("background-color", "white");
-          $(".span2").css("background-color", "white");
-          $(".span3").css("background-color", "white");
-
-          if ($(".mobile-menu-place-i").hasClass("opened")) {
-            // 열림
-            console.log("열림");
-
-            if ($(".top-nav").hasClass("fixed-head-white")) {
-              // 배경 하얀색
-              console.log("배경 하얀색");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-              $(".mobile-menu").css("top", "0px");
-            } else if ($(".top-nav").hasClass("fixed-head")) {
-              // 배경 투명
-              console.log("배경 투명색임 scroll");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-            } else {
-              // 배경 투명
-              console.log("배경 투명 scroll");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-            }
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        // 48
+        if (scroll > 48) {
+          $(".top-nav").addClass("fixed-head");
+          if (scroll > 350) {
+            $(".top-nav").addClass("fixed-head-white");
+          } else {
+            $(".top-nav").removeClass("fixed-head-white");
           }
-
-          $(".mobile-menu").css("top", "0");
+        } else {
+          $(".top-nav").removeClass("fixed-head");
         }
-      } else {
-        console.log("scroll <= 48");
-        $(".top-nav").removeClass("fixed-head");
-        $(".span1").css("background-color", "white");
-        $(".span2").css("background-color", "white");
-        $(".span3").css("background-color", "white");
-        $(".logo-w-img").attr(
-          "src",
-          "./assets/img/sugarmancargo_logo_wh@2x.png"
-        );
-        $(".mobile-menu").css("top", "50px");
-      }
-      console.log(scroll);
-    });
-  </script>
-</body>
-
+        console.log(scroll);
+      });
+    </script>
+  </body>
 </html>
