@@ -35,7 +35,7 @@
   justify-content: center;
   margin: 20px auto;
 }
-.fail-btn:hover{
+.fail-btn:hover {
   color: #e9474d;
 }
 
@@ -762,7 +762,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   color: #000;
   z-index: 99;
   border-bottom: 1px solid #e1e1e1;
-
 }
 
 .fixed-head-white .nav-link {
@@ -1096,7 +1095,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .footer .col-md-6 {
   font-size: 0.8125rem;
 }
-.footer .so img{
+.footer .so img {
   width: 40px;
   height: 40px;
 }
@@ -1207,36 +1206,37 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
-  .event_wrap{
-    margin-top:85px !important;
+  .event_wrap {
+    margin-top: 85px !important;
   }
-  .min-half img{
+  .min-half img {
     width: 85px !important;
     height: auto !important;
   }
-  .qna-agree .wrap .agree-txt, .agree-txt{
+  .qna-agree .wrap .agree-txt,
+  .agree-txt {
     font-size: 14px;
   }
-  .service-box{
+  .service-box {
     height: 170px !important;
   }
-  .card-body{
+  .card-body {
     padding: 1rem;
   }
-  .qna-box{
+  .qna-box {
     margin-top: 0px !important;
   }
-  .qna-box .mg-13{
+  .qna-box .mg-13 {
     font-size: 14px;
   }
-  .footer .footer-bottom{
+  .footer .footer-bottom {
     padding: 15px 15px 110px 15px !important;
   }
-  .navbar-wrap img{
+  .navbar-wrap img {
     width: 105px !important;
     height: auto !important;
   }
-  .about-title{
+  .about-title {
     font-size: 26px !important;
     line-height: 2.2rem !important;
   }
@@ -1279,7 +1279,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .address-info {
     font-size: 1rem !important;
   }
-  .main-slide-next .material-icons{
+  .main-slide-next .material-icons {
     font-size: 30px !important;
   }
   .main-slide-next.prev-slide {
@@ -2371,7 +2371,7 @@ a:visited {
 }
 
 /* 지점 상세페이지 */
-.root_daum_roughmap{
+.root_daum_roughmap {
   width: 100% !important;
 }
 .branch-1 {
@@ -3447,7 +3447,7 @@ select::-ms-expand {
     padding: 25px 10px;
     top: 255px;
   }
-  .f-text-p{
+  .f-text-p {
     font-size: 16px !important;
   }
   .ft-14 {
@@ -3905,7 +3905,7 @@ body.scroll-lock {
   position: fixed;
   z-index: 10001;
   display: none;
-  bottom: 0px;
+  bottom: -40px;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
@@ -4056,7 +4056,7 @@ body.scroll-lock {
   max-width: 500px !important;
   position: absolute;
   margin: auto;
-  bottom: 50px;
+  bottom: 50px !important;
 }
 
 .gallery-thumbs {
