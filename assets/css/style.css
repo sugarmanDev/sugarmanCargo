@@ -3935,7 +3935,7 @@ body.scroll-lock {
     opacity: 0;
   }
   to {
-    bottom: 0px;
+    bottom: -40px;
     opacity: 1;
   }
 }
@@ -3946,7 +3946,7 @@ body.scroll-lock {
     opacity: 0;
   }
   to {
-    bottom: 0px;
+    bottom: -40px;
     opacity: 1;
   }
 }
