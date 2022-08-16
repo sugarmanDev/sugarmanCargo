@@ -531,6 +531,15 @@
       } else {
         $('#openPromoForm').remove();
       }
+
+
+      if(data.endYN === 'Y') {
+        window.location.href = '/404.html'
+
+      } else {
+        console.log(data.endYN)
+      }
+
     }, 'json');
   });
 
