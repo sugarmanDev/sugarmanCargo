@@ -2455,7 +2455,32 @@ a:visited {
 .branch-3-img6 {
   background: url("../img/space_Detail page/cargo_space_3/branch3_6.jpg");
 }
-/* 3호점 > 상세 페이지 > 슬라이드 이미지 */
+
+/* 4호점 > 상세 페이지 > 슬라이드 이미지 */
+.branch-4-img1 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_1.jpg");
+}
+
+.branch-4-img2 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_2.jpg");
+}
+
+.branch-4-img3 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_3.jpg");
+}
+
+.branch-4-img4 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_4.jpg");
+}
+
+.branch-4-img5 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_5.jpg");
+}
+
+.branch-4-img6 {
+  background: url("../img/space_Detail page/cargo_space_4/branch4_6.jpg");
+}
+
 .slide-elements {
   max-width: 96%;
 }
