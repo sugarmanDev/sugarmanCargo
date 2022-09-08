@@ -318,6 +318,7 @@
                     console.log("data : ", data);
                     console.log("2");
                     for (var idx = data.length - 1; idx >= 0; idx--) {
+                        // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
                         var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
 
                         html = '<div class="col-md-3 mb-4">';
@@ -330,9 +331,15 @@
                         // 안양 명학점
                         else if (data[idx].idx === 89) {
                             html += "<img src='/assets/img/20220712_event.jpg' class='card-img-top' alt='...'/>";
-                        } else {
-                            html += `<img src=${imgURL} class='card-img-top' alt='...'/>`;
                         }
+                        // 인천 부평점
+                        else if (data[idx].idx === 96) {
+                            html += "<img src='/assets/img/220908_카고부평_사전등록.jpg' class='card-img-top' alt='...'/>";
+                        }
+
+                        // else {
+                        //     html += `<img src=${imgURL} class='card-img-top' alt='...'/>`;
+                        // }
                         html +=
                             "<div class='event-card-body'><h5 class='card-title mb-1'>" +
                             data[idx].title +
