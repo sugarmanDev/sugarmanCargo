@@ -377,7 +377,7 @@
     } else {
       // 닫힘
       console.log("닫힘");
-      $(".scroll-nav").css("padding-right", "10px");
+      $(".scroll-nav").css("padding-right", "50px");
       $(".logo-w-img").attr(
         "src",
         "./assets/img/sugarmancargo_logo@2x.png"
@@ -451,7 +451,7 @@
     $(window).scroll(function () {
       if ((scroll = $(window).scrollTop() > 1700)) {
         console.log("scroll1");
-        $(".scroll-nav").css("padding-right", "10px");
+        $(".scroll-nav").css("padding-right", "50px");
         $(".join-guide").css('padding-top', "120px");
       } else {
         console.log("scroll2");
@@ -462,10 +462,10 @@
           $(".scroll-nav").css("top", "0");
           $(".scroll-nav").css("position", "fixed");
           $(".scroll-nav").css("width", "100%");
-          $(".scroll-nav").css("padding-right", "10px");
+          $(".scroll-nav").css("padding-right", "50px");
         } else {
           console.log("스크롤 없음");
-          $(".scroll-nav").css("padding-right", "10px");
+          $(".scroll-nav").css("padding-right", "50px");
 
           if ($("html").hasClass("event-banner-close")) {
             console.log("배너 없음");
