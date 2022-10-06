@@ -1,524 +1,486 @@
 <!DOCTYPE html>
 <html lang="kr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        <title>슈가맨카고</title>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153851611-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
 
-            gtag("config", "UA-153851611-1");
-        </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title>슈가맨카고 | 개인정보취급방침</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153851611-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-        <meta name="keywords" content="도심 속 공유 창고" />
-        <meta name="description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
+    gtag("config", "UA-153851611-1");
+  </script>
 
-        <meta property="og:locale" content="ko_KR" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="슈가맨카고" />
-        <meta property="og:description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
-        <meta property="og:url" content="https://sugarmancargo.com/" />
-        <meta property="og:site_name" content="슈가맨카고" />
-        <meta property="og:image" content="https://sugarmancargo.com/assets/800@2x.jpg" />
-        <meta property="og:image:secure_url" content="https://sugarmancargo.com/assets/800@2x.jpg" />
+  <meta name="keywords" content="도심 속 공유 창고" />
+  <meta name="description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
 
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="슈가맨카고" />
+  <meta property="og:description" content="도심 속 공유 창고 슈가맨카고와 함께 비즈니스와 일상이 효율을 높여 보세요." />
+  <meta property="og:url" content="https://sugarmancargo.com/" />
+  <meta property="og:site_name" content="슈가맨카고" />
+  <meta property="og:image" content="https://sugarmancargo.com/assets/800@2x.jpg" />
+  <meta property="og:image:secure_url" content="https://sugarmancargo.com/assets/800@2x.jpg" />
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
 
-        <!-- Apple Touch Icons -->
-        <link rel="apple-touch-icon" href="https://sugarmancargo.com/assets/57@2x.png" />
-        <link rel="apple-touch-icon-precomposed" href="https://sugarmancargo.com/assets/57@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://sugarmancargo.com/assets/57@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://sugarmancargo.com/assets/72@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://sugarmancargo.com/assets/60@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://sugarmancargo.com/assets/76@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://sugarmancargo.com/assets/114@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://sugarmancargo.com/assets/120@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sugarmancargo.com/assets/144@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://sugarmancargo.com/assets/152@2x.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://sugarmancargo.com/assets/180@2x.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
 
-        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/96@2x.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/128@2x.png" sizes="128x128" />
-        <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/196@2x.png" sizes="196x196" />
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="https://sugarmancargo.com/assets/57@2x.png" />
+  <link rel="apple-touch-icon-precomposed" href="https://sugarmancargo.com/assets/57@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://sugarmancargo.com/assets/57@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://sugarmancargo.com/assets/72@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://sugarmancargo.com/assets/60@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://sugarmancargo.com/assets/76@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://sugarmancargo.com/assets/114@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://sugarmancargo.com/assets/120@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sugarmancargo.com/assets/144@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://sugarmancargo.com/assets/152@2x.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://sugarmancargo.com/assets/180@2x.png" />
 
-        <!-- Windows 8 Tiles -->
-        <meta name="msapplication-TileImage" content="https://sugarmancargo.com/assets/144@2x.png" />
+  <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/96@2x.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/128@2x.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="https://sugarmancargo.com/assets/196@2x.png" sizes="196x196" />
 
-        <!-- Internet Explorer 11 Tiles -->
-        <meta name="msapplication-square70x70logo" content="https://sugarmancargo.com/assets/70@2x.png" />
-        <meta name="msapplication-square150x150logo" content="https://sugarmancargo.com/assets/150@2x.png" />
-        <meta name="msapplication-square310x150logo" content="https://sugarmancargo.com/assets/310x150_2@2x.png" />
-        <meta name="msapplication-square310x310logo" content="https://sugarmancargo.com/assets/310@2x.png" />
+  <!-- Windows 8 Tiles -->
+  <meta name="msapplication-TileImage" content="https://sugarmancargo.com/assets/144@2x.png" />
 
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-            crossorigin="anonymous"
-        ></script>
+  <!-- Internet Explorer 11 Tiles -->
+  <meta name="msapplication-square70x70logo" content="https://sugarmancargo.com/assets/70@2x.png" />
+  <meta name="msapplication-square150x150logo" content="https://sugarmancargo.com/assets/150@2x.png" />
+  <meta name="msapplication-square310x150logo" content="https://sugarmancargo.com/assets/310x150_2@2x.png" />
+  <meta name="msapplication-square310x310logo" content="https://sugarmancargo.com/assets/310@2x.png" />
 
-        <!-- datepicker -->
-        <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
-        <script src="./assets/js/datepicker/datepicker.min.js"></script>
-        <script src="./assets/js/datepicker/datepicker.ko.js"></script>
-        <script src="./assets/js/datepicker/LunarCalculator.js"></script>
-        <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
-        <script src="./assets/js/click-menu.js" charset="utf-8"></script>
-    </head>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    <body style="overflow-x: hidden">
-        <!-- 이벤트 띠배너 -->
-        <div class="event-banner d-flex pt-2 pb-2">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="flex-fill text-center event-text">
-                        <span class="new">NEW</span>
-                        <span
-                            ><a href="./event.html"
-                                ><u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을 만나보세요!</u
-                                >&nbsp;🎉</a
-                            ></span
-                        >
-                    </div>
-                    <button class="event-banner-btn" style="border-style: none; background: transparent">
-                        <span class="material-icons ml-auto" style="cursor: pointer">close</span>
-                    </button>
-                </div>
-            </div>
+  <!-- datepicker -->
+  <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
+  <script src="./assets/js/datepicker/datepicker.min.js"></script>
+  <script src="./assets/js/datepicker/datepicker.ko.js"></script>
+  <script src="./assets/js/datepicker/LunarCalculator.js"></script>
+  <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
+  <script src="./assets/js/click-menu.js" charset="utf-8"></script>
+</head>
+
+<body style="overflow-x: hidden">
+  <!-- 이벤트 띠배너 -->
+  <div class="event-banner d-flex pt-2 pb-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="flex-fill text-center event-text">
+          <span class="new">NEW</span>
+          <span><a href="./event.html"><u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을
+                만나보세요!</u>&nbsp;🎉</a></span>
         </div>
-        <!-- scroll nav -->
-        <div
-        class="navbar-wrap sticky-top scroll-nav"
-        style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
-          <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
-          <a class="navbar-brand" href="./index.html">
-              <img
-              src="./assets/img/sugarmancargo_logo@2x.png"
-              alt="sugarmancargo_logo"
-              class="main-logo"
-              />
-          </a>
+        <button class="event-banner-btn" style="border-style: none; background: transparent">
+          <span class="material-icons ml-auto" style="cursor: pointer">close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- scroll nav -->
+  <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
+    <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo" />
+      </a>
 
-          <!-- <button
+      <!-- <button
               class="navbar-toggler mobile-menu-place toggle-mobile-menu"
               type="button"
           >
               <span class="material-icons">menu</span>
           </button> -->
 
-          <div
-              id="nav_button"
-              class="nav_button material-icons toggle-mobile-menu"
-          >
-              <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
-              <label for="menuicon">
-              <span
-                  class="span1"
-                  style="background-color: rgb(17, 35, 72)"
-              ></span>
-              <span
-                  class="span2"
-                  style="background-color: rgb(17, 35, 72)"
-              ></span>
-              <span
-                  class="span3"
-                  style="background-color: rgb(17, 35, 72)"
-              ></span>
-              </label>
-          </div>
+      <div id="nav_button" class="nav_button material-icons toggle-mobile-menu">
+        <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
+        <label for="menuicon">
+          <span class="span1" style="background-color: rgb(17, 35, 72)"></span>
+          <span class="span2" style="background-color: rgb(17, 35, 72)"></span>
+          <span class="span3" style="background-color: rgb(17, 35, 72)"></span>
+        </label>
+      </div>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" style="color: #000" href="./branch_list.html"
-                  >지점찾기</a
-                  >
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" style="color: #000" href="./franchise.html"
-                  >가맹안내</a
-                  >
-              </li>
-              <li class="nav-item">
-                  <button
-                  type="button"
-                  class="nav-bar-btn"
-                  style="background-color: #e9474d; color: #fff"
-                  onclick="location.href='./visit.html' "
-                  >
-                  방문예약
-                  </button>
-              </li>
-              </ul>
-          </div>
-          </nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-bar-btn" style="background-color: #e9474d; color: #fff"
+              onclick="location.href='./visit.html' ">
+              방문예약
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="privacy-wrap">
+    <div class="container">
+      <!-- <div class="privacy-line"></div> -->
+
+      <h1 class="privacy-title">개인 정보 취급 방침</h1>
+
+      <div class="privacy-line"></div>
+
+      <p class="privacy-txt">
+        슈가맨카고(이하 '회사')는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「개인정보 보호법 등 관련 법률」에 따라
+        이용자의 개인정보를 보호하고 있습니다. 개인정보처리방침은 법률 및 고시의 변경 또는 내부 운영방침 변경에 따라 변경될 수
+        있습니다. 변경될 경우 변경 사항은 홈페이지를 통하여 공지합니다.
+      </p>
+
+      <!-- <div class="privacy-line"></div> -->
+
+      <p class="privacy-num">제 1조. 개인정보 수집에 대한 동의</p>
+      <p class="privacy-info">
+        이용자는 개인정보 수집, 이용과 관련 동의여부를 선택할 수 있습니다. 동의를 선택하면 개인 정보 수집에 대해 동의하는 것으로
+        봅니다.
+      </p>
+
+      <p class="privacy-num">제 2조. 개인정보 수집 항목</p>
+      <p class="privacy-info">- 필수 항목: 이름, 연락처, 희망지역, 이메일</p>
+
+      <p class="privacy-num">제 3조. 개인정보 수집 목적</p>
+      <p class="privacy-info">- 각종 서비스 제공, 원활한 고객과의 커뮤니케이션을 위해 고객의 개인 정보를 수집, 이용합니다.</p>
+      <p class="privacy-info">- 기타 설문조사 및 이벤트 및 프로모션을 위해 개인정보를 수집, 이용합니다.</p>
+
+      <table class="privacy-table">
+        <tr>
+          <th>구분</th>
+          <th>수집항목</th>
+          <th>수집 • 이용 목적</th>
+          <th>이용 • 보유 기간</th>
+        </tr>
+        <tr>
+          <td>필수항목</td>
+          <td>이름, 연락처, 지점 선택, 원하는 스토리지 사이즈, 방문날짜, 방문 시간, 알게 된 경로, 문의 내용</td>
+          <td>본인 확인, 상담, 문의에 대한 답변 및 정보 전달, 각종 서비스 및 혜택 안내</td>
+          <td>정보 제출일로부터 1년</td>
+        </tr>
+      </table>
+
+      <p class="privacy-num">제 4조. 개인정보 제공</p>
+      <p class="privacy-info">
+        수집한 정보는 "제3조 개인정보 수집 목적"에 고지한 범위 내에서 사용하며, 이용자의 사전 동의 없이 외부에 공개하지
+        않습니다. 다만, 예외로 법령 규정, 수사에 의해서는 공개할 수 있습니다.
+      </p>
+
+      <p class="privacy-num">제 5조. 개인정보 보유 및 이용기간</p>
+      <p class="privacy-info">- 이용자의 개인정보는 이용자 동의 하에 슈가맨카고의 웹사이트를 이용하는 동안 보유, 이용됩니다.</p>
+      <p class="privacy-info">
+        - 단, 회사는 정보통신망법 제29조에 따라 "개인정보 유효기간제"를 적용하고 있습니다. 1년간 이용내역이 없는 회원의 경우
+        개인 정보를 파기 혹은 별도로 분리해 보관합니다.
+      </p>
+
+      <p class="privacy-num">제 6조. 개인정보의 파기 절차 및 방법</p>
+      <p class="privacy-info">
+        회사는 이용자의 개인정보가 필요하지 않게 되었을 때 즉시 해당 개인정보를 파기합니다. 개인 정보는 기록을 복구 또는 재생항
+        수 없는 방법을 사용하여 완전히 삭제합니다. 종이에 출력된 개인정보는 분쇄나 소각을 통해 파기합니다.
+      </p>
+
+      <p class="privacy-num">제 7조. 쿠키에 의한 개인정보 수집 및 그 거부사항</p>
+      <p class="privacy-info">
+        회사는 이용자의 정보를 저장하고 찾아내는 '쿠키(cookie)'를 사용합니다. 쿠키란, 웹사이트를 운영하는데 이용되는 서버가
+        이용자의 브라우저에 보내는 아주 작은 텍스트 파일로 이용자 컴퓨터의 하드디스크에 저장됩니다. 회사는 다음과 같은 목적을
+        위해 쿠키를 사용합니다.
+      </p>
+
+      <p class="privacy-info">
+        1) 쿠키의 운용 목적 이용자의 관심 분야레 따라 차별화된 정보 제공, 회원과 비회원의 접속 빈도나 방문 시간 등을 분석해 타겟
+        마케팅 및 개인 맞춤형 정보를 제공합니다.
+      </p>
+
+      <p class="privacy-info">
+        2) 쿠키에 대한 선택권 이용자의 웹브라우저의 옵션을 조정함으로써 모든 쿠키의 허용, 일부 허용, 혹은 모든 쿠키를 거부할
+        수도 있습니다.
+      </p>
+
+      <p class="privacy-info">
+        이용자는 웹브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인 을 거치거나, 모든 쿠키의
+        저장을 거부할 수도 있습니다. 단, 이용자가 쿠키 설치를 거부하였을 경우 서비스가 제한될 수 있습니다.
+      </p>
+
+      <p class="privacy-info">
+        쿠키 설정방법은 다음과 같습니다.<br /><br />
+        인터넷 익스플로러의 : [도구] - [인터넷 옵션] - [개인정보 탭] - [개인정보 설정] 에서 변경
+      </p>
+
+      <p class="privacy-num">제 8조. 개인정보 의견 수렴 및 불만처리</p>
+      <p class="privacy-info">
+        슈가맨카고는 개인정보보호와 관련한 이용자들의 의견을 수렴하고 불만을 신속히 처리하기 위해 고객센터를 운영하고 있습니다.
+        또한 개인정보 관리 책임자를 두어 이용자들의 문의에 신속하게 답변을 드리고 있습니다. 고객센터와 개인정보 최고책임자의
+        연락처는 다음과 같습니다.
+      </p>
+
+      <p class="privacy-info">
+        [고객센터]
+        <br />
+        E-mail: sugarmancargo@gmail.com 전화번호: 1522-2387 (평일 오전 9시 ~ 6시)
+      </p>
+
+      <p class="privacy-info">
+        [개인정보보호 최고책임자]
+        <br />
+        성명: 박동욱
+        <br />
+        전화번호: 032-323-2327
+        <br />
+        - 기타 개인정보침해에 관한 상담, 신고가 필요한 경우에는 아래 기관에서 문의하시길 바랍니다.
+      </p>
+
+      <p class="privacy-info">
+        [경찰국 사이버안전국]
+        <br />
+        전화번호: 국번없이 182
+        <br />
+        웹사이트: http://cyberbureau.police.go.kr
+      </p>
+
+      <p class="privacy-info">
+        [대검찰청 사이버수사과]
+        <br />
+        전화번호: 국번없이 1301
+        <br />
+        웹사이트: http://www.spo.go.kr
+      </p>
+
+      <p class="privacy-info">
+        [개인정보침해신고센터]
+        <br />
+        전화번호: 국번없이 118
+        <br />
+        웹사이트: http://privacy.kisa.or.kr
+      </p>
+
+      <p class="privacy-num">제 9조. 개인의 의무</p>
+      <p class="privacy-info">
+        회원은 본인의 개인정보를 보호할 의무가 있으며, 본인의 부주의로 개인정보가 유출될 시 회사는 책임을 지지 않습니다.
+      </p>
+
+      <p class="privacy-num">제 10조. 고지의 의무</p>
+      <p class="privacy-info">
+        개인정보취급방침은 정부의 정책, 보안기술 또는 회사 내부 운영 방침의 변경에 따라 내용이 변경될 수 있습니다. 내용 변경
+        시에는 홈페이지를 통해 변경 이유 및 내용을 즉시 공지하겠습니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- 푸터 시작 -->
+  <div class="content-section bg-footer footer-t footer">
+    <div class="container-fluid main-container">
+      <div class="row">
+        <div class="col-md-2">
+          <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo" />
+        </div>
+        <div class="col-md-7 footer-con">
+          <ul class="footer-con-1">
+            <li>
+              <span><a href="./about.html">회사소개</a></span>
+            </li>
+            <li>
+              <span><a href="./event.html">이벤트</a></span>
+            </li>
+            <li>
+              <span><a href="./faq.html">고객센터</a></span>
+            </li>
+          </ul>
+          <ul class="footer-con-2">
+            <li>
+              <span>(주)슈가맨</span><strong style="color: #e1e1e1"> | </strong>
+            </li>
+            <li class="ceo">
+              <span>대표이사 </span> 최성원
+              <strong style="color: #e1e1e1"> | </strong>
+            </li>
+            <li class="num"><span>사업자등록번호 </span>155-87-01085
+              <a href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"><u>사업자
+                  정보확인</u></a>
+            </li>
+          </ul>
+          <ul class="footer-con-3">
+            <li>
+              <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
+              <strong style="color: #e1e1e1"> | </strong>
+            </li>
+            <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
+          </ul>
         </div>
 
-        <div class="privacy-wrap">
-            <div class="container">
-                <!-- <div class="privacy-line"></div> -->
-
-                <h1 class="privacy-title">개인 정보 취급 방침</h1>
-
-                <div class="privacy-line"></div>
-
-                <p class="privacy-txt">
-                    슈가맨카고(이하 '회사')는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「개인정보 보호법 등 관련 법률」에 따라
-                    이용자의 개인정보를 보호하고 있습니다. 개인정보처리방침은 법률 및 고시의 변경 또는 내부 운영방침 변경에 따라 변경될 수
-                    있습니다. 변경될 경우 변경 사항은 홈페이지를 통하여 공지합니다.
-                </p>
-
-                <!-- <div class="privacy-line"></div> -->
-
-                <p class="privacy-num">제 1조. 개인정보 수집에 대한 동의</p>
-                <p class="privacy-info">
-                    이용자는 개인정보 수집, 이용과 관련 동의여부를 선택할 수 있습니다. 동의를 선택하면 개인 정보 수집에 대해 동의하는 것으로
-                    봅니다.
-                </p>
-
-                <p class="privacy-num">제 2조. 개인정보 수집 항목</p>
-                <p class="privacy-info">- 필수 항목: 이름, 연락처, 희망지역, 이메일</p>
-
-                <p class="privacy-num">제 3조. 개인정보 수집 목적</p>
-                <p class="privacy-info">- 각종 서비스 제공, 원활한 고객과의 커뮤니케이션을 위해 고객의 개인 정보를 수집, 이용합니다.</p>
-                <p class="privacy-info">- 기타 설문조사 및 이벤트 및 프로모션을 위해 개인정보를 수집, 이용합니다.</p>
-
-                <table class="privacy-table">
-                    <tr>
-                        <th>구분</th>
-                        <th>수집항목</th>
-                        <th>수집 • 이용 목적</th>
-                        <th>이용 • 보유 기간</th>
-                    </tr>
-                    <tr>
-                        <td>필수항목</td>
-                        <td>이름, 연락처, 지점 선택, 원하는 스토리지 사이즈, 방문날짜, 방문 시간, 알게 된 경로, 문의 내용</td>
-                        <td>본인 확인, 상담, 문의에 대한 답변 및 정보 전달, 각종 서비스 및 혜택 안내</td>
-                        <td>정보 제출일로부터 1년</td>
-                    </tr>
-                </table>
-
-                <p class="privacy-num">제 4조. 개인정보 제공</p>
-                <p class="privacy-info">
-                    수집한 정보는 "제3조 개인정보 수집 목적"에 고지한 범위 내에서 사용하며, 이용자의 사전 동의 없이 외부에 공개하지
-                    않습니다. 다만, 예외로 법령 규정, 수사에 의해서는 공개할 수 있습니다.
-                </p>
-
-                <p class="privacy-num">제 5조. 개인정보 보유 및 이용기간</p>
-                <p class="privacy-info">- 이용자의 개인정보는 이용자 동의 하에 슈가맨카고의 웹사이트를 이용하는 동안 보유, 이용됩니다.</p>
-                <p class="privacy-info">
-                    - 단, 회사는 정보통신망법 제29조에 따라 "개인정보 유효기간제"를 적용하고 있습니다. 1년간 이용내역이 없는 회원의 경우
-                    개인 정보를 파기 혹은 별도로 분리해 보관합니다.
-                </p>
-
-                <p class="privacy-num">제 6조. 개인정보의 파기 절차 및 방법</p>
-                <p class="privacy-info">
-                    회사는 이용자의 개인정보가 필요하지 않게 되었을 때 즉시 해당 개인정보를 파기합니다. 개인 정보는 기록을 복구 또는 재생항
-                    수 없는 방법을 사용하여 완전히 삭제합니다. 종이에 출력된 개인정보는 분쇄나 소각을 통해 파기합니다.
-                </p>
-
-                <p class="privacy-num">제 7조. 쿠키에 의한 개인정보 수집 및 그 거부사항</p>
-                <p class="privacy-info">
-                    회사는 이용자의 정보를 저장하고 찾아내는 '쿠키(cookie)'를 사용합니다. 쿠키란, 웹사이트를 운영하는데 이용되는 서버가
-                    이용자의 브라우저에 보내는 아주 작은 텍스트 파일로 이용자 컴퓨터의 하드디스크에 저장됩니다. 회사는 다음과 같은 목적을
-                    위해 쿠키를 사용합니다.
-                </p>
-
-                <p class="privacy-info">
-                    1) 쿠키의 운용 목적 이용자의 관심 분야레 따라 차별화된 정보 제공, 회원과 비회원의 접속 빈도나 방문 시간 등을 분석해 타겟
-                    마케팅 및 개인 맞춤형 정보를 제공합니다.
-                </p>
-
-                <p class="privacy-info">
-                    2) 쿠키에 대한 선택권 이용자의 웹브라우저의 옵션을 조정함으로써 모든 쿠키의 허용, 일부 허용, 혹은 모든 쿠키를 거부할
-                    수도 있습니다.
-                </p>
-
-                <p class="privacy-info">
-                    이용자는 웹브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인 을 거치거나, 모든 쿠키의
-                    저장을 거부할 수도 있습니다. 단, 이용자가 쿠키 설치를 거부하였을 경우 서비스가 제한될 수 있습니다.
-                </p>
-
-                <p class="privacy-info">
-                    쿠키 설정방법은 다음과 같습니다.<br /><br />
-                    인터넷 익스플로러의 : [도구] - [인터넷 옵션] - [개인정보 탭] - [개인정보 설정] 에서 변경
-                </p>
-
-                <p class="privacy-num">제 8조. 개인정보 의견 수렴 및 불만처리</p>
-                <p class="privacy-info">
-                    슈가맨카고는 개인정보보호와 관련한 이용자들의 의견을 수렴하고 불만을 신속히 처리하기 위해 고객센터를 운영하고 있습니다.
-                    또한 개인정보 관리 책임자를 두어 이용자들의 문의에 신속하게 답변을 드리고 있습니다. 고객센터와 개인정보 최고책임자의
-                    연락처는 다음과 같습니다.
-                </p>
-
-                <p class="privacy-info">
-                    [고객센터]
-                    <br />
-                    E-mail: sugarmancargo@gmail.com 전화번호: 1522-2387 (평일 오전 9시 ~ 6시)
-                </p>
-
-                <p class="privacy-info">
-                    [개인정보보호 최고책임자]
-                    <br />
-                    성명: 박동욱
-                    <br />
-                    전화번호: 032-323-2327
-                    <br />
-                    - 기타 개인정보침해에 관한 상담, 신고가 필요한 경우에는 아래 기관에서 문의하시길 바랍니다.
-                </p>
-
-                <p class="privacy-info">
-                    [경찰국 사이버안전국]
-                    <br />
-                    전화번호: 국번없이 182
-                    <br />
-                    웹사이트: http://cyberbureau.police.go.kr
-                </p>
-
-                <p class="privacy-info">
-                    [대검찰청 사이버수사과]
-                    <br />
-                    전화번호: 국번없이 1301
-                    <br />
-                    웹사이트: http://www.spo.go.kr
-                </p>
-
-                <p class="privacy-info">
-                    [개인정보침해신고센터]
-                    <br />
-                    전화번호: 국번없이 118
-                    <br />
-                    웹사이트: http://privacy.kisa.or.kr
-                </p>
-
-                <p class="privacy-num">제 9조. 개인의 의무</p>
-                <p class="privacy-info">
-                    회원은 본인의 개인정보를 보호할 의무가 있으며, 본인의 부주의로 개인정보가 유출될 시 회사는 책임을 지지 않습니다.
-                </p>
-
-                <p class="privacy-num">제 10조. 고지의 의무</p>
-                <p class="privacy-info">
-                    개인정보취급방침은 정부의 정책, 보안기술 또는 회사 내부 운영 방침의 변경에 따라 내용이 변경될 수 있습니다. 내용 변경
-                    시에는 홈페이지를 통해 변경 이유 및 내용을 즉시 공지하겠습니다.
-                </p>
-            </div>
-        </div>
-
-        <!-- 푸터 시작 -->
-    <div class="content-section bg-footer footer-t footer">
-        <div class="container-fluid main-container">
-          <div class="row">
-            <div class="col-md-2">
-              <img
-                class="footer-logo"
-                src="./assets/img/footer_logo.png"
-                alt="footer-logo"
-              />
-            </div>
-            <div class="col-md-7 footer-con">
-              <ul class="footer-con-1">
-                <li>
-                  <span><a href="./about.html">회사소개</a></span>
-                </li>
-                <li>
-                  <span><a href="./event.html">이벤트</a></span>
-                </li>
-                <li>
-                  <span><a href="./faq.html">고객센터</a></span>
-                </li>
-              </ul>
-              <ul class="footer-con-2">
-                <li>
-                  <span>(주)슈가맨</span
-                  ><strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li class="ceo">
-                  <span>대표이사 </span> 최성원
-                  <strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li class="num"><span>사업자등록번호 </span>155-87-01085
-                  <a href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"><u>사업자 정보확인</u></a>
-                </li>
-              </ul>
-              <ul class="footer-con-3">
-                <li>
-                  <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
-                  <strong style="color: #e1e1e1"> | </strong>
-                </li>
-                <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
-              </ul>
-            </div>
-  
-            <div class="col-md-3">
-              <div class="footer-right">
-                <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
-                <p>월~금 9:00~18:00 (공휴일 · 주말 휴무)</p>
-              </div>
-            </div>
+        <div class="col-md-3">
+          <div class="footer-right">
+            <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
+            <p>월~금 9:00~18:00 (공휴일 · 주말 휴무)</p>
           </div>
         </div>
       </div>
-  
-      <div class="footer-m footer container-fluid p-0">
-        <div class="footer-line"></div>
-      </div>
-  
-      <div class="footer">
-        <div class="container-fluid main-container footer-bottom">
-          <div class="row">
-            <div class="col-md-6 footer-bottom-text">
-              <p>© 2020 sugarmancargo All rights reserved</p>
-              <a href="./privacy.html">개인정보취급방침</a>
+    </div>
+  </div>
+
+  <div class="footer-m footer container-fluid p-0">
+    <div class="footer-line"></div>
+  </div>
+
+  <div class="footer">
+    <div class="container-fluid main-container footer-bottom">
+      <div class="row">
+        <div class="col-md-6 footer-bottom-text">
+          <p>© 2020 sugarmancargo All rights reserved</p>
+          <a href="./privacy.html">개인정보취급방침</a>
+        </div>
+        <div class="col-md-6 social">
+          <a href="https://sugarmanwork.com" target="_blank">
+            <div class="so sugarmanwok">
+              <img src="./assets/img/sugarmanwork@2x.png" alt="sugarmanwork" />
             </div>
-            <div class="col-md-6 social">
-              <a href="https://sugarmanwork.com" target="_blank">
-                <div class="so sugarmanwok">
-                  <img src="./assets/img/sugarmanwork@2x.png" alt="sugarmanwork" />
-                </div>
-              </a>
-              <a href="https://salk.co.kr" target="_blank">
-                <div class="so salk">
-                  <img src="./assets/img/salk@2x.png" alt="salk" />
-                </div>
-              </a>
-              <a href="https://prop-landlord-web.vercel.app" target="_blank">
-                <div class="so prop">
-                  <img src="./assets/img/prop@2x.png" alt="prop" />
-                </div>
-              </a>
-              <a href="https://blog.naver.com/sugarmancargo" target="_blank">
-                <div class="so naver">
-                  <img src="./assets/img/footer_icon_1.png" alt="blog" />
-                </div>
-              </a>
+          </a>
+          <a href="https://salk.co.kr" target="_blank">
+            <div class="so salk">
+              <img src="./assets/img/salk@2x.png" alt="salk" />
             </div>
-          </div>
+          </a>
+          <a href="https://prop-landlord-web.vercel.app" target="_blank">
+            <div class="so prop">
+              <img src="./assets/img/prop@2x.png" alt="prop" />
+            </div>
+          </a>
+          <a href="https://blog.naver.com/sugarmancargo" target="_blank">
+            <div class="so naver">
+              <img src="./assets/img/footer_icon_1.png" alt="blog" />
+            </div>
+          </a>
         </div>
       </div>
+    </div>
+  </div>
 
-        <script>
-            $(function () {
-                $(window).scroll(function () {
-                    if ((scroll = $(window).scrollTop() > 575)) {
-                        $(".bottom-fix2").removeClass("bottom-sticky");
-                    } else {
-                        $(".bottom-fix2").addClass("bottom-sticky");
-                    }
-                });
-            });
-        </script>
-        <script>
-          $(document).on("click", ".close-btn-index", function () {
-            $(".event-text").addClass("close-topbar");
-            $("html").toggleClass("event-banner-close");
+  <script>
+    $(function () {
+      $(window).scroll(function () {
+        if ((scroll = $(window).scrollTop() > 575)) {
+          $(".bottom-fix2").removeClass("bottom-sticky");
+        } else {
+          $(".bottom-fix2").addClass("bottom-sticky");
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).on("click", ".close-btn-index", function () {
+      $(".event-text").addClass("close-topbar");
+      $("html").toggleClass("event-banner-close");
+      $(".mobile-menu").css("top", "0px");
+      $(".scroll-nav").css("top", "0px");
+    });
+  </script>
+
+  <script>
+    $(document).on("click", ".mobile-menu-place-i", function () {
+      $(".mobile-menu").toggle();
+      // $(".mobile-menu-place-i").toggleClass("opened");
+      if ($(".mobile-menu-place-i").hasClass("opened")) {
+        $(".mobile-menu-place-i").removeClass("opened");
+      } else {
+        $(".mobile-menu-place-i").addClass("opened");
+      }
+
+      if ($(".mobile-menu-place-i").hasClass("opened")) {
+        console.log("열림");
+        $(".scroll-nav").css("padding-right", "15px");
+        $(".logo-w-img").attr(
+          "src",
+          "./assets/img/sugarmancargo_logo@2x.png"
+        );
+
+        // 배너 유무
+        if ($("html").hasClass("event-banner-close")) {
+          console.log("배너 없음");
+          $(".mobile-menu").css("top", "0px");
+        } else {
+          console.log("배너 있음");
+
+          // 스크롤 유무
+          if ($(window).scrollTop() > 0) {
+            console.log("스크롤 있음");
+            $(".scroll-nav").css("top", "0");
+            $(".scroll-nav").css("position", "fixed");
+            $(".scroll-nav").css("width", "100vw");
             $(".mobile-menu").css("top", "0px");
-            $(".scroll-nav").css("top", "0px");
-          });
-        </script>
-    
-        <script>
-          $(document).on("click", ".mobile-menu-place-i", function () {
-            $(".mobile-menu").toggle();
-            // $(".mobile-menu-place-i").toggleClass("opened");
-            if ($(".mobile-menu-place-i").hasClass("opened")) {
-              $(".mobile-menu-place-i").removeClass("opened");
+          } else {
+            console.log("스크롤 없음");
+            $(".scroll-nav").css("top", "40px");
+            $(".mobile-menu").css("top", "40px");
+          }
+        }
+      } else {
+        // 닫힘
+        console.log("닫힘");
+        $(".scroll-nav").css("padding-right", "15px");
+        $(".logo-w-img").attr(
+          "src",
+          "./assets/img/sugarmancargo_logo@2x.png"
+        );
+      }
+
+      $(".web-popup").hide();
+      $("html").toggleClass("prevent-scroll");
+      $("body").toggleClass("prevent-scroll");
+    });
+
+    $(function () {
+      $(window).scroll(function () {
+        if ((scroll = $(window).scrollTop() > 1700)) {
+          console.log("scroll1");
+          $(".scroll-nav").css("padding-right", "50px");
+        } else {
+          console.log("scroll2");
+
+          // 스크롤 유무
+          if ($(window).scrollTop() > 0) {
+            console.log("스크롤 있음");
+            $(".scroll-nav").css("top", "0");
+            $(".scroll-nav").css("position", "fixed");
+            $(".scroll-nav").css("width", "100%");
+            $(".scroll-nav").css("padding-right", "50px");
+          } else {
+            console.log("스크롤 없음");
+            $(".scroll-nav").css("padding-right", "50px");
+            $(".Customer_wrap").css("margin-top", "100px");
+
+            if ($("html").hasClass("event-banner-close")) {
+              console.log("배너 없음");
+              $(".scroll-nav").css("top", "0");
             } else {
-              $(".mobile-menu-place-i").addClass("opened");
+              console.log("배너 있음");
+              $(".scroll-nav").css("top", "40px");
             }
-    
-            if ($(".mobile-menu-place-i").hasClass("opened")) {
-              console.log("열림");
-              $(".scroll-nav").css("padding-right", "15px");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-    
-              // 배너 유무
-              if ($("html").hasClass("event-banner-close")) {
-                console.log("배너 없음");
-                $(".mobile-menu").css("top", "0px");
-              } else {
-                console.log("배너 있음");
-    
-                // 스크롤 유무
-                if ($(window).scrollTop() > 0) {
-                  console.log("스크롤 있음");
-                  $(".scroll-nav").css("top", "0");
-                  $(".scroll-nav").css("position", "fixed");
-                  $(".scroll-nav").css("width", "100vw");
-                  $(".mobile-menu").css("top", "0px");
-                } else {
-                  console.log("스크롤 없음");
-                  $(".scroll-nav").css("top", "40px");
-                  $(".mobile-menu").css("top", "40px");
-                }
-              }
-            } else {
-              // 닫힘
-              console.log("닫힘");
-              $(".scroll-nav").css("padding-right", "15px");
-              $(".logo-w-img").attr(
-                "src",
-                "./assets/img/sugarmancargo_logo@2x.png"
-              );
-            }
-    
-            $(".web-popup").hide();
-            $("html").toggleClass("prevent-scroll");
-            $("body").toggleClass("prevent-scroll");
-          });
-    
-          $(function () {
-            $(window).scroll(function () {
-              if ((scroll = $(window).scrollTop() > 1700)) {
-                console.log("scroll1");
-                $(".scroll-nav").css("padding-right", "50px");
-              } else {
-                console.log("scroll2");
-    
-                // 스크롤 유무
-                if ($(window).scrollTop() > 0) {
-                  console.log("스크롤 있음");
-                  $(".scroll-nav").css("top", "0");
-                  $(".scroll-nav").css("position", "fixed");
-                  $(".scroll-nav").css("width", "100%");
-                  $(".scroll-nav").css("padding-right", "50px");
-                } else {
-                  console.log("스크롤 없음");
-                  $(".scroll-nav").css("padding-right", "50px");
-                  $(".Customer_wrap").css("margin-top", "100px");
-    
-                  if ($("html").hasClass("event-banner-close")) {
-                    console.log("배너 없음");
-                    $(".scroll-nav").css("top", "0");
-                  } else {
-                    console.log("배너 있음");
-                    $(".scroll-nav").css("top", "40px");
-                  }
-                }
-              }
-            });
-          });
-        </script>
-    </body>
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>
