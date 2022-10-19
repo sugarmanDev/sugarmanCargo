@@ -497,7 +497,7 @@
       } else if (
         data.idx === 89) {
         $('#eventImage').attr('src', '/assets/img/20220712_event.jpg');
-      } else if (data.idx === 96) {
+      } else if (data.idx === 102) {
         $('#eventImage').attr('src', '/assets/img/221017_카고부평_사전등록.jpg');
       }
 
@@ -506,7 +506,7 @@
       // }
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
-      $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 89 ? "2022.7.12" : data.idx === 96 ? "2022.10.19" : "")
+      $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 89 ? "2022.7.12" : data.idx === 102 ? "2022.10.19" : "")
       $('#eventDesc').html(data.content)
 
       if (data.formYN == 'Y') {
