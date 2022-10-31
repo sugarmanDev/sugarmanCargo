@@ -506,11 +506,10 @@
       // else {
       //   $('#eventImage').attr('src', imgURL);
       // }
-      console.log(data);
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
-      $('#title').html(data.title)
-      $('#branchIdx').html(data.branchIdx)
+      $('#title').val(data.title)
+      $('#branchIdx').val(data.branchIdx)
       $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 89 ? "2022.7.12" : data.idx === 102 ? "2022.10.19" : "")
       $('#eventDesc').html(data.content)
 
@@ -553,6 +552,7 @@
       var formData = new FormData(form);
       var queryString = $('#formData').serialize();
 
+      console.log(targetDomain, queryString)
 
       $.ajax({
         type: 'post',
