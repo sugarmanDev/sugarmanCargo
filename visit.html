@@ -249,16 +249,8 @@
   </style>
 
   <script>
-    //   $(document).on("click", ".mobile-menu-place-i", function () {
-    //     $("#mobile").toggle();
-    //     $(".mobile-menu-place-i").toggleClass("opened");
-    //     $("html").toggleClass("prevent-scroll");
-    //     $("body").toggleClass("prevent-scroll");
-    //   });
-
     $(document).on("click", ".mobile-menu-place-i", function () {
       $(".mobile-menu").toggle();
-      // $(".mobile-menu-place-i").toggleClass("opened");
       if ($(".mobile-menu-place-i").hasClass("opened")) {
         $(".mobile-menu-place-i").removeClass("opened");
       } else {
@@ -332,7 +324,6 @@
         var form = $("#inquiryData")[0];
         var formData = new FormData(form);
         var queryString = $("#inquiryData").serialize();
-        console.log(queryString);
 
         $.ajax({
           type: "post",
@@ -494,6 +485,7 @@
         <div class="col-md-5 join-g-inquiry-right" style="margin-top: 100px; margin-bottom: 150px">
           <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
             <input type="hidden" name="visitTime" id="visitTime" />
+            <input type="hidden" name="branchIdx" id="branchIdx" />
             <h2 class="mb-4 main-title">방문예약</h2>
             <div class="form-row">
               <div class="form-group col-md-12">
@@ -732,6 +724,24 @@
   <script>
     set_date_picker("#datepicker");
 
+    // 지점 추가 될 때마다 수정 해야 함
+    $("#visitInputstore1").change(function () {
+      let val = $(this).val();
+      let result = null;
+
+      if (val === "슈가맨카고 부평점") {
+        result = 1;
+      } else if (val === "슈가맨카고 군자역점") {
+        result = 2;
+      } else if (val === "슈가맨카고 상동점") {
+        result = 3;
+      } else if (val === "슈가맨카고 명학점") {
+        result = 4;
+      }
+
+      $("#branchIdx").attr("value", result);
+    })
+
     function checkForm() {
       if (confirm("저장하시겠습니까?") == true) {
         var hour = $("#hour").val();
@@ -758,7 +768,11 @@
         var form = $("#formData")[0];
         var formData = new FormData(form);
         var queryString = $("#formData").serialize();
-        console.log(queryString);
+
+        // 출력용
+        for (let key of formData.keys()) {
+          console.log(key, ":", formData.get(key));
+        }
 
         $.ajax({
           type: "post",
