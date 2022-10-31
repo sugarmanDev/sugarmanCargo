@@ -156,6 +156,8 @@
             <h5 class="">이벤트 신청</h5>
             <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
               <input type="hidden" name="promoIdx" id="promoIdx" value="">
+              <input type="hidden" name="branchIdx" id="branchIdx" value="">
+              <input type="hidden" name="title" id="title" value="">
               <div class=" form-title form-group mt-3">
                 <label for="eventInputName">이름<span>*</span></label>
                 <input type="text" class="visitInputName visit" placeholder="이름/회사명" name="name" id="name" require>
@@ -506,6 +508,8 @@
       // }
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
+      $('#title').html(data.title)
+      $('#branchIdx').html(data.branchIdx)
       $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 89 ? "2022.7.12" : data.idx === 102 ? "2022.10.19" : "")
       $('#eventDesc').html(data.content)
 
@@ -541,6 +545,7 @@
     if (confirm('저장하시겠습니까?') == true) {
 
       $('#promoIdx').val(idx);
+      $('#branchIdx').val(idx);
 
       $('.submit-form').attr('disabled', true);
 
