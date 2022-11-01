@@ -359,6 +359,11 @@ ul {
   }
 }
 
+@media (min-width: 415px) and (max-width: 767px) {
+  .control-box{
+    margin-top: 24px !important;
+  }
+}
 @media (min-width: 341px) and (max-width: 467px) {
   .fail-h1 {
     font-size: 7rem;
@@ -1206,6 +1211,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .control-box{
+    margin-top: 24px !important;
+  }
   .event_wrap {
     margin-top: 85px !important;
   }
@@ -2714,9 +2722,9 @@ a:visited {
   line-height: 30px;
 }
 
-.visit-down {
+/* .visit-down {
   margin-top: 5px;
-}
+} */
 
 .package-con {
   padding-top: 100px;
@@ -2954,6 +2962,9 @@ a:visited {
 }
 
 @media (min-width: 768px) and (max-width: 820px) {
+  .mg-box{
+    margin: 180px 0 !important;
+  }
   .main-banner-text {
     font-size: 2.5rem;
   }
