@@ -234,7 +234,6 @@
 
   <script>
     $(document).on("click", ".close-btn-index", function () {
-      console.log("이벤트 배너 닫기");
       $(".event-text").addClass("close-topbar");
       $("html").toggleClass("event-banner-close");
       $(".mobile-menu").css("top", "0px");
@@ -258,36 +257,27 @@
       }
 
       if ($(".mobile-menu-place-i").hasClass("opened")) {
-        console.log("열림");
         $(".scroll-nav").css("padding-right", "15px");
         $(".logo-w-img").attr(
           "src",
           "./assets/img/sugarmancargo_logo@2x.png"
         );
 
-        // 배너 유무
         if ($("html").hasClass("event-banner-close")) {
-          console.log("배너 없음");
           $(".mobile-menu").css("top", "0px");
         } else {
-          console.log("배너 있음");
 
-          // 스크롤 유무
           if ($(window).scrollTop() > 0) {
-            console.log("스크롤 있음");
             $(".scroll-nav").css("top", "0");
             $(".scroll-nav").css("position", "fixed");
             $(".scroll-nav").css("width", "100vw");
             $(".mobile-menu").css("top", "0px");
           } else {
-            console.log("스크롤 없음");
             $(".scroll-nav").css("top", "40px");
             $(".mobile-menu").css("top", "40px");
           }
         }
       } else {
-        // 닫힘
-        console.log("닫힘");
         $(".scroll-nav").css("padding-right", "15px");
         $(".logo-w-img").attr(
           "src",
@@ -331,7 +321,6 @@
           data: queryString,
           dataType: "json",
           success: function (data) {
-            console.log(data);
             if (data.result == "success") {
               location.replace("./success.html");
             } else {
@@ -349,27 +338,19 @@
     $(function () {
       $(window).scroll(function () {
         if ((scroll = $(window).scrollTop() > 1700)) {
-          console.log("scroll1");
           $(".scroll-nav").css("padding-right", "10px");
         } else {
-          console.log("scroll2");
-
-          // 스크롤 유무
           if ($(window).scrollTop() > 0) {
-            console.log("스크롤 있음");
             $(".scroll-nav").css("top", "0");
             $(".scroll-nav").css("position", "fixed");
             $(".scroll-nav").css("width", "100%");
             $(".scroll-nav").css("padding-right", "50px");
           } else {
-            console.log("스크롤 없음");
             $(".scroll-nav").css("padding-right", "50px");
 
             if ($("html").hasClass("event-banner-close")) {
-              console.log("배너 없음");
               $(".scroll-nav").css("top", "0");
             } else {
-              console.log("배너 있음");
               $(".scroll-nav").css("top", "40px");
             }
           }
@@ -769,18 +750,12 @@
         var formData = new FormData(form);
         var queryString = $("#formData").serialize();
 
-        // 출력용
-        for (let key of formData.keys()) {
-          console.log(key, ":", formData.get(key));
-        }
-
         $.ajax({
           type: "post",
           url: targetDomain + "/visit",
           data: queryString,
           dataType: "json",
           success: function (data) {
-            console.log(data);
             if (data.result == "success") {
               location.replace("./success.html");
             } else {

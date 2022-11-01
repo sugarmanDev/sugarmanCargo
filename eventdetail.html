@@ -144,8 +144,6 @@
         <div class="col-xl-5 col-xs-6">
           <div class="title-box pb-3">
             <h3 class="mb-2 main-title" id="eventTitle">슈가맨카고 안산점 얼리버드</h3>
-            <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;">이벤트 기간</span> -->
-            <!-- <span class="mb-1" style="color:#888; font-size: 0.9375rem;"">2020.06.05 - 2020.09.05</span> -->
             <div className="pt-3 pb-3">등록일: <span id="eventDate"></span></div>
           </div>
           <div class=" text-box pt-3 pb-3" style="border-bottom: 1px solid #e1e1e1; border-top: 1px solid #e1e1e1;"
@@ -185,7 +183,6 @@
                 </div>
               </div>
 
-
               <div class="form-group col-md-12 mt-4 d-felx align-items-center" style="padding: 0;">
                 <input type="checkbox" name="checkYN" id="checkYN" required>
                 <label for="checkYN" style="margin-bottom:18px;"></label>
@@ -196,7 +193,6 @@
                   </button>및 활용에 동의합니다.
                 </p>
                 <br>
-
 
                 <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                   aria-hidden="true">
@@ -238,7 +234,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- 푸터 시작 -->
   <div class="content-section bg-footer footer-t footer">
@@ -341,7 +336,6 @@
 
   $(document).on("click", ".mobile-menu-place-i", function () {
     $(".mobile-menu").toggle();
-    // $(".mobile-menu-place-i").toggleClass("opened");
     if ($(".mobile-menu-place-i").hasClass("opened")) {
       $(".mobile-menu-place-i").removeClass("opened");
     } else {
@@ -349,36 +343,26 @@
     }
 
     if ($(".mobile-menu-place-i").hasClass("opened")) {
-      console.log("열림");
       $(".scroll-nav").css("padding-right", "50px");
       $(".logo-w-img").attr(
         "src",
         "./assets/img/sugarmancargo_logo@2x.png"
       );
 
-      // 배너 유무
       if ($("html").hasClass("event-banner-close")) {
-        console.log("배너 없음");
         $(".mobile-menu").css("top", "0px");
       } else {
-        console.log("배너 있음");
-
-        // 스크롤 유무
         if ($(window).scrollTop() > 0) {
-          console.log("스크롤 있음");
           $(".scroll-nav").css("top", "0");
           $(".scroll-nav").css("position", "fixed");
           $(".scroll-nav").css("width", "100vw");
           $(".mobile-menu").css("top", "0px");
         } else {
-          console.log("스크롤 없음");
           $(".scroll-nav").css("top", "50px");
           $(".mobile-menu").css("top", "50px");
         }
       }
     } else {
-      // 닫힘
-      console.log("닫힘");
       $(".scroll-nav").css("padding-right", "50px");
       $(".logo-w-img").attr(
         "src",
@@ -398,9 +382,8 @@
   x.addListener((a) => {
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
-      // 48
+
       if (scroll > 48) {
-        console.log("scroll > 48");
         $(".top-nav").addClass("fixed-head");
         $(".span1").css("background-color", "#112348");
         $(".span2").css("background-color", "#112348");
@@ -412,7 +395,6 @@
         $(".mobile-menu").css("top", "0px");
 
         if (scroll > 200) {
-          console.log("scroll > 200");
           $(".top-nav").addClass("fixed-head-white");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -423,7 +405,6 @@
           );
           $(".mobile-menu").css("top", "50px");
         } else {
-          console.log("scroll <= 200");
           $(".top-nav").removeClass("fixed-head-white");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
@@ -435,7 +416,6 @@
           $(".mobile-menu").css("top", "0px");
         }
       } else {
-        console.log("scroll <= 48");
         $(".top-nav").removeClass("fixed-head");
         $(".span1").css("background-color", "white");
         $(".span2").css("background-color", "white");
@@ -445,35 +425,27 @@
           "./assets/img/sugarmancargo_logo_wh@2x.png"
         );
       }
-      console.log(scroll);
     });
   });
 
   $(function () {
     $(window).scroll(function () {
       if ((scroll = $(window).scrollTop() > 1700)) {
-        console.log("scroll1");
         $(".scroll-nav").css("padding-right", "50px");
         $(".join-guide").css('padding-top', "120px");
       } else {
-        console.log("scroll2");
 
-        // 스크롤 유무
         if ($(window).scrollTop() > 0) {
-          console.log("스크롤 있음");
           $(".scroll-nav").css("top", "0");
           $(".scroll-nav").css("position", "fixed");
           $(".scroll-nav").css("width", "100%");
           $(".scroll-nav").css("padding-right", "50px");
         } else {
-          console.log("스크롤 없음");
           $(".scroll-nav").css("padding-right", "50px");
 
           if ($("html").hasClass("event-banner-close")) {
-            console.log("배너 없음");
             $(".scroll-nav").css("top", "0");
           } else {
-            console.log("배너 있음");
             $(".scroll-nav").css("top", "50px");
           }
         }
@@ -503,9 +475,6 @@
         $('#eventImage').attr('src', '/assets/img/221017_카고부평_사전등록.jpg');
       }
 
-      // else {
-      //   $('#eventImage').attr('src', imgURL);
-      // }
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
       $('#title').val(data.title)
@@ -519,12 +488,8 @@
         $('#openPromoForm').remove();
       }
 
-
       if (data.endYN === 'Y') {
         window.location.href = '/404.html'
-
-      } else {
-        console.log(data.endYN)
       }
 
     }, 'json');
@@ -539,20 +504,15 @@
     return results == null ? null : results[1];
   }
 
-
   function checkForm() {
 
     if (confirm('저장하시겠습니까?') == true) {
-
       $('#promoIdx').val(idx);
-
       $('.submit-form').attr('disabled', true);
 
       var form = $('#formData')[0];
       var formData = new FormData(form);
       var queryString = $('#formData').serialize();
-
-      console.log(targetDomain, queryString)
 
       $.ajax({
         type: 'post',
@@ -560,7 +520,6 @@
         data: queryString,
         dataType: 'json',
         success: function (data) {
-          console.log(data);
           if (data.result == 'success') {
             location.replace('./success.html');
           } else {
@@ -571,8 +530,6 @@
           $('.submit-form').attr('disabled', false);
         }
       });
-
-
     }
     return false;
   }

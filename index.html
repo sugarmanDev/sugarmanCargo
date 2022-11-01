@@ -110,13 +110,6 @@
           class="main-logo" />
       </a>
 
-      <!-- <button
-          class="navbar-toggler mobile-menu-place toggle-mobile-menu"
-          type="button"
-        >
-          <span class="material-icons main_menu">menu</span>
-        </button> -->
-
       <div id="nav_button" class="nav_button material-icons toggle-mobile-menu">
         <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
         <label for="menuicon">
@@ -173,6 +166,7 @@
 
               <div class="col-12">
                 <label for="in_branch">문의 지점</label>
+                <input type="hidden" name="branchIdx" id="modalBranchIdx" />
                 <select id="in_branch" name="branch" class="in_form_con arrow" required>
                   <option selected value="" disabled>지점 선택</option>
                   <option value="1">[1호점] 인천 부평점</option>
@@ -248,16 +242,9 @@
   </style>
 
   <script>
-    // $(document).on("click", ".mobile-menu-place-i", function () {
-    //   $("#mobile").toggle();
-    //   $(".mobile-menu-place-i").toggleClass("opened");
-    //   $("html").toggleClass("prevent-scroll");
-    //   $("body").toggleClass("prevent-scroll");
-    // });
 
     $(document).on("click", ".mobile-menu-place-i", function () {
       $(".mobile-menu").toggle();
-      // $(".mobile-menu-place-i").toggleClass("opened");
       if ($(".mobile-menu-place-i").hasClass("opened")) {
         $(".mobile-menu-place-i").removeClass("opened");
       } else {
@@ -265,54 +252,35 @@
       }
 
       if ($(".mobile-menu-place-i").hasClass("opened")) {
-        // 열림
-        console.log("열림");
-
         if ($(".top-nav").hasClass("fixed-head-white")) {
-          // 배경 하얀색
-          console.log("배경 하얀색");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
         } else if ($(".top-nav").hasClass("fixed-head")) {
-          // 배경 투명
-          console.log("배경 투명함");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
         } else {
-          // 배경 투명
-          console.log("배경 투명함");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
 
-          // 배너 유무
           if ($("html").hasClass("event-banner-close")) {
-            console.log("배너 없음");
             $(".mobile-menu").css("top", "0px");
           } else {
-            console.log("배너 있음");
             $(".mobile-menu").css("top", "55px");
           }
         }
       } else {
-        // 닫힘
-        console.log("닫힘");
-
         if ($(".top-nav").hasClass("fixed-head-white")) {
-          // 배경 하얀색
-          console.log("배경 하얀색");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
         } else {
-          // 배경 투명
-          console.log("배경 투명함");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo_wh@2x.png"
@@ -326,8 +294,8 @@
     });
 
     $(".main_inquiry_btn").click(function () {
-      window.location.hash = "mainInquiry"; //set hash
-      return false; //disables browser anchor jump behavior
+      window.location.hash = "mainInquiry";
+      return false;
     });
 
     function locationHashChanged() {
@@ -350,6 +318,12 @@
       window.history.back();
     });
 
+    // 지점 추가 될 때마다 수정 해야 함
+    $("#in_branch").change(function () {
+      let val = $(this).val();
+      $("#modalBranchIdx").attr("value", val);
+    });
+
     function checkForm() {
       if (confirm("저장하시겠습니까?") == true) {
         $(".submit-form").attr("disabled", true);
@@ -357,7 +331,6 @@
         var form = $("#formData")[0];
         var formData = new FormData(form);
         var queryString = $("#formData").serialize();
-        console.log(queryString);
 
         $.ajax({
           type: "post",
@@ -365,7 +338,6 @@
           data: queryString,
           dataType: "json",
           success: function (data) {
-            console.log(data);
             if (data.result == "success") {
               location.replace("./success.html");
             } else {
@@ -713,7 +685,6 @@
     }
 
     $(function () {
-      console.log($(window).width());
       if ($(window).width() < 415) {
         $(".close-popup").each(function () {
           var getCookieName = $(this).attr("data-banner");
@@ -1005,9 +976,8 @@
     x.addListener((a) => {
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        // 48
+
         if (scroll > 48) {
-          console.log("scroll > 48");
           $(".top-nav").addClass("fixed-head");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -1019,7 +989,6 @@
           $(".mobile-menu").css("top", "0px");
 
           if (scroll > 200) {
-            console.log("scroll > 200");
             $(".top-nav").addClass("fixed-head-white");
             $(".span1").css("background-color", "#112348");
             $(".span2").css("background-color", "#112348");
@@ -1030,7 +999,6 @@
             );
             $(".mobile-menu").css("top", "55px");
           } else {
-            console.log("scroll <= 200");
             $(".top-nav").removeClass("fixed-head-white");
             $(".span1").css("background-color", "white");
             $(".span2").css("background-color", "white");
@@ -1042,7 +1010,6 @@
             $(".mobile-menu").css("top", "0px");
           }
         } else {
-          console.log("scroll <= 48");
           $(".top-nav").removeClass("fixed-head");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
@@ -1052,15 +1019,13 @@
             "./assets/img/sugarmancargo_logo_wh@2x.png"
           );
         }
-        console.log(scroll);
       });
     });
 
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
-      // 48
+
       if (scroll > 48) {
-        console.log("scroll > 48");
         $(".top-nav").addClass("fixed-head");
         $(".span1").css("background-color", "#112348");
         $(".span2").css("background-color", "#112348");
@@ -1072,7 +1037,6 @@
         $(".mobile-menu").css("top", "0");
 
         if (scroll > 350) {
-          console.log("scroll > 350");
           $(".top-nav").addClass("fixed-head-white");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -1083,7 +1047,6 @@
           );
           $(".mobile-menu").css("top", "55px");
         } else {
-          console.log("scroll <= 350");
           $(".top-nav").removeClass("fixed-head-white");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
@@ -1095,7 +1058,6 @@
           $(".mobile-menu").css("top", "0");
         }
       } else {
-        console.log("scroll <= 48");
         $(".top-nav").removeClass("fixed-head");
         $(".span1").css("background-color", "white");
         $(".span2").css("background-color", "white");
@@ -1106,7 +1068,6 @@
         );
         $(".mobile-menu").css("top", "55px");
       }
-      console.log(scroll);
     });
   </script>
 </body>

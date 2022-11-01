@@ -439,37 +439,6 @@
       $('.fixed-bottom').addClass('footer-above-2');
       $('.fixed-bottom').addClass('footer-above-3');
     }
-
-    // var scrollAdd = scroll + 539.125;
-    //
-    // if (scrollAdd > bottom_position) {
-    //   $('.fixed-bottom').removeClass('footer-above-1');
-    //   $('.fixed-bottom').removeClass('footer-above-2');
-    //   $('.fixed-bottom').removeClass('footer-above-3');
-    //
-    //   $('.fixed-bottom').removeClass('footer-above-1');
-    //   $('.fixed-bottom').removeClass('footer-above-2');
-    //   $('.fixed-bottom').removeClass('footer-above-3');
-    //
-    //   if (scrollAdd > bottom_position && scrollAdd <= bottom_position1) {
-    //     $('.fixed-bottom').addClass('footer-above-1');
-    //     $('.fixed-bottom').addClass('footer-above-1');
-    //   }
-    //   else if (scrollAdd > bottom_position1 && scrollAdd <= bottom_position2) {
-    //     $('.fixed-bottom').addClass('footer-above-2');
-    //     $('.fixed-bottom').addClass('footer-above-2');
-    //   }
-    //   else if (scrollAdd > bottom_position2 || scrollAdd > bottom_position3) {
-    //     $('.fixed-bottom').addClass('footer-above-3');
-    //     $('.fixed-bottom').addClass('footer-above-3');
-    //   }
-    // }
-    // else {
-    //   $('.fixed-bottom').removeClass('footer-above-1');
-    //   $('.fixed-bottom').removeClass('footer-above-2');
-    //   $('.fixed-bottom').removeClass('footer-above-3');
-    //   $('.fixed-bottom').addClass('bottom-sticky');
-    // }
   }
 
 </script>
@@ -485,7 +454,6 @@
 
   $(document).on("click", ".mobile-menu-place-i", function () {
     $(".mobile-menu").toggle();
-    // $(".mobile-menu-place-i").toggleClass("opened");
     if ($(".mobile-menu-place-i").hasClass("opened")) {
       $(".mobile-menu-place-i").removeClass("opened");
     } else {
@@ -493,36 +461,27 @@
     }
 
     if ($(".mobile-menu-place-i").hasClass("opened")) {
-      console.log("열림");
       $(".scroll-nav").css("padding-right", "10px");
       $(".logo-w-img").attr(
         "src",
         "./assets/img/sugarmancargo_logo@2x.png"
       );
 
-      // 배너 유무
       if ($("html").hasClass("event-banner-close")) {
-        console.log("배너 없음");
         $(".mobile-menu").css("top", "0px");
       } else {
-        console.log("배너 있음");
 
-        // 스크롤 유무
         if ($(window).scrollTop() > 0) {
-          console.log("스크롤 있음");
           $(".scroll-nav").css("top", "0");
           $(".scroll-nav").css("position", "fixed");
           $(".scroll-nav").css("width", "100vw");
           $(".mobile-menu").css("top", "0px");
         } else {
-          console.log("스크롤 없음");
           $(".scroll-nav").css("top", "40px");
           $(".mobile-menu").css("top", "40px");
         }
       }
     } else {
-      // 닫힘
-      console.log("닫힘");
       $(".scroll-nav").css("padding-right", "10px");
       $(".logo-w-img").attr(
         "src",
@@ -542,9 +501,8 @@
   x.addListener((a) => {
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
-      // 48
+
       if (scroll > 48) {
-        console.log("scroll > 48");
         $(".top-nav").addClass("fixed-head");
         $(".span1").css("background-color", "#112348");
         $(".span2").css("background-color", "#112348");
@@ -556,7 +514,6 @@
         $(".mobile-menu").css("top", "0px");
 
         if (scroll > 200) {
-          console.log("scroll > 200");
           $(".top-nav").addClass("fixed-head-white");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -567,7 +524,6 @@
           );
           $(".mobile-menu").css("top", "40px");
         } else {
-          console.log("scroll <= 200");
           $(".top-nav").removeClass("fixed-head-white");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
@@ -579,7 +535,6 @@
           $(".mobile-menu").css("top", "0px");
         }
       } else {
-        console.log("scroll <= 48");
         $(".top-nav").removeClass("fixed-head");
         $(".span1").css("background-color", "white");
         $(".span2").css("background-color", "white");
@@ -589,35 +544,26 @@
           "./assets/img/sugarmancargo_logo_wh@2x.png"
         );
       }
-      console.log(scroll);
     });
   });
 
   $(function () {
     $(window).scroll(function () {
       if ((scroll = $(window).scrollTop() > 1700)) {
-        console.log("scroll1");
         $(".scroll-nav").css("padding-right", "10px");
         $(".join-guide").css('padding-top', "120px");
       } else {
-        console.log("scroll2");
-
-        // 스크롤 유무
         if ($(window).scrollTop() > 0) {
-          console.log("스크롤 있음");
           $(".scroll-nav").css("top", "0");
           $(".scroll-nav").css("position", "fixed");
           $(".scroll-nav").css("width", "100%");
           $(".scroll-nav").css("padding-right", "50px");
         } else {
-          console.log("스크롤 없음");
           $(".scroll-nav").css("padding-right", "50px");
 
           if ($("html").hasClass("event-banner-close")) {
-            console.log("배너 없음");
             $(".scroll-nav").css("top", "0");
           } else {
-            console.log("배너 있음");
             $(".scroll-nav").css("top", "40px");
           }
         }

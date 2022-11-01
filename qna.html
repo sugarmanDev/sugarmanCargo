@@ -409,7 +409,6 @@
                 var form = $("#formData")[0];
                 var formData = new FormData(form);
                 var queryString = $("#formData").serialize();
-                console.log(queryString);
 
                 $.ajax({
                     type: "post",
@@ -417,7 +416,6 @@
                     data: queryString,
                     dataType: "json",
                     success: function (data) {
-                        console.log(data);
                         if (data.result == "success") {
                             location.replace("./success.html");
                         } else {
@@ -453,7 +451,6 @@
     <script>
         $(document).on("click", ".mobile-menu-place-i", function () {
             $(".mobile-menu").toggle();
-            // $(".mobile-menu-place-i").toggleClass("opened");
             if ($(".mobile-menu-place-i").hasClass("opened")) {
                 $(".mobile-menu-place-i").removeClass("opened");
             } else {
@@ -461,36 +458,26 @@
             }
 
             if ($(".mobile-menu-place-i").hasClass("opened")) {
-                console.log("열림");
                 $(".scroll-nav").css("padding-right", "15px");
                 $(".logo-w-img").attr(
                     "src",
                     "./assets/img/sugarmancargo_logo@2x.png"
                 );
 
-                // 배너 유무
                 if ($("html").hasClass("event-banner-close")) {
-                    console.log("배너 없음");
                     $(".mobile-menu").css("top", "0px");
                 } else {
-                    console.log("배너 있음");
-
-                    // 스크롤 유무
                     if ($(window).scrollTop() > 0) {
-                        console.log("스크롤 있음");
                         $(".scroll-nav").css("top", "0");
                         $(".scroll-nav").css("position", "fixed");
                         $(".scroll-nav").css("width", "100vw");
                         $(".mobile-menu").css("top", "0px");
                     } else {
-                        console.log("스크롤 없음");
                         $(".scroll-nav").css("top", "40px");
                         $(".mobile-menu").css("top", "40px");
                     }
                 }
             } else {
-                // 닫힘
-                console.log("닫힘");
                 $(".scroll-nav").css("padding-right", "15px");
                 $(".logo-w-img").attr(
                     "src",
@@ -506,28 +493,20 @@
         $(function () {
             $(window).scroll(function () {
                 if ((scroll = $(window).scrollTop() > 1700)) {
-                    console.log("scroll1");
                     $(".scroll-nav").css("padding-right", "10px");
                 } else {
-                    console.log("scroll2");
-
-                    // 스크롤 유무
                     if ($(window).scrollTop() > 0) {
-                        console.log("스크롤 있음");
                         $(".scroll-nav").css("top", "0");
                         $(".scroll-nav").css("position", "fixed");
                         $(".scroll-nav").css("width", "100%");
                         $(".scroll-nav").css("padding-right", "50px");
                     } else {
-                        console.log("스크롤 없음");
                         $(".scroll-nav").css("padding-right", "50px");
                         $(".Customer_wrap").css("margin-top", "100px");
 
                         if ($("html").hasClass("event-banner-close")) {
-                            console.log("배너 없음");
                             $(".scroll-nav").css("top", "0");
                         } else {
-                            console.log("배너 있음");
                             $(".scroll-nav").css("top", "40px");
                         }
                     }

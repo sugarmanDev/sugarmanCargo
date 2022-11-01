@@ -20,29 +20,27 @@ mobileMenu += "</div>";
 mobileMenu += "</div>";
 
 $(document).on("click", ".toggle-mobile-menu", function () {
-    $(".mobile-menu").toggle();
-    $(".web-popup").hide();
-    $("html").toggleClass("prevent-scroll");
-    $("body").toggleClass("prevent-scroll");
+  $(".mobile-menu").toggle();
+  $(".web-popup").hide();
+  $("html").toggleClass("prevent-scroll");
+  $("body").toggleClass("prevent-scroll");
 });
 
 $(document).ready(function () {
-    $("body").append(mobileMenu);
+  $("body").append(mobileMenu);
 });
 
 $(document).on("click", ".event-banner-btn", function () {
-    $(".event-banner").remove();
-    $(".top-nav").css("top", "0px");
+  $(".event-banner").remove();
+  $(".top-nav").css("top", "0px");
 });
 
 var getDomain = window.location.hostname;
 
 var targetDomain = "";
 
-console.log(getDomain);
-
 if (getDomain == "sugarmancargo.com" || getDomain == "sugarmandev.github.io") {
-    targetDomain = "https://sugarmango.co.kr/cargo";
+  targetDomain = "https://sugarmango.co.kr/cargo";
 } else {
-    targetDomain = "http://localhost/cargo";
+  targetDomain = "http://localhost/cargo";
 }

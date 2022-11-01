@@ -620,7 +620,6 @@
 <script>
   $(document).on("click", ".mobile-menu-place-i", function () {
     $(".mobile-menu").toggle();
-    // $(".mobile-menu-place-i").toggleClass("opened");
     if ($(".mobile-menu-place-i").hasClass("opened")) {
       $(".mobile-menu-place-i").removeClass("opened");
     } else {
@@ -628,33 +627,23 @@
     }
 
     if ($(".mobile-menu-place-i").hasClass("opened")) {
-      console.log("열림");
       $(".scroll-nav").css("padding-right", "10px");
 
-      // 배너 유무
       if ($("html").hasClass("event-banner-close")) {
-        console.log("배너 없음");
         $(".mobile-menu").css("top", "0px");
       } else {
-        console.log("배너 있음");
-
         if ($(window).scrollTop() > 0) {
-          console.log("스크롤 있음");
           $(".scroll-nav").css("position", "absolute");
           $(".scroll-nav").css("width", "100vw");
         } else {
-          console.log("스크롤 없음");
           $(".scroll-nav").css("position", "absolute");
           $(".scroll-nav").css("width", "100vw");
         }
       }
     } else {
-      // 닫힘
-      console.log("닫힘");
       $(".scroll-nav").css("position", "relative");
 
       var m = matchMedia("screen and (max-width: 500px)");
-      console.log(m.matches)
       if (m.matches) {
         $(".scroll-nav").css("padding-right", "15px");
       } else {
@@ -666,19 +655,6 @@
     $(".web-popup").hide();
     $("html").toggleClass("prevent-scroll");
     $("body").toggleClass("prevent-scroll");
-  });
-
-  $(function () {
-    $(window).scroll(function () {
-      // 스크롤 유무
-      if ($(window).scrollTop() > 0) {
-        console.log("스크롤 있음");
-
-      } else {
-        console.log("스크롤 없음");
-      }
-    }
-    )
   });
 </script>
 

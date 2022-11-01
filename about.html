@@ -330,30 +330,12 @@
   </div>
 
   <script>
-    //   $(window).scroll(function () {
-    //     var scroll = $(window).scrollTop();
-    //     // 48
-    //     if (scroll > 48) {
-    //       $(".top-nav").addClass("fixed-head");
-    //       if (scroll > 450) {
-    //         $(".top-nav").addClass("fixed-head-white");
-    //       } else {
-    //         $(".top-nav").removeClass("fixed-head-white");
-    //       }
-    //     } else {
-    //       $(".top-nav").removeClass("fixed-head");
-    //     }
-    //     console.log(scroll);
-    //   });
-
     const x = window.matchMedia("screen and (min-width:500px)");
 
     x.addListener((a) => {
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        // 48
         if (scroll > 48) {
-          console.log("scroll > 48");
           $(".top-nav").addClass("fixed-head");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -365,7 +347,6 @@
           $(".mobile-menu").css("top", "0px");
 
           if (scroll > 200) {
-            console.log("scroll > 200");
             $(".top-nav").addClass("fixed-head-white");
             $(".span1").css("background-color", "#112348");
             $(".span2").css("background-color", "#112348");
@@ -376,7 +357,6 @@
             );
             $(".mobile-menu").css("top", "50px");
           } else {
-            console.log("scroll <= 200");
             $(".top-nav").removeClass("fixed-head-white");
             $(".span1").css("background-color", "white");
             $(".span2").css("background-color", "white");
@@ -388,7 +368,6 @@
             $(".mobile-menu").css("top", "0px");
           }
         } else {
-          console.log("scroll <= 48");
           $(".top-nav").removeClass("fixed-head");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
@@ -398,15 +377,13 @@
             "./assets/img/sugarmancargo_logo_wh@2x.png"
           );
         }
-        console.log(scroll);
       });
     });
 
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
-      // 48
+
       if (scroll > 48) {
-        console.log("scroll > 48");
         $(".top-nav").addClass("fixed-head");
         $(".span1").css("background-color", "#112348");
         $(".span2").css("background-color", "#112348");
@@ -418,7 +395,6 @@
         $(".mobile-menu").css("top", "0");
 
         if (scroll > 350) {
-          console.log("scroll > 350");
           $(".top-nav").addClass("fixed-head-white");
           $(".span1").css("background-color", "#112348");
           $(".span2").css("background-color", "#112348");
@@ -429,19 +405,13 @@
           );
           $(".mobile-menu").css("top", "50px");
         } else {
-          console.log("scroll <= 350");
           $(".top-nav").removeClass("fixed-head-white");
           $(".span1").css("background-color", "white");
           $(".span2").css("background-color", "white");
           $(".span3").css("background-color", "white");
 
           if ($(".mobile-menu-place-i").hasClass("opened")) {
-            // 열림
-            console.log("열림");
-
             if ($(".top-nav").hasClass("fixed-head-white")) {
-              // 배경 하얀색
-              console.log("배경 하얀색");
               $(".logo-w-img").attr(
                 "src",
                 "./assets/img/sugarmancargo_logo@2x.png"
@@ -449,8 +419,6 @@
 
               $(".mobile-menu").css("top", "0px");
             } else if ($(".top-nav").hasClass("fixed-head")) {
-              // 배경 투명
-              console.log("배경 투명색임 scroll");
               $(".logo-w-img").attr(
                 "src",
                 "./assets/img/sugarmancargo_logo@2x.png"
@@ -458,8 +426,6 @@
 
               $(".mobile-menu").css("top", "0");
             } else {
-              // 배경 투명
-              console.log("배경 투명 scroll");
               $(".logo-w-img").attr(
                 "src",
                 "./assets/img/sugarmancargo_logo@2x.png"
@@ -470,7 +436,6 @@
           }
         }
       } else {
-        console.log("scroll <= 48");
         $(".top-nav").removeClass("fixed-head");
         $(".span1").css("background-color", "white");
         $(".span2").css("background-color", "white");
@@ -481,7 +446,6 @@
         );
         $(".mobile-menu").css("top", "50px");
       }
-      console.log(scroll);
     });
   </script>
 
@@ -494,7 +458,6 @@
 
     $(document).on("click", ".mobile-menu-place-i", function () {
       $(".mobile-menu").toggle();
-      // $(".mobile-menu-place-i").toggleClass("opened");
       if ($(".mobile-menu-place-i").hasClass("opened")) {
         $(".mobile-menu-place-i").removeClass("opened");
       } else {
@@ -502,13 +465,9 @@
       }
 
       if ($(".mobile-menu-place-i").hasClass("opened")) {
-        // 열림
-        console.log("열림");
         $("#nav_button").css("padding-right", "0px");
 
         if ($(".top-nav").hasClass("fixed-head-white")) {
-          // 배경 하얀색
-          console.log("배경 하얀색");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
@@ -516,44 +475,31 @@
 
           $(".mobile-menu").css("top", "0px");
         } else if ($(".top-nav").hasClass("fixed-head")) {
-          // 배경 투명
-          console.log("배경 투명색임");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
         } else {
-          // 배경 투명
-          console.log("배경 투명");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
 
-          // 배너 유무
           if ($("html").hasClass("event-banner-close")) {
-            console.log("배너 없음");
             $(".mobile-menu").css("top", "0px");
           } else {
-            console.log("배너 있음");
             $(".mobile-menu").css("top", "50px");
           }
         }
       } else {
-        // 닫힘
-        console.log("닫힘");
         $("#nav_button").css("padding-right", "0px");
 
         if ($(".top-nav").hasClass("fixed-head-white")) {
-          // 배경 하얀색
-          console.log("배경 하얀색");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo@2x.png"
           );
         } else {
-          // 배경 투명
-          console.log("배경 투명함");
           $(".logo-w-img").attr(
             "src",
             "./assets/img/sugarmancargo_logo_wh@2x.png"

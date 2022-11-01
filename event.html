@@ -246,7 +246,6 @@
 
     $(document).on("click", ".mobile-menu-place-i", function () {
         $(".mobile-menu").toggle();
-        // $(".mobile-menu-place-i").toggleClass("opened");
         if ($(".mobile-menu-place-i").hasClass("opened")) {
             $(".mobile-menu-place-i").removeClass("opened");
         } else {
@@ -254,21 +253,14 @@
         }
 
         if ($(".mobile-menu-place-i").hasClass("opened")) {
-            console.log("열림");
             $(".logo-w-img").attr("src", "./assets/img/sugarmancargo_logo@2x.png");
 
-            // 배너 유무
             if ($("html").hasClass("event-banner-close")) {
-                console.log("배너 없음");
                 $(".mobile-menu").css("top", "0px");
             } else {
-                console.log("배너 있음");
                 $(".mobile-menu").css("top", "50px");
             }
         } else {
-            // 닫힘
-            console.log("닫힘");
-
             $(".logo-w-img").attr("src", "./assets/img/sugarmancargo_logo@2x.png");
         }
 
@@ -277,33 +269,17 @@
         $("body").toggleClass("prevent-scroll");
     });
 
-    $(function () {
-        $(window).scroll(function () {
-            if ((scroll = $(window).scrollTop() > 575)) {
-                console.log("scroll1");
-
-                // 스크롤 유무
-            }
-        });
-    });
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0) {
-            console.log("스크롤 있음");
             $(".scroll-nav").css("top", "0");
             $(".scroll-nav").css("position", "fixed");
             $(".scroll-nav").css("width", "100%");
         } else {
-            console.log("스크롤 없음");
-
             if ($("html").hasClass("event-banner-close")) {
-                console.log("배너 없음");
                 $(".scroll-nav").css("top", "0");
             } else {
-                console.log("배너 있음");
                 $(".scroll-nav").css("top", "40px");
             }
-
             $(".scroll-nav").css("position", "static");
         }
     });
@@ -314,12 +290,8 @@
         $.get(
             targetDomain + "/event",
             function (data) {
-                console.log("타겟도메인 : ", targetDomain);
                 var html = "";
-                console.log("???", data);
                 if (data.length > 0) {
-                    console.log("data : ", data);
-                    console.log("2");
                     for (var idx = data.length - 1; idx >= 0; idx--) {
                         // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
                         var imgURL = "http://cd.sugarmanwork.com/stuff/" + data[idx].image;
@@ -327,6 +299,7 @@
                         html = '<div class="col-md-3 mb-4">';
                         html += '<div class="card shadow-sm border-0">';
                         html += '<a href="./eventdetail.html?idx=' + data[idx].idx + '">';
+
                         // 부천 상동점
                         if (data[idx].idx === 78) {
                             html += "<img src='/assets/img/220322_event.jpg' class='card-img-top' alt='...'/>";
@@ -340,9 +313,6 @@
                             html += "<img src='/assets/img/221017_카고부평_사전등록.jpg' class='card-img-top' alt='...'/>";
                         }
 
-                        // else {
-                        //     html += `<img src=${imgURL} class='card-img-top' alt='...'/>`;
-                        // }
                         html +=
                             "<div class='event-card-body'><h5 class='card-title mb-1'>" +
                             data[idx].title +
@@ -357,7 +327,6 @@
                         $("#listPlace").append(html);
                     }
                 } else {
-                    console.log("1");
                     html = '<div style="margin-top:30px;margin-left: 15px;"><p>아직 등록된 이벤트가 없습니다.</p></div>';
 
                     $("#listPlace").append(html);
