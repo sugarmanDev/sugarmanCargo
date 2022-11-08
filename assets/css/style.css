@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
 
 /* .Customer_wrap .row{
   padding: 15px;
@@ -91,11 +92,13 @@ body.prevent-scroll {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif !important;
+  /* font-family: "Noto Sans KR", sans-serif !important; */
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.01em;
 }
 h3 {
   line-height: 1.45;
+  font-weight: 600;
 }
 ul {
   list-style: none;
@@ -212,7 +215,8 @@ ul {
   .type .col-9 {
     text-align: right !important;
   }
-  .main-title {
+  .main-title,
+  .new-main-title {
     font-size: 1.6rem;
     line-height: 1.35em;
   }
@@ -324,7 +328,8 @@ ul {
     border: 1px solid #fff !important;
   }
 
-  .main-title {
+  .main-title,
+  .new-main-title {
     font-size: 1.6rem;
     line-height: 1.35em;
   }
@@ -398,7 +403,8 @@ ul {
     border: 1px solid #fff !important;
   }
 
-  .main-title {
+  .main-title,
+  .new-main-title {
     font-size: 1.5rem;
     line-height: 1.35em;
   }
@@ -513,7 +519,8 @@ ul {
     border: 1px solid #fff !important;
   }
 
-  .main-title {
+  .main-title,
+  .new-main-title {
     font-size: 1.5rem !important;
     line-height: 1.35em;
   }
@@ -631,18 +638,19 @@ ul {
 
 .navbar .nav-link {
   color: #fff;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .navbar .nav-bar-btn {
   background-color: #e9474d;
   border: none;
   color: #fff;
-  padding: 8px 20px;
-  font-size: 1.063rem;
+  padding: 9px 18px;
+  font-size: 18px;
   border-radius: 500px;
   margin-left: 10px;
+  font-weight: 600;
 }
 
 .main-banner-subtext {
@@ -825,7 +833,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .storage-wrap {
   background: linear-gradient(#e9474d 65%, #ffffff 35%);
-  padding-top: 35px;
+  padding-top: 50px;
 }
 
 .storage-box {
@@ -840,7 +848,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .label {
   background-color: #000;
   color: #fff;
-  padding: 2px 5px;
+  padding: 5px 5px;
   border-radius: 500%;
   font-size: 0.875rem;
   font-weight: 500;
@@ -1210,7 +1218,34 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
     top: -258px !important;
   }
 }
+@media (min-width: 0px) and (max-width: 1009px){
+  .first-box{
+    border-radius: 0 !important;
+  }
+  .last-box{
+    border-radius: 0 !important;
+  }
+}
 @media (min-width: 0px) and (max-width: 414px) {
+  .main-title,
+  .new-main-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 24px;
+  }
+  .new-sub-text{
+    font-size: 17px !important;
+  }
+  .new_index1{
+    margin: 150px 0 !important;
+  }
+  .new-main-text{
+    font-size: 18px !important;
+  }
+  .new_index1 .box,
+  .bg-box{
+    border-radius: 25px !important;
+    padding: 30px !important;
+  }
   .control-box {
     margin-top: 24px !important;
   }
@@ -1342,7 +1377,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
   .main-text,
   .size-name {
-    font-size: 1rem !important;
+    font-size: 17px !important;
   }
   .size-price {
     font-size: 16px !important;
@@ -1897,13 +1932,13 @@ input[type="checkbox"]:checked + label {
 
 .main-text {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
 .sub-text {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #555;
 }
 
@@ -2968,7 +3003,8 @@ a:visited {
   .main-banner-text {
     font-size: 2.5rem;
   }
-  .main-title {
+  .main-title,
+  .new-main-title {
     font-size: 1.5rem !important;
   }
   .margin-tb {
@@ -3286,7 +3322,7 @@ select::-ms-expand {
   line-height: 1;
   padding-bottom: 3px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   color: #e9474d !important;
 }
 
@@ -3427,11 +3463,10 @@ select::-ms-expand {
     font-size: 14px;
     right: 20px;
   }
-
   .sizeCheck {
     bottom: 110px !important;
+    font-weight: 700;
   }
-
   .main_inquiry .form_box {
     width: 100vw;
     left: 0;
@@ -3605,12 +3640,10 @@ select::-ms-expand {
   color: #555;
   font-size: 36px;
 }
-
 .toggle-mobile-menu .main_menu {
   color: #fff;
   font-size: 36px;
 }
-
 .top-nav.fixed-head .toggle-mobile-menu span {
   color: #555;
 }
@@ -4223,6 +4256,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .sizeCheck {
   position: fixed;
   bottom: 130px;
+  background-color: #ffeaea;
+  border-color: #ffc8c8 !important;
 }
 
 /* 햄버거 버튼(nav button) media CSS */
@@ -4242,4 +4277,72 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .hamBtn {
     padding-right: 15px !important;
   }
+}
+
+
+
+/* new_index */
+.new-main-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: #484e57;
+}
+.new-main-text{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #484e57;
+}
+.new-sub-text{
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.new-main-text span{
+  font-weight: 600;
+  font-size: 20px;
+  color: #bbbbbb;
+}
+.new_index1 .box{
+  background-color: #f7f7f7;
+  border-radius: 30px;
+  padding: 40px;
+}
+.new_index1 .box .bg-box .img-box{
+  max-width: 100%;
+  margin-left: auto !important;
+  width: 270px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.new_index1 .box .bg-box .img-box1{
+  background-image: url(/assets/img/new/1@2x.png);
+}
+.new_index1 .box .bg-box .img-box2{
+  background-image: url(/assets/img/new/2@2x.png);
+}
+.new_index1 .box .bg-box .img-box3{
+  background-image: url(/assets/img/new/3@2x.png);
+}
+.new_index1 .box .col-md-12,
+.new_index4 .bg-box .col-md-6,
+.new_index4 .bg-box .col-md-12{
+  padding: 0 !important;
+}
+.bg-box{
+  background-color: #f7f7f7;
+  border-radius: 30px;
+  padding: 40px;
+  margin: 0px;
+}
+.bg-box img{
+  width: 250px;
+  height: auto;
+}
+.first-box{
+  border-radius: 30px 0 0 30px;
+}
+.last-box{
+  border-radius: 0 30px 30px 0;
 }
