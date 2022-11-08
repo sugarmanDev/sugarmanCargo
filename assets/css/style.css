@@ -335,7 +335,7 @@ ul {
   }
 
   .margin-tb {
-    margin: 5rem 0rem !important;
+    margin: 6rem 0rem !important;
   }
 
   .branch-list-box {
@@ -1227,6 +1227,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .new_index4{
+    margin: 150px 0 !important;
+  }
   .main-title,
   .new-main-title {
     font-size: 1.5rem !important;
@@ -2997,6 +3000,9 @@ a:visited {
 }
 
 @media (min-width: 768px) and (max-width: 820px) {
+  .new-main-text{
+    font-size: 20px !important;
+  }
   .mg-box {
     margin: 180px 0 !important;
   }
