@@ -1227,6 +1227,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
+  .title{
+    font-size: 24px !important;
+  }
   .franchise_1 .first-title{
     font-size: 26px !important;
   }
@@ -1333,8 +1336,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .storage-txt div {
     padding-left: 12px;
   }
+
   .join-guide .join-g-title h3 {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.5rem !important;
     letter-spacing: 0;
     display: flex;
@@ -4400,7 +4404,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 .franchise-btn{
   display: inline-block !important;
-  padding: 9px 10px;
+  padding: 9px 12px;
   font-size: 17px;
   font-weight: 600;
   color: #e9474d;
