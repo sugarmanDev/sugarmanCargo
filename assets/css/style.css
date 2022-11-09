@@ -862,6 +862,10 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .card.off-event .event-card-body {
   opacity: 0.5;
 }
+.card.off-event .card-img-top{
+  border-radius: 14px !important;
+  border: 1px solid #e1e1e1 !important;
+}
 
 .card.off-event .event-card-body .card-title .mb-1 {
   color: #333;
