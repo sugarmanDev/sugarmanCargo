@@ -1245,14 +1245,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .franchise-btn{
     font-size: 16px !important;
   }
-  [class*="branch-1-img"],
-  [class*="branch-2-img"],
-  [class*="branch-3-img"],
-  [class*="branch-4-img"]{
-    width: 340px !important;
-    height: 240px !important;
-    border-radius: 15px !important;
-  }
   .main-banner-wrap{
     width: 100%;
     background-image: url(/assets/img/m_banner@2x.jpg) !important;
@@ -2504,16 +2496,13 @@ a:visited {
   width: 100% !important;
 }
 /* 지점찾기 상세 이미지 start*/
-[class*="branch-1-img"],
-[class*="branch-2-img"],
-[class*="branch-3-img"],
-[class*="branch-4-img"]{
+.branch-1{
   width: 1096px;
   height: 670px;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
 /* 지점찾기 상세 이미지 url start*/
