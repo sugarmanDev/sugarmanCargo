@@ -154,26 +154,26 @@
       <form method="post" onsubmit="return inquiryForm();" id="inquiryData">
         <input type="hidden" name="type" value="main" />
         <div class="row" style="margin: 0">
-          <div class="col-12 top" style="height: 80px">
+          <div class="col-12 top" style="height: 130px">
             <img class="main_inquiry_logo" src="./assets/cargo@2x.png" alt="main_inquiry_logo" />
             <span class="material-icons main_inquiry_close">clear</span>
           </div>
           <div class="col-12 form" style="overflow-x: hidden">
             <div class="row">
               <div class="col-12">
-                <label for="in_name">이름/업체명</label>
+                <!-- <label for="in_name">이름/업체명</label> -->
                 <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
               </div>
 
               <div class="col-12">
-                <label for="in_phone">연락처</label>
-                <input type="text" name="phone" placeholder="010" class="in_form_con" id="in_phone" required />
+                <!-- <label for="in_phone">연락처</label> -->
+                <input type="text" name="phone" placeholder="연락처" class="in_form_con" id="in_phone" required />
               </div>
 
-              <div class="col-12">
-                <label for="in_branch">문의 지점</label>
+              <div class="col-12 select-wrap">
+                <!-- <label for="in_branch">문의 지점</label> -->
                 <select id="in_branch" name="branch" class="in_form_con" required>
-                  <option selected value="" disabled>지점 선택</option>
+                  <option selected value="" disabled>문의 지점</option>
                   <option value="1">[1호점] 인천 부평점</option>
                   <option value="2">[2호점] 서울 군자점</option>
                   <option value="3">[3호점] 부천 상동점</option>
@@ -181,10 +181,10 @@
                 </select>
               </div>
 
-              <div class="col-12">
-                <label for="visitInputstore2">스토리지 사이즈</label>
-                <select name="storageSize" id="visitInputstore2" class="in_form_con" required>
-                  <option selected="" disabled="">사이즈 선택</option>
+              <div class="col-12 select-wrap">
+                <!-- <label for="visitInputstore2">스토리지 사이즈</label> -->
+                <select name="storageSize" id="visitInputstore2" class="in_form_con select-wrap" required>
+                  <option selected="" disabled="">스토리지 사이즈</option>
                   <option value="cb">큐브</option>
                   <option value="sm">스몰</option>
                   <option value="md">미디엄</option>
@@ -195,14 +195,14 @@
               </div>
 
               <div class="col-12">
-                <label for="in_content">문의 내용</label>
-                <textarea id="in_content" name="subject" required></textarea>
+                <!-- <label for="in_content">문의 내용</label> -->
+                <textarea id="in_content" name="subject" placeholder="문의 내용을 입력해주세요." required></textarea>
               </div>
 
-              <div class="col-12">
-                <label for="in_path">알게 된 경로</label>
+              <div class="col-12 select-wrap">
+                <!-- <label for="in_path">알게 된 경로</label> -->
                 <select id="in_path" name="route" class="in_form_con" required>
-                  <option selected value="" disabled>선택</option>
+                  <option selected value="" disabled>알게 된 경로</option>
                   <option value="1">인스타그램</option>
                   <option value="2">페이스북</option>
                   <option value="3">블로그</option>
@@ -212,7 +212,7 @@
                 </select>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 mt-3 mb-2">
                 <input type="checkbox" name="agree" id="check" name="checkYN" required />
                 <label for="check" class="check"></label>
                 <p class="agree-txt">
