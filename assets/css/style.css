@@ -896,15 +896,22 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 .form-control {
-  border-radius: 0;
-  height: calc(2.2rem + 0.75rem);
+  border-radius: 10px;
+  height: calc(2.35rem + 0.75rem);
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #888;
+  color: #666;
+  padding: 0.375rem 15px !important;
+}
+
+.form-control option{
+  font-size: 13.5pt;
+  padding: 10px !important;
 }
 
 .visit {
   border: 1px solid #ced4da;
+  border-radius: 10px;
   padding: 13px 15px;
   width: 100%;
   font-size: 16px;
@@ -959,7 +966,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border: 1px solid #e9474d;
   color: #e9474d !important;
   font-weight: 500;
-  border-radius: 0;
+  border-radius: 12px;
 }
 
 .submit-form:hover {
@@ -1646,7 +1653,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .event-form .form-group-virtual {
@@ -2462,7 +2469,11 @@ a:visited {
 .root_daum_roughmap {
   width: 100% !important;
 }
-.branch-1 {
+/* 지점찾기 상세 이미지 start*/
+[class*="branch-1-img"],
+[class*="branch-2-img"],
+[class*="branch-3-img"],
+[class*="branch-4-img"]{
   width: 1096px;
   height: 670px;
   background-size: cover !important;
@@ -2471,6 +2482,7 @@ a:visited {
   border-radius: 20px;
 }
 
+/* 지점찾기 상세 이미지 url start*/
 .branch-1-img1 {
   background: url("../img/space_Detail page/cargo_space_1/branch1_1@2x.jpg");
 }
@@ -2710,7 +2722,7 @@ a:visited {
 
 .detail-title {
   font-size: 1.775rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
