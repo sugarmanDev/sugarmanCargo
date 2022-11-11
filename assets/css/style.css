@@ -621,6 +621,7 @@ ul {
   background-position: center;
   background-size: cover;
   height: 100vh;
+  margin-right: -15px;
 }
 
 /* 탑 띠배너 */
@@ -862,7 +863,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .card.off-event .event-card-body {
   opacity: 0.5;
 }
-.card-img-top{
+.card-img-top {
   border-radius: 14px !important;
   border: 1px solid #e1e1e1 !important;
 }
@@ -905,7 +906,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-color: #e1e1e1 !important;
 }
 
-.form-control option{
+.form-control option {
   font-size: 13.5pt;
   padding: 10px !important;
 }
@@ -1242,28 +1243,28 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
-  .franchise-btn{
+  .franchise-btn {
     font-size: 16px !important;
   }
-  .main-banner-wrap{
+  .main-banner-wrap {
     width: 100%;
     background-image: url(/assets/img/m_banner@2x.jpg) !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
-  .franchise-mt{
+  .franchise-mt {
     margin-top: 60px !important;
   }
-  .service-box .card-title{
+  .service-box .card-title {
     font-size: 18px !important;
     margin-bottom: 0px !important;
     padding-top: 0px !important;
   }
-  .service-box .card-text{
+  .service-box .card-text {
     display: none;
   }
-  .event-footer{
+  .event-footer {
     margin-top: 0px !important;
   }
   .title {
@@ -1278,8 +1279,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .franchise_2 .img {
     border-radius: 20px !important;
   }
-  .franchise_2{
-    margin: 120px 0 0 0!important;
+  .franchise_2 {
+    margin: 120px 0 0 0 !important;
   }
   .franchise_3 .swiper-slide img {
     width: 91% !important;
@@ -1312,7 +1313,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   .new-main-text {
     font-size: 18px !important;
   }
-  .new-main-text.text-bottom{
+  .new-main-text.text-bottom {
     margin-bottom: 0px !important;
   }
   .new_index1 .box,
@@ -2496,7 +2497,7 @@ a:visited {
   width: 100% !important;
 }
 /* 지점찾기 상세 이미지 start*/
-.branch-1{
+.branch-1 {
   width: 1096px;
   height: 670px;
   background-size: cover !important;
@@ -2726,7 +2727,7 @@ a:visited {
   position: absolute;
   z-index: 100;
 }
-.root_daum_roughmap_landing{
+.root_daum_roughmap_landing {
   border-radius: 20px !important;
 }
 .map-overlay {
@@ -3429,11 +3430,11 @@ select::-ms-expand {
   color: #666 !important;
 }
 
-.main_inquiry textarea{
+.main_inquiry textarea {
   padding: 15px;
   font-size: 15px;
 }
-.select-wrap::after{
+.select-wrap::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -3481,7 +3482,7 @@ select::-ms-expand {
   height: auto;
 }
 
-.main_inquiry option{
+.main_inquiry option {
   font-size: 13.5pt;
 }
 
@@ -4391,7 +4392,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 /* new_index */
-.main-title{
+.main-title {
   font-weight: 600 !important;
 }
 .new-main-title {
@@ -4463,7 +4464,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   font-weight: 700;
   margin-bottom: 24px;
 }
-.main-img{
+.main-img {
   border-radius: 20px;
 }
 /* newFranchise */
