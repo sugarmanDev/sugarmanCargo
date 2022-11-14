@@ -1876,7 +1876,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .qna-box span {
   color: #e9474d;
 }
-
+.qna-box option{
+  font-size: 13.5pt !important;
+}
 .qna-input {
   width: 100%;
   border: 1px solid #e1e1e1;
@@ -4499,6 +4501,33 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .main-img {
   border-radius: 20px;
 }
+.list-box{
+  padding: 50px 40px;
+  border-radius: 30px;
+  background-color: #f7f7f7;
+}
+.list-box h6{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #484e57;
+}
+.list-box p{
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.list-box p:nth-child(4){
+  margin-bottom: 0px !important;
+}
+.list-box1{
+  background-color: #eef7fd;
+}
+.list-box2{
+  background-color: #fff1f2;
+}
 /* newFranchise */
 .f_main_banner {
   background-image: url(/assets/img/new/f_main_banner.jpg);
@@ -4536,30 +4565,4 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 0px;
-}
-.list-box{
-  padding: 50px 40px;
-  border-radius: 30px;
-  background-color: #f7f7f7;
-}
-.list-box h6{
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 32px;
-}
-.list-box p{
-  padding: 20px 24px;
-  background: #fff;
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.list-box p:nth-child(4){
-  margin-bottom: 0px !important;
-}
-.list-box1{
-  background-color: #eef7fd;
-}
-.list-box2{
-  background-color: #fff1f2;
 }
