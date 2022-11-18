@@ -622,9 +622,9 @@
         }
       } else {
         $(".top-nav").removeClass("fixed-head");
-        $(".span1").css("background-color", "white");
-        $(".span2").css("background-color", "white");
-        $(".span3").css("background-color", "white");
+        $(".span1").css("background-color", "#112348");
+        $(".span2").css("background-color", "#112348");
+        $(".span3").css("background-color", "#112348");
         $(".logo-w-img").attr(
           "src",
           "./assets/img/sugarmancargo_logo_wh@2x.png"
@@ -634,7 +634,7 @@
 
       if (scroll > 0) { } else {
         $(".navbar-wrap").css("top", "");
-        if ("html".hasClass("event-banner")) {
+        if ($("html").hasClass("event-banner")) {
           $(".navbar-wrap").css("top", "50px");
         } else {
           $(".navbar-wrap").css("top", "0px");
