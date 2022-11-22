@@ -29,7 +29,7 @@ set_luna_holidays.forEach(function (value) {
   luna_holidays.push(set_holiday);
 });
 
-function set_date_picker(selector) {
+function set_date_picker(selector, type) {
   var minDate = new Date();
   minDate.setDate(minDate.getDate()); // 이전 날짜 비활성화
 
@@ -38,6 +38,7 @@ function set_date_picker(selector) {
     firstDay: 1,
     dateFormat: "yyyy-mm-dd",
     minDate: minDate,
+    inline: type === "open" ? true : false,
 
     onRenderCell: function (date, cellType) {
       if (cellType == "day") {

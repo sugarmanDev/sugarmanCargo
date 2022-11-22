@@ -344,68 +344,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        set_date_picker("#datepicker");
-
-        function checkForm() {
-            if (confirm("저장하시겠습니까?") == true) {
-                var hour = $("#hour").val();
-                var minute = $("#minute").val();
-                var visitTime = $("#visitTime").val();
-
-                visitTime = hour + "시" + minute + "분";
-
-                var visitDate = $("#datepicker").val();
-
-                if ($("#datepicker").val() == "") {
-                    visitDate = "방문일자 상담후 결정";
-                }
-
-                if (hour == "") {
-                    visitTime = "시간 미정";
-                }
-
-                $("#visitTime").val(visitTime);
-                $("#datepicker").val(visitDate);
-
-                $(".submit-form").attr("disabled", true);
-
-                var form = $("#formData")[0];
-                var formData = new FormData(form);
-                var queryString = $("#formData").serialize();
-
-                $.ajax({
-                    type: "post",
-                    url: targetDomain + "/visit",
-                    data: queryString,
-                    dataType: "json",
-                    success: function (data) {
-                        if (data.result == "success") {
-                            location.replace("./success.html");
-                        } else {
-                            alert("문제가 발생했습니다.\n다시 시도해주세요.");
-                            $(".submit-form").attr("disabled", false);
-                        }
-                    },
-                    error: function (e) {
-                        $(".submit-form").attr("disabled", false);
-                    },
-                });
-            }
-            return false;
-        }
-
-        $(function () {
-            $(window).scroll(function () {
-                if ((scroll = $(window).scrollTop() > 575)) {
-                    $(".bottom-fix2").removeClass("bottom-sticky");
-                } else {
-                    $(".bottom-fix2").addClass("bottom-sticky");
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
