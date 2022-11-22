@@ -3571,20 +3571,6 @@ select::-ms-expand {
   padding: 15px;
   font-size: 15px;
 }
-.select-wrap::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 23px;
-  right: 30px;
-  color: #9c9c9c;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
-}
 .main_inquiry .form_box {
   width: 390px;
   height: 770px;
