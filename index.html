@@ -183,7 +183,7 @@
                   <div class="arrowBottom"></div>
 
                   <!-- 옵션 영역 -->
-                  <ul name="type" class="default_control hide noScroll">
+                  <ul name="type" class="default_control hide noScroll selectUp">
                     <li value="" disabled selected hidden>문의 지점</li>
                     <li value="1">[1호점] 인천 부평점</li>
                     <li value="2">[2호점] 서울 군자점</li>
@@ -523,14 +523,6 @@
     });
 
     function checkForm() {
-      // 테스트용
-      var form = $("#formData")[0];
-      var formData = new FormData(form);
-      var queryString = $("#formData").serialize();
-      for (var pair of formData) {
-        console.log(pair[0] + ', ' + pair[1]);
-      }
-
       if (confirm("저장하시겠습니까?") == true) {
         $(".submit-form").attr("disabled", true);
 
