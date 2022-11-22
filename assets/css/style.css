@@ -1587,6 +1587,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .visit_wrap {
   background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
 }
+.new_visit_wrap {
+  background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
+}
 
 .article-title {
   font-weight: 500;
@@ -2003,8 +2006,8 @@ input[type="checkbox"] {
 
 input[id="checkYN"] + label {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #888888;
   cursor: pointer;
   border-radius: 3px;
@@ -4668,12 +4671,11 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-radius: 12px;
   border: 1px solid #e1e1e1;
   height: 50px;
-  margin-top: 4px;
   line-height: 50px;
   position: relative;
 }
 
-.default_select .arrowBottom {
+/* .default_select .arrowBottom {
   width: 0;
   height: 0;
   border-bottom: 5px solid transparent;
@@ -4684,6 +4686,20 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   position: absolute;
   top: 45px;
   right: -2px;
+} */
+.default_select::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  right: 7%;
+  color: #9c9c9c;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
 
 .default_select .default_control {
@@ -4693,24 +4709,25 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background-color: #fff;
   color: #888;
   border: 1px solid #e1e1e1;
-  padding: 4px 0px;
+  padding: 5px 0px;
   position: absolute;
   z-index: 10;
-  top: 50px !important;
+  top: 54px !important;
   left: 0px;
+  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
+  line-height: 3;
 }
 
 .default_select .default_control li {
   color: #333;
   padding: 0px 16px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .default_select .default_control li:hover {
-  background-color: #458cff;
-  color: #fff;
+  background-color: #FFF6F7;
 }
 
 .show {
@@ -4728,6 +4745,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .selectUp {
   z-index: 20 !important;
 }
+
 /* new_visit_wrap 방문예약 */
 .size-img {
   width: 26px;
@@ -4786,13 +4804,13 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 .new_visit_wrap .datepicker--cell.-selected-,
 .datepicker--cell.-selected-.-current- {
-  background-color: #458cff !important;
+  background-color: #e9474d !important;
   border-radius: 8px;
   color: #fff !important;
 }
 .new_visit_wrap .datepicker--nav {
   border-bottom: none;
-  padding: 7px 15px;
+  padding: 0px 15px 7px;
   background-color: transparent;
 }
 .new_visit_wrap .datepicker--nav-title {
@@ -4815,13 +4833,12 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .new_visit_wrap .datepicker--cell-day {
   font-size: 15px;
   font-weight: 500;
-  height: 45px;
+  height: 43px;
 }
 .new_visit_wrap .datepicker--cell-day:hover {
   background-color: #fff;
   color: #458cff;
 }
-
 .new_visit_wrap .card .card-header {
   border: 0;
   padding: 0;
@@ -4836,6 +4853,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background: #fff0;
   padding: 15px 17px;
   border-radius: 15px;
+  font-size: 16px !important;
 }
 .new_visit_wrap .card .card-header .btn-header-link.collapsed {
   background: #fff0;
@@ -4851,13 +4869,12 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .new_visit_wrap .card {
   border-radius: 15px;
 }
-
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff !important;
-  background-color: #458cff !important;
-  border: #458cff !important;
+  background-color: #e9474d !important;
+  border: #e9474d !important;
   font-weight: 500;
 }
 .new_visit_wrap #visitTime .btn-primary{
@@ -4869,13 +4886,12 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-radius: 8px;
   height: 42px;
   font-size: 15px;
-  background: #f2f7ff;
+  background: #f7f7f7;
   color: #333;
   font-weight: 400;
 }
 .new_visit_wrap #visitTime button:hover{
-  background-color: #458cff !important;
-  color: #fff !important;
+  background-color: #fceff1 !important;
 }
 .new_visit_wrap .default_select{
   margin-top: 0px;
@@ -4898,8 +4914,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   color:#222;
   margin-left: 2px;
 }
-.visit-wrap{
+.new_visit_wrap .visit-wrap{
   position: relative;
+  margin-bottom: 12px;
 }
 .new_visit_wrap #visitData .form-control{
   position: absolute;
@@ -4910,23 +4927,24 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   right: 40px;
   border: none;
   background-color: transparent !important;
-  z-index: 10;
+  z-index: 1;
   text-align: center;
   cursor: unset !important;
+  font-weight: 500 !important;
 }
-.new_visit_wrap .visit-box{
+.new_visit_wrap .visit-box-wrap{
   position: relative;
   box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
   border-radius: 15px;
 }
-.new_visit_wrap .visit-box .card{
+.new_visit_wrap .visit-box-wrap .card{
   border-color: #eee;
 }
-.new_visit_wrap .visit-wrap::after {
+.new_visit_wrap .visit-box-wrap::after {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 23px;
+  top: 26px;
   right: 7%;
   color: #9c9c9c;
   margin-left: 0.255em;
@@ -4935,4 +4953,21 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
+}
+.new_visit_wrap .visit-drop-wrap{
+  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
+  border-radius: 15px;
+}
+.new_visit_wrap .visit-drop-wrap .default_select{
+  padding: 2px 17px !important;
+  height: auto;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 15px !important;
+  border-color: #eee !important;
+}
+.list-size-img{
+  width: 22px;
+  margin-right: 8px;
 }
