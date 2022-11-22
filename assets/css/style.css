@@ -4669,54 +4669,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   font-weight: 500;
   margin-bottom: 0px;
 }
-.size-img {
-  width: 26px;
-  height: auto;
-  margin-bottom: 2px;
-}
-.visit-name {
-  font-size: 17px;
-  font-weight: 600;
-  padding-left: 8px;
-  color: #000;
-}
-.visit-size {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-.visit-box {
-  font-size: 16px;
-  font-weight: 600;
-  color: #888;
-  letter-spacing: -0.7px;
-}
-.visit-list-box {
-  padding: 18px 20px;
-  margin-bottom: 10px;
-  border: 1px solid #eee;
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
-}
-.visit-top-box {
-  padding: 12px 20px;
-  margin-bottom: 10px;
-  border: 1px solid #eee;
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
-}
-.visit-top-name {
-  font-size: 15px;
-  font-weight: 600;
-}
-.storage-info .branch-storage-box {
-  padding: 28px 20px;
-  border-radius: 30px;
-  background-color: #f9f9f9;
-  margin: 15px;
-}
+
 
 /* default_select */
 .default_select {
@@ -4788,4 +4741,212 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .selectUp {
   z-index: 20 !important;
+}
+/* new_visit_wrap 방문예약 */
+.size-img {
+  width: 26px;
+  height: auto;
+  margin-bottom: 2px;
+}
+.visit-name {
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #000;
+}
+.visit-size {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.visit-box {
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: -0.7px;
+}
+.visit-list-box {
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
+}
+.visit-top-box {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
+}
+.visit-top-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.storage-info .branch-storage-box {
+  padding: 28px 20px;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  margin: 15px;
+}
+.new_visit_wrap .datepicker-inline .datepicker{
+  font-family: "Pretendard Variable", Pretendard;
+  width: 100%;
+  border-radius: 15px;
+  border: none !important;
+  background:transparent;
+}
+.new_visit_wrap .datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+  background-color: #458cff !important;
+  border-radius: 8px;
+  color: #fff !important;
+}
+.new_visit_wrap .datepicker--nav {
+  border-bottom: none;
+  padding: 7px 15px;
+  background-color: transparent;
+}
+.new_visit_wrap .datepicker--nav-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.new_visit_wrap .datepicker--nav-title i {
+  color: #000;
+}
+.new_visit_wrap .datepicker--day-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.new_visit_wrap .datepicker--content {
+  display: inline-block;
+  padding: 5px 15px 15px !important;
+}
+.new_visit_wrap .datepicker--cell-day {
+  font-size: 15px;
+  font-weight: 500;
+  height: 45px;
+}
+.new_visit_wrap .datepicker--cell-day:hover {
+  background-color: #fff;
+  color: #458cff;
+}
+
+.new_visit_wrap .card .card-header {
+  border: 0;
+  padding: 0;
+  background-color: #fff0;
+  border-radius: 12px;
+}
+.new_visit_wrap .card .card-header .btn-header-link {
+  font-weight: 600;
+  color: #222;
+  display: block;
+  text-align: left;
+  background: #fff0;
+  padding: 15px 17px;
+  border-radius: 15px;
+}
+.new_visit_wrap .card .card-header .btn-header-link.collapsed {
+  background: #fff0;
+  color: #000;
+}
+.new_visit_wrap .card .collapse {
+  border: 0;
+}
+.new_visit_wrap .card .collapse.show {
+  line-height: 30px;
+  color: #222;
+}
+.new_visit_wrap .card {
+  border-radius: 15px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff !important;
+  background-color: #458cff !important;
+  border: #458cff !important;
+  font-weight: 500;
+}
+.new_visit_wrap #visitTime .btn-primary{
+  border-color: transparent !important;
+}
+.new_visit_wrap #visitTime button{
+  width: 21.5%;
+  margin: 4.5px 4px;
+  border-radius: 8px;
+  height: 42px;
+  font-size: 15px;
+  background: #f2f7ff;
+  color: #333;
+  font-weight: 400;
+}
+.new_visit_wrap #visitTime button:hover{
+  background-color: #458cff !important;
+  color: #fff !important;
+}
+.new_visit_wrap .default_select{
+  margin-top: 0px;
+}
+.visit-form-box{
+  padding: 20px 17px !important;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+.visit-form-box input{
+  border: none !important;
+  background-color: #f7f7f7;
+  border-radius: 10px !important;
+  padding: 12px 15px !important;
+  margin-bottom: 10px;
+}
+.visit-form-box>span{
+  font-size: 16px;
+  font-weight: 600;
+  color:#222;
+  margin-left: 2px;
+}
+.visit-wrap{
+  position: relative;
+}
+.new_visit_wrap #visitData .form-control{
+  position: absolute;
+  padding: 0px !important;
+  width: 27%;
+  height: auto;
+  top: 15px;
+  right: 40px;
+  border: none;
+  background-color: transparent !important;
+  z-index: 10;
+  text-align: center;
+  cursor: unset !important;
+}
+.new_visit_wrap .visit-box{
+  position: relative;
+  box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
+  border-radius: 15px;
+}
+.new_visit_wrap .visit-box .card{
+  border-color: #eee;
+}
+.new_visit_wrap .visit-wrap::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  right: 7%;
+  color: #9c9c9c;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }

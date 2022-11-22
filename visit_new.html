@@ -76,7 +76,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+  </script>
 
   <!-- datepicker -->
   <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
@@ -305,7 +305,14 @@
                     opts5.forEach(opt5 => {
                       const innerValue5 = opt5.innerHTML;
 
-                      const typeBox = { 큐브: "cb", 스몰: "sm", 미디엄: "md", 라지: "lg", 엑스라지: "xl", "상담 후 결정": 'etc' }
+                      const typeBox = {
+                        큐브: "cb",
+                        스몰: "sm",
+                        미디엄: "md",
+                        라지: "lg",
+                        엑스라지: "xl",
+                        "상담 후 결정": 'etc'
+                      }
 
                       function changeValue5() {
                         values5.innerHTML = innerValue5;
@@ -393,7 +400,14 @@
                         values6.innerHTML = innerValue6;
                         $(".selected-option6").text(innerValue6);
 
-                        const routeBox = { 인스타그램: 1, 페이스북: 2, 블로그: 3, 구글: 4, 지인소개: 5, 기타: 6 }
+                        const routeBox = {
+                          인스타그램: 1,
+                          페이스북: 2,
+                          블로그: 3,
+                          구글: 4,
+                          지인소개: 5,
+                          기타: 6
+                        }
 
                         $("#route").attr("value", routeBox[innerValue6]);
                       }
@@ -568,7 +582,7 @@
     });
   </script>
 
-  <div class="visit_wrap">
+  <div class="new_visit_wrap">
     <section class="container main-container front-join">
       <div class="row">
         <div class="col-md-5 join-g-faq-left" style="margin-top: 200px;">
@@ -658,7 +672,7 @@
         </div>
         <div class="col-md-2 visit_m"></div>
 
-        <div class="col-md-5 join-g-inquiry-right" style="margin-top: 200px; margin-bottom: 250px">
+        <div class="col-md-4 join-g-inquiry-right" style="margin-top: 200px; margin-bottom: 250px">
           <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
             <input type="hidden" name="visitTime" id="visitTime" />
             <input type="hidden" name="branchIdx" id="branchIdx" />
@@ -798,7 +812,14 @@
                     opts2.forEach(opt2 => {
                       const innerValue2 = opt2.innerHTML;
 
-                      const typeBox = { 큐브: "cb", 스몰: "sm", 미디엄: "md", 라지: "lg", 엑스라지: "xl", "상담 후 결정": 'etc' }
+                      const typeBox = {
+                        큐브: "cb",
+                        스몰: "sm",
+                        미디엄: "md",
+                        라지: "lg",
+                        엑스라지: "xl",
+                        "상담 후 결정": 'etc'
+                      }
 
                       function changeValue2() {
                         values2.innerHTML = innerValue2;
@@ -831,111 +852,178 @@
                 </script>
               </div>
 
-              <div class="form-group col-md-12 visit-time">
-                <!-- <label for="visitInputTime">방문 날짜<span style="color: #e9474d">*</span></label> -->
-                <input type="text" name="visitDate" id="datepicker" placeholder="방문날짜" autocomplete="off"
-                  class="form-control visit-sel" required />
-              </div>
+              <div class="col-md-12 mb-3 visit-wrap">
+                <div id="visitData" class="visit-box">
+                  <div class="card">
+                    <div class="card-header" id="datahead1">
+                      <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#visitData1"
+                        aria-expanded="true" aria-controls="visitData1">방문 날짜</a>
+                    </div>
 
-              <div class="form-group col-md-12">
-                <!-- <label for="visitInputName">이름<span style="color: #e9474d">*</span></label> -->
-                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required />
-              </div>
-              <div class="form-group col-md-12">
-                <!-- <label for="visitInputPhone">연락처<span style="color: #e9474d">*</span></label> -->
-                <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
-              </div>
-
-              <div class="form-group col-md-12 visit-time">
-                <!-- <label for="visitInputTime">방문 시간<span style="color: #e9474d">*</span></label> -->
-                <select name="hour" id="hour" class="form-control" required>
-                  <option selected disabled value="">방문 시간(시)</option>
-                  <option value="9">9시</option>
-                  <option value="10">10시</option>
-                  <option value="11">11시</option>
-                  <option value="13">13시</option>
-                  <option value="14">14시</option>
-                  <option value="15">15시</option>
-                  <option value="16">16시</option>
-                  <option value="17">17시</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-12 visitStoreMobile mobile_hide">
-                <div class="select3 default_select" data-role="selectBox3">
-                  <span date-value="optValue3" class="selected-option3">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
-                  </span>
-                  <div class="arrowBottom"></div>
-
-                  <!-- 옵션 영역 -->
-                  <ul name="type" class="default_control hide noScroll">
-                    <li value="" disabled selected hidden>알게 된 경로</li>
-                    <li value="1">인스타그램</li>
-                    <li value="2">페이스북</li>
-                    <li value="3">지인추천</li>
-                    <li value="4">구글</li>
-                    <li value="5">기타</li>
-                  </ul>
+                    <div id="visitData1" class="collapse show" aria-labelledby="datahead1" data-parent="#visitData">
+                      <div>
+                        <input type="text" name="visitDate" id="datepicker" autocomplete="off"
+                        class="form-control visit-sel" required />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <script>
-                  const body3 = document.querySelector('body');
-                  const select3 = document.querySelector(`[data-role="selectBox3"]`);
-                  const values3 = select3.querySelector(`[date-value="optValue3"]`);
-                  const option3 = select3.querySelector('ul');
-                  const opts3 = option3.querySelectorAll('li');
+              <div class="col-md-12 mb-3 visit-wrap">
+                <div id="visitTime" class="visit-box">
+                  <div class="card">
+                    <div class="card-header" id="timehead1">
+                      <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#visitTime1"
+                        aria-expanded="true" aria-controls="visitTime1">방문 시간</a>
+                    </div>
 
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects3(e) {
-                    e.stopPropagation();
-                    option3.setAttribute('style', `top:${select3.offsetHeight}px`)
-                    if (option3.classList.contains('hide')) {
-                      option3.classList.remove('hide');
-                      option3.classList.add('show');
-                    } else {
-                      option3.classList.add('hide');
-                      option3.classList.remove('show');
-                    }
-                    selectOpt3();
-                  }
+                    <div id="visitTime1" class="collapse show" aria-labelledby="timehead1" data-parent="#visitTime">
+                      <div style="padding:0px 15px 12px">
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('9:00')">
+                          9:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('9:30')">
+                          9:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('10:00')">
+                          10:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('10:30')">
+                          10:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('11:00')">
+                          11:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('11:30')">
+                          11:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('13:00')">
+                          13:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('13:30')">
+                          13:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('14:00')">
+                          14:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('14:30')">
+                          14:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('15:00')">
+                          15:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('15:30')">
+                          15:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('16:00')">
+                          16:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('16:30')">
+                          16:30
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('17:00')">
+                          17:00
+                        </button>
+                        <button class="btn btn-primary" type="button" onclick="chkVisitTime('17:30')">
+                          17:30
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                  /* 옵션 선택 */
-                  function selectOpt3() {
-                    opts3.forEach(opt3 => {
-                      const innerValue3 = opt3.innerHTML;
+              <div class="form-group col-md-12">
+                <div class="visit-form-box visit-box">
+                  <!-- <label for="visitInputName">이름<span style="color: #e9474d">*</span></label> -->
+                  <span>예약자 정보<span style="float:right;">📝</span></span>
+                  <input type="text" class="visitInputName form-control mt-3" placeholder="이름" name="name" required />
+                  <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
+                  <div class="form-group visitStoreMobile mobile_hide" style="margin-bottom: 0px">
+                    <div class="select3 default_select" data-role="selectBox3">
+                      <span date-value="optValue3" class="selected-option3">
+                        <!-- 선택된 옵션 값이 출력되는 부분 -->
+                      </span>
+                      <div class="arrowBottom"></div>
 
-                      const routeBox = { 인스타그램: 1, 페이스북: 2, 블로그: 3, 구글: 4, 지인추천: 5, 기타: 6 }
+                      <!-- 옵션 영역 -->
+                      <ul name="type" class="default_control hide noScroll">
+                        <li value="" disabled selected hidden>알게 된 경로</li>
+                        <li value="1">인스타그램</li>
+                        <li value="2">페이스북</li>
+                        <li value="3">지인추천</li>
+                        <li value="4">구글</li>
+                        <li value="5">기타</li>
+                      </ul>
+                    </div>
 
-                      function changeValue3() {
-                        values3.innerHTML = innerValue3;
-                        $(".selected-option3").text(innerValue3);
-                        $("#branch_desktop").attr("value", routeBox[innerValue3]);
+                    <script>
+                      const body3 = document.querySelector('body');
+                      const select3 = document.querySelector(`[data-role="selectBox3"]`);
+                      const values3 = select3.querySelector(`[date-value="optValue3"]`);
+                      const option3 = select3.querySelector('ul');
+                      const opts3 = option3.querySelectorAll('li');
+
+                      /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+                      function selects3(e) {
+                        e.stopPropagation();
+                        option3.setAttribute('style', `top:${select3.offsetHeight}px`)
+                        if (option3.classList.contains('hide')) {
+                          option3.classList.remove('hide');
+                          option3.classList.add('show');
+                        } else {
+                          option3.classList.add('hide');
+                          option3.classList.remove('show');
+                        }
+                        selectOpt3();
                       }
 
-                      opt3.addEventListener('click', changeValue3);
-                    });
-                  }
+                      /* 옵션 선택 */
+                      function selectOpt3() {
+                        opts3.forEach(opt3 => {
+                          const innerValue3 = opt3.innerHTML;
+
+                          const routeBox = {
+                            인스타그램: 1,
+                            페이스북: 2,
+                            블로그: 3,
+                            구글: 4,
+                            지인추천: 5,
+                            기타: 6
+                          }
+
+                          function changeValue3() {
+                            values3.innerHTML = innerValue3;
+                            $(".selected-option3").text(innerValue3);
+                            $("#branch_desktop").attr("value", routeBox[innerValue3]);
+                          }
+
+                          opt3.addEventListener('click', changeValue3);
+                        });
+                      }
 
 
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst3() {
-                    const firstValue3 = opts3[0].innerHTML;
-                    values3.innerHTML = `${firstValue3}`;
-                  }
+                      /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+                      function selectFirst3() {
+                        const firstValue3 = opts3[0].innerHTML;
+                        values3.innerHTML = `${firstValue3}`;
+                      }
 
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect3() {
-                    if (option3.classList.contains('show')) {
-                      option3.classList.add('hide');
-                      option3.classList.remove('show');
-                    }
-                  }
+                      /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+                      function hideselect3() {
+                        if (option3.classList.contains('show')) {
+                          option3.classList.add('hide');
+                          option3.classList.remove('show');
+                        }
+                      }
 
-                  selectFirst3();
-                  select3.addEventListener('click', selects3);
-                  body3.addEventListener('click', hideselect3);
-                </script>
+                      selectFirst3();
+                      select3.addEventListener('click', selects3);
+                      body3.addEventListener('click', hideselect3);
+                    </script>
+                  </div>
+                </div>
               </div>
 
               <div class="form-group col-md-12 mt-2 form-box">
@@ -987,8 +1075,8 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group col-md-12">
-                <button class="btn submit-form mt-2" type="submit">
+              <div class="form-group col-md-12 mt-3">
+                <button class="btn submit-form" type="submit">
                   예약하기
                 </button>
               </div>
