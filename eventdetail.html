@@ -74,7 +74,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="./assets/js/click-menu.js" charset="utf-8"></script>
 
@@ -156,6 +156,7 @@
             <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
               <input type="hidden" name="promoIdx" id="promoIdx" value="">
               <input type="hidden" name="branchIdx" id="branchIdx" value="">
+              <input type="hidden" name="route" id="route" value="">
               <input type="hidden" name="title" id="title" value="">
               <div class=" form-title form-group mt-3">
                 <!-- <label for="eventInputName">이름<span>*</span></label> -->
@@ -173,14 +174,81 @@
               <div class="form-title form-group">
                 <!-- <label for="eventInputCourse">알게 된 경로<span>*</span></label> -->
                 <div class="form-title mb-2">
-                  <select name="route" id="route" class="form-control" required style="border:1px solid #e1e1e1;">
-                    <option selected>알게 된 경로</option>
-                    <option vlaue="9">인스타그램</option>
-                    <option vlaue="10">페이스북</option>
-                    <option vlaue="11">지인추천</option>
-                    <option vlaue="13">구글</option>
-                    <option vlaue="14">기타</option>
-                  </select>
+                  <div class="select1 default_select" data-role="selectBox1">
+                    <span date-value="optValue1" class="selected-option1">
+                      <!-- 선택된 옵션 값이 출력되는 부분 -->
+                    </span>
+                    <div class="arrowBottom"></div>
+
+                    <!-- 옵션 영역 -->
+                    <ul name="type" class="default_control hide noScroll">
+                      <li value="" disabled selected hidden>알게 된 경로</li>
+                      <li value="1">인스타그램</li>
+                      <li value="2">페이스북</li>
+                      <li value="3">블로그</li>
+                      <li value="4">구글</li>
+                      <li value="5">지인소개</li>
+                      <li value="6">기타</li>
+                    </ul>
+                  </div>
+
+                  <script>
+                    const body1 = document.querySelector('body');
+                    const select1 = document.querySelector(`[data-role="selectBox1"]`);
+                    const values1 = select1.querySelector(`[date-value="optValue1"]`);
+                    const option1 = select1.querySelector('ul');
+                    const opts1 = option1.querySelectorAll('li');
+
+                    /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+                    function selects1(e) {
+                      e.stopPropagation();
+                      option1.setAttribute('style', `top:${select1.offsetHeight}px`)
+                      if (option1.classList.contains('hide')) {
+                        option1.classList.remove('hide');
+                        option1.classList.add('show');
+                      } else {
+                        option1.classList.add('hide');
+                        option1.classList.remove('show');
+                      }
+                      selectOpt1();
+                    }
+
+                    /* 옵션 선택 */
+                    function selectOpt1() {
+                      opts1.forEach(opt1 => {
+                        const innerValue1 = opt1.innerHTML;
+
+                        function changeValue1() {
+                          values1.innerHTML = innerValue1;
+                          $(".selected-option1").text(innerValue1);
+
+                          const routeBox = { 인스타그램: 1, 페이스북: 2, 블로그: 3, 구글: 4, 지인소개: 5, 기타: 6 }
+
+                          $("#route").attr("value", routeBox[innerValue1]);
+                        }
+
+                        opt1.addEventListener('click', changeValue1);
+                      });
+                    }
+
+                    /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+                    function selectFirst1() {
+                      const firstValue1 = opts1[0].innerHTML;
+                      values1.innerHTML = `${firstValue1}`;
+                    }
+
+                    /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+                    function hideselect1() {
+                      if (option1.classList.contains('show')) {
+                        option1.classList.add('hide');
+                        option1.classList.remove('show');
+                      }
+                    }
+
+                    selectFirst1();
+                    select1.addEventListener('click', selects1);
+                    body1.addEventListener('click', hideselect1);
+                  </script>
                 </div>
               </div>
 

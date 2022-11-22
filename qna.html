@@ -193,6 +193,7 @@
                 <div class="qna-box">
                     <form method="post" onsubmit="return checkForm();" id="formData">
                         <input type="hidden" name="type" value="qna" />
+                        <input type="hidden" name="route" value="route" />
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-3"></div>
@@ -220,19 +221,83 @@
                                                 required />
                                         </div>
                                     </div>
-                                    <div class="row mg-20 mb-2">
+                                    <div class="row mg-20 mb-2" style="padding: 0 15px">
                                         <!-- <div class="col-md-2 mg-13">알게 된 경로<span>*</span></div> -->
-                                        <div class="col-md-12">
-                                            <select name="route" class="partner-form1">
-                                                <option value="" disabled selected required>알게 된 경로</option>
-                                                <option value="1">인스타그램</option>
-                                                <option value="2">페이스북</option>
-                                                <option value="3">블로그</option>
-                                                <option value="4">구글</option>
-                                                <option value="5">지인소개</option>
-                                                <option value="6">기타</option>
-                                            </select>
+                                        <div class="select1 default_select" data-role="selectBox1">
+                                            <span date-value="optValue1" class="selected-option1" style="color: #333">
+                                                <!-- 선택된 옵션 값이 출력되는 부분 -->
+                                            </span>
+                                            <div class="arrowBottom"></div>
+
+                                            <!-- 옵션 영역 -->
+                                            <ul name="type" class="default_control hide noScroll">
+                                                <li value="" disabled selected hidden>알게 된 경로</li>
+                                                <li value="1">인스타그램</li>
+                                                <li value="2">페이스북</li>
+                                                <li value="3">블로그</li>
+                                                <li value="4">구글</li>
+                                                <li value="5">지인소개</li>
+                                                <li value="6">기타</li>
+                                            </ul>
                                         </div>
+
+                                        <script>
+                                            const body1 = document.querySelector('body');
+                                            const select1 = document.querySelector(`[data-role="selectBox1"]`);
+                                            const values1 = select1.querySelector(`[date-value="optValue1"]`);
+                                            const option1 = select1.querySelector('ul');
+                                            const opts1 = option1.querySelectorAll('li');
+
+                                            /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+                                            function selects1(e) {
+                                                e.stopPropagation();
+                                                option1.setAttribute('style', `top:${select1.offsetHeight}px`)
+                                                if (option1.classList.contains('hide')) {
+                                                    option1.classList.remove('hide');
+                                                    option1.classList.add('show');
+                                                } else {
+                                                    option1.classList.add('hide');
+                                                    option1.classList.remove('show');
+                                                }
+                                                selectOpt1();
+                                            }
+
+                                            /* 옵션 선택 */
+                                            function selectOpt1() {
+                                                opts1.forEach(opt1 => {
+                                                    const innerValue1 = opt1.innerHTML;
+
+                                                    function changeValue1() {
+                                                        values1.innerHTML = innerValue1;
+                                                        $(".selected-option1").text(innerValue1);
+
+                                                        const routeBox = { 인스타그램: 1, 페이스북: 2, 블로그: 3, 구글: 4, 지인소개: 5, 기타: 6 }
+
+                                                        $("#route").attr("value", routeBox[innerValue1]);
+                                                    }
+
+                                                    opt1.addEventListener('click', changeValue1);
+                                                });
+                                            }
+
+                                            /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+                                            function selectFirst1() {
+                                                const firstValue1 = opts1[0].innerHTML;
+                                                values1.innerHTML = `${firstValue1}`;
+                                            }
+
+                                            /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+                                            function hideselect1() {
+                                                if (option1.classList.contains('show')) {
+                                                    option1.classList.add('hide');
+                                                    option1.classList.remove('show');
+                                                }
+                                            }
+
+                                            selectFirst1();
+                                            select1.addEventListener('click', selects1);
+                                            body1.addEventListener('click', hideselect1);
+                                        </script>
                                     </div>
                                     <div class="row mt-2">
                                         <!-- <div class="col-md-2"></div> -->
