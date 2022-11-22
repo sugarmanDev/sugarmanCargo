@@ -221,7 +221,15 @@
                       function changeValue4() {
                         values4.innerHTML = innerValue4;
                         $(".selected-option4").text(innerValue4);
-                        $("#visitBranch").attr("value", innerValue4);
+
+                        const branchBox = {
+                          "[1호점] 인천 부평점": "슈가맨카고 부평점",
+                          "[2호점] 서울 군자점": "슈가맨카고 군자점",
+                          "[3호점] 부천 상동점": "슈가맨카고 상동점",
+                          "[4호점] 안양 명학점": "슈가맨카고 명학점"
+                        }
+
+                        $("#visitBranch").attr("value", branchBox[innerValue4]);
 
                         $("#branch").attr("value", innerValue4.split("호점]")[0].split("[")[1]);
                       }
@@ -715,7 +723,16 @@
                       function changeValue1() {
                         values1.innerHTML = innerValue1;
                         $(".selected-option1").text(innerValue1);
-                        $("#visitBranch").attr("value", innerValue1.split("]")[1].trim());
+
+                        const branchBox = {
+                          "[1호점] 인천 부평점": "슈가맨카고 부평점",
+                          "[2호점] 서울 군자점": "슈가맨카고 군자점",
+                          "[3호점] 부천 상동점": "슈가맨카고 상동점",
+                          "[4호점] 안양 명학점": "슈가맨카고 명학점"
+                        }
+
+                        $("#visitBranch").attr("value", branchBox[innerValue1]);
+
                         $("#branchIdx").attr("value", innerValue1.split("호점]")[0].split("[")[1]);
                       }
 
