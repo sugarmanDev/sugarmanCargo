@@ -663,7 +663,7 @@
         </div>
         <div class="col-md-2 visit_m"></div>
 
-        <div class="col-md-5 join-g-inquiry-right" style="margin-top: 250px; margin-bottom: 250px">
+        <div class="col-md-5 join-g-inquiry-right" style="margin-top: 200px; margin-bottom: 250px">
           <form class="visit_form" method="post" onsubmit="return checkForm();" id="formData">
             <input type="hidden" name="visitTime" id="visitTime" />
             <input type="hidden" name="branchIdx" id="branchIdx" />
@@ -672,15 +672,6 @@
             <input type="hidden" name="storageSize" id="storageSize" />
             <h2 class="mb-4 main-title">방문예약</h2>
             <div class="form-row">
-              <div class="form-group col-md-12">
-                <!-- <label for="visitInputName">이름<span style="color: #e9474d">*</span></label> -->
-                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required />
-              </div>
-              <div class="form-group col-md-12">
-                <!-- <label for="visitInputPhone">연락처<span style="color: #e9474d">*</span></label> -->
-                <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
-              </div>
-
               <div class="form-group col-md-12 visitStoreMobile">
                 <!-- <label for="visitInputstore1">지점 선택<span style="color: #e9474d">*</span></label> -->
                 <div class="select1 default_select" data-role="selectBox1">
@@ -851,7 +842,16 @@
                   class="form-control visit-sel" required />
               </div>
 
-              <div class="form-group col-md-6 visit-time">
+              <div class="form-group col-md-12">
+                <!-- <label for="visitInputName">이름<span style="color: #e9474d">*</span></label> -->
+                <input type="text" class="visitInputName form-control" placeholder="이름" name="name" required />
+              </div>
+              <div class="form-group col-md-12">
+                <!-- <label for="visitInputPhone">연락처<span style="color: #e9474d">*</span></label> -->
+                <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
+              </div>
+
+              <div class="form-group col-md-12 visit-time">
                 <!-- <label for="visitInputTime">방문 시간<span style="color: #e9474d">*</span></label> -->
                 <select name="hour" id="hour" class="form-control" required>
                   <option selected disabled value="">방문 시간(시)</option>
@@ -863,15 +863,6 @@
                   <option value="15">15시</option>
                   <option value="16">16시</option>
                   <option value="17">17시</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-6 visit-time visit-down visit-time-m">
-                <!-- <label for="visitInputTime"></label> -->
-                <select name="minute" id="minute" class="form-control control-box" required>
-                  <option selected disabled value="">방문시간(분)</option>
-                  <option value="00">00분</option>
-                  <option value="30">30분</option>
                 </select>
               </div>
 
