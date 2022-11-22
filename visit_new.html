@@ -274,7 +274,8 @@
                     <li value="sm"><img src="/assets/img/size/s@2x.png" class="list-size-img" alt="storage_s">스몰</li>
                     <li value="md"><img src="/assets/img/size/m@2x.png" class="list-size-img" alt="storage_m">미디엄</li>
                     <li value="lg"><img src="/assets/img/size/l@2x.png" class="list-size-img" alt="storage_l">라지</li>
-                    <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지</li>
+                    <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지
+                    </li>
                     <li value="etc">상담 후 결정</li>
                   </ul>
                 </div>
@@ -316,6 +317,7 @@
 
                       function changeValue5() {
                         values5.innerHTML = innerValue5;
+                        console.log(eval(innerValue5))
                         $(".selected-option5").text(innerValue5);
                         $("#storageSize2").attr("value", typeBox[innerValue5]);
                       }
@@ -789,7 +791,8 @@
                       <li value="sm"><img src="/assets/img/size/s@2x.png" class="list-size-img" alt="storage_s">스몰</li>
                       <li value="md"><img src="/assets/img/size/m@2x.png" class="list-size-img" alt="storage_m">미디엄</li>
                       <li value="lg"><img src="/assets/img/size/l@2x.png" class="list-size-img" alt="storage_l">라지</li>
-                      <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지</li>
+                      <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지
+                      </li>
                       <li value="etc">상담 후 결정</li>
                     </ul>
                   </div>
@@ -831,6 +834,7 @@
 
                         function changeValue2() {
                           values2.innerHTML = innerValue2;
+                          console.log(eval(innerValue2))
                           $(".selected-option2").text(innerValue2);
                           $("#storageSize").attr("value", typeBox[innerValue2]);
                         }
