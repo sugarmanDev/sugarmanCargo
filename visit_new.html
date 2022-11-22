@@ -76,7 +76,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- datepicker -->
   <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
@@ -868,7 +868,7 @@
                     <div id="visitData1" class="collapse show" aria-labelledby="datahead1" data-parent="#visitData">
                       <div>
                         <input type="text" name="visitDate" id="datepicker" autocomplete="off"
-                        class="form-control visit-sel" required />
+                          class="form-control visit-sel" required />
                       </div>
                     </div>
                   </div>
@@ -945,7 +945,7 @@
                   <span>예약자 정보<span style="float:right;">📝</span></span>
                   <input type="text" class="visitInputName form-control mt-3" placeholder="이름" name="name" required />
                   <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
-                  <div class="form-group visitStoreMobile mobile_hide" style="margin-bottom: 0px">
+                  <div class="form-group visitStoreMobile" style="margin-bottom: 0px">
                     <div class="select3 default_select" data-role="selectBox3">
                       <span date-value="optValue3" class="selected-option3">
                         <!-- 선택된 옵션 값이 출력되는 부분 -->
@@ -1184,42 +1184,65 @@
   <script>
     set_date_picker("#datepicker", "open");
 
+    function chkVisitTime(visitTime) {
+      let chk = false;
+
+      $("#visitTime1 button").each(function (i, obj) {
+        if (obj.innerHTML.trim() == visitTime.trim()) {
+          // 선택한 시간
+          if ($(this).hasClass("active")) {
+            // 이미 선택된 시간
+            chk = true;
+            $(obj).removeClass("active");
+            $("#visitTime1").attr("value", "");
+          } else {
+            // 아직 선택하지 않은 시간
+            $(obj).addClass("active");
+            $("#visitTime1").attr("value", visitTime);
+          }
+        } else {
+          // 선택하지 않은 시간
+          $(obj).removeClass("active");
+          $("#visitTime1").attr("value", "");
+        }
+      });
+
+      if (chk) {
+        $("#visitTime1").attr("value", "");
+      } else {
+        $("#visitTime1").attr("value", visitTime);
+      }
+    }
+
     function checkForm() {
       // 방문날짜, 방문시간 필수사항 설정 해야 함
 
       if (confirm("저장하시겠습니까?") == true) {
-        var hour = $("#hour").val();
-        var minute = $("#minute").val();
+        var hour = $("#visitTime1").attr("value")
+          ? $("#visitTime1").attr("value").split(":")[0]
+          : undefined;
+        var minute = $("#visitTime1").attr("value")
+          ? $("#visitTime1").attr("value").split(":")[1]
+          : undefined;
         var visitTime = $("#visitTime").val();
-
-        visitTime = hour + "시" + minute + "분";
-
         var visitDate = $("#datepicker").val();
 
-        if ($("#datepicker").val() == "") {
-          visitDate = "방문일자 상담후 결정";
-        }
-
-        if (hour == "") {
+        if (!hour) {
           visitTime = "시간 미정";
+        } else {
+          visitTime = hour + "시" + minute + "분";
         }
 
         var branchIdx = $("#branchIdx").attr("value");
 
         if (!branchIdx) {
-          alert("방문지점 선택 후 다시 시도해주세요.");
+          alert("지점 선택 후 다시 시도해주세요.");
           return false;
         }
 
         // 방문날짜 필수사항 체크
         if ($("#datepicker").val() == "") {
           alert("방문날짜 선택 후 다시 시도해주세요.");
-          return false;
-        }
-
-        // 방문시간 필수사항 체크
-        if (!hour || !minute) {
-          alert("방문시간 선택 후 다시 시도해주세요.");
           return false;
         }
 
