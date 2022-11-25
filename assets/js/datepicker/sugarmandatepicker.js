@@ -31,7 +31,7 @@ set_luna_holidays.forEach(function (value) {
 
 function set_date_picker(selector, type) {
   var minDate = new Date();
-  minDate.setDate(minDate.getDate()); // 이전 날짜 비활성화
+  minDate.setDate(minDate.getDate() + 1); // 이전 날짜 비활성화
 
   $(selector).datepicker({
     language: "ko",
