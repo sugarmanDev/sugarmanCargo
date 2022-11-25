@@ -1420,8 +1420,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   }
   .franchise_3 .swiper-slide img {
     width: 91% !important;
-    height: 320px;
-    margin-left: -8.8% !important;
+    height: 320px !important;
+    /* margin-left: -8.8% !important; */
   }
   .franchise_2 .box {
     padding: 28px !important;
