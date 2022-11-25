@@ -211,7 +211,7 @@ ul {
   .new_visit_wrap {
     background: linear-gradient(#fff5f5 42%, #ffffff 50%) !important;
   }
-  
+
   .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
@@ -4656,7 +4656,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   margin-bottom: 0px;
 }
 
-
 /* default_select */
 .default_select {
   width: 100%;
@@ -4684,7 +4683,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   top: 45px;
   right: -2px;
 } */
-.default_select::after{
+.default_select::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -4724,7 +4723,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 .default_select .default_control li:hover {
-  background-color: #FFF6F7;
+  background-color: #fff6f7;
 }
 
 .show {
@@ -4792,12 +4791,12 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background-color: #f9f9f9;
   margin: 15px;
 }
-.new_visit_wrap .datepicker-inline .datepicker{
+.new_visit_wrap .datepicker-inline .datepicker {
   font-family: "Pretendard Variable", Pretendard;
   width: 100%;
   border-radius: 15px;
   border: none !important;
-  background:transparent;
+  background: transparent;
 }
 .new_visit_wrap .datepicker--cell.-selected-,
 .datepicker--cell.-selected-.-current- {
@@ -4866,6 +4865,11 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .new_visit_wrap .card {
   border-radius: 15px;
 }
+
+.new_visit_wrap #visitTime button:hover {
+  background-color: #fceff1;
+}
+
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
@@ -4874,10 +4878,10 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border: #e9474d !important;
   font-weight: 500;
 }
-.new_visit_wrap #visitTime .btn-primary{
+.new_visit_wrap #visitTime .btn-primary {
   border-color: transparent !important;
 }
-.new_visit_wrap #visitTime button{
+.new_visit_wrap #visitTime button {
   width: 21.5%;
   margin: 4.5px 4px;
   border-radius: 8px;
@@ -4887,35 +4891,32 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   color: #333;
   font-weight: 400;
 }
-.new_visit_wrap #visitTime button:hover{
-  background-color: #fceff1 !important;
-}
-.new_visit_wrap .default_select{
+.new_visit_wrap .default_select {
   margin-top: 0px;
 }
-.visit-form-box{
+.visit-form-box {
   padding: 20px 17px !important;
   border: 1px solid #eee;
   border-radius: 15px;
 }
-.visit-form-box input{
+.visit-form-box input {
   border: none !important;
   background-color: #f7f7f7;
   border-radius: 10px !important;
   padding: 12px 15px !important;
   margin-bottom: 10px;
 }
-.visit-form-box>span{
+.visit-form-box > span {
   font-size: 16px;
   font-weight: 600;
-  color:#222;
+  color: #222;
   margin-left: 2px;
 }
-.new_visit_wrap .visit-wrap{
+.new_visit_wrap .visit-wrap {
   position: relative;
   margin-bottom: 12px;
 }
-.new_visit_wrap #visitData .form-control{
+.new_visit_wrap #visitData .form-control {
   position: absolute;
   padding: 0px !important;
   width: 27%;
@@ -4929,13 +4930,13 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   cursor: unset !important;
   font-weight: 500 !important;
 }
-.new_visit_wrap .visit-box-wrap{
+.new_visit_wrap .visit-box-wrap {
   position: relative;
   box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
   border-radius: 15px;
   background-color: #fff !important;
 }
-.new_visit_wrap .visit-box-wrap .card{
+.new_visit_wrap .visit-box-wrap .card {
   border-color: #eee;
 }
 .new_visit_wrap .visit-box-wrap::after {
@@ -4952,11 +4953,11 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
-.new_visit_wrap .visit-drop-wrap{
+.new_visit_wrap .visit-drop-wrap {
   box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
   border-radius: 15px;
 }
-.new_visit_wrap .visit-drop-wrap .default_select{
+.new_visit_wrap .visit-drop-wrap .default_select {
   padding: 2px 17px !important;
   height: auto;
   color: #222;
@@ -4965,7 +4966,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-radius: 15px !important;
   border-color: #eee !important;
 }
-.list-size-img{
+.list-size-img {
   width: 22px;
   margin-right: 8px;
 }
