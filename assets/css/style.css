@@ -208,9 +208,10 @@ ul {
     display: block;
   }
 
-  .visit_wrap {
+  .new_visit_wrap {
     background: linear-gradient(#fff5f5 42%, #ffffff 50%) !important;
   }
+  
   .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
@@ -588,7 +589,7 @@ ul {
     font-size: 1rem !important;
   }
 
-  .visit_wrap {
+  .new_visit_wrap {
     background: linear-gradient(#fff5f5 40%, #ffffff 50%) !important;
   }
   .border-bottom-thin .col-lg-5,
@@ -601,7 +602,7 @@ ul {
   .form-group {
     margin-bottom: 10px;
   }
-  .visit_wrap .join-g-faq-left {
+  .new_visit_wrap .join-g-faq-left {
     margin-top: 75px !important;
   }
   .cargor-box .cargor-sub-box {
@@ -964,15 +965,15 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .submit-form {
   width: 100%;
   padding: 17px 34px;
-  background-color: #fff;
+  background-color: #e9474d;
   border: 1px solid #e9474d;
-  color: #e9474d !important;
+  color: #fff !important;
   font-weight: 500;
   border-radius: 12px;
 }
 
 .submit-form:hover {
-  background-color: #e9474d;
+  background-color: #d9464b;
   color: #fff !important;
 }
 
@@ -1583,10 +1584,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 /* 방문예약 시작reservation_wrap */
-
-.visit_wrap {
-  background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
-}
 .new_visit_wrap {
   background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
 }
@@ -4936,6 +4933,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   position: relative;
   box-shadow: rgb(173 173 173 / 16%) 0px 3px 6px;
   border-radius: 15px;
+  background-color: #fff !important;
 }
 .new_visit_wrap .visit-box-wrap .card{
   border-color: #eee;
