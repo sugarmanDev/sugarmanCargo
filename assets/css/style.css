@@ -120,7 +120,7 @@ ul {
 
 /* 컨테이너 */
 .main-container {
-  max-width: 1230px !important;
+  max-width: 1260px !important;
   margin: 0 auto;
 }
 
@@ -1379,6 +1379,42 @@ input[id="privacy"] + label {
 }
 
 /* 가맹-가맹절차 */
+.new_procedure .g-pro .step-arrow {
+  position: absolute;
+  right: 0;
+  top: 28%;
+  font-size: 22px;
+}
+.new_procedure .g-pro {
+  position: relative;
+  margin: 0 auto;
+}
+.new_procedure .join-g-pro-con {
+  width: 170px;
+  height: 170px;
+  background-color: #fff5f6;
+  border-radius: 500px !important;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 12%;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 11;
+}
+.new_procedure .join-g-pro-con img {
+  max-width: 100%;
+  width: 62px;
+  height: 62px;
+}
+.new_procedure .g-pro-text {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 13px;
+  text-align: center;
+  letter-spacing: -0.4px;
+}
+/* 
 .join-g-pro-con {
   width: 11.25rem;
   height: 11.25rem;
@@ -1394,12 +1430,11 @@ input[id="privacy"] + label {
 
 .join-g-pro-con span {
   color: #e9474d;
-}
+} */
 
 .g-pro:last-child {
-  margin-bottom: 168px;
+  margin-bottom: 100px;
 }
-
 .sort-height-line {
   height: 1px;
   border: 1px solid #e1e1e1;
@@ -1407,13 +1442,11 @@ input[id="privacy"] + label {
   transform: rotate(90deg);
   right: 8.2%;
 }
-
 .sort-width-line {
   height: 1px;
   border: 1px solid #e1e1e1;
   top: 100px;
 }
-
 .sort-height-line2 {
   height: 1px;
   border: 1px solid #e1e1e1;
@@ -1421,7 +1454,6 @@ input[id="privacy"] + label {
   transform: rotate(90deg);
   left: 8.2%;
 }
-
 .under {
   color: #000;
 }
@@ -1440,7 +1472,6 @@ input[id="privacy"] + label {
 .branch-list-address a {
   color: #555;
 }
-
 .branch-list-address {
   font-size: 1.063rem;
   font-weight: 400;
@@ -1448,7 +1479,6 @@ input[id="privacy"] + label {
   display: inline-block;
   margin-bottom: 2px !important;
 }
-
 .preparing-area {
   width: 100%;
   max-width: 705px;
@@ -1461,11 +1491,9 @@ input[id="privacy"] + label {
   background-color: #dedede;
   opacity: 0.5;
 }
-
 .branch-list-box {
   margin-left: 40px;
 }
-
 .branch_list_btn {
   border: 2px solid #fff;
   background: none;
@@ -1475,11 +1503,9 @@ input[id="privacy"] + label {
   font-weight: 600;
   padding: 12px 18px;
 }
-
 .mobile_show {
   background-color: #e9474d;
 }
-
 .arrow-forward {
   background: none;
   border: none;
@@ -1488,7 +1514,6 @@ input[id="privacy"] + label {
   padding: 22px;
   width: 100%;
 }
-
 .mobile-menu {
   position: fixed;
   width: 100vw;
@@ -1500,7 +1525,6 @@ input[id="privacy"] + label {
   left: 0px;
   display: none;
 }
-
 .close-btn {
   position: absolute;
   top: 20px;
@@ -1508,17 +1532,14 @@ input[id="privacy"] + label {
   border-style: none;
   background: transparent;
 }
-
 .close-btn span {
   font-size: 40px;
 }
-
 .mobile-menu ul {
   padding-left: 0 !important;
   text-align: left;
   border-bottom: 1px solid #e1e1e1;
 }
-
 .mobile-menu .mobile-menu-list {
   text-align: center;
   height: 70%;
@@ -1527,24 +1548,19 @@ input[id="privacy"] + label {
   font-weight: 500;
   color: #000;
 }
-
 .mobile-menu .mobile-menu-list a {
   color: #000;
 }
-
 .mobile-menu .mobile-menu-list a:hover {
   text-decoration: none;
 }
-
 .mobile-menu .mobile-menu-list li {
   margin-bottom: 9%;
   font-weight: 600;
 }
-
 a:visited {
   text-decoration: none;
 }
-
 .mobile-menu .mobile-menu-list button {
   padding-left: 0px;
   text-align: left;
@@ -1562,7 +1578,6 @@ a:visited {
   padding: 15px;
   border: 15px solid #fff;
 }
-.service
 
 /* 지점 상세페이지 */
 .root_daum_roughmap {
@@ -3323,7 +3338,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .new_visit_wrap .default_select {
   margin-top: 0px;
 }
-
 .visit-form-box {
   padding: 20px 17px !important;
   border: 1px solid #eee;
@@ -3352,7 +3366,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .new_visit_wrap #visitData .form-control {
   position: absolute;
   padding: 0px !important;
-  width: 27%;
+  width: 28%;
   height: auto;
   top: 15px;
   right: 40px;
