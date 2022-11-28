@@ -1210,6 +1210,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 820px) {
+  .new_visit_wrap #visitTime button {
+    width: 29.5% !important;
+  }
   .navbar {
     padding-top: 7px !important;
     padding-bottom: 7px !important;
