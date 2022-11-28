@@ -264,7 +264,8 @@
                     <li value="sm"><img src="/assets/img/size/s@2x.png" class="list-size-img" alt="storage_s">스몰</li>
                     <li value="md"><img src="/assets/img/size/m@2x.png" class="list-size-img" alt="storage_m">미디엄</li>
                     <li value="lg"><img src="/assets/img/size/l@2x.png" class="list-size-img" alt="storage_l">라지</li>
-                    <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지</li>
+                    <li value="xl"><img src="/assets/img/size/xl@2x.png" class="list-size-img" alt="storage_xl">엑스라지
+                    </li>
                     <li value="etc">상담 후 결정</li>
                   </ul>
                 </div>
@@ -295,7 +296,14 @@
                     opts2.forEach(opt2 => {
                       const innerValue2 = opt2.innerHTML;
 
-                      const typeBox = { 큐브: "cb", 스몰: "sm", 미디엄: "md", 라지: "lg", 엑스라지: "xl", "상담 후 결정": 'etc' }
+                      const typeBox = {
+                        큐브: "cb",
+                        스몰: "sm",
+                        미디엄: "md",
+                        라지: "lg",
+                        엑스라지: "xl",
+                        "상담 후 결정": 'etc'
+                      }
 
                       function changeValue2() {
                         values2.innerHTML = innerValue2;
@@ -383,7 +391,14 @@
                         values3.innerHTML = innerValue3;
                         $(".selected-option3").text(innerValue3);
 
-                        const routeBox = { 인스타그램: 1, 페이스북: 2, 블로그: 3, 구글: 4, 지인소개: 5, 기타: 6 }
+                        const routeBox = {
+                          인스타그램: 1,
+                          페이스북: 2,
+                          블로그: 3,
+                          구글: 4,
+                          지인소개: 5,
+                          기타: 6
+                        }
 
                         $("#route").attr("value", routeBox[innerValue3]);
                       }
@@ -582,7 +597,7 @@
     </div>
   </div>
 
-  <div class="new_index1" style="margin: 250px 0">
+  <div class="new_index1" style="margin: 200px 0">
     <div class="container main-container">
       <div class="row">
         <div class="col-md-5">
@@ -845,7 +860,7 @@
     </div>
   </div> -->
 
-  <div class="new_index3" style="margin: 300px 0;">
+  <div class="new_index3" style="margin: 260px 0 280px 0;">
     <div class="container main-container">
       <div class="row">
         <div class="col-md-12 mb-4">
@@ -1005,8 +1020,8 @@
 
         // animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
         $("html").animate({
-          scrollTop: offset.top - 50,
-        },
+            scrollTop: offset.top - 50,
+          },
           400
         );
       });
@@ -1123,60 +1138,7 @@
     });
   </script>
 
-  <!-- 이용 방법 시작 -->
-  <!-- <div class="margin-tb">
-    <div class="container main-container">
-      <h3 class="new-main-title">쉽고 빠른<br />슈가맨카고 이용 방법</h3>
-      <div class="row mt-5 text-center">
-        <div class="col-xl-3 col-md-6 mb-3">
-          <div class="contents">
-            <img src="./assets/img/cargo_4@2x.jpg" class="img-fluid" alt="" style="background: #f5f5f5" />
-            <div class="box mt-3">
-              <span class="label mr-1">01</span>
-              <p class="sub-text" style="display: inline; color: #000; font-weight: 500">
-                방문 상담 예약하기
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-3">
-          <div class="contents">
-            <img src="./assets/img/cargo_5@2x.jpg" class="img-fluid" alt="" style="background: #f5f5f5" />
-            <div class="box mt-3">
-              <span class="label mr-1">02</span>
-              <p class="sub-text" style="display: inline; color: #000; font-weight: 500">
-                나에게 맞는 스토리지 찾기
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-3">
-          <div class="contents">
-            <img src="./assets/img/cargo_6@2x.jpg" class="img-fluid" alt="" style="background: #f5f5f5" />
-            <div class="box mt-3">
-              <span class="label mr-1">03</span>
-              <p class="sub-text" style="display: inline; color: #000; font-weight: 500">
-                계약기간 설정 및 계약하기
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-5">
-          <div class="contents">
-            <img src="./assets/img/cargo_7@2x.jpg" class="img-fluid" alt="" style="background: #f5f5f5" />
-            <div class="box mt-3">
-              <span class="label mr-1">04</span>
-              <p class="sub-text" style="display: inline; color: #000; font-weight: 500">
-                슈가맨카고 자유롭게 이용하기
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="new_index4" style="margin: 250px 0">
+  <div class="new_index4" style="margin: 220px 0">
     <div class="container main-container">
       <div class="row">
         <div class="col-md-5 col-xl-6">
@@ -1250,6 +1212,199 @@
       </div>
     </div>
   </div>
+
+  <!-- 컨텐츠3 -->
+  <div class="franchise_3 newFranchise" style="margin: 200px 0">
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-md-12 mb-5">
+          <h3 class="new-main-title">
+            지점 소개
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- Swiper = web -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="/branch1.html">
+              <div class="space_name">인천 부평점</div>
+              <img src="/assets/img/branch_list_1@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch2.html">
+              <div class="space_name">서울 군자점</div>
+              <img src="/assets/img/branch_list_2@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch3.html">
+              <div class="space_name">부천 상동점</div>
+              <img src="/assets/img/branch_list_3@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch4.html">
+              <div class="space_name">안양 명학점</div>
+              <img src="/assets/img/branch_list_4@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination pagination"></div>
+      </div>
+
+      <!-- Swiper = mobile -->
+      <div class="swiper mySwiper-mobile">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="/branch1.html">
+              <div class="space_name">인천 부평점</div>
+              <img src="/assets/img/branch_list_1@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch2.html">
+              <div class="space_name">서울 군자점</div>
+              <img src="/assets/img/branch_list_2@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch3.html">
+              <div class="space_name">부천 상동점</div>
+              <img src="/assets/img/branch_list_3@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/branch4.html">
+              <div class="space_name">안양 명학점</div>
+              <img src="/assets/img/branch_list_4@2x.jpg" alt="" style="width: 100%" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination-mobile pagination"></div>
+      </div>
+
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+
+        var swiper = new Swiper(".mySwiper-mobile", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination-mobile",
+            clickable: true,
+          },
+        });
+
+        $(function () {
+          if ($(window).width() < 415) {
+            $(".mySwiper-mobile").show();
+            $(".mySwiper").hide();
+          } else {
+            $(".mySwiper-mobile").hide();
+            $(".mySwiper").show();
+          }
+        });
+      </script>
+    </div>
+  </div>
+
+  <style>
+    .franchise_3 .swiper-pagination-bullet {
+      width: var(--swiper-pagination-bullet-width,
+          var(--swiper-pagination-bullet-size, 10px));
+      height: var(--swiper-pagination-bullet-height,
+          var(--swiper-pagination-bullet-size, 10px));
+    }
+
+    .franchise_3 {
+      position: relative;
+    }
+
+    .franchise_3 .mySwiper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .franchise_3 .space_name {
+      position: absolute;
+      left: 23px;
+      bottom: 23px;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 7px 10px;
+      background-color: #fff;
+      border-radius: 50px;
+      opacity: 0.9;
+      color: #222 !important;
+    }
+
+    .franchise_3 .swiper-pagination {
+      position: relative;
+      margin: 0 auto;
+      width: 100% !important;
+      max-width: 35px !important;
+      bottom: 30px !important;
+    }
+
+    .franchise_3 .swiper-pagination-mobile {
+      position: relative;
+      margin: 0 auto;
+      width: 100% !important;
+      max-width: 70px !important;
+      bottom: 30px !important;
+      z-index: 10;
+    }
+
+    .franchise_3 .swiper-slide {
+      border-radius: 20px !important;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      position: relative;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .franchise_3 .swiper-slide img {
+      border-radius: 20px !important;
+      display: block;
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
 
   <!-- 푸터 시작 -->
   <div class="content-section bg-footer footer-t footer">
