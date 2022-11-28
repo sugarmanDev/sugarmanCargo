@@ -39,6 +39,7 @@
         rel="stylesheet" />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
     <link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
 
     <!-- Apple Touch Icons -->
@@ -73,71 +74,16 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="./assets/js/click-menu.js" charset="utf-8"></script>
+    <script src="./assets/js/includeHTML.js"></script>
 </head>
 
 <body>
-    <!-- 이벤트 띠배너 -->
-    <div class="event-banner d-flex pt-2 pb-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="flex-fill text-center event-text">
-                    <span class="new">NEW</span>
-                    <span><a href="./event.html"><u style="color: #000; font-weight: 500; font-size: 16px">슈가맨카고 이벤트 소식을
-                                만나보세요!</u>&nbsp;🎉</a></span>
-                </div>
-                <button class="event-banner-btn" style="border-style: none; background: transparent">
-                    <span class="material-icons ml-auto" style="cursor: pointer">close</span>
-                </button>
-            </div>
-        </div>
-    </div>
+    <header include-html="/common/scrollHead2.html"></header>
 
-    <!-- scroll nav -->
-    <div class="navbar-wrap sticky-top scroll-nav" style="border-bottom: 1px solid #e1e1e1; background-color: #fff">
-        <nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 0">
-            <a class="navbar-brand" href="./index.html">
-                <img src="./assets/img/sugarmancargo_logo@2x.png" alt="sugarmancargo_logo" class="main-logo" />
-            </a>
-
-            <!-- <button
-                class="navbar-toggler mobile-menu-place toggle-mobile-menu"
-                type="button"
-            >
-                <span class="material-icons">menu</span>
-            </button> -->
-
-            <div id="nav_button" class="nav_button material-icons toggle-mobile-menu">
-                <input type="checkbox" id="menuicon" class="mobile-menu-place-i" />
-                <label for="menuicon">
-                    <span class="span1" style="background-color: rgb(17, 35, 72)"></span>
-                    <span class="span2" style="background-color: rgb(17, 35, 72)"></span>
-                    <span class="span3" style="background-color: rgb(17, 35, 72)"></span>
-                </label>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #000" href="./branch_list.html">지점찾기</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #000" href="./franchise.html">가맹안내</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-bar-btn" style="background-color: #e9474d; color: #fff"
-                            onclick="location.href='./visit.html' ">
-                            방문예약
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div class="Customer_wrap" style="margin-top: 45px; margin-bottom: 150px">
+    <div class="Customer_wrap" style="margin-top: 125px; margin-bottom: 150px">
         <div class="container main-container">
             <div class="row" style="padding: 15px">
                 <h2 class="main-title">고객센터</h2>
@@ -362,230 +308,147 @@
         </div>
     </div>
 
-    <!-- 푸터 시작 -->
-    <div class="content-section bg-footer footer-t footer">
-        <div class="container-fluid main-container">
-            <div class="row">
-                <div class="col-md-2">
-                    <img class="footer-logo" src="./assets/img/footer_logo.png" alt="footer-logo" />
-                </div>
-                <div class="col-md-7 footer-con">
-                    <ul class="footer-con-1">
-                        <li>
-                            <span><a href="./about.html">회사소개</a></span>
-                        </li>
-                        <li>
-                            <span><a href="./event.html">이벤트</a></span>
-                        </li>
-                        <li>
-                            <span><a href="./faq.html">고객센터</a></span>
-                        </li>
-                    </ul>
-                    <ul class="footer-con-2">
-                        <li>
-                            <span>(주)슈가맨</span><strong style="color: #e1e1e1"> | </strong>
-                        </li>
-                        <li class="ceo">
-                            <span>대표이사 </span> 최성원
-                            <strong style="color: #e1e1e1"> | </strong>
-                        </li>
-                        <li class="num"><span>사업자등록번호 </span>155-87-01085
-                            <a
-                                href="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml"><u>사업자
-                                    정보확인</u></a>
-                        </li>
-                    </ul>
-                    <ul class="footer-con-3">
-                        <li>
-                            <span>주소 </span>경기도 부천시 중동로 254번길 78 6F
-                            <strong style="color: #e1e1e1"> | </strong>
-                        </li>
-                        <li><span> 이메일 </span>sugarmancargo@gmail.com</li>
-                    </ul>
-                </div>
+    <footer include-html="/common/footer.html"></footer>
+</body>
 
-                <div class="col-md-3">
-                    <div class="footer-right">
-                        <h6>문의전화 <a href="tel:1522-2387">1522-2387</a></h6>
-                        <p>월~금 9:00~18:00 (공휴일 · 주말 휴무)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+    includeHTML();
+</script>
 
-    <div class="footer-m footer container-fluid p-0">
-        <div class="footer-line"></div>
-    </div>
+<style>
+    .spinner-border {
+        opacity: 0;
+        margin-bottom: 3px;
+        margin-right: 10px;
+    }
 
-    <div class="footer">
-        <div class="container-fluid main-container footer-bottom">
-            <div class="row">
-                <div class="col-md-6 footer-bottom-text">
-                    <p>© 2020 sugarmancargo All rights reserved</p>
-                    <a href="./privacy.html">개인정보취급방침</a>
-                </div>
-                <div class="col-md-6 social">
-                    <a href="https://sugarmanwork.com" target="_blank">
-                        <div class="so sugarmanwok">
-                            <img src="./assets/img/sugarmanwork@2x.png" alt="sugarmanwork" />
-                        </div>
-                    </a>
-                    <a href="https://salk.co.kr" target="_blank">
-                        <div class="so salk">
-                            <img src="./assets/img/salk@2x.png" alt="salk" />
-                        </div>
-                    </a>
-                    <a href="https://prop-landlord-web.vercel.app" target="_blank">
-                        <div class="so prop">
-                            <img src="./assets/img/prop@2x.png" alt="prop" />
-                        </div>
-                    </a>
-                    <a href="https://blog.naver.com/sugarmancargo" target="_blank">
-                        <div class="so naver">
-                            <img src="./assets/img/footer_icon_1.png" alt="blog" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    .empty-spinner {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+    }
 
-    <style>
-        .spinner-border {
-            opacity: 0;
-            margin-bottom: 3px;
-            margin-right: 10px;
+    button[type="submit"]:disabled .spinner-border {
+        opacity: 1;
+    }
+
+    button[type="submit"]:disabled>* {
+        color: #fff;
+    }
+</style>
+
+<script>
+    function checkForm() {
+        if (confirm("저장하시겠습니까?") == true) {
+            $(".submit-form").attr("disabled", true);
+
+            var form = $("#formData")[0];
+            var formData = new FormData(form);
+            var queryString = $("#formData").serialize();
+
+            $.ajax({
+                type: "post",
+                url: targetDomain + "/request",
+                data: queryString,
+                dataType: "json",
+                success: function (data) {
+                    if (data.result == "success") {
+                        location.replace("./success.html");
+                    } else {
+                        alert("문제가 발생했습니다.\n다시 시도해주세요.");
+                    }
+                },
+                error: function (e) {
+                    $(".submit-form").attr("disabled", false);
+                },
+            });
+        }
+        return false;
+    }
+</script>
+
+<script>
+    $(document).on("click", ".questions", function () {
+        var answerTarget = $(this).next();
+        answerTarget.toggleClass("open-a");
+        $(this).children().toggleClass("up");
+    });
+</script>
+
+<script>
+    $(document).on("click", ".close-btn-index", function () {
+        $(".event-text").addClass("close-topbar");
+        $("html").toggleClass("event-banner-close");
+        $(".mobile-menu").css("top", "0px");
+        $(".scroll-nav").css("top", "0px");
+    });
+</script>
+
+<script>
+    $(document).on("click", ".mobile-menu-place-i", function () {
+        $(".mobile-menu").toggle();
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+            $(".mobile-menu-place-i").removeClass("opened");
+        } else {
+            $(".mobile-menu-place-i").addClass("opened");
         }
 
-        .empty-spinner {
-            width: 1rem;
-            height: 1rem;
-            display: inline-block;
-        }
+        if ($(".mobile-menu-place-i").hasClass("opened")) {
+            $(".scroll-nav").css("padding-right", "15px");
+            $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo@2x.png"
+            );
 
-        button[type="submit"]:disabled .spinner-border {
-            opacity: 1;
-        }
-
-        button[type="submit"]:disabled>* {
-            color: #fff;
-        }
-    </style>
-
-    <script>
-        function checkForm() {
-            if (confirm("저장하시겠습니까?") == true) {
-                $(".submit-form").attr("disabled", true);
-
-                var form = $("#formData")[0];
-                var formData = new FormData(form);
-                var queryString = $("#formData").serialize();
-
-                $.ajax({
-                    type: "post",
-                    url: targetDomain + "/request",
-                    data: queryString,
-                    dataType: "json",
-                    success: function (data) {
-                        if (data.result == "success") {
-                            location.replace("./success.html");
-                        } else {
-                            alert("문제가 발생했습니다.\n다시 시도해주세요.");
-                        }
-                    },
-                    error: function (e) {
-                        $(".submit-form").attr("disabled", false);
-                    },
-                });
-            }
-            return false;
-        }
-    </script>
-
-    <script>
-        $(document).on("click", ".questions", function () {
-            var answerTarget = $(this).next();
-            answerTarget.toggleClass("open-a");
-            $(this).children().toggleClass("up");
-        });
-    </script>
-
-    <script>
-        $(document).on("click", ".close-btn-index", function () {
-            $(".event-text").addClass("close-topbar");
-            $("html").toggleClass("event-banner-close");
-            $(".mobile-menu").css("top", "0px");
-            $(".scroll-nav").css("top", "0px");
-        });
-    </script>
-
-    <script>
-        $(document).on("click", ".mobile-menu-place-i", function () {
-            $(".mobile-menu").toggle();
-            if ($(".mobile-menu-place-i").hasClass("opened")) {
-                $(".mobile-menu-place-i").removeClass("opened");
+            if ($("html").hasClass("event-banner-close")) {
+                $(".mobile-menu").css("top", "0px");
             } else {
-                $(".mobile-menu-place-i").addClass("opened");
-            }
-
-            if ($(".mobile-menu-place-i").hasClass("opened")) {
-                $(".scroll-nav").css("padding-right", "15px");
-                $(".logo-w-img").attr(
-                    "src",
-                    "./assets/img/sugarmancargo_logo@2x.png"
-                );
-
-                if ($("html").hasClass("event-banner-close")) {
+                if ($(window).scrollTop() > 0) {
+                    $(".scroll-nav").css("top", "0");
+                    $(".scroll-nav").css("position", "fixed");
+                    $(".scroll-nav").css("width", "100vw");
                     $(".mobile-menu").css("top", "0px");
                 } else {
-                    if ($(window).scrollTop() > 0) {
+                    $(".scroll-nav").css("top", "40px");
+                    $(".mobile-menu").css("top", "40px");
+                }
+            }
+        } else {
+            $(".scroll-nav").css("padding-right", "15px");
+            $(".logo-w-img").attr(
+                "src",
+                "./assets/img/sugarmancargo_logo@2x.png"
+            );
+        }
+
+        $(".web-popup").hide();
+        $("html").toggleClass("prevent-scroll");
+        $("body").toggleClass("prevent-scroll");
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            if ((scroll = $(window).scrollTop() > 1700)) {
+                $(".scroll-nav").css("padding-right", "10px");
+            } else {
+                if ($(window).scrollTop() > 0) {
+                    $(".scroll-nav").css("top", "0");
+                    $(".scroll-nav").css("position", "fixed");
+                    $(".scroll-nav").css("width", "100%");
+                    // $(".scroll-nav").css("padding-right", "50px");
+                } else {
+                    // $(".scroll-nav").css("padding-right", "50px");
+                    $(".Customer_wrap").css("margin-top", "100px");
+
+                    if ($("html").hasClass("event-banner-close")) {
                         $(".scroll-nav").css("top", "0");
-                        $(".scroll-nav").css("position", "fixed");
-                        $(".scroll-nav").css("width", "100vw");
-                        $(".mobile-menu").css("top", "0px");
                     } else {
                         $(".scroll-nav").css("top", "40px");
-                        $(".mobile-menu").css("top", "40px");
                     }
                 }
-            } else {
-                $(".scroll-nav").css("padding-right", "15px");
-                $(".logo-w-img").attr(
-                    "src",
-                    "./assets/img/sugarmancargo_logo@2x.png"
-                );
             }
-
-            $(".web-popup").hide();
-            $("html").toggleClass("prevent-scroll");
-            $("body").toggleClass("prevent-scroll");
         });
-
-        $(function () {
-            $(window).scroll(function () {
-                if ((scroll = $(window).scrollTop() > 1700)) {
-                    $(".scroll-nav").css("padding-right", "10px");
-                } else {
-                    if ($(window).scrollTop() > 0) {
-                        $(".scroll-nav").css("top", "0");
-                        $(".scroll-nav").css("position", "fixed");
-                        $(".scroll-nav").css("width", "100%");
-                        $(".scroll-nav").css("padding-right", "50px");
-                    } else {
-                        $(".scroll-nav").css("padding-right", "50px");
-                        $(".Customer_wrap").css("margin-top", "100px");
-
-                        if ($("html").hasClass("event-banner-close")) {
-                            $(".scroll-nav").css("top", "0");
-                        } else {
-                            $(".scroll-nav").css("top", "40px");
-                        }
-                    }
-                }
-            });
-        });
-    </script>
-</body>
+    });
+</script>
 
 </html>
