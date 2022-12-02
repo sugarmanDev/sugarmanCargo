@@ -3423,3 +3423,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   width: 22px;
   margin-right: 8px;
 }
+
+.mobile-show {
+  display: none !important;
+}
