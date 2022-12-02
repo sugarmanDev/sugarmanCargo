@@ -1116,29 +1116,6 @@
     }
     return false;
   }
-
-  $(function () {
-    $(window).scroll(function () {
-      if ((scroll = $(window).scrollTop() > 1700)) {
-        $(".scroll-nav").css("padding-right", "10px");
-      } else {
-        if ($(window).scrollTop() > 0) {
-          $(".scroll-nav").css("top", "0");
-          $(".scroll-nav").css("position", "fixed");
-          $(".scroll-nav").css("width", "100%");
-          // $(".scroll-nav").css("padding-right", "50px");
-        } else {
-          // $(".scroll-nav").css("padding-right", "50px");
-
-          if ($("html").hasClass("event-banner-close")) {
-            $(".scroll-nav").css("top", "0");
-          } else {
-            $(".scroll-nav").css("top", "40px");
-          }
-        }
-      }
-    });
-  });
 </script>
 
 <script>
