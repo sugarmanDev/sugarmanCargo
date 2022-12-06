@@ -3428,3 +3428,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .mobile-show {
   display: none !important;
 }
+
+button:focus-visible,
+button:focus {
+  outline: none;
+}
