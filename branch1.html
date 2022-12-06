@@ -325,18 +325,6 @@
   src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
 <script>
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
-    if ($(document).height() - 1500 <= scroll) {
-      $(".fixed-bottom").css("display", "none")
-    } else {
-      $(".fixed-bottom").css("display", "block")
-    }
-  });
-</script>
-
-<script>
   $(function () {
     var mapWidth = $(".location").width();
     var mapHeight = Math.round(mapWidth / 2);
@@ -414,10 +402,6 @@
 </script>
 
 <script>
-  $(document).on("click", ".more-map", function () {
-    $(".map-overlay").hide();
-    $(".open-map-text").hide();
-  });
   $(document).on("click", ".map-overlay", function () {
     $(".map-overlay").hide();
     $(".open-map-text").hide();

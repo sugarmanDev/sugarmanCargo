@@ -259,18 +259,6 @@
 </body>
 
 <script>
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
-    if ($(document).height() - 1500 <= scroll) {
-      $(".fixed-bottom").css("display", "none")
-    } else {
-      $(".fixed-bottom").css("display", "block")
-    }
-  });
-</script>
-
-<script>
   $(document).on("click", ".close-btn-index", function () {
     $(".event-text").addClass("close-topbar");
     $("html").toggleClass("event-banner-close");

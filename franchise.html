@@ -428,18 +428,6 @@
 </script>
 
 <script>
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
-    if ($(document).height() - 1500 <= scroll) {
-      $(".fixed-bottom").css("display", "none")
-    } else {
-      $(".fixed-bottom").css("display", "block")
-    }
-  });
-</script>
-
-<script>
   const x = window.matchMedia("screen and (min-width:500px)");
 
   x.addListener((a) => {
