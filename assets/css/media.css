@@ -1823,3 +1823,16 @@
     padding-right: 15px !important;
   }
 }
+
+/* 메인 - 배너 팝업 위치 반응형 */
+@media screen and (min-width: 1301px) {
+  .web-popup {
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .web-popup {
+    right: 5%;
+  }
+}

@@ -523,6 +523,8 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .footer .footer-logo {
   width: 118px;
+  margin-left: 40px;
+  margin-bottom: 30px;
 }
 
 .footer-con-1 {
@@ -2448,33 +2450,6 @@ body.scroll-lock {
   overflow: hidden;
 }
 
-.web-popup {
-  width: 500px !important;
-  left: 60%;
-  position: fixed;
-  z-index: 10001;
-  top: 18%;
-  -webkit-animation-name: webAnimatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: webAnimatebottom;
-  animation-duration: 1s;
-}
-
-.web-popup img {
-  width: 500px !important;
-  height: auto;
-  border-radius: 4px;
-}
-
-.web-popup .close-popup-web {
-  position: absolute;
-  margin-top: 15px;
-  margin-left: -45px;
-  color: #5e798c;
-  font-size: 32px;
-  cursor: pointer;
-}
-
 @-webkit-keyframes webAnimatebottom {
   from {
     opacity: 0;
@@ -2614,7 +2589,6 @@ body.scroll-lock {
 .web-popup {
   width: 500px !important;
   overflow: hidden;
-  left: 60%;
   position: fixed;
   z-index: 10001;
   top: 18%;
@@ -2623,11 +2597,13 @@ body.scroll-lock {
   animation-name: webAnimatebottom;
   animation-duration: 1s;
 }
+
 .web-popup img {
   width: 500px !important;
   height: auto;
   border-radius: 4px;
 }
+
 .web-popup .close-popup-web {
   position: absolute;
   margin-top: 15px;
