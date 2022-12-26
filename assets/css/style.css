@@ -126,7 +126,7 @@ ul {
 
 /* 메인페이지 메인배너 */
 .main-banner-wrap {
-  background-image: url(../img/main_banner2@2x.jpg);
+  background-image: url(../img/index/main_banner2@2x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2939,15 +2939,15 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 .new_index1 .box .bg-box .img-box1 {
-  background-image: url(/assets/img/new/1@2x.png);
+  background-image: url(/assets/img/index/1@2x.png);
 }
 
 .new_index1 .box .bg-box .img-box2 {
-  background-image: url(/assets/img/new/2@2x.png);
+  background-image: url(/assets/img/index/2@2x.png);
 }
 
 .new_index1 .box .bg-box .img-box3 {
-  background-image: url(/assets/img/new/3@2x.png);
+  background-image: url(/assets/img/index/3@2x.png);
 }
 
 .new_index1 .box .col-md-12,
