@@ -523,7 +523,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .footer .footer-logo {
   width: 118px;
-  margin-left: 40px;
   margin-bottom: 30px;
 }
 
@@ -532,6 +531,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   font-weight: 500;
   margin-top: 5px;
   padding-bottom: 40px;
+  padding-left: 0 !important;
 }
 
 .footer-con-1 span a {
@@ -568,6 +568,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .footer .footer-con-2 {
   font-size: 0.8125rem;
   padding-bottom: 10px;
+  padding-left: 0px;
 }
 
 .footer .footer-con-2 li:nth-child(3) {
@@ -577,6 +578,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .footer .footer-con-3 {
   font-size: 0.8125rem;
   padding-bottom: 98px;
+  padding-left: 0px;
 }
 
 .footer .footer-con-3 li:nth-child(2) {
@@ -2590,7 +2592,7 @@ body.scroll-lock {
   width: 500px !important;
   overflow: hidden;
   position: fixed;
-  z-index: 10001;
+  z-index: 996;
   top: 18%;
   -webkit-animation-name: webAnimatebottom;
   -webkit-animation-duration: 1s;
@@ -3408,4 +3410,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 button:focus-visible,
 button:focus {
   outline: none;
+}
+
+/* 지점 상세 - 지도 */
+.root_daum_roughmap .wrap_controllers {
+  display: none !important;
 }

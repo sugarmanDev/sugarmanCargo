@@ -37,8 +37,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/media.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
     <link rel="shortcut icon" href="https://sugarmancargo.com/assets/favicon.ico" />
 
     <!-- Apple Touch Icons -->
@@ -76,14 +76,14 @@
         crossorigin="anonymous"></script>
 
     <!-- datepicker -->
-    <link rel="stylesheet" href="./assets/css/datepicker/datepicker.min.css" />
-    <script src="./assets/js/datepicker/datepicker.min.js"></script>
-    <script src="./assets/js/datepicker/datepicker.ko.js"></script>
-    <script src="./assets/js/datepicker/LunarCalculator.js"></script>
-    <script src="./assets/js/datepicker/sugarmandatepicker.js"></script>
-    <script src="./assets/js/click-menu.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/assets/css/datepicker/datepicker.min.css" />
+    <script src="/assets/js/datepicker/datepicker.min.js"></script>
+    <script src="/assets/js/datepicker/datepicker.ko.js"></script>
+    <script src="/assets/js/datepicker/LunarCalculator.js"></script>
+    <script src="/assets/js/datepicker/sugarmandatepicker.js"></script>
+    <script src="/assets/js/click-menu.js" charset="utf-8"></script>
 
-    <script src="./assets/js/includeHTML.js"></script>
+    <script src="/assets/js/includeHTML.js"></script>
 </head>
 
 <body>
@@ -211,7 +211,7 @@
                 dataType: "json",
                 success: function (data) {
                     if (data.result == "success") {
-                        location.replace("./success.html");
+                        location.replace("/pages/success.html");
                     } else {
                         alert("문제가 발생했습니다.\n다시 시도해주세요.");
                     }

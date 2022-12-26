@@ -540,21 +540,12 @@
     display: none;
   }
 
-  .footer-con-2 {
-    padding-left: 0 !important;
-  }
-
   .footer-con-3 {
-    padding-left: 0 !important;
     padding-bottom: 60px !important;
   }
 
   .footer-con-3 strong {
     display: none;
-  }
-
-  .footer-con-1 {
-    padding-left: 0 !important;
   }
 }
 
@@ -1070,12 +1061,7 @@
     padding-top: 30px !important;
   }
 
-  .footer-con-2 {
-    padding-left: 0 !important;
-  }
-
   .footer-con-3 {
-    padding-left: 0 !important;
     padding-bottom: 80px !important;
   }
 
@@ -1128,10 +1114,6 @@
     margin-top: 24px;
     margin-right: 0 !important;
     margin-left: 0 !important;
-  }
-
-  .footer-con-1 {
-    padding-left: 0 !important;
   }
 }
 
