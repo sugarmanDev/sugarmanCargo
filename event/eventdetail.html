@@ -398,29 +398,32 @@
 
     $.get(targetDomain + "/event/" + idx, function (data) {
 
-      var imgURL = 'http://cd.sugarmanwork.com/stuff/' + data.image;
+      const list = [
+        { idx: 78, src: "cargo_popup_banner4.jpg", date: "2022.2.8" },
+        { idx: 89, src: "20220712_event.jpg", date: "2022.7.12" },
+        { idx: 102, src: "221017_카고부평_사전등록.jpg", date: "2022.10.19" },
+        { idx: 119, src: "221227_카고부평_새해맞이-6개월.jpg", date: "2022.12.27" },
+      ]
+
+      let img = "";
+      let date = "";
+
+      list.forEach(item => {
+        if (item.idx === idx) {
+          img = item.src;
+          date = item.date;
+        };
+      });
 
       // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
-      if (data.idx === 78) {
-        $('#eventImage').attr('src', '/assets/img/event/cargo_popup_banner4.jpg');
-      } else if (
-        data.idx === 89) {
-        $('#eventImage').attr('src', '/assets/img/event/20220712_event.jpg');
-      } else if (data.idx === 102) {
-        $('#eventImage').attr('src', '/assets/img/event/221017_카고부평_사전등록.jpg');
-      } else {
-        $('#eventImage').attr('src', data.image);
-      }
+      $('#eventImage').attr('src', '/assets/img/event/' + img + '');
 
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
       $('#title').val(data.title)
       $('#branchIdx').val(data.branchIdx)
-      $('#eventDate').html(data.date ? data.date : data.idx === 78 ? "2022.2.8" : data.idx === 89 ?
-        "2022.7.12" : data.idx === 102 ? "2022.10.19" : "")
+      $('#eventDate').html(date)
       $('#eventDesc').html(data.content)
-
-      console.log(data.date)
 
       if (data.formYN == 'Y') {
         $('#openPromoForm').show();
