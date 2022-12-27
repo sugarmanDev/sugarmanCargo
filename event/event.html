@@ -152,28 +152,21 @@
             function (data) {
                 var html = "";
                 if (data.length > 0) {
-                    const list = [
-                        { idx: 78, src: "/assets/img/event/cargo_popup_banner4.jpg" },
-                        { idx: 89, src: "/assets/img/event/20220712_event.jpg" },
-                        { idx: 102, src: "/assets/img/event/221017_카고부평_사전등록.jpg" },
-                        { idx: 119, src: "/assets/img/event/221227_카고부평_새해맞이-6개월.jpg" },
-                    ]
+                    const imgObj = {
+                        78: "/assets/img/event/cargo_popup_banner4.jpg",
+                        89: "/assets/img/event/20220712_event.jpg",
+                        102: "/assets/img/event/221017_카고부평_사전등록.jpg",
+                        119: "/assets/img/event/221227_카고부평_새해맞이-6개월.jpg"
+                    }
 
                     for (var idx = data.length - 1; idx >= 0; idx--) {
                         // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
-                        let img = "";
-
-                        list.forEach(item => {
-                            if (item.idx === idx) {
-                                img = item.src;
-                            };
-                        });
 
                         html = '<div class="col-md-3 mb-4">';
                         html += '<div class="card border-0">';
                         html += '<a href="/event/eventdetail.html?idx=' + data[idx].idx + '">';
 
-                        html += "<img src=" + img + " class='card-img-top' alt='...'/>";
+                        html += "<img src=" + imgObj[idx] + " class='card-img-top' alt='...'/>";
 
                         html +=
                             "<div class='event-card-body'><h5 class='card-title mb-1'>" +
