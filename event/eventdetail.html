@@ -412,13 +412,13 @@
       }
 
       // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
-      $('#eventImage').attr('src', imgObj[idx]);
+      $('#eventImage').attr('src', imgObj[Number(idx)]);
 
       $('#eventImage').show();
       $('#eventTitle').html(data.title)
       $('#title').val(data.title)
       $('#branchIdx').val(data.branchIdx)
-      $('#eventDate').html(dateObj[idx])
+      $('#eventDate').html(dateObj[Number(idx)])
       $('#eventDesc').html(data.content)
 
       if (data.formYN == 'Y') {
