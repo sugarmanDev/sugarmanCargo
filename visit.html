@@ -114,121 +114,30 @@
           <div class="col-12 form" style="overflow-x: hidden">
             <div class="row">
               <div class="col-12">
-                <!-- <label for="in_name">이름/업체명</label> -->
                 <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_phone">연락처</label> -->
                 <input type="text" name="phone" placeholder="연락처" class="in_form_con" id="in_phone" required />
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_branch">문의 지점</label> -->
                 <div class="select4 default_select" data-role="selectBox4">
                   <span date-value="optValue4" class="selected-option4">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
                   <ul name="type" class="default_control hide noScroll selectUp">
-                    <li value="" disabled selected hidden>문의 지점</li>
-                    <li value="1">[1호점] 인천 부평점</li>
-                    <li value="2">[2호점] 서울 군자점</li>
-                    <li value="3">[3호점] 부천 상동점</li>
-                    <li value="4">[4호점] 안양 명학점</li>
                   </ul>
                 </div>
-
-                <script>
-                  const body4 = document.querySelector("body");
-                  const select4 = document.querySelector(
-                    `[data-role="selectBox4"]`
-                  );
-                  const values4 = select4.querySelector(
-                    `[date-value="optValue4"]`
-                  );
-                  const option4 = select4.querySelector("ul");
-                  const opts4 = option4.querySelectorAll("li");
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects4(e) {
-                    e.stopPropagation();
-                    option4.setAttribute(
-                      "style",
-                      `top:${select4.offsetHeight}px`
-                    );
-                    if (option4.classList.contains("hide")) {
-                      option4.classList.remove("hide");
-                      option4.classList.add("show");
-                    } else {
-                      option4.classList.add("hide");
-                      option4.classList.remove("show");
-                    }
-                    selectOpt4();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt4() {
-                    opts4.forEach((opt4) => {
-                      const innerValue4 = opt4.innerHTML;
-
-                      function changeValue4() {
-                        values4.innerHTML = innerValue4;
-                        $(".selected-option4").text(innerValue4);
-
-                        const branchBox = {
-                          "[1호점] 인천 부평점": "슈가맨카고 부평점",
-                          "[2호점] 서울 군자점": "슈가맨카고 군자점",
-                          "[3호점] 부천 상동점": "슈가맨카고 상동점",
-                          "[4호점] 안양 명학점": "슈가맨카고 명학점",
-                        };
-
-                        $("#visitBranch").attr(
-                          "value",
-                          branchBox[innerValue4]
-                        );
-
-                        $("#branch").attr(
-                          "value",
-                          innerValue4.split("호점]")[0].split("[")[1]
-                        );
-                      }
-
-                      opt4.addEventListener("click", changeValue4);
-                    });
-                  }
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst4() {
-                    const firstValue4 = opts4[0].innerHTML;
-                    values4.innerHTML = `${firstValue4}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect4() {
-                    if (option4.classList.contains("show")) {
-                      option4.classList.add("hide");
-                      option4.classList.remove("show");
-                    }
-                  }
-
-                  selectFirst4();
-                  select4.addEventListener("click", selects4);
-                  body4.addEventListener("click", hideselect4);
-                </script>
               </div>
 
               <div class="col-12">
-                <!-- <label for="visitInputstore2">스토리지 사이즈</label> -->
                 <div class="select5 default_select" data-role="selectBox5">
                   <span date-value="optValue5" class="selected-option5">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
                   <ul name="type" class="default_control hide noScroll">
                     <li value="" disabled selected hidden>스토리지 사이즈</li>
                     <li value="cb">
@@ -249,98 +158,18 @@
                     <li value="etc">상담 후 결정</li>
                   </ul>
                 </div>
-
-                <script>
-                  const body5 = document.querySelector("body");
-                  const select5 = document.querySelector(
-                    `[data-role="selectBox5"]`
-                  );
-                  const values5 = select5.querySelector(
-                    `[date-value="optValue5"]`
-                  );
-                  const option5 = select5.querySelector("ul");
-                  const opts5 = option5.querySelectorAll("li");
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects5(e) {
-                    e.stopPropagation();
-                    option5.setAttribute(
-                      "style",
-                      `top:${select5.offsetHeight}px`
-                    );
-                    if (option5.classList.contains("hide")) {
-                      option5.classList.remove("hide");
-                      option5.classList.add("show");
-                    } else {
-                      option5.classList.add("hide");
-                      option5.classList.remove("show");
-                    }
-                    selectOpt5();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt5() {
-                    opts5.forEach((opt5) => {
-                      const innerValue5 = opt5.innerHTML;
-
-                      const typeBox = {
-                        큐브: "cb",
-                        스몰: "sm",
-                        미디엄: "md",
-                        라지: "lg",
-                        엑스라지: "xl",
-                        "상담 후 결정": "etc",
-                      };
-
-                      function changeValue5() {
-                        values5.innerHTML = innerValue5;
-                        // ..??
-                        console.log(exec(innerValue5));
-                        $(".selected-option5").text(innerValue5);
-                        $("#storageSize2").attr(
-                          "value",
-                          typeBox[innerValue5]
-                        );
-                      }
-
-                      opt5.addEventListener("click", changeValue5);
-                    });
-                  }
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst5() {
-                    const firstValue5 = opts5[0].innerHTML;
-                    values5.innerHTML = `${firstValue5}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect5() {
-                    if (option5.classList.contains("show")) {
-                      option5.classList.add("hide");
-                      option5.classList.remove("show");
-                    }
-                  }
-
-                  selectFirst5();
-                  select5.addEventListener("click", selects5);
-                  body5.addEventListener("click", hideselect5);
-                </script>
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_content">문의 내용</label> -->
                 <textarea id="in_content" name="subject" placeholder="문의 내용을 입력해주세요." required></textarea>
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_path">알게 된 경로</label> -->
                 <div class="select6 default_select" data-role="selectBox6">
                   <span date-value="optValue6" class="selected-option6">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
                   <ul name="type" class="default_control hide noScroll">
                     <li value="" disabled selected hidden>알게 된 경로</li>
                     <li value="1">인스타그램</li>
@@ -351,78 +180,6 @@
                     <li value="6">기타</li>
                   </ul>
                 </div>
-
-                <script>
-                  const body6 = document.querySelector("body");
-                  const select6 = document.querySelector(
-                    `[data-role="selectBox6"]`
-                  );
-                  const values6 = select6.querySelector(
-                    `[date-value="optValue6"]`
-                  );
-                  const option6 = select6.querySelector("ul");
-                  const opts6 = option6.querySelectorAll("li");
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects6(e) {
-                    e.stopPropagation();
-                    option6.setAttribute(
-                      "style",
-                      `top:${select6.offsetHeight}px`
-                    );
-                    if (option6.classList.contains("hide")) {
-                      option6.classList.remove("hide");
-                      option6.classList.add("show");
-                    } else {
-                      option6.classList.add("hide");
-                      option6.classList.remove("show");
-                    }
-                    selectOpt6();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt6() {
-                    opts6.forEach((opt6) => {
-                      const innerValue6 = opt6.innerHTML;
-
-                      function changeValue6() {
-                        values6.innerHTML = innerValue6;
-                        $(".selected-option6").text(innerValue6);
-
-                        const routeBox = {
-                          인스타그램: 1,
-                          페이스북: 2,
-                          블로그: 3,
-                          구글: 4,
-                          지인소개: 5,
-                          기타: 6,
-                        };
-
-                        $("#route").attr("value", routeBox[innerValue6]);
-                      }
-
-                      opt6.addEventListener("click", changeValue6);
-                    });
-                  }
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst6() {
-                    const firstValue6 = opts6[0].innerHTML;
-                    values6.innerHTML = `${firstValue6}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect6() {
-                    if (option6.classList.contains("show")) {
-                      option6.classList.add("hide");
-                      option6.classList.remove("show");
-                    }
-                  }
-
-                  selectFirst6();
-                  select6.addEventListener("click", selects6);
-                  body6.addEventListener("click", hideselect6);
-                </script>
               </div>
 
               <div class="col-12 mt-3 mb-2">
@@ -550,114 +307,25 @@
             <h2 class="mb-4 main-title">방문예약</h2>
             <div class="form-row">
               <div class="form-group col-md-12 visitStoreMobile">
-                <!-- <label for="visitInputstore1">지점 선택<span style="color: #e9474d">*</span></label> -->
                 <div class="visit-drop-wrap">
                   <div class="select1 default_select" data-role="selectBox1">
                     <span date-value="optValue1" class="selected-option1">
-                      <!-- 선택된 옵션 값이 출력되는 부분 -->
                     </span>
                     <div class="arrowBottom"></div>
 
-                    <!-- 옵션 영역 -->
                     <ul name="type" class="default_control hide noScroll selectUp">
-                      <li value="" disabled selected hidden>지점 선택</li>
-                      <li value="1">[1호점] 인천 부평점</li>
-                      <li value="2">[2호점] 서울 군자점</li>
-                      <li value="3">[3호점] 부천 상동점</li>
-                      <li value="4">[4호점] 안양 명학점</li>
                     </ul>
                   </div>
-
-                  <script>
-                    const body1 = document.querySelector("body");
-                    const select1 = document.querySelector(
-                      `[data-role="selectBox1"]`
-                    );
-                    const values1 = select1.querySelector(
-                      `[date-value="optValue1"]`
-                    );
-                    const option1 = select1.querySelector("ul");
-                    const opts1 = option1.querySelectorAll("li");
-
-                    /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                    function selects1(e) {
-                      e.stopPropagation();
-                      option1.setAttribute(
-                        "style",
-                        `top:${select1.offsetHeight}px`
-                      );
-                      if (option1.classList.contains("hide")) {
-                        option1.classList.remove("hide");
-                        option1.classList.add("show");
-                      } else {
-                        option1.classList.add("hide");
-                        option1.classList.remove("show");
-                      }
-                      selectOpt1();
-                    }
-
-                    /* 옵션 선택 */
-                    function selectOpt1() {
-                      opts1.forEach((opt1) => {
-                        const innerValue1 = opt1.innerHTML;
-
-                        function changeValue1() {
-                          values1.innerHTML = innerValue1;
-                          $(".selected-option1").text(innerValue1);
-
-                          const branchBox = {
-                            "[1호점] 인천 부평점": "슈가맨카고 부평점",
-                            "[2호점] 서울 군자점": "슈가맨카고 군자점",
-                            "[3호점] 부천 상동점": "슈가맨카고 상동점",
-                            "[4호점] 안양 명학점": "슈가맨카고 명학점",
-                          };
-
-                          $("#visitBranch").attr(
-                            "value",
-                            branchBox[innerValue1]
-                          );
-
-                          $("#branchIdx").attr(
-                            "value",
-                            innerValue1.split("호점]")[0].split("[")[1]
-                          );
-                        }
-
-                        opt1.addEventListener("click", changeValue1);
-                      });
-                    }
-
-                    /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                    function selectFirst1() {
-                      const firstValue1 = opts1[0].innerHTML;
-                      values1.innerHTML = `${firstValue1}`;
-                    }
-
-                    /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                    function hideselect1() {
-                      if (option1.classList.contains("show")) {
-                        option1.classList.add("hide");
-                        option1.classList.remove("show");
-                      }
-                    }
-
-                    selectFirst1();
-                    select1.addEventListener("click", selects1);
-                    body1.addEventListener("click", hideselect1);
-                  </script>
                 </div>
               </div>
 
               <div class="form-group col-md-12 visitStoreMobile">
-                <!-- <label for="visitInputstore2">원하는 스토리지 사이즈<span style="color: #e9474d">*</span></label> -->
                 <div class="visit-drop-wrap">
                   <div class="select2 default_select" data-role="selectBox2">
                     <span date-value="optValue2" class="selected-option2">
-                      <!-- 선택된 옵션 값이 출력되는 부분 -->
                     </span>
                     <div class="arrowBottom"></div>
 
-                    <!-- 옵션 영역 -->
                     <ul name="type" class="default_control hide noScroll">
                       <li value="" disabled selected hidden>
                         스토리지 사이즈
@@ -680,81 +348,6 @@
                       <li value="etc">상담 후 결정</li>
                     </ul>
                   </div>
-
-                  <script>
-                    const body2 = document.querySelector("body");
-                    const select2 = document.querySelector(
-                      `[data-role="selectBox2"]`
-                    );
-                    const values2 = select2.querySelector(
-                      `[date-value="optValue2"]`
-                    );
-                    const option2 = select2.querySelector("ul");
-                    const opts2 = option2.querySelectorAll("li");
-
-                    /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                    function selects2(e) {
-                      e.stopPropagation();
-                      option2.setAttribute(
-                        "style",
-                        `top:${select2.offsetHeight}px`
-                      );
-                      if (option2.classList.contains("hide")) {
-                        option2.classList.remove("hide");
-                        option2.classList.add("show");
-                      } else {
-                        option2.classList.add("hide");
-                        option2.classList.remove("show");
-                      }
-                      selectOpt2();
-                    }
-
-                    /* 옵션 선택 */
-                    function selectOpt2() {
-                      opts2.forEach((opt2) => {
-                        const innerValue2 = opt2.innerHTML;
-
-                        const typeBox = {
-                          큐브: "cb",
-                          스몰: "sm",
-                          미디엄: "md",
-                          라지: "lg",
-                          엑스라지: "xl",
-                          "상담 후 결정": "etc",
-                        };
-
-                        function changeValue2() {
-                          values2.innerHTML = innerValue2;
-                          console.log(exec(innerValue2));
-                          $(".selected-option2").text(innerValue2);
-                          $("#storageSize").attr(
-                            "value",
-                            typeBox[innerValue2]
-                          );
-                        }
-
-                        opt2.addEventListener("click", changeValue2);
-                      });
-                    }
-
-                    /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                    function selectFirst2() {
-                      const firstValue2 = opts2[0].innerHTML;
-                      values2.innerHTML = `${firstValue2}`;
-                    }
-
-                    /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                    function hideselect2() {
-                      if (option2.classList.contains("show")) {
-                        option2.classList.add("hide");
-                        option2.classList.remove("show");
-                      }
-                    }
-
-                    selectFirst2();
-                    select2.addEventListener("click", selects2);
-                    body2.addEventListener("click", hideselect2);
-                  </script>
                 </div>
               </div>
 
@@ -842,18 +435,15 @@
 
               <div class="form-group col-md-12">
                 <div class="visit-form-box visit-box-wrap">
-                  <!-- <label for="visitInputName">이름<span style="color: #e9474d">*</span></label> -->
                   <span>예약자 정보<span style="float: right">📝</span></span>
                   <input type="text" class="visitInputName form-control mt-3" placeholder="이름" name="name" required />
                   <input type="text" class="visitInputPhone form-control" placeholder="연락처" name="phone" required />
                   <div class="form-group visitStoreMobile" style="margin-bottom: 0px">
                     <div class="select3 default_select" data-role="selectBox3">
                       <span date-value="optValue3" class="selected-option3">
-                        <!-- 선택된 옵션 값이 출력되는 부분 -->
                       </span>
                       <div class="arrowBottom"></div>
 
-                      <!-- 옵션 영역 -->
                       <ul name="type" class="default_control hide noScroll">
                         <li value="" disabled selected hidden>
                           알게 된 경로
@@ -865,80 +455,6 @@
                         <li value="5">기타</li>
                       </ul>
                     </div>
-
-                    <script>
-                      const body3 = document.querySelector("body");
-                      const select3 = document.querySelector(
-                        `[data-role="selectBox3"]`
-                      );
-                      const values3 = select3.querySelector(
-                        `[date-value="optValue3"]`
-                      );
-                      const option3 = select3.querySelector("ul");
-                      const opts3 = option3.querySelectorAll("li");
-
-                      /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                      function selects3(e) {
-                        e.stopPropagation();
-                        option3.setAttribute(
-                          "style",
-                          `top:${select3.offsetHeight}px`
-                        );
-                        if (option3.classList.contains("hide")) {
-                          option3.classList.remove("hide");
-                          option3.classList.add("show");
-                        } else {
-                          option3.classList.add("hide");
-                          option3.classList.remove("show");
-                        }
-                        selectOpt3();
-                      }
-
-                      /* 옵션 선택 */
-                      function selectOpt3() {
-                        opts3.forEach((opt3) => {
-                          const innerValue3 = opt3.innerHTML;
-
-                          const routeBox = {
-                            인스타그램: 1,
-                            페이스북: 2,
-                            블로그: 3,
-                            구글: 4,
-                            지인추천: 5,
-                            기타: 6,
-                          };
-
-                          function changeValue3() {
-                            values3.innerHTML = innerValue3;
-                            $(".selected-option3").text(innerValue3);
-                            $("#branch_desktop").attr(
-                              "value",
-                              routeBox[innerValue3]
-                            );
-                          }
-
-                          opt3.addEventListener("click", changeValue3);
-                        });
-                      }
-
-                      /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                      function selectFirst3() {
-                        const firstValue3 = opts3[0].innerHTML;
-                        values3.innerHTML = `${firstValue3}`;
-                      }
-
-                      /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                      function hideselect3() {
-                        if (option3.classList.contains("show")) {
-                          option3.classList.add("hide");
-                          option3.classList.remove("show");
-                        }
-                      }
-
-                      selectFirst3();
-                      select3.addEventListener("click", selects3);
-                      body3.addEventListener("click", hideselect3);
-                    </script>
                   </div>
                 </div>
               </div>
@@ -1117,6 +633,7 @@
   }
 </script>
 
+<!-- 방문 시간 선택 script -->
 <script>
   set_date_picker("#datepicker", "open");
 
@@ -1222,6 +739,488 @@
       }
     });
   });
+</script>
+
+<script>
+  // 👉 지점 추가 시 (방문예약 지점 선택 드롭다운/1:1문의 문의 지점 드롭다운)
+  const dropdownList = [
+    { idx: 0 },
+    { idx: 1, name: "인천 부평점" },
+    { idx: 2, name: "서울 군자점" },
+    { idx: 3, name: "부천 상동점" },
+    { idx: 4, name: "안양 명학점" },
+  ];
+
+  let visitDropdownHtml = '';
+  let inquiryDropdownHtml = '';
+
+  dropdownList.forEach((item, i) => {
+    if (item.idx === 0) {
+      visitDropdownHtml += '<li value="" disabled selected hidden>문의 지점</li>';
+      inquiryDropdownHtml += '<li value="" disabled selected hidden>문의 지점</li>';
+    } else {
+      visitDropdownHtml += '<li value=' + String(item.idx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
+      inquiryDropdownHtml += '<li value=' + String(item.idx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
+    };
+  });
+
+  $(".select1 ul").append(visitDropdownHtml);
+  $(".select4 ul").append(inquiryDropdownHtml);
+</script>
+
+<!-- 방문예약 > 드롭다운 script -->
+<script>
+  const body1 = document.querySelector("body");
+  const select1 = document.querySelector(
+    `[data-role="selectBox1"]`
+  );
+  const values1 = select1.querySelector(
+    `[date-value="optValue1"]`
+  );
+  const option1 = select1.querySelector("ul");
+  const opts1 = option1.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects1(e) {
+    e.stopPropagation();
+    option1.setAttribute(
+      "style",
+      `top:${select1.offsetHeight}px`
+    );
+    if (option1.classList.contains("hide")) {
+      option1.classList.remove("hide");
+      option1.classList.add("show");
+    } else {
+      option1.classList.add("hide");
+      option1.classList.remove("show");
+    }
+    selectOpt1();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt1() {
+    opts1.forEach((opt1) => {
+      const innerValue1 = opt1.innerHTML;
+
+      function changeValue1() {
+        values1.innerHTML = innerValue1;
+        $(".selected-option1").text(innerValue1);
+
+        const branchBox = {
+          "[1호점] 인천 부평점": "슈가맨카고 부평점",
+          "[2호점] 서울 군자점": "슈가맨카고 군자점",
+          "[3호점] 부천 상동점": "슈가맨카고 상동점",
+          "[4호점] 안양 명학점": "슈가맨카고 명학점",
+        };
+
+        $("#visitBranch").attr(
+          "value",
+          branchBox[innerValue1]
+        );
+
+        $("#branchIdx").attr(
+          "value",
+          innerValue1.split("호점]")[0].split("[")[1]
+        );
+      }
+
+      opt1.addEventListener("click", changeValue1);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst1() {
+    const firstValue1 = opts1[0].innerHTML;
+    values1.innerHTML = `${firstValue1}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect1() {
+    if (option1.classList.contains("show")) {
+      option1.classList.add("hide");
+      option1.classList.remove("show");
+    }
+  }
+
+  selectFirst1();
+  select1.addEventListener("click", selects1);
+  body1.addEventListener("click", hideselect1);
+</script>
+
+<script>
+  const body2 = document.querySelector("body");
+  const select2 = document.querySelector(
+    `[data-role="selectBox2"]`
+  );
+  const values2 = select2.querySelector(
+    `[date-value="optValue2"]`
+  );
+  const option2 = select2.querySelector("ul");
+  const opts2 = option2.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects2(e) {
+    e.stopPropagation();
+    option2.setAttribute(
+      "style",
+      `top:${select2.offsetHeight}px`
+    );
+    if (option2.classList.contains("hide")) {
+      option2.classList.remove("hide");
+      option2.classList.add("show");
+    } else {
+      option2.classList.add("hide");
+      option2.classList.remove("show");
+    }
+    selectOpt2();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt2() {
+    opts2.forEach((opt2) => {
+      const innerValue2 = opt2.innerHTML;
+
+      const typeBox = {
+        큐브: "cb",
+        스몰: "sm",
+        미디엄: "md",
+        라지: "lg",
+        엑스라지: "xl",
+        "상담 후 결정": "etc",
+      };
+
+      function changeValue2() {
+        values2.innerHTML = innerValue2;
+        console.log(exec(innerValue2));
+        $(".selected-option2").text(innerValue2);
+        $("#storageSize").attr(
+          "value",
+          typeBox[innerValue2]
+        );
+      }
+
+      opt2.addEventListener("click", changeValue2);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst2() {
+    const firstValue2 = opts2[0].innerHTML;
+    values2.innerHTML = `${firstValue2}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect2() {
+    if (option2.classList.contains("show")) {
+      option2.classList.add("hide");
+      option2.classList.remove("show");
+    }
+  }
+
+  selectFirst2();
+  select2.addEventListener("click", selects2);
+  body2.addEventListener("click", hideselect2);
+</script>
+
+<script>
+  const body3 = document.querySelector("body");
+  const select3 = document.querySelector(
+    `[data-role="selectBox3"]`
+  );
+  const values3 = select3.querySelector(
+    `[date-value="optValue3"]`
+  );
+  const option3 = select3.querySelector("ul");
+  const opts3 = option3.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects3(e) {
+    e.stopPropagation();
+    option3.setAttribute(
+      "style",
+      `top:${select3.offsetHeight}px`
+    );
+    if (option3.classList.contains("hide")) {
+      option3.classList.remove("hide");
+      option3.classList.add("show");
+    } else {
+      option3.classList.add("hide");
+      option3.classList.remove("show");
+    }
+    selectOpt3();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt3() {
+    opts3.forEach((opt3) => {
+      const innerValue3 = opt3.innerHTML;
+
+      const routeBox = {
+        인스타그램: 1,
+        페이스북: 2,
+        블로그: 3,
+        구글: 4,
+        지인추천: 5,
+        기타: 6,
+      };
+
+      function changeValue3() {
+        values3.innerHTML = innerValue3;
+        $(".selected-option3").text(innerValue3);
+        $("#branch_desktop").attr(
+          "value",
+          routeBox[innerValue3]
+        );
+      }
+
+      opt3.addEventListener("click", changeValue3);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst3() {
+    const firstValue3 = opts3[0].innerHTML;
+    values3.innerHTML = `${firstValue3}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect3() {
+    if (option3.classList.contains("show")) {
+      option3.classList.add("hide");
+      option3.classList.remove("show");
+    }
+  }
+
+  selectFirst3();
+  select3.addEventListener("click", selects3);
+  body3.addEventListener("click", hideselect3);
+</script>
+
+<!-- 1:1문의 > 드롭다운 script -->
+<script>
+  const body4 = document.querySelector("body");
+  const select4 = document.querySelector(
+    `[data-role="selectBox4"]`
+  );
+  const values4 = select4.querySelector(
+    `[date-value="optValue4"]`
+  );
+  const option4 = select4.querySelector("ul");
+  const opts4 = option4.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects4(e) {
+    e.stopPropagation();
+    option4.setAttribute(
+      "style",
+      `top:${select4.offsetHeight}px`
+    );
+    if (option4.classList.contains("hide")) {
+      option4.classList.remove("hide");
+      option4.classList.add("show");
+    } else {
+      option4.classList.add("hide");
+      option4.classList.remove("show");
+    }
+    selectOpt4();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt4() {
+    opts4.forEach((opt4) => {
+      const innerValue4 = opt4.innerHTML;
+
+      function changeValue4() {
+        values4.innerHTML = innerValue4;
+        $(".selected-option4").text(innerValue4);
+
+        const branchBox = {
+          "[1호점] 인천 부평점": "슈가맨카고 부평점",
+          "[2호점] 서울 군자점": "슈가맨카고 군자점",
+          "[3호점] 부천 상동점": "슈가맨카고 상동점",
+          "[4호점] 안양 명학점": "슈가맨카고 명학점",
+        };
+
+        $("#visitBranch").attr(
+          "value",
+          branchBox[innerValue4]
+        );
+
+        $("#branch").attr(
+          "value",
+          innerValue4.split("호점]")[0].split("[")[1]
+        );
+      }
+
+      opt4.addEventListener("click", changeValue4);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst4() {
+    const firstValue4 = opts4[0].innerHTML;
+    values4.innerHTML = `${firstValue4}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect4() {
+    if (option4.classList.contains("show")) {
+      option4.classList.add("hide");
+      option4.classList.remove("show");
+    }
+  }
+
+  selectFirst4();
+  select4.addEventListener("click", selects4);
+  body4.addEventListener("click", hideselect4);
+</script>
+
+<script>
+  const body5 = document.querySelector("body");
+  const select5 = document.querySelector(
+    `[data-role="selectBox5"]`
+  );
+  const values5 = select5.querySelector(
+    `[date-value="optValue5"]`
+  );
+  const option5 = select5.querySelector("ul");
+  const opts5 = option5.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects5(e) {
+    e.stopPropagation();
+    option5.setAttribute(
+      "style",
+      `top:${select5.offsetHeight}px`
+    );
+    if (option5.classList.contains("hide")) {
+      option5.classList.remove("hide");
+      option5.classList.add("show");
+    } else {
+      option5.classList.add("hide");
+      option5.classList.remove("show");
+    }
+    selectOpt5();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt5() {
+    opts5.forEach((opt5) => {
+      const innerValue5 = opt5.innerHTML;
+
+      const typeBox = {
+        큐브: "cb",
+        스몰: "sm",
+        미디엄: "md",
+        라지: "lg",
+        엑스라지: "xl",
+        "상담 후 결정": "etc",
+      };
+
+      function changeValue5() {
+        values5.innerHTML = innerValue5;
+        // ..??
+        console.log(exec(innerValue5));
+        $(".selected-option5").text(innerValue5);
+        $("#storageSize2").attr(
+          "value",
+          typeBox[innerValue5]
+        );
+      }
+
+      opt5.addEventListener("click", changeValue5);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst5() {
+    const firstValue5 = opts5[0].innerHTML;
+    values5.innerHTML = `${firstValue5}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect5() {
+    if (option5.classList.contains("show")) {
+      option5.classList.add("hide");
+      option5.classList.remove("show");
+    }
+  }
+
+  selectFirst5();
+  select5.addEventListener("click", selects5);
+  body5.addEventListener("click", hideselect5);
+</script>
+
+<script>
+  const body6 = document.querySelector("body");
+  const select6 = document.querySelector(
+    `[data-role="selectBox6"]`
+  );
+  const values6 = select6.querySelector(
+    `[date-value="optValue6"]`
+  );
+  const option6 = select6.querySelector("ul");
+  const opts6 = option6.querySelectorAll("li");
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects6(e) {
+    e.stopPropagation();
+    option6.setAttribute(
+      "style",
+      `top:${select6.offsetHeight}px`
+    );
+    if (option6.classList.contains("hide")) {
+      option6.classList.remove("hide");
+      option6.classList.add("show");
+    } else {
+      option6.classList.add("hide");
+      option6.classList.remove("show");
+    }
+    selectOpt6();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt6() {
+    opts6.forEach((opt6) => {
+      const innerValue6 = opt6.innerHTML;
+
+      function changeValue6() {
+        values6.innerHTML = innerValue6;
+        $(".selected-option6").text(innerValue6);
+
+        const routeBox = {
+          인스타그램: 1,
+          페이스북: 2,
+          블로그: 3,
+          구글: 4,
+          지인소개: 5,
+          기타: 6,
+        };
+
+        $("#route").attr("value", routeBox[innerValue6]);
+      }
+
+      opt6.addEventListener("click", changeValue6);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst6() {
+    const firstValue6 = opts6[0].innerHTML;
+    values6.innerHTML = `${firstValue6}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect6() {
+    if (option6.classList.contains("show")) {
+      option6.classList.add("hide");
+      option6.classList.remove("show");
+    }
+  }
+
+  selectFirst6();
+  select6.addEventListener("click", selects6);
+  body6.addEventListener("click", hideselect6);
 </script>
 
 </html>
