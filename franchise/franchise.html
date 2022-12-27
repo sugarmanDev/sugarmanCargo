@@ -202,186 +202,21 @@
       </div>
     </div>
     <div class="container-fluid">
-      <!-- Swiper = web -->
+      <!-- swiper-web -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="/branch/branch1.html">
-              <div class="space_name">인천 부평점</div>
-              <img src="/assets/img/branch_list/branch_list_1@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch2.html">
-              <div class="space_name">서울 군자점</div>
-              <img src="/assets/img/branch_list/branch_list_2@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch3.html">
-              <div class="space_name">부천 상동점</div>
-              <img src="/assets/img/branch_list/branch_list_3@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch4.html">
-              <div class="space_name">안양 명학점</div>
-              <img src="/assets/img/branch_list/branch_list_4@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
         </div>
         <div class="swiper-pagination pagination"></div>
       </div>
 
-      <!-- Swiper = mobile -->
+      <!-- swiper-mobile -->
       <div class="swiper mySwiper-mobile">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="/branch/branch1.html">
-              <div class="space_name">인천 부평점</div>
-              <img src="/assets/img/branch_list/branch_list_1@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch2.html">
-              <div class="space_name">서울 군자점</div>
-              <img src="/assets/img/branch_list/branch_list_2@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch3.html">
-              <div class="space_name">부천 상동점</div>
-              <img src="/assets/img/branch_list/branch_list_3@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch4.html">
-              <div class="space_name">안양 명학점</div>
-              <img src="/assets/img/branch_list/branch_list_4@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
         </div>
         <div class="swiper-pagination-mobile pagination"></div>
       </div>
-
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-      <!-- Initialize Swiper -->
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-
-        var swiper = new Swiper(".mySwiper-mobile", {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination-mobile",
-            clickable: true,
-          },
-        });
-
-        $(function () {
-          if ($(window).width() < 415) {
-            $(".mySwiper-mobile").show();
-            $(".mySwiper").hide();
-          } else {
-            $(".mySwiper-mobile").hide();
-            $(".mySwiper").show();
-          }
-        });
-      </script>
     </div>
   </div>
-
-  <style>
-    .swiper-pagination-bullet {
-      width: var(--swiper-pagination-bullet-width,
-          var(--swiper-pagination-bullet-size, 10px));
-      height: var(--swiper-pagination-bullet-height,
-          var(--swiper-pagination-bullet-size, 10px));
-    }
-
-    .franchise_3 {
-      position: relative;
-    }
-
-    .mySwiper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .space_name {
-      position: absolute;
-      left: 23px;
-      bottom: 23px;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 7px 10px;
-      background-color: #fff;
-      border-radius: 50px;
-      opacity: 0.9;
-      color: #222 !important;
-    }
-
-    .swiper-pagination {
-      position: relative;
-      margin: 0 auto;
-      width: 100% !important;
-      max-width: 35px !important;
-      bottom: 30px !important;
-    }
-
-    .swiper-pagination-mobile {
-      position: relative;
-      margin: 0 auto;
-      width: 100% !important;
-      max-width: 70px !important;
-      bottom: 30px !important;
-      z-index: 10;
-    }
-
-    .swiper-slide {
-      border-radius: 20px !important;
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      position: relative;
-
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      border-radius: 20px !important;
-      display: block;
-      width: 100%;
-      height: 460px;
-      object-fit: cover;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
 
   <div class="container-fluid fixed-bottom mobile_hide pt-3 pb-3" style="background-color: #e9474d" id="bar">
     <div class="main-container">
@@ -591,5 +426,146 @@
     $("body").toggleClass("prevent-scroll");
   });
 </script>
+
+<script>
+  // 👉 지점 추가 시 (1:1문의 지점 선택 드롭다운/지점 소개 슬라이드(웹/모바일))
+  const dropdownList = [
+    { idx: 1, name: "인천 부평점" },
+    { idx: 2, name: "서울 군자점" },
+    { idx: 3, name: "부천 상동점" },
+    { idx: 4, name: "안양 명학점" }
+  ];
+
+  let swiperHtml = '';
+
+  dropdownList.forEach((item, i) => {
+    swiperHtml += '<div class="swiper-slide">';
+    swiperHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+    swiperHtml += '<div class="space_name">' + item.name + '</div>';
+    swiperHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" style="width: 100%" />';
+    swiperHtml += '</a>';
+    swiperHtml += '</div>';
+  });
+
+  $(".mySwiper .swiper-wrapper").append(swiperHtml);
+  $(".mySwiper-mobile .swiper-wrapper").append(swiperHtml);
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper-mobile", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination-mobile",
+      clickable: true,
+    },
+  });
+
+  $(function () {
+    if ($(window).width() < 415) {
+      $(".mySwiper-mobile").show();
+      $(".mySwiper").hide();
+    } else {
+      $(".mySwiper-mobile").hide();
+      $(".mySwiper").show();
+    }
+  });
+</script>
+
+<style>
+  .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 10px));
+    height: var(--swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 10px));
+  }
+
+  .franchise_3 {
+    position: relative;
+  }
+
+  .mySwiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .space_name {
+    position: absolute;
+    left: 23px;
+    bottom: 23px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 7px 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    opacity: 0.9;
+    color: #222 !important;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 35px !important;
+    bottom: 30px !important;
+  }
+
+  .swiper-pagination-mobile {
+    position: relative;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 70px !important;
+    bottom: 30px !important;
+    z-index: 10;
+  }
+
+  .swiper-slide {
+    border-radius: 20px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    border-radius: 20px !important;
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
 
 </html>

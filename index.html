@@ -115,99 +115,30 @@
           <div class="col-12 form" style="overflow-x: hidden">
             <div class="row">
               <div class="col-12">
-                <!-- <label for="in_name">이름/업체명</label> -->
                 <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_phone">연락처</label> -->
                 <input type="text" name="phone" placeholder="연락처" class="in_form_con" id="in_phone" required />
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_branch">문의 지점</label> -->
                 <div class="select1 default_select" data-role="selectBox1">
                   <span date-value="optValue1" class="selected-option1">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
-                  <ul name="type" class="default_control hide noScroll selectUp">
-                    <li value="" disabled selected hidden>문의 지점</li>
-                    <li value="1">[1호점] 인천 부평점</li>
-                    <li value="2">[2호점] 서울 군자점</li>
-                    <li value="3">[3호점] 부천 상동점</li>
-                    <li value="4">[4호점] 안양 명학점</li>
+                  <ul name="type" class="branchDropDown default_control hide noScroll selectUp">
                   </ul>
                 </div>
-
-                <script>
-                  const body1 = document.querySelector('body');
-                  const select1 = document.querySelector(`[data-role="selectBox1"]`);
-                  const values1 = select1.querySelector(`[date-value="optValue1"]`);
-                  const option1 = select1.querySelector('ul');
-                  const opts1 = option1.querySelectorAll('li');
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects1(e) {
-                    e.stopPropagation();
-                    option1.setAttribute('style', `top:${select1.offsetHeight}px`)
-                    if (option1.classList.contains('hide')) {
-                      option1.classList.remove('hide');
-                      option1.classList.add('show');
-                    } else {
-                      option1.classList.add('hide');
-                      option1.classList.remove('show');
-                    }
-                    selectOpt1();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt1() {
-                    opts1.forEach(opt1 => {
-                      const innerValue1 = opt1.innerHTML;
-
-                      function changeValue1() {
-                        values1.innerHTML = innerValue1;
-                        $(".selected-option1").text(innerValue1);
-                        $("#branch").attr("value", innerValue1.split("호점]")[0].split("[")[1]);
-                      }
-
-                      opt1.addEventListener('click', changeValue1);
-                    });
-                  }
-
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst1() {
-                    const firstValue1 = opts1[0].innerHTML;
-                    values1.innerHTML = `${firstValue1}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect1() {
-                    if (option1.classList.contains('show')) {
-                      option1.classList.add('hide');
-                      option1.classList.remove('show');
-                    }
-                  }
-
-                  selectFirst1();
-                  select1.addEventListener('click', selects1);
-                  body1.addEventListener('click', hideselect1);
-                </script>
               </div>
 
               <div class="col-12">
-                <!-- <label for="visitInputstore2">스토리지 사이즈</label> -->
                 <div class="select2 default_select" data-role="selectBox2">
                   <span date-value="optValue2" class="selected-option2">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
                   <ul name="type" class="default_control hide noScroll">
                     <li value="" disabled selected hidden>스토리지 사이즈</li>
                     <li value="cb"><img src="/assets/img/size/c@2x.png" class="list-size-img" alt="storage_c">큐브</li>
@@ -219,87 +150,18 @@
                     <li value="etc">상담 후 결정</li>
                   </ul>
                 </div>
-
-                <script>
-                  const body2 = document.querySelector('body');
-                  const select2 = document.querySelector(`[data-role="selectBox2"]`);
-                  const values2 = select2.querySelector(`[date-value="optValue2"]`);
-                  const option2 = select2.querySelector('ul');
-                  const opts2 = option2.querySelectorAll('li');
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects2(e) {
-                    e.stopPropagation();
-                    option2.setAttribute('style', `top:${select2.offsetHeight}px`)
-                    if (option2.classList.contains('hide')) {
-                      option2.classList.remove('hide');
-                      option2.classList.add('show');
-                    } else {
-                      option2.classList.add('hide');
-                      option2.classList.remove('show');
-                    }
-                    selectOpt2();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt2() {
-                    opts2.forEach(opt2 => {
-                      const innerValue2 = opt2.innerHTML;
-
-                      const typeBox = {
-                        큐브: "cb",
-                        스몰: "sm",
-                        미디엄: "md",
-                        라지: "lg",
-                        엑스라지: "xl",
-                        "상담 후 결정": 'etc'
-                      }
-
-                      function changeValue2() {
-                        values2.innerHTML = innerValue2;
-                        $(".selected-option2").text(innerValue2);
-                        $("#storageSize").attr("value", typeBox[innerValue2]);
-                      }
-
-                      opt2.addEventListener('click', changeValue2);
-                    });
-                  }
-
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst2() {
-                    const firstValue2 = opts2[0].innerHTML;
-                    values2.innerHTML = `${firstValue2}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect2() {
-                    if (option2.classList.contains('show')) {
-                      option2.classList.add('hide');
-                      option2.classList.remove('show');
-                    }
-                  }
-
-                  selectFirst2();
-                  select2.addEventListener('click', selects2);
-                  body2.addEventListener('click', hideselect2);
-                </script>
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_content">문의 내용</label> -->
                 <textarea id="in_content" name="subject" placeholder="문의 내용을 입력해주세요." required></textarea>
               </div>
 
               <div class="col-12">
-                <!-- <label for="in_path">알게 된 경로</label> -->
                 <div class="select3 default_select" data-role="selectBox3">
                   <span date-value="optValue3" class="selected-option3">
-                    <!-- 선택된 옵션 값이 출력되는 부분 -->
                   </span>
                   <div class="arrowBottom"></div>
 
-                  <!-- 옵션 영역 -->
                   <ul name="type" class="default_control hide noScroll">
                     <li value="" disabled selected hidden>알게 된 경로</li>
                     <li value="1">인스타그램</li>
@@ -310,71 +172,6 @@
                     <li value="6">기타</li>
                   </ul>
                 </div>
-
-                <script>
-                  const body3 = document.querySelector('body');
-                  const select3 = document.querySelector(`[data-role="selectBox3"]`);
-                  const values3 = select3.querySelector(`[date-value="optValue3"]`);
-                  const option3 = select3.querySelector('ul');
-                  const opts3 = option3.querySelectorAll('li');
-
-                  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
-                  function selects3(e) {
-                    e.stopPropagation();
-                    option3.setAttribute('style', `top:${select3.offsetHeight}px`)
-                    if (option3.classList.contains('hide')) {
-                      option3.classList.remove('hide');
-                      option3.classList.add('show');
-                    } else {
-                      option3.classList.add('hide');
-                      option3.classList.remove('show');
-                    }
-                    selectOpt3();
-                  }
-
-                  /* 옵션 선택 */
-                  function selectOpt3() {
-                    opts3.forEach(opt3 => {
-                      const innerValue3 = opt3.innerHTML;
-
-                      function changeValue3() {
-                        values3.innerHTML = innerValue3;
-                        $(".selected-option3").text(innerValue3);
-
-                        const routeBox = {
-                          인스타그램: 1,
-                          페이스북: 2,
-                          블로그: 3,
-                          구글: 4,
-                          지인소개: 5,
-                          기타: 6
-                        }
-
-                        $("#route").attr("value", routeBox[innerValue3]);
-                      }
-
-                      opt3.addEventListener('click', changeValue3);
-                    });
-                  }
-
-                  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
-                  function selectFirst3() {
-                    const firstValue3 = opts3[0].innerHTML;
-                    values3.innerHTML = `${firstValue3}`;
-                  }
-
-                  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
-                  function hideselect3() {
-                    if (option3.classList.contains('show')) {
-                      option3.classList.add('hide');
-                      option3.classList.remove('show');
-                    }
-                  }
-
-                  selectFirst3();
-                  select3.addEventListener('click', selects3);
-                  body3.addEventListener('click', hideselect3);
-                </script>
               </div>
 
               <div class="col-12 mt-3">
@@ -601,46 +398,6 @@
     </div>
   </div>
 
-  <!-- 
-  <div class="margin-tb">
-    <div class="container main-container">
-      <h3 class="main-title">
-        물품 보관은 물론<br /> 연계 비즈니스까지<br />
-        제공하는 슈가맨카고
-      </h3>
-      <div class="row mt-m">
-        <div class="col-md-4">
-          <img src="/assets/img/cargo_1@2x.jpg" class="img-fluid mt-5" alt="" />
-          <h6 class="main-text mt-4">물품 보관</h6>
-          <p class="sub-text">
-            집이나 사무실에 물건이 많아 공간이 부족하신가요?<br class="d-none d-xl-block d-lg-block" />
-            알맞은 크기의 창고를 선택하여 합리적인 가격으로
-            <br class="d-none d-xl-block d-lg-block" />
-            짐을 보관해보세요.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img src="/assets/img/cargo_2@2x.jpg" class="img-fluid mt-5" alt="" />
-          <h6 class="main-text mt-4">택배 서비스</h6>
-          <p class="sub-text">
-            슈가맨카고에서 바로 택배 발송이 가능합니다.<br class="d-none d-xl-block d-lg-block" />
-            재고 보관과 상품 배송을 한번에 해결할 수 있어<br class="d-none d-xl-block d-lg-block" />
-            온라인 쇼핑몰에게 알맞은 서비스입니다.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img src="/assets/img/cargo_3@2x.jpg" class="img-fluid mt-5" alt="" />
-          <h6 class="main-text mt-4">비상주 사무실 등록</h6>
-          <p class="sub-text">
-            창고 이용만으로 사업자 주소지 등록이<br class="d-none d-xl-block d-lg-block" />
-            가능합니다. 도착한 우편물도 슈가맨카고에서<br class="d-none d-xl-block d-lg-block" />
-            관리해 드립니다.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <!-- 스토리지사이즈 시작 -->
   <div class="storage-wrap margin-tb">
     <div class="container main-container">
@@ -796,24 +553,6 @@
     <span class="material-icons close-popup-web" data-banner="event_202108">close</span>
     <div class="swiper-container gallery-top">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="https://sugarmancargo.com/event/eventdetail.html?idx=89">
-            <img class="visit-slide-img-web" src="/assets/img/event/20220712_event.jpg" />
-          </a>
-        </div>
-        <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
-        <div class="swiper-slide">
-          <a href="https://sugarmancargo.com/event/eventdetail.html?idx=78">
-            <img class="visit-slide-img-web" src="/assets/img/event/cargo_popup_banner4.jpg" />
-          </a>
-        </div>
-        <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
-        <div class="swiper-slide">
-          <a href="/franchise/franchise.html">
-            <img class="visit-slide-img-web" src="/assets/img/event/cargo_popup_banner2.jpg" />
-          </a>
-        </div>
-
         <div class="swiper-container gallery-thumbs"></div>
       </div>
 
@@ -838,61 +577,12 @@
     </div>
   </div>
 
-  <!-- web-swiper -->
-  <script>
-    var galleryThumbsMobile = new Swiper(".gallery-thumbs", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTopMobile = new Swiper(".gallery-top", {
-      spaceBetween: 0,
-      speed: 500, // 넘어가는 시간
-      autoplay: {
-        delay: 3500, // 머무는 시간
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      thumbs: {
-        swiper: galleryThumbsMobile,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next-web",
-        prevEl: ".swiper-button-prev-web",
-      },
-    });
-  </script>
-
   <!-- mobile-popup -->
   <div class="popup-layer"></div>
   <div class="popup">
     <span class="material-icons close-popup" data-banner="event_202108">close</span>
     <div class="swiper-container gallery-top-mobile">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="https://sugarmancargo.com/event/eventdetail.html?idx=89">
-            <img class="visit-slide-img-web" src="/assets/img/event/20220712_event.jpg" />
-          </a>
-          <div class="swiper-container gallery-thumbs"></div>
-        </div>
-        <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
-        <div class="swiper-slide">
-          <a href="https://sugarmancargo.com/event/eventdetail.html?idx=78">
-            <img class="visit-slide-img" src="/assets/img/event/cargo_popup_banner4.jpg" />
-          </a>
-        </div>
-        <!-- * popup 이미지 추가 시 아래 코드 복붙하여 사용 -->
-        <div class="swiper-slide">
-          <a href="/franchise/franchise.html">
-            <img class="visit-slide-img" src="/assets/img/event/cargo_popup_banner2.jpg" />
-          </a>
-        </div>
-
         <div class="swiper-container gallery-thumbs-mobile"></div>
       </div>
 
@@ -916,134 +606,6 @@
       <div class="swiper-pagination swiper-pagination-mobile"></div>
     </div>
   </div>
-
-  <!-- 출처 : https://appsnuri.tistory.com/411 -->
-  <script>
-    $(document).ready(function () {
-      $(".sizeCheck").click(function (e) {
-        e.preventDefault();
-        var offset = $(".storage-wrap").offset();
-        // 선택한 태그의 위치를 반환
-
-        // animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
-        $("html").animate({
-          scrollTop: offset.top - 50,
-        },
-          400
-        );
-      });
-    });
-  </script>
-
-  <!-- mobile-swiper -->
-  <script>
-    var galleryThumbsMobile = new Swiper(".gallery-thumbs-mobile", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTopMobile = new Swiper(".gallery-top-mobile", {
-      spaceBetween: 0,
-      speed: 500,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination-mobile",
-        clickable: true,
-      },
-      thumbs: {
-        swiper: galleryThumbsMobile,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next-mobile",
-        prevEl: ".swiper-button-prev-mobile",
-      },
-    });
-  </script>
-
-  <script>
-    $(document).on("click", ".web-popup-layer", function () {
-      $(".web-popup").remove();
-      $(".web-popup-layer").remove();
-      $("html").removeClass("scroll-lock");
-      $("body").removeClass("scroll-lock");
-    });
-
-    $(document).on("click", ".close-popup-web", function () {
-      var getCookieName = $(this).attr("data-banner");
-      // setCookie(getCookieName, 'N', 1)
-      $(this).parents(".popup-banner").remove();
-      $(".web-popup").remove();
-      $(".web-popup-layer").remove();
-      $("html").removeClass("scroll-lock");
-      $("body").removeClass("scroll-lock");
-    });
-
-    $(document).on("click", ".popup-layer", function () {
-      $(".popup").remove();
-      $(".popup-layer").remove();
-      $("html").removeClass("scroll-lock");
-      $("body").removeClass("scroll-lock");
-    });
-
-    $(document).on("click", ".close-popup", function () {
-      // var getCookieName = $(this).attr('data-banner');
-      // setCookie(getCookieName, 'N', 1)
-      $(this).parents(".popup-banner").remove();
-      $(".popup").remove();
-      $(".popup-layer").remove();
-      $("html").removeClass("scroll-lock");
-      $("body").removeClass("scroll-lock");
-    });
-
-    function setCookie(name, value, expiredays) {
-      var todayDate = new Date();
-      todayDate.setDate(todayDate.getDate() + expiredays);
-      document.cookie =
-        name +
-        "=" +
-        escape(value) +
-        "; path=/; expires=" +
-        todayDate.toGMTString() +
-        ";";
-    }
-
-    //쿠키 불러오기
-    function getCookie(name) {
-      var obj = name + "=";
-      var x = 0;
-      while (x <= document.cookie.length) {
-        var y = x + obj.length;
-        if (document.cookie.substring(x, y) == obj) {
-          if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
-            endOfCookie = document.cookie.length;
-          return unescape(document.cookie.substring(y, endOfCookie));
-        }
-        x = document.cookie.indexOf(" ", x) + 1;
-        if (x == 0) break;
-      }
-      return "";
-    }
-
-    $(function () {
-      if ($(window).width() < 415) {
-        $(".close-popup").each(function () {
-          var getCookieName = $(this).attr("data-banner");
-          if (getCookie(getCookieName) != "N") {
-            $(this).parents(".popup").show();
-            $(".popup-layer").show();
-            $(".web-popup").hide();
-            $("html").addClass("scroll-lock");
-            $("body").addClass("scroll-lock");
-          }
-        });
-      }
-    });
-  </script>
 
   <div class="new_index4" style="margin: 220px 0">
     <div class="container main-container">
@@ -1132,186 +694,21 @@
       </div>
     </div>
     <div class="container-fluid">
-      <!-- Swiper = web -->
+      <!-- swiper-web -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="/branch/branch1.html">
-              <div class="space_name">인천 부평점</div>
-              <img src="/assets/img/branch_list/branch_list_1@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch2.html">
-              <div class="space_name">서울 군자점</div>
-              <img src="/assets/img/branch_list/branch_list_2@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch3.html">
-              <div class="space_name">부천 상동점</div>
-              <img src="/assets/img/branch_list/branch_list_3@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch4.html">
-              <div class="space_name">안양 명학점</div>
-              <img src="/assets/img/branch_list/branch_list_4@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
         </div>
         <div class="swiper-pagination pagination"></div>
       </div>
 
-      <!-- Swiper = mobile -->
+      <!-- swiper-mobile -->
       <div class="swiper mySwiper-mobile">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="/branch/branch1.html">
-              <div class="space_name">인천 부평점</div>
-              <img src="/assets/img/branch_list/branch_list_1@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch2.html">
-              <div class="space_name">서울 군자점</div>
-              <img src="/assets/img/branch_list/branch_list_2@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch3.html">
-              <div class="space_name">부천 상동점</div>
-              <img src="/assets/img/branch_list/branch_list_3@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="/branch/branch4.html">
-              <div class="space_name">안양 명학점</div>
-              <img src="/assets/img/branch_list/branch_list_4@2x.jpg" alt="" style="width: 100%" />
-            </a>
-          </div>
         </div>
         <div class="swiper-pagination-mobile pagination"></div>
       </div>
-
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-      <!-- Initialize Swiper -->
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-
-        var swiper = new Swiper(".mySwiper-mobile", {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination-mobile",
-            clickable: true,
-          },
-        });
-
-        $(function () {
-          if ($(window).width() < 415) {
-            $(".mySwiper-mobile").show();
-            $(".mySwiper").hide();
-          } else {
-            $(".mySwiper-mobile").hide();
-            $(".mySwiper").show();
-          }
-        });
-      </script>
     </div>
   </div>
-
-  <style>
-    .franchise_3 .swiper-pagination-bullet {
-      width: var(--swiper-pagination-bullet-width,
-          var(--swiper-pagination-bullet-size, 10px));
-      height: var(--swiper-pagination-bullet-height,
-          var(--swiper-pagination-bullet-size, 10px));
-    }
-
-    .franchise_3 {
-      position: relative;
-    }
-
-    .franchise_3 .mySwiper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .franchise_3 .space_name {
-      position: absolute;
-      left: 23px;
-      bottom: 23px;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 7px 10px;
-      background-color: #fff;
-      border-radius: 50px;
-      opacity: 0.9;
-      color: #222 !important;
-    }
-
-    .franchise_3 .swiper-pagination {
-      position: relative;
-      margin: 0 auto;
-      width: 100% !important;
-      max-width: 35px !important;
-      bottom: 30px !important;
-    }
-
-    .franchise_3 .swiper-pagination-mobile {
-      position: relative;
-      margin: 0 auto;
-      width: 100% !important;
-      max-width: 70px !important;
-      bottom: 30px !important;
-      z-index: 10;
-    }
-
-    .franchise_3 .swiper-slide {
-      border-radius: 20px !important;
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      position: relative;
-
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-    .franchise_3 .swiper-slide img {
-      border-radius: 20px !important;
-      display: block;
-      width: 100%;
-      height: 460px;
-      object-fit: cover;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
 
   <footer include-html="/common/footer.html"></footer>
 </body>
@@ -1417,6 +814,529 @@
         "/assets/img/sugarmancargo_logo_wh@2x.png"
       );
       $(".mobile-menu").css("top", "55px");
+    }
+  });
+</script>
+
+<style>
+  .franchise_3 .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 10px));
+    height: var(--swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 10px));
+  }
+
+  .franchise_3 {
+    position: relative;
+  }
+
+  .franchise_3 .mySwiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .franchise_3 .space_name {
+    position: absolute;
+    left: 23px;
+    bottom: 23px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 7px 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    opacity: 0.9;
+    color: #222 !important;
+  }
+
+  .franchise_3 .swiper-pagination {
+    position: relative;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 35px !important;
+    bottom: 30px !important;
+  }
+
+  .franchise_3 .swiper-pagination-mobile {
+    position: relative;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 70px !important;
+    bottom: 30px !important;
+    z-index: 10;
+  }
+
+  .franchise_3 .swiper-slide {
+    border-radius: 20px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .franchise_3 .swiper-slide img {
+    border-radius: 20px !important;
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+
+<script>
+  // 👉 지점 추가 시 (1:1문의 지점 선택 드롭다운/지점 소개 슬라이드(웹/모바일))
+  const dropdownList = [
+    { idx: 0 },
+    { idx: 1, name: "인천 부평점" },
+    { idx: 2, name: "서울 군자점" },
+    { idx: 3, name: "부천 상동점" },
+    { idx: 4, name: "안양 명학점" }
+  ];
+
+  let indexDropDownHtml = '';
+  let swiperHtml = '';
+
+  dropdownList.forEach((item, i) => {
+    if (item.idx === 0) {
+      indexDropDownHtml += '<li value="" disabled selected hidden>문의 지점</li>';
+    } else {
+      indexDropDownHtml += '<li value=' + String(item.idx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
+
+      swiperHtml += '<div class="swiper-slide">';
+      swiperHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+      swiperHtml += '<div class="space_name">' + item.name + '</div>';
+      swiperHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" style="width: 100%" />';
+      swiperHtml += '</a>';
+      swiperHtml += '</div>';
+    };
+  });
+
+  $(".branchDropDown").append(indexDropDownHtml);
+  $(".mySwiper .swiper-wrapper").append(swiperHtml);
+  $(".mySwiper-mobile .swiper-wrapper").append(swiperHtml);
+</script>
+
+<script>
+  // 👉 배너 추가 시
+  const bannerList = [
+    { href: "https://sugarmancargo.com/event/eventdetail.html?idx=89", src: "/assets/img/event/20220712_event.jpg" },
+    { href: "https://sugarmancargo.com/event/eventdetail.html?idx=78", src: "/assets/img/event/cargo_popup_banner4.jpg" },
+    { href: "/franchise/franchise.html", src: "/assets/img/event/cargo_popup_banner2.jpg" },
+  ];
+
+  let popupWebHtml = '';
+  let popupMobileHtml = '';
+
+  bannerList.forEach((item, i) => {
+    popupWebHtml += '<div class="swiper-slide">';
+    popupWebHtml += '<a href=' + item.href + '>';
+    popupWebHtml += '<img class="visit-slide-img-web" src=' + item.src + ' />';
+    popupWebHtml += '</a>';
+    popupWebHtml += '</div>';
+
+    popupMobileHtml += '<div class="swiper-slide">';
+    popupMobileHtml += '<a href=' + item.href + '>';
+    popupMobileHtml += '<img class="visit-slide-img" src=' + item.src + ' />';
+    popupMobileHtml += '</a>';
+    popupMobileHtml += '</div>';
+  });
+
+  $(".web-popup .swiper-wrapper").append(popupWebHtml);
+  $(".popup .swiper-wrapper").append(popupMobileHtml);
+</script>
+
+<script>
+  const body1 = document.querySelector('body');
+  const select1 = document.querySelector(`[data-role="selectBox1"]`);
+  const values1 = select1.querySelector(`[date-value="optValue1"]`);
+  const option1 = select1.querySelector('ul');
+  const opts1 = option1.querySelectorAll('li');
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects1(e) {
+    e.stopPropagation();
+    option1.setAttribute('style', `top:${select1.offsetHeight}px`)
+    if (option1.classList.contains('hide')) {
+      option1.classList.remove('hide');
+      option1.classList.add('show');
+    } else {
+      option1.classList.add('hide');
+      option1.classList.remove('show');
+    }
+    selectOpt1();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt1() {
+    opts1.forEach(opt1 => {
+      const innerValue1 = opt1.innerHTML;
+
+      function changeValue1() {
+        values1.innerHTML = innerValue1;
+        $(".selected-option1").text(innerValue1);
+        $("#branch").attr("value", innerValue1.split("호점]")[0].split("[")[1]);
+      }
+
+      opt1.addEventListener('click', changeValue1);
+    });
+  }
+
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst1() {
+    const firstValue1 = opts1[0].innerHTML;
+    values1.innerHTML = `${firstValue1}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect1() {
+    if (option1.classList.contains('show')) {
+      option1.classList.add('hide');
+      option1.classList.remove('show');
+    }
+  }
+
+  selectFirst1();
+  select1.addEventListener('click', selects1);
+  body1.addEventListener('click', hideselect1);
+</script>
+
+<script>
+  const body2 = document.querySelector('body');
+  const select2 = document.querySelector(`[data-role="selectBox2"]`);
+  const values2 = select2.querySelector(`[date-value="optValue2"]`);
+  const option2 = select2.querySelector('ul');
+  const opts2 = option2.querySelectorAll('li');
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects2(e) {
+    e.stopPropagation();
+    option2.setAttribute('style', `top:${select2.offsetHeight}px`)
+    if (option2.classList.contains('hide')) {
+      option2.classList.remove('hide');
+      option2.classList.add('show');
+    } else {
+      option2.classList.add('hide');
+      option2.classList.remove('show');
+    }
+    selectOpt2();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt2() {
+    opts2.forEach(opt2 => {
+      const innerValue2 = opt2.innerHTML;
+
+      const typeBox = {
+        큐브: "cb",
+        스몰: "sm",
+        미디엄: "md",
+        라지: "lg",
+        엑스라지: "xl",
+        "상담 후 결정": 'etc'
+      }
+
+      function changeValue2() {
+        values2.innerHTML = innerValue2;
+        $(".selected-option2").text(innerValue2);
+        $("#storageSize").attr("value", typeBox[innerValue2]);
+      }
+
+      opt2.addEventListener('click', changeValue2);
+    });
+  }
+
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst2() {
+    const firstValue2 = opts2[0].innerHTML;
+    values2.innerHTML = `${firstValue2}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect2() {
+    if (option2.classList.contains('show')) {
+      option2.classList.add('hide');
+      option2.classList.remove('show');
+    }
+  }
+
+  selectFirst2();
+  select2.addEventListener('click', selects2);
+  body2.addEventListener('click', hideselect2);
+</script>
+
+<script>
+  const body3 = document.querySelector('body');
+  const select3 = document.querySelector(`[data-role="selectBox3"]`);
+  const values3 = select3.querySelector(`[date-value="optValue3"]`);
+  const option3 = select3.querySelector('ul');
+  const opts3 = option3.querySelectorAll('li');
+
+  /* 셀렉트 영역 클릭 시 옵션 숨기기, 보이기 */
+  function selects3(e) {
+    e.stopPropagation();
+    option3.setAttribute('style', `top:${select3.offsetHeight}px`)
+    if (option3.classList.contains('hide')) {
+      option3.classList.remove('hide');
+      option3.classList.add('show');
+    } else {
+      option3.classList.add('hide');
+      option3.classList.remove('show');
+    }
+    selectOpt3();
+  }
+
+  /* 옵션 선택 */
+  function selectOpt3() {
+    opts3.forEach(opt3 => {
+      const innerValue3 = opt3.innerHTML;
+
+      function changeValue3() {
+        values3.innerHTML = innerValue3;
+        $(".selected-option3").text(innerValue3);
+
+        const routeBox = {
+          인스타그램: 1,
+          페이스북: 2,
+          블로그: 3,
+          구글: 4,
+          지인소개: 5,
+          기타: 6
+        }
+
+        $("#route").attr("value", routeBox[innerValue3]);
+      }
+
+      opt3.addEventListener('click', changeValue3);
+    });
+  }
+
+  /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+  function selectFirst3() {
+    const firstValue3 = opts3[0].innerHTML;
+    values3.innerHTML = `${firstValue3}`;
+  }
+
+  /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+  function hideselect3() {
+    if (option3.classList.contains('show')) {
+      option3.classList.add('hide');
+      option3.classList.remove('show');
+    }
+  }
+
+  selectFirst3();
+  select3.addEventListener('click', selects3);
+  body3.addEventListener('click', hideselect3);
+</script>
+
+<!-- 출처 : https://appsnuri.tistory.com/411 -->
+<script>
+  $(document).ready(function () {
+    $(".sizeCheck").click(function (e) {
+      e.preventDefault();
+      var offset = $(".storage-wrap").offset();
+      // 선택한 태그의 위치를 반환
+
+      // animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+      $("html").animate({
+        scrollTop: offset.top - 50,
+      },
+        400
+      );
+    });
+  });
+</script>
+
+<!-- web-swiper -->
+<script>
+  var galleryThumbsMobile = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTopMobile = new Swiper(".gallery-top", {
+    spaceBetween: 0,
+    speed: 500, // 넘어가는 시간
+    autoplay: {
+      delay: 3500, // 머무는 시간
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: galleryThumbsMobile,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-web",
+      prevEl: ".swiper-button-prev-web",
+    },
+  });
+</script>
+
+<!-- mobile-swiper -->
+<script>
+  var galleryThumbsMobile = new Swiper(".gallery-thumbs-mobile", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTopMobile = new Swiper(".gallery-top-mobile", {
+    spaceBetween: 0,
+    speed: 500,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination-mobile",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: galleryThumbsMobile,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-mobile",
+      prevEl: ".swiper-button-prev-mobile",
+    },
+  });
+</script>
+
+<script>
+  $(document).on("click", ".web-popup-layer", function () {
+    $(".web-popup").remove();
+    $(".web-popup-layer").remove();
+    $("html").removeClass("scroll-lock");
+    $("body").removeClass("scroll-lock");
+  });
+
+  $(document).on("click", ".close-popup-web", function () {
+    var getCookieName = $(this).attr("data-banner");
+    // setCookie(getCookieName, 'N', 1)
+    $(this).parents(".popup-banner").remove();
+    $(".web-popup").remove();
+    $(".web-popup-layer").remove();
+    $("html").removeClass("scroll-lock");
+    $("body").removeClass("scroll-lock");
+  });
+
+  $(document).on("click", ".popup-layer", function () {
+    $(".popup").remove();
+    $(".popup-layer").remove();
+    $("html").removeClass("scroll-lock");
+    $("body").removeClass("scroll-lock");
+  });
+
+  $(document).on("click", ".close-popup", function () {
+    // var getCookieName = $(this).attr('data-banner');
+    // setCookie(getCookieName, 'N', 1)
+    $(this).parents(".popup-banner").remove();
+    $(".popup").remove();
+    $(".popup-layer").remove();
+    $("html").removeClass("scroll-lock");
+    $("body").removeClass("scroll-lock");
+  });
+
+  function setCookie(name, value, expiredays) {
+    var todayDate = new Date();
+    todayDate.setDate(todayDate.getDate() + expiredays);
+    document.cookie =
+      name +
+      "=" +
+      escape(value) +
+      "; path=/; expires=" +
+      todayDate.toGMTString() +
+      ";";
+  }
+
+  //쿠키 불러오기
+  function getCookie(name) {
+    var obj = name + "=";
+    var x = 0;
+    while (x <= document.cookie.length) {
+      var y = x + obj.length;
+      if (document.cookie.substring(x, y) == obj) {
+        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+          endOfCookie = document.cookie.length;
+        return unescape(document.cookie.substring(y, endOfCookie));
+      }
+      x = document.cookie.indexOf(" ", x) + 1;
+      if (x == 0) break;
+    }
+    return "";
+  }
+
+  $(function () {
+    if ($(window).width() < 415) {
+      $(".close-popup").each(function () {
+        var getCookieName = $(this).attr("data-banner");
+        if (getCookie(getCookieName) != "N") {
+          $(this).parents(".popup").show();
+          $(".popup-layer").show();
+          $(".web-popup").hide();
+          $("html").addClass("scroll-lock");
+          $("body").addClass("scroll-lock");
+        }
+      });
+    }
+  });
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper-mobile", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination-mobile",
+      clickable: true,
+    },
+  });
+
+  $(function () {
+    if ($(window).width() < 415) {
+      $(".mySwiper-mobile").show();
+      $(".mySwiper").hide();
+    } else {
+      $(".mySwiper-mobile").hide();
+      $(".mySwiper").show();
     }
   });
 </script>
