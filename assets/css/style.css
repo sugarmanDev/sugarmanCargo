@@ -514,7 +514,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .footer-t {
   padding: 0;
-  padding-top: 62px;
+  padding-top: 125px;
 }
 
 .footer a:hover {
