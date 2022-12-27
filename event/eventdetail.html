@@ -425,7 +425,7 @@
       }
 
       if (data.endYN === 'Y') {
-        window.location.href = '/pages/404.html'
+        window.location.href = '/404.html'
       }
 
     }, 'json');
@@ -457,7 +457,7 @@
         dataType: 'json',
         success: function (data) {
           if (data.result == 'success') {
-            location.replace('/pages/success.html');
+            location.replace('/success.html');
           } else {
             alert('문제가 발생했습니다.\n다시 시도해주세요.')
           }

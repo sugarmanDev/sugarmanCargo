@@ -430,7 +430,7 @@
                 <label for="check" class="check"></label>
                 <p class="agree-txt">
                   (필수) 슈가맨카고
-                  <a href="/pages/privacy.html">개인정보 수집</a> 및 활용에
+                  <a href="/privacy.html">개인정보 수집</a> 및 활용에
                   동의합니다.
                 </p>
               </div>
@@ -1103,7 +1103,7 @@
         dataType: "json",
         success: function (data) {
           if (data.result == "success") {
-            location.replace("/pages/success.html");
+            location.replace("/success.html");
           } else {
             alert("문제가 발생했습니다.\n다시 시도해주세요.");
           }
@@ -1199,7 +1199,7 @@
         dataType: "json",
         success: function (data) {
           if (data.result == "success") {
-            location.replace("/pages/success.html");
+            location.replace("/success.html");
           } else {
             alert("문제가 발생했습니다.\n다시 시도해주세요.");
             $(".submit-form").attr("disabled", false);
