@@ -159,8 +159,6 @@
                         119: "/assets/img/event/221227_카고부평_새해맞이-6개월.jpg"
                     }
 
-                    console.log(data)
-
                     for (var idx = data.length - 1; idx >= 0; idx--) {
                         // 프로그램이 개발된 상태가 아니라서 링크로 연결하지 말고 이미지 받으면 이미지로 넣어야 함 !!!
 
@@ -168,7 +166,7 @@
                         html += '<div class="card border-0">';
                         html += '<a href="/event/eventdetail.html?idx=' + data[idx].idx + '">';
 
-                        html += "<img src=" + imgObj[Number(idx)] + " class='card-img-top' alt='...'/>";
+                        html += "<img src=" + imgObj[data[idx].idx] + " class='card-img-top' alt='...'/>";
 
                         html +=
                             "<div class='event-card-body'><h5 class='card-title mb-1'>" +
