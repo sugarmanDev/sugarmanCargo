@@ -878,7 +878,7 @@
   /* 옵션 선택 */
   function selectOpt2() {
     opts2.forEach((opt2) => {
-      const innerValue2 = opt2.innerHTML;
+      const innerValue2 = opt2.innerHTML === "상담 후 결정" ? opt2.innerHTML : opt2.innerHTML.split(">")[1];
 
       const typeBox = {
         큐브: "cb",
@@ -886,20 +886,19 @@
         미디엄: "md",
         라지: "lg",
         엑스라지: "xl",
-        "상담 후 결정": "etc",
-      };
-
-      function changeValue2() {
-        values2.innerHTML = innerValue2;
-        console.log(exec(innerValue2));
-        $(".selected-option2").text(innerValue2);
-        $("#storageSize").attr(
-          "value",
-          typeBox[innerValue2]
-        );
+        "상담 후 결정": 'etc'
       }
 
-      opt2.addEventListener("click", changeValue2);
+      function changeValue2() {
+        values2.innerHTML = innerValue2.trim();
+        $(".selected-option2").text(innerValue2.trim());
+        $("#storageSize").attr("value", typeBox[innerValue2.trim()]);
+
+        // ..?? 절대 지우면 안됨
+        console.log(exec(innerValue2.trim()));
+      }
+
+      opt2.addEventListener('click', changeValue2);
     });
   }
 
@@ -1106,7 +1105,7 @@
   /* 옵션 선택 */
   function selectOpt5() {
     opts5.forEach((opt5) => {
-      const innerValue5 = opt5.innerHTML;
+      const innerValue5 = opt5.innerHTML === "상담 후 결정" ? opt5.innerHTML : opt5.innerHTML.split(">")[1];
 
       const typeBox = {
         큐브: "cb",
@@ -1118,14 +1117,12 @@
       };
 
       function changeValue5() {
-        values5.innerHTML = innerValue5;
+        values5.innerHTML = innerValue5.trim();
+        $(".selected-option5").text(innerValue5.trim());
+        $("#storageSize2").attr("value", typeBox[innerValue5.trim()]);
+
         // ..?? 절대 지우면 안됨
-        console.log(exec(innerValue5));
-        $(".selected-option5").text(innerValue5);
-        $("#storageSize2").attr(
-          "value",
-          typeBox[innerValue5]
-        );
+        console.log(exec(innerValue5.trim()));
       }
 
       opt5.addEventListener("click", changeValue5);
