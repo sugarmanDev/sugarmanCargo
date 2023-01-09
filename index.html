@@ -1055,12 +1055,8 @@
       }
 
       function changeValue2() {
-        values2.innerHTML = innerValue2.trim();
-        $(".selected-option2").text(innerValue2.trim());
+        values2.innerHTML = opt2.innerHTML;;
         $("#storageSize").attr("value", typeBox[innerValue2.trim()]);
-
-        // ..?? 절대 지우면 안됨
-        console.log(exec(innerValue2.trim()));
       }
 
       opt2.addEventListener('click', changeValue2);
