@@ -209,6 +209,19 @@
   </style>
 
   <script>
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > document.body.offsetHeight - 1000) {
+        $(".sizeCheck").attr("style", "display: none");
+        $(".main_inquiry_btn").attr("style", "display: none");
+      } else {
+        $(".sizeCheck").attr("style", "display: block");
+        $(".main_inquiry_btn").attr("style", "display: block");
+
+      }
+    });
+  </script>
+
+  <script>
     $(document).on("click", ".mobile-menu-place-i", function () {
       $(".mobile-menu").toggle();
       if ($(".mobile-menu-place-i").hasClass("opened")) {

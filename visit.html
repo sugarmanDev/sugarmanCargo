@@ -742,6 +742,17 @@
 </script>
 
 <script>
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > document.body.offsetHeight - 1000) {
+      $(".main_inquiry_btn").attr("style", "display: none");
+    } else {
+      $(".main_inquiry_btn").attr("style", "display: block");
+
+    }
+  });
+</script>
+
+<script>
   // 👉 지점 추가 시 (방문예약 지점 선택 드롭다운/1:1문의 문의 지점 드롭다운)
   const dropdownList = [
     { idx: 0 },

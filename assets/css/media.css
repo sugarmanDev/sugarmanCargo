@@ -490,6 +490,11 @@
   .footer-con-3 strong {
     display: none;
   }
+
+  .qna-box .col-md-5 {
+    max-width: 100%;
+    flex: none;
+  }
 }
 
 @media (min-width: 415px) and (max-width: 768px) {
@@ -573,6 +578,10 @@
   .main-slide-next.next-slide {
     left: 540px !important;
     top: -258px !important;
+  }
+
+  .qna-box .col-md-3 {
+    display: none;
   }
 }
 
@@ -724,9 +733,11 @@
   .franchise_3 {
     margin: 120px 0 !important;
   }
+
   .franchise_3 .col-md-12.mb-5 {
     margin-bottom: 8px !important;
   }
+
   .franchise_3 .space_name {
     font-size: 15px !important;
     left: 20px !important;
@@ -843,6 +854,7 @@
   .new_index1 {
     margin: 120px 0 !important;
   }
+
   .new_index3 .col-md-12.mb-4 {
     margin-bottom: 0px !important;
   }
@@ -1195,6 +1207,7 @@
   .new_visit_wrap #visitTime button {
     width: 29.5% !important;
   }
+
   .navbar {
     padding-top: 7px !important;
     padding-bottom: 7px !important;
@@ -1665,7 +1678,6 @@
   }
 
   .visit_main_inquiry_btn {
-    bottom: 85px !important;
     z-index: 50;
   }
 
