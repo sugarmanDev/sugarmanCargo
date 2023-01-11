@@ -950,9 +950,7 @@
 <script>
   // 👉 배너 추가 시
   const bannerList = [
-    { href: "https://sugarmancargo.com/event/eventdetail.html?idx=119", src: "/assets/img/event/221227_카고부평_새해맞이-6개월.jpg" },
     { href: "https://sugarmancargo.com/event/eventdetail.html?idx=89", src: "/assets/img/event/20220712_event.jpg" },
-    { href: "https://sugarmancargo.com/event/eventdetail.html?idx=78", src: "/assets/img/event/cargo_popup_banner4.jpg" },
     { href: "/franchise/franchise.html", src: "/assets/img/event/cargo_popup_banner2.jpg" },
   ];
 
@@ -1057,7 +1055,7 @@
   /* 옵션 선택 */
   function selectOpt2() {
     opts2.forEach(opt2 => {
-      const innerValue2 = opt2.innerHTML;
+      const innerValue2 = opt2.innerHTML === "상담 후 결정" ? opt2.innerHTML : opt2.innerHTML.split(">")[1];
 
       const typeBox = {
         큐브: "cb",
@@ -1069,11 +1067,8 @@
       }
 
       function changeValue2() {
-        values2.innerHTML = innerValue2;
-        // ..?? 절대 지우면 안됨
-        console.log(exec(innerValue2));
-        $(".selected-option2").text(innerValue2);
-        $("#storageSize").attr("value", typeBox[innerValue2]);
+        values2.innerHTML = opt2.innerHTML;;
+        $("#storageSize").attr("value", typeBox[innerValue2.trim()]);
       }
 
       opt2.addEventListener('click', changeValue2);

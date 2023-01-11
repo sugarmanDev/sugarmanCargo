@@ -514,7 +514,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 .footer-t {
   padding: 0;
-  padding-top: 125px;
+  padding-top: 58px;
 }
 
 .footer a:hover {
@@ -1401,10 +1401,14 @@ input[id="privacy"] + label {
   border-radius: 500px !important;
   margin: 0 auto;
   text-align: center;
-  padding-top: 12%;
+  padding-top: 0 !important;
   margin-bottom: 50px;
   background-repeat: no-repeat;
   background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 11;
 }
 .new_procedure .join-g-pro-con img {
@@ -1419,23 +1423,6 @@ input[id="privacy"] + label {
   text-align: center;
   letter-spacing: -0.4px;
 }
-/* 
-.join-g-pro-con {
-  width: 11.25rem;
-  height: 11.25rem;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 60px;
-  margin-bottom: 50px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.join-g-pro-con span {
-  color: #e9474d;
-} */
 
 .g-pro:last-child {
   margin-bottom: 100px;
