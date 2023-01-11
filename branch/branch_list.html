@@ -242,15 +242,17 @@
     "/promo/sinjungdong-work-december"
     - 이벤트 문구 없는 경우 > eventMentYN: 0
     3) href(지점 링크 or 이벤트 링크) 없으면 비워두면 됨
+    4) openYN (지점 오픈 유무) -> 0일 때는 openText도 같이 기재
 -->
 <script>
 
   // 👉 지점 추가 시
   const branchs = [
-    { idx: 1, name: "인천 부평점", address: "인천 부평구 대정로66 다운타운일레븐 5층 502-1호", phone: "032-504-2327", eventMentYN: 0 },
-    { idx: 2, name: "서울 군자점", address: "천호대로 536 서림빌딩 지하 1층", phone: "02-6956-9800", eventMentYN: 0 },
-    { idx: 3, name: "부천 상동점", address: "경기도 부천시 길주로 70 강산타운 805호", phone: "032-322-6160", eventMentYN: 0 },
-    { idx: 4, name: "안양 명학점", address: "만안구 덕천로 152번길 25 아이에스비즈타워 지하2층", phone: "031-8086-4362", eventMentYN: 1, eventMent: "오픈 기념 30% 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=89" },
+    { idx: 1, name: "인천 부평점", openYN: 1, address: "인천 부평구 대정로66 다운타운일레븐 5층 502-1호", phone: "032-504-2327", eventMentYN: 0 },
+    { idx: 2, name: "서울 군자점", openYN: 1, address: "천호대로 536 서림빌딩 지하 1층", phone: "02-6956-9800", eventMentYN: 0 },
+    { idx: 3, name: "부천 상동점", openYN: 1, address: "경기도 부천시 길주로 70 강산타운 805호", phone: "032-322-6160", eventMentYN: 0 },
+    { idx: 4, name: "안양 명학점", openYN: 1, address: "만안구 덕천로 152번길 25 아이에스비즈타워 지하2층", phone: "031-8086-4362", eventMentYN: 1, eventMent: "오픈 기념 30% 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=89" },
+    { idx: 5, name: "인천 갈산점", openYN: 0, openText: "3월 중 오픈 예정", address: "인천 부평구 주부토로231 갈산홈프라자 4층 408, 409호", phone: "", eventMentYN: 0 },
   ];
 
   let branchsHtml = "";
@@ -262,15 +264,26 @@
       branchsHtml += '<div class="row d-flex align-items-center" style="margin-top:30px;">';
     }
     branchsHtml += '<div class="col-md-7 col-xs-6 mb-3">';
-    branchsHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
-    branchsHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
-    branchsHtml += '</a>';
+    if (Boolean(item.openYN)) {
+      branchsHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+      branchsHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
+      branchsHtml += '</a>';
+    } else {
+      branchsHtml += '<div class="preparing-area" id="branch' + item.idx + '">' + item.openText + '</div>'
+    }
     branchsHtml += '</div>';
     branchsHtml += '<div class="col-md-5 col-xs-6 mb-3">';
     branchsHtml += '<div class="branch-list-box branch-box">';
-    branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title" href="/branch/branch' + String(item.idx) + '.html">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
-    branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">주소<span>I</span>' + item.address + '</a></p><br>';
-    branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">문의<span>I</span></a><a href="tel:' + item.phone + '">' + item.phone + '</a></p>';
+    if (item.openYN) {
+      branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title" href="/branch/branch' + String(item.idx) + '.html">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
+      branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">주소<span>I</span>' + item.address + '</a></p><br>';
+    } else {
+      branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
+      branchsHtml += '<p class="branch-list-address"><a class="detail-a">주소<span>I</span>' + item.address + '</a></p><br>';
+    }
+    if (item.phone) {
+      branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">문의<span>I</span></a><a href="tel:' + item.phone + '">' + item.phone + '</a></p>';
+    }
 
     if (Boolean(item.eventMentYN)) {
       branchsHtml += '<div>';
