@@ -961,21 +961,12 @@
     opts3.forEach((opt3) => {
       const innerValue3 = opt3.innerHTML;
 
-      const routeBox = {
-        인스타그램: 1,
-        페이스북: 2,
-        블로그: 3,
-        구글: 4,
-        지인추천: 5,
-        기타: 6,
-      };
-
       function changeValue3() {
         values3.innerHTML = innerValue3;
         $(".selected-option3").text(innerValue3);
         $("#branch_desktop").attr(
           "value",
-          routeBox[innerValue3]
+          innerValue3
         );
       }
 
@@ -1188,16 +1179,7 @@
         values6.innerHTML = innerValue6;
         $(".selected-option6").text(innerValue6);
 
-        const routeBox = {
-          인스타그램: 1,
-          페이스북: 2,
-          블로그: 3,
-          구글: 4,
-          지인소개: 5,
-          기타: 6,
-        };
-
-        $("#route").attr("value", routeBox[innerValue6]);
+        $("#route").attr("value", innerValue6);
       }
 
       opt6.addEventListener("click", changeValue6);

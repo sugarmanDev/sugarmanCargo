@@ -1125,16 +1125,7 @@
         values3.innerHTML = innerValue3;
         $(".selected-option3").text(innerValue3);
 
-        const routeBox = {
-          인스타그램: 1,
-          페이스북: 2,
-          블로그: 3,
-          구글: 4,
-          지인소개: 5,
-          기타: 6
-        }
-
-        $("#route").attr("value", routeBox[innerValue3]);
+        $("#route").attr("value", innerValue3);
       }
 
       opt3.addEventListener('click', changeValue3);
