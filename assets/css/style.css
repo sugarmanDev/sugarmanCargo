@@ -1500,15 +1500,15 @@ input[id="privacy"]+label {
 }
 
 .preparing-area {
-  width: 100%;
-  max-width: 705px;
-  line-height: 400px;
   text-align: center;
   font-size: 30px;
   font-weight: 500;
-  border: 1px solid #dedede;
   border-radius: 20px;
-  background-color: #dedede;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #212529;
   opacity: 0.5;
 }
 
