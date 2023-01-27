@@ -43,25 +43,24 @@ function set_date_picker(selector, type) {
     onRenderCell: function (date, cellType) {
       if (cellType == "day") {
         var isDisabled = false;
-
         var day = date.getDay();
         if (day == 0 || day == 6) {
           isDisabled = true;
         } else {
-          var year = date.getFullYear();
+          // var year = date.getFullYear();
           var month = 1 + date.getMonth(); //M
           month = month >= 10 ? month : "0" + month; //month 두자리로 저장
 
           var day = date.getDate(); //d
           day = day >= 10 ? day : "0" + day; //day
 
-          var set_disabled = month + day;
+          var set_disabled = String(month) + String(day);
 
-          var get_holiday1 = solar_holidays.indexOf(set_disabled);
-          var get_holiday2 = luna_holidays.indexOf(set_disabled);
-          var get_holiday3 = added_holidays.indexOf(set_disabled);
+          let get_holiday1 = solar_holidays.includes(set_disabled);
+          let get_holiday2 = set_luna_holidays.includes(set_disabled);
+          let get_holiday3 = added_holidays.includes(set_disabled);
 
-          if (get_holiday1 > -1 || get_holiday2 > -1 || get_holiday3 > -1) {
+          if (get_holiday1 || get_holiday2 || get_holiday3) {
             isDisabled = true;
           }
         }
