@@ -25,8 +25,14 @@ var added_holidays = ["1009"]; // 추가 휴일
 
 var current_year = new Date().getFullYear();
 set_luna_holidays.forEach(function (value) {
-  var set_holiday = calc_lunar(current_year + value);
-  luna_holidays.push(set_holiday);
+  if (value === "1230" || value === "1231") {
+    var set_holiday = calc_lunar(current_year + "0101");
+
+    luna_holidays.push(`0${Number(set_holiday - 1)}`);
+  } else {
+    var set_holiday = calc_lunar(current_year + value);
+    luna_holidays.push(set_holiday);
+  }
 });
 
 function set_date_picker(selector, type) {
