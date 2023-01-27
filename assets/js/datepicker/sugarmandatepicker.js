@@ -5,11 +5,11 @@ var solar_holidays = [
   "0301",
   "0505",
   "0606",
-  "0717",
   "0815",
   "1003",
+  "1009",
   "1225",
-]; //양력휴일
+]; // 양력 휴일
 var set_luna_holidays = [
   "1231",
   "0101",
@@ -18,10 +18,10 @@ var set_luna_holidays = [
   "0814",
   "0815",
   "0816",
-]; //음력휴일
+]; // 음력 휴일
 var luna_holidays = [];
 
-var added_holidays = []; //추가 휴일
+var added_holidays = ["1009"]; // 추가 휴일
 
 var current_year = new Date().getFullYear();
 set_luna_holidays.forEach(function (value) {
