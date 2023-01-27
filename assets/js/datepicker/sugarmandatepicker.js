@@ -61,6 +61,7 @@ function set_date_picker(selector, type) {
           let get_holiday2 = luna_holidays.includes(set_disabled);
           let get_holiday3 = added_holidays.includes(set_disabled);
 
+          console.log(set_disabled);
           if (get_holiday1 || get_holiday2 || get_holiday3) {
             isDisabled = false;
           }
