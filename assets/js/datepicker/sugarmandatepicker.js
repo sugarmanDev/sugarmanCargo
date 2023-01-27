@@ -57,7 +57,7 @@ function set_date_picker(selector, type) {
           var set_disabled = String(month) + String(day);
 
           let get_holiday1 = solar_holidays.includes(set_disabled);
-          let get_holiday2 = set_luna_holidays.includes(set_disabled);
+          let get_holiday2 = luna_holidays.includes(set_disabled);
           let get_holiday3 = added_holidays.includes(set_disabled);
 
           if (get_holiday1 || get_holiday2 || get_holiday3) {
