@@ -912,12 +912,14 @@
 
 <script>
   // 👉 지점 추가 시 (1:1문의 지점 선택 드롭다운/지점 소개 슬라이드(웹/모바일))
+  // 1:1문의에만 추가하는 경우 inquiry: true 추가하세요.
   const dropdownList = [
     { idx: 0 },
     { idx: 1, name: "인천 부평점", branchIdx: "99" },
     { idx: 2, name: "서울 군자점", branchIdx: "100" },
     { idx: 3, name: "부천 상동점", branchIdx: "101" },
-    { idx: 4, name: "안양 명학점", branchIdx: "102" }
+    { idx: 4, name: "안양 명학점", branchIdx: "102" },
+    { idx: 5, name: "인천 갈산점", branchIdx: "103", inquiry: true }
   ];
 
   let indexDropDownHtml = '';
@@ -929,12 +931,14 @@
     } else {
       indexDropDownHtml += '<li value=' + String(item.branchIdx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
 
-      swiperHtml += '<div class="swiper-slide">';
-      swiperHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
-      swiperHtml += '<div class="space_name">' + item.name + '</div>';
-      swiperHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" style="width: 100%" />';
-      swiperHtml += '</a>';
-      swiperHtml += '</div>';
+      if (!item.inquiry) {
+        swiperHtml += '<div class="swiper-slide">';
+        swiperHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+        swiperHtml += '<div class="space_name">' + item.name + '</div>';
+        swiperHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" style="width: 100%" />';
+        swiperHtml += '</a>';
+        swiperHtml += '</div>';
+      }
     };
   });
 

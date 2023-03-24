@@ -750,12 +750,14 @@
 
 <script>
   // 👉 지점 추가 시 (방문예약 지점 선택 드롭다운/1:1문의 문의 지점 드롭다운)
+  // 1:1문의에만 추가하는 경우 inquiry: true 추가하세요.
   const dropdownList = [
     { idx: 0 },
     { idx: 1, name: "인천 부평점", branchIdx: "99" },
     { idx: 2, name: "서울 군자점", branchIdx: "100" },
     { idx: 3, name: "부천 상동점", branchIdx: "101" },
-    { idx: 4, name: "안양 명학점", branchIdx: "102" }
+    { idx: 4, name: "안양 명학점", branchIdx: "102" },
+    { idx: 5, name: "인천 갈산점", branchIdx: "103", inquiry: true }
   ];
 
   let visitDropdownHtml = '';
@@ -766,7 +768,9 @@
       visitDropdownHtml += '<li value="" disabled selected hidden>문의 지점</li>';
       inquiryDropdownHtml += '<li value="" disabled selected hidden>문의 지점</li>';
     } else {
-      visitDropdownHtml += '<li value=' + String(item.idx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
+      if (!item.inquiry) {
+        visitDropdownHtml += '<li value=' + String(item.idx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
+      }
       inquiryDropdownHtml += '<li value=' + String(item.branchIdx) + '>[' + String(item.idx) + '호점] ' + item.name + '</li>';
     };
   });
