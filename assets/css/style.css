@@ -1943,15 +1943,25 @@ a:visited {
 }
 
 .success-page {
-  padding: 0px;
-  min-height: 650px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 300px;
+}
+
+.success-txt {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .success-txt2 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   margin: 15px auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e1e1e1;
 }
 
 .success-btn-box {
@@ -1960,13 +1970,12 @@ a:visited {
 
 .success-btn {
   border: 1px solid #e9474d;
+  padding: 20px 93px;
   color: #0e1726;
   font-size: 18px;
+  margin: 0px 10px;
   font-weight: 500;
   border-radius: 5px;
-  width: 40%;
-  height: 50px;
-  margin: 15px auto;
 }
 
 .return {

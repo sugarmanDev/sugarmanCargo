@@ -618,7 +618,7 @@
         data: queryString,
         dataType: "json",
         success: function (data) {
-          location.replace("/success.html");
+          location.replace("/success/inquiry.html");
         },
         error: function (e) {
           $(".submit_form").attr("disabled", false);
@@ -712,7 +712,7 @@
         dataType: "json",
         success: function (data) {
           if (data.result == "success") {
-            location.replace("/success.html");
+            location.replace("/success/visit.html");
           } else {
             alert("문제가 발생했습니다.\n다시 시도해주세요.");
             $(".submit-form").attr("disabled", false);
