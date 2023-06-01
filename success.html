@@ -81,26 +81,28 @@
 <body>
   <header include-html="/common/header.html"></header>
 
-  <div class="success" style="padding: 110px 0px 200px">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1"></div>
-
-        <div class="col-md-10">
-          <div style="margin-bottom: 50px">
+  <div style="position: relative; height: 100vh;">
+    <div class="success-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="lottie_player1"></div>
             <div class="success-txt">
               <div id="lottie_player2" style="height: 150px; display: none"></div>
               <lottie-player id="ll-player" src="https://assets6.lottiefiles.com/packages/lf20_rSH8or.json"
                 class="check-lottie" background="transparent" speed="1" autoplay></lottie-player>
-              <p class="success-txt2">정상적으로 등록되었습니다!</p>
+              <p class="success-txt">
+                정상적으로 등록되었습니다!
+              </p>
+              <p class="success-txt2">
+                남겨주신 문의는 확인 후<br />담당자가 빠른 시일 내에 답변드리겠습니다. </p>
             </div>
             <div class="success-btn-box">
-              <a href="/index.html"><button class="success-btn return">HOME</button></a>
+              <a href="/"><button class="success-btn home">홈으로</button></a>
+              <a href="/branch-list"><button class="success-btn return">지점찾기</button></a>
             </div>
           </div>
         </div>
-
-        <div class="col-md-1"></div>
       </div>
     </div>
   </div>
@@ -125,41 +127,6 @@
         url2 +
         '" class="check-lottie" background="transparent" speed="1" autoplay></lottie-player>';
     }
-  });
-</script>
-
-<script>
-  function gup(name, url) {
-    if (!url) url = location.href;
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regexS = "[\\?&]" + name + "=([^&#]*)";
-    var regex = new RegExp(regexS);
-    var results = regex.exec(url);
-    return results == null ? null : results[1];
-  }
-
-  var idx = gup('idx', window.location.href)
-
-  $(document).ready(function () {
-    $.get(targetDomain + "/event/" + idx, function (data) {
-
-      console.log(data)
-
-      if (data.formYN == 'Y') {
-        $('#openPromoForm').show();
-      } else {
-        $('#openPromoForm').remove();
-      }
-
-      if (data.length < 1) {
-        window.location.href = '/event404.html'
-      }
-
-      if (data.endYN === 'Y') {
-        window.location.href = '/event404.html'
-      }
-
-    }, 'json');
   });
 </script>
 
