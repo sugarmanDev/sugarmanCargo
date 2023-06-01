@@ -490,6 +490,23 @@
   .footer-con-3 strong {
     display: none;
   }
+
+  .oops1 {
+    font-size: 5rem;
+  }
+
+  .oops2 {
+    font-size: 2rem;
+  }
+
+  .not-txt1 {
+    font-size: 1.7rem;
+  }
+
+  .notpage-img {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 @media (min-width: 415px) and (max-width: 768px) {
@@ -546,6 +563,22 @@
 
   .footer-con-3 strong {
     display: none;
+  }
+
+  .oops1 {
+    font-size: 3rem;
+  }
+
+  .oops2 {
+    font-size: 1.5rem;
+  }
+
+  .not-txt1 {
+    font-size: 1.4rem;
+  }
+
+  .link-a-box3 {
+    padding: 30px 0px;
   }
 }
 
@@ -1117,6 +1150,29 @@
     margin-top: 24px;
     margin-right: 0 !important;
     margin-left: 0 !important;
+  }
+
+  .oops1 {
+    font-size: 3.5rem;
+  }
+
+  .oops2 {
+    font-size: 1.5rem;
+  }
+
+  .not-txt1 {
+    font-size: 1.3rem;
+  }
+
+  .link-a-box3 {
+    padding: 30px 0px;
+  }
+
+  .notpage-img {
+    background-size: cover;
+    width: 345px;
+    height: 345px;
+    margin-top: 0px;
   }
 }
 

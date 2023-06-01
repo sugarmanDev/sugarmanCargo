@@ -431,8 +431,12 @@
         $('#openPromoForm').remove();
       }
 
+      if (data.length < 1) {
+        window.location.href = '/event404.html'
+      }
+
       if (data.endYN === 'Y') {
-        window.location.href = '/404.html'
+        window.location.href = '/event404.html'
       }
 
     }, 'json');

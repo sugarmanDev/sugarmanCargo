@@ -3597,3 +3597,128 @@ button:focus {
 .root_daum_roughmap .wrap_controllers {
   display: none !important;
 }
+
+/* 404 */
+.page-notfound {
+  padding: 150px 0px 100px;
+}
+
+.page-not-img {
+  background: url("/img/lottie/404-page.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  margin-top: 100px;
+}
+
+.right-line {
+  border-right: 2px solid #000;
+}
+
+.warning-box {
+  text-align: center;
+}
+
+.not-txt {
+  font-size: 35px;
+  font-weight: 500;
+  color: red;
+}
+
+.oops1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #e9474d;
+}
+
+.oops2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e9474d;
+  white-space: nowrap;
+}
+
+.not-txt1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.error-code {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.link-a-box1 {
+  padding: 50px 0px;
+}
+
+.link-a-box2 {
+  padding-bottom: 50px;
+}
+
+.link-a-box3 {
+  padding: 80px 0px;
+}
+
+.link-ul3 li {
+  text-align: left;
+  margin: 10px 0px;
+}
+
+.link-ul3 a {
+  color: #000;
+}
+
+.link-ul3 a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.area-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px !important;
+}
+
+.notpage-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 640px;
+  margin-top: 100px;
+}
+
+.confetti-gif {
+  background: url("/img/lottie/confetti.gif");
+  width: 100%;
+  height: 640px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: 100px;
+}
+
+.check-gif {
+  background: url("/img/lottie/check-success.gif");
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.check-lottie {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.check-lottie path {
+  stroke: red !important;
+}
+
+.check-lottie g {
+  stroke: red !important;
+}
