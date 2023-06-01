@@ -128,4 +128,39 @@
   });
 </script>
 
+<script>
+  function gup(name, url) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(url);
+    return results == null ? null : results[1];
+  }
+
+  var idx = gup('idx', window.location.href)
+
+  $(document).ready(function () {
+    $.get(targetDomain + "/event/" + idx, function (data) {
+
+      console.log(data)
+
+      if (data.formYN == 'Y') {
+        $('#openPromoForm').show();
+      } else {
+        $('#openPromoForm').remove();
+      }
+
+      if (data.length < 1) {
+        window.location.href = '/event404.html'
+      }
+
+      if (data.endYN === 'Y') {
+        window.location.href = '/event404.html'
+      }
+
+    }, 'json');
+  });
+</script>
+
 </html>
