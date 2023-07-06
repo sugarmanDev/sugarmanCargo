@@ -482,6 +482,14 @@
   }
 }
 
+@media screen and (min-width: 415px) {
+  .preparingWrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 @media (min-width: 415px) and (max-width: 1024px) {
   .footer-con-2 strong {
     display: none;
