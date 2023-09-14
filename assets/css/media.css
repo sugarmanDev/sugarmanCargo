@@ -75,7 +75,6 @@
     background: linear-gradient(#fff5f5 42%, #ffffff 50%) !important;
   }
 
-  .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
   }
@@ -240,10 +239,6 @@
 }
 
 @media (min-width: 341px) and (max-width: 467px) {
-  .fail-h1 {
-    font-size: 7rem;
-  }
-
   .min-half {
     max-width: 33.333%;
   }
@@ -332,10 +327,6 @@
 }
 
 @media (min-width: 0px) and (max-width: 334px) {
-  .fail-h1 {
-    font-size: 7rem;
-  }
-
   .storage-box.normal-box {
     width: 50%;
     max-width: 50%;
@@ -460,7 +451,6 @@
     background: linear-gradient(#fff5f5 40%, #ffffff 50%) !important;
   }
 
-  .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
   }
@@ -540,10 +530,6 @@
 
   .footer .footer-logo {
     max-width: 95%;
-  }
-
-  .fail-h1 {
-    font-size: 7rem;
   }
 
   .service-box img {
@@ -935,10 +921,6 @@
 
   .qna-box {
     margin-top: 0px !important;
-  }
-
-  .qna-box .mg-13 {
-    font-size: 14px;
   }
 
   .footer .footer-bottom {
@@ -1509,7 +1491,6 @@
     height: 185px;
   }
 
-  .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
   }
@@ -1689,7 +1670,6 @@
     margin-top: 1rem !important;
   }
 
-  .border-bottom-thin .col-lg-5,
   .col-lg-4 {
     text-align: right !important;
   }

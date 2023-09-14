@@ -7,42 +7,6 @@
   box-shadow: none;
 }
 
-.fail-body {
-  width: 100%;
-  height: 100vh;
-}
-
-.fail-h1 {
-  font-size: 12rem;
-  text-align: center;
-  font-weight: 600;
-  color: #545454;
-}
-
-.fail-h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 400;
-  color: #000;
-}
-
-.fail-btn {
-  background-color: #fff;
-  border: 1px solid #e9474d;
-  color: #e9474d;
-  font-size: 1.063rem;
-  border-radius: 500px;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-}
-
-.fail-btn:hover {
-  color: #e9474d;
-}
-
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
@@ -118,10 +82,6 @@ ul {
 .about-logo {
   width: 296px;
   height: auto;
-}
-
-.navbar-light .navbar-toggler {
-  border: none;
 }
 
 /* 컨테이너 */
@@ -329,14 +289,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   color: #000 !important;
 }
 
-.pd-7 {
-  padding-bottom: 0.7rem;
-}
-
-.top-pd {
-  padding: 15px 0px;
-}
-
 .top-nav {
   position: fixed;
   left: 0px;
@@ -404,22 +356,9 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 }
 
 /* 이벤트 */
-.card.off-event .card-img-top,
-.card.off-event .event-card-body {
-  opacity: 0.5;
-}
-
 .card-img-top {
   border-radius: 14px !important;
   border: 1px solid #e1e1e1 !important;
-}
-
-.card.off-event .event-card-body .card-title .mb-1 {
-  color: #333;
-}
-
-.card.off-event .event-card-body .card-text {
-  color: #333;
 }
 
 .overlay {
@@ -464,14 +403,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   width: 100%;
   font-size: 16px;
   color: #666;
-}
-
-.partner-form {
-  border: 1px solid #e1e1e1;
-  padding: 1rem 1rem;
-  width: 100%;
-  font-size: 0.875rem;
-  color: #888;
 }
 
 .form-title {
@@ -681,17 +612,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   background: linear-gradient(to right, #fff5f5 50%, #ffffff 50%);
 }
 
-.article-title {
-  font-weight: 500;
-  margin-left: 2px;
-  font-size: 1.063rem;
-}
-
-.border-bottom-thin {
-  border-bottom: 1px solid #e9474d;
-  padding-bottom: 18px;
-}
-
 .cube {
   background-color: #e9474d;
   color: #fff;
@@ -700,59 +620,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   font-size: 1.563rem;
   font-weight: 800;
   min-height: 33px;
-}
-
-.cube-angle {
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-  border-bottom: 13px solid #fff;
-  position: relative;
-  width: 0px;
-}
-
-.cube-angle.left {
-  transform: rotate(-45deg);
-  top: 22px;
-  left: -10px;
-  height: 0px;
-}
-
-.cube-angle.right {
-  transform: rotate(132deg);
-  top: 51px;
-  left: 36px;
-  height: 0px;
-}
-
-.cube-text {
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.cube-text.size {
-  border-top: 30px solid transparent;
-}
-
-.cube-text.red {
-  color: #e9474d;
-}
-
-.border-bottom-thin .col-lg-3 {
-  position: relative;
-}
-
-.border-bottom-thin .col-lg-3 div {
-  position: absolute;
-}
-
-.border-bottom-thin {
-  border-bottom: 1px solid #e1e1e1;
-  padding-bottom: 21px;
-}
-
-.border-bottom-bold {
-  border-bottom: 3px solid #e9474d;
-  padding-bottom: 21px;
 }
 
 .red {
@@ -910,41 +777,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-radius: 15px;
 }
 
-.info-area {
-  padding: 50px 0px;
-  padding-left: 50px !important;
-}
-
-.qna-img {
-  background: url("../img/qna.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 186px;
-  height: 100px;
-  margin: 50px auto;
-}
-
-.faq-img {
-  background: url("../img/faq.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 186px;
-  height: 100px;
-  margin: 50px auto;
-}
-
-.cs-title {
-  font-size: 1.5rem;
-  color: #333333;
-  font-weight: 500;
-  margin-bottom: 7px;
-}
-
-.cs-txt {
-  font-size: 0.875rem;
-  color: #888888;
-}
-
 .questions {
   border-bottom: 1px solid #e1e1e1;
   padding: 24px;
@@ -986,11 +818,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   transform: rotate(180deg);
 }
 
-.bd-b-r {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
 .qna-box {
   border: 1px solid #e1e1e1;
   background-color: #f7f7f7;
@@ -1015,19 +842,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   border-radius: 10px;
 }
 
-.form-select {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #e5e5e5;
-  padding: 12px;
-  color: #888888;
-  margin-bottom: 15px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url("../img/arrow_down.png") no-repeat 98% 50%;
-}
-
 .qna-input::placeholder {
   color: #888888;
   font-size: 0.95rem;
@@ -1041,28 +855,6 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .ask {
   padding-top: 15px;
   height: 222px;
-}
-
-.mg-13 {
-  margin: 6px 0px 4px;
-  white-space: pre-line;
-  word-break: keep-all;
-}
-
-.btn-qna-area {
-  width: 100%;
-  text-align: center;
-  padding: 40px 0px 0px;
-}
-
-.btn-qna {
-  background-color: #e0e0e0;
-  border-radius: 54px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  width: 123px;
-  height: 50px;
-  border: none;
 }
 
 .form-box {
@@ -1109,13 +901,6 @@ input[type="checkbox"]:checked + label {
 }
 
 /* 제휴서비스-start*/
-.partner_form_wrap {
-  margin-bottom: 215px;
-}
-
-.partner_wrap {
-  padding: 25px 0px 0px;
-}
 
 .main_title {
   margin-bottom: 40px;
@@ -1137,64 +922,10 @@ input[type="checkbox"]:checked + label {
   color: #555;
 }
 
-.partner-form {
-  border: 1px solid #e1e1e1;
-  padding: 1rem 1rem;
-  width: 100%;
-  font-size: 0.875rem;
-  color: #888;
-  height: 50px;
-  margin: 6px 0px 12px;
-  background-color: #fff;
-}
-
-.partner-form1 {
-  display: block;
-  width: 100%;
-  height: 50px !important;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #888888 !important;
-  background-color: #fff;
-  border: 1px solid #e1e1e1 !important;
-  border-radius: 10px;
-  padding: 0px 12px;
-  font-size: 0.875rem !important;
-  margin: 2px 0px 12px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.select-down {
-  position: relative;
-  top: -50px;
-  color: #000;
-  z-index: 30;
-  float: right;
-  height: 0px;
-}
-
-.partner-form::input {
-  color: #888888;
-  font-size: 0.95rem;
-}
-
-.partner-p {
-  padding: 15px;
-  margin: 6px 0 12px;
-}
-
 .privacy-txt {
   color: #888888;
   font-weight: 300;
   font-size: 0.95rem;
-}
-
-.privacy-b {
-  color: #000 !important;
-  font-weight: 500;
-  text-decoration: underline !important;
 }
 
 .event-form label {
@@ -1234,14 +965,6 @@ input[id="privacy"] + label {
   position: absolute;
   left: 40%;
   margin-top: 25px;
-}
-
-.faq-img {
-  background-image: url(../img/faq.png);
-}
-
-.qna-img {
-  background-image: url(../img/qna.png);
 }
 
 /* 프렌차이즈 가맹 */
@@ -2275,19 +1998,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.form-select {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #e5e5e5;
-  padding: 12px;
-  color: #888888;
-  margin-bottom: 15px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url("../img/arrow_down.png") no-repeat 98% 50%;
 }
 
 select::-ms-expand {
