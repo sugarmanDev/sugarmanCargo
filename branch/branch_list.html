@@ -261,9 +261,9 @@
     if (i === 0) {
       branchsHtml += '<div class="row d-flex align-items-center">';
     } else {
-      branchsHtml += '<div class="row d-flex align-items-center" style="margin-top:30px;">';
+      branchsHtml += '<div class="row d-flex align-items-centers branch-list-2" style="margin-top:30px;">';
     }
-    branchsHtml += '<div class="col-md-7 col-xs-6 mb-3">';
+    branchsHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box">';
     if (Boolean(item.openYN)) {
       branchsHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
       branchsHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
@@ -272,7 +272,7 @@
       branchsHtml += '<div style="position: relative;"><img src="/assets/img/prepareBg.png" alt="" class="img-fluid main-img"><div class="preparing-area" id="branch' + item.idx + '">' + item.openText + '</div></img></div>'
     }
     branchsHtml += '</div>';
-    branchsHtml += '<div class="col-md-5 col-xs-6 mb-3">';
+    branchsHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-text-box">';
     branchsHtml += '<div class="branch-list-box branch-box">';
     if (item.openYN) {
       branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title" href="/branch/branch' + String(item.idx) + '.html">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
