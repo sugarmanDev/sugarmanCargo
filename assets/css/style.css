@@ -99,6 +99,10 @@ ul {
   height: 100vh;
 }
 
+.navbar-light .navbar-brand {
+  margin-top: 1px;
+}
+
 /* 탑 띠배너 */
 .event-banner {
   background-color: #f5f5f5;
