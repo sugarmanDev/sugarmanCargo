@@ -2659,7 +2659,7 @@ body.scroll-lock {
   max-width: 500px !important;
   position: absolute;
   margin: auto;
-  bottom: 10px !important;
+  bottom: 25px !important;
 }
 
 .gallery-thumbs {
@@ -3450,4 +3450,8 @@ button:focus {
 
 .check-lottie g {
   stroke: red !important;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #e9474d;
 }
