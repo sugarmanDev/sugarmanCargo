@@ -25,7 +25,7 @@
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
-  background-color: #e9474d;
+  background-color: #000;
   padding: 1px 5px;
   color: #fff;
   border-radius: 3px;
@@ -99,15 +99,21 @@ ul {
   height: 100vh;
 }
 
+.event-banner-btn {
+  color: white;
+}
+
 .navbar-light .navbar-brand {
   margin-top: 1px;
 }
 
 /* 탑 띠배너 */
 .event-banner {
-  background-color: #f5f5f5;
+  background: #e9474d;
+  color: white;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 18px;
+  font-weight: 600;
   height: 50px;
   padding-right: 5px;
 }
