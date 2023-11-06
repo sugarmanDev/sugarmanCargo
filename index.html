@@ -952,13 +952,13 @@
 
 <script>
   // 👉 배너 추가 시
-  const bannerList = [
-    { href: "https://sugarmancargo.com/franchise/presentation.html", src: "/assets/img/event/230726_카고-사업설명회_배너-(1).jpg" },
+  let bannerList = [
     { href: "https://sugarmancargo.com/event/eventdetail.html?idx=150", src: "/assets/img/event/231102_카고-인천-부평점_선착순-할인.jpg" },
     { href: "https://sugarmancargo.com/event/eventdetail.html?idx=128", src: "/assets/img/event/231102_카고-인천-갈산점_오픈-이벤트.jpg" },
     { href: "https://sugarmancargo.com/event/eventdetail.html?idx=141", src: "/assets/img/event/231102_카고-안양-명학점_오픈-프로모션.jpg" },
-    { href: "/franchise/franchise.html", src: "/assets/img/event/cargo_popup_banner2.jpg" },
   ];
+
+  bannerList = bannerList.sort(() => Math.random() - 0.5)
 
   let popupWebHtml = '';
   let popupMobileHtml = '';
