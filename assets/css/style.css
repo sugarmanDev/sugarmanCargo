@@ -2989,7 +2989,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   display: inline-block;
   position: absolute;
   top: 24px;
-  right: 7%;
+  right: 17px;
   color: #9c9c9c;
   margin-left: 0.255em;
   vertical-align: 0.255em;
@@ -3286,7 +3286,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   display: inline-block;
   position: absolute;
   top: 26px;
-  right: 7%;
+  right: 17px;
   color: #9c9c9c;
   margin-left: 0.255em;
   vertical-align: 0.255em;
