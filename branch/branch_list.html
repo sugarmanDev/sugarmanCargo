@@ -244,9 +244,8 @@
     4) openYN (지점 오픈 유무) -> 0일 때는 openText도 같이 기재
 -->
 <script>
-
   // 👉 지점 추가 시
-  const branchs = [
+  const branches = [
     { idx: 1, name: "인천 부평역점", openYN: 1, address: "인천 부평구 대정로66 다운타운일레븐 5층", phone: "032-504-2327", eventMentYN: 0 },
     { idx: 2, name: "서울 군자역점", openYN: 1, address: "서울 광진구 천호대로 536 서림빌딩 지하 1층", phone: "02-6956-9800", eventMentYN: 0 },
     { idx: 3, name: "부천 상동역점", openYN: 1, address: "경기 부천시 길주로 70 강산타운 8층", phone: "032-322-6160", eventMentYN: 0 },
@@ -255,49 +254,49 @@
     // { idx: 5, name: "인천 갈산역점", openYN: 1, openText: "23년 3월 오픈", address: "인천 부평구 주부토로231 갈산홈프라자 4층", phone: "032-529-9996", eventMentYN: 1, eventMent: "오픈 기념 40% 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=128" },
   ];
 
-  let branchsHtml = "";
+  let branchesHtml = "";
 
-  branchs.forEach((item, i) => {
+  branches.forEach((item, i) => {
     if (i === 0) {
-      branchsHtml += '<div class="row d-flex align-items-center">';
+      branchesHtml += '<div class="row d-flex align-items-center">';
     } else {
-      branchsHtml += '<div class="row d-flex align-items-centers branch-list-2" style="margin-top:30px;">';
+      branchesHtml += '<div class="row d-flex align-items-centers branch-list-2" style="margin-top:30px;">';
     }
-    branchsHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box">';
+    branchesHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box">';
     if (Boolean(item.openYN)) {
-      branchsHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
-      branchsHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
-      branchsHtml += '</a>';
+      branchesHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+      branchesHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
+      branchesHtml += '</a>';
     } else {
-      branchsHtml += '<div style="position: relative;"><img src="/assets/img/prepareBg.png" alt="" class="img-fluid main-img"><div class="preparing-area" id="branch' + item.idx + '">' + item.openText + '</div></img></div>'
+      branchesHtml += '<div style="position: relative;"><img src="/assets/img/prepareBg.png" alt="" class="img-fluid main-img"><div class="preparing-area" id="branch' + item.idx + '">' + item.openText + '</div></img></div>'
     }
-    branchsHtml += '</div>';
-    branchsHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-text-box">';
-    branchsHtml += '<div class="branch-list-box branch-box">';
+    branchesHtml += '</div>';
+    branchesHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-text-box">';
+    branchesHtml += '<div class="branch-list-box branch-box">';
     if (item.openYN) {
-      branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title" href="/branch/branch' + String(item.idx) + '.html">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
-      branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">주소<span>I</span>' + item.address + '</a></p><br>';
+      branchesHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title" href="/branch/branch' + String(item.idx) + '.html">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
+      branchesHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">주소<span>I</span>' + item.address + '</a></p><br>';
     } else {
-      branchsHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
-      branchsHtml += '<p class="branch-list-address"><a class="detail-a">주소<span>I</span>' + item.address + '</a></p><br>';
+      branchesHtml += '<h3 class="mb-4 branch-list-title"><a class="detail-a-title">' + item.name + ' I ' + String(item.idx) + '호점</a></h3>';
+      branchesHtml += '<p class="branch-list-address"><a class="detail-a">주소<span>I</span>' + item.address + '</a></p><br>';
     }
     if (item.phone) {
-      branchsHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">문의<span>I</span></a><a href="tel:' + item.phone + '">' + item.phone + '</a></p>';
+      branchesHtml += '<p class="branch-list-address"><a class="detail-a" href="/branch/branch' + String(item.idx) + '.html">문의<span>I</span></a><a href="tel:' + item.phone + '">' + item.phone + '</a></p>';
     }
 
     if (Boolean(item.eventMentYN)) {
-      branchsHtml += '<div>';
-      branchsHtml += '<br />';
-      branchsHtml += '' + item.eventMent + '<br />';
-      branchsHtml += '</div>';
-      branchsHtml += '<a href=' + item.eventHref + ' style="color: #e9474d">할인 이벤트 자세히 보기 ></a>';
+      branchesHtml += '<div>';
+      branchesHtml += '<br />';
+      branchesHtml += '' + item.eventMent + '<br />';
+      branchesHtml += '</div>';
+      branchesHtml += '<a href=' + item.eventHref + ' style="color: #e9474d">할인 이벤트 자세히 보기 ></a>';
     }
-    branchsHtml += '</div>';
-    branchsHtml += '</div>';
-    branchsHtml += '</div>';
+    branchesHtml += '</div>';
+    branchesHtml += '</div>';
+    branchesHtml += '</div>';
   });
 
-  $(".branch-wrap .container").append(branchsHtml);
+  $(".branch-wrap .container").append(branchesHtml);
 
   console.log("test")
 </script>
