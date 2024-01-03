@@ -10,31 +10,53 @@ var solar_holidays = [
   "1009",
   "1225",
 ]; // 양력 휴일
-var set_luna_holidays = [
-  "1230",
-  "0101",
-  "0102",
-  "0103",
-  "0408",
-  "0814",
-  "0815",
-  "0816",
-]; // 음력 휴일
+var set_luna_holidays = {
+  2024: ["1230", "0101", "0102", "0103", "0408", "0814", "0815", "0816"],
+  2025: [
+    "1230",
+    "0101",
+    "0102",
+    "0408",
+    "0814",
+    "0815",
+    "0816",
+    "0817",
+    "0818",
+  ],
+  2026: ["1229", "1230", "0101", "0102", "0409", "0814", "0815", "0816"],
+  2027: ["0101", "0102", "0103", "0408", "0814", "0815", "0816"],
+  2028: ["1230", "0101", "0102", "0408", "0814", "0815", "0816", "0817"],
+  2029: [
+    "1229",
+    "1230",
+    "0101",
+    "0102",
+    "0409",
+    "0814",
+    "0815",
+    "0816",
+    "0817",
+  ],
+  2030: ["0101", "0102", "0103", "0408", "0814", "0815", "0816"],
+}; // 음력 휴일
 var luna_holidays = [];
 
-var added_holidays = ["1009"]; // 추가 휴일
+function chagneLunaHoliday(year) {
+  var luna_holidays = [];
 
-var current_year = new Date().getFullYear();
-set_luna_holidays.forEach(function (value) {
-  if (value === "1230" || value === "1231") {
-    var set_holiday = calc_lunar(current_year + "0101");
+  set_luna_holidays[year].forEach(function (value) {
+    if (value === "1230" || value === "1231") {
+      var set_holiday = calc_lunar(year + "0101");
 
-    luna_holidays.push(`0${Number(set_holiday - 1)}`);
-  } else {
-    var set_holiday = calc_lunar(current_year + value);
-    luna_holidays.push(set_holiday);
-  }
-});
+      luna_holidays.push(`0${Number(set_holiday - 1)}`);
+    } else {
+      var set_holiday = calc_lunar(year + value);
+      luna_holidays.push(set_holiday);
+    }
+  });
+
+  return luna_holidays;
+}
 
 function set_date_picker(selector, type) {
   var minDate = new Date();
@@ -64,10 +86,11 @@ function set_date_picker(selector, type) {
           var set_disabled = String(month) + String(day);
 
           let get_holiday1 = solar_holidays.includes(set_disabled);
-          let get_holiday2 = luna_holidays.includes(set_disabled);
-          let get_holiday3 = added_holidays.includes(set_disabled);
+          let get_holiday2 = chagneLunaHoliday(date.getFullYear()).includes(
+            set_disabled
+          );
 
-          if (get_holiday1 || get_holiday2 || get_holiday3) {
+          if (get_holiday1 || get_holiday2) {
             isDisabled = true;
           }
         }
