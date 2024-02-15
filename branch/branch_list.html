@@ -257,12 +257,8 @@
   let branchesHtml = "";
 
   branches.forEach((item, i) => {
-    if (i === 0) {
-      branchesHtml += '<div class="row d-flex align-items-center">';
-    } else {
-      branchesHtml += '<div class="row d-flex align-items-centers branch-list-2" style="margin-top:30px;">';
-    }
-    branchesHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box">';
+    branchesHtml += '<div class="row d-flex align-items-center">';
+    branchesHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box" style="' + "margin-top: 30px;" + '"">';
     if (Boolean(item.openYN)) {
       branchesHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
       branchesHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
