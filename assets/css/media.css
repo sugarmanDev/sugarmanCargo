@@ -586,6 +586,10 @@
     z-index: 998 !important;
     position: relative;
   }
+
+  .notUseForm2 .box {
+    width: calc(100% - 10px);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 990px) {
@@ -650,6 +654,10 @@
 
   .mobile_hide {
     display: none !important;
+  }
+
+  .notUseForm2 .box {
+    width: 360px;
   }
 
   .branch-text-box {
