@@ -3465,3 +3465,92 @@ button:focus {
 .swiper-pagination-bullet-active {
   --swiper-theme-color: #e9474d;
 }
+
+.notUseForm,
+.notUseForm .box,
+.notUseForm2,
+.notUseForm2 .box {
+  display: none;
+}
+
+.notUseForm,
+.notUseForm2 {
+  padding: 0 !important;
+}
+
+.notUseForm2 .box {
+  box-shadow: 0px 2px 4px #00000029;
+}
+
+.notUseForm .box,
+.notUseForm2 .box {
+  height: 518px;
+  margin-top: 5px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 324px;
+  margin-left: 15px;
+}
+
+.notUseForm .notUseForm2 .box {
+  margin-top: 0;
+}
+
+.notUseForm2 .box {
+  height: 483px;
+  width: 390px;
+  margin: 0 5px;
+}
+
+.notUseForm .box .callBox,
+.notUseForm2 .box .callBox {
+  width: 60px;
+  height: 60px;
+  background: #f5f5f6 !important;
+  border-radius: 500px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.notUseForm .box .branchName,
+.notUseForm2 .box .branchName {
+  font-size: 32px;
+  font-weight: 700;
+  color: #27272a;
+  margin-bottom: 30px;
+}
+
+.notUseForm .box p,
+.notUseForm2 .box p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #71717a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.notUseForm .box .phoneNumberBox,
+.notUseForm2 .box .phoneNumberBox {
+  height: 64px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  width: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notUseForm .box .phoneNumberBox .phoneNumber,
+.notUseForm2 .box .phoneNumberBox .phoneNumber {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e9474d;
+  margin-bottom: 0;
+}

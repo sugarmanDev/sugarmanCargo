@@ -115,14 +115,6 @@
           <div class="col-12 form" style="overflow-x: hidden">
             <div class="row">
               <div class="col-12">
-                <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
-              </div>
-
-              <div class="col-12">
-                <input type="text" name="phone" placeholder="연락처" class="in_form_con" id="in_phone" required />
-              </div>
-
-              <div class="col-12">
                 <div class="select1 default_select" data-role="selectBox1">
                   <span date-value="optValue1" class="selected-option1">
                   </span>
@@ -133,7 +125,15 @@
                 </div>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 useForm">
+                <input type="text" name="name" placeholder="이름/업체명" class="in_form_con" id="in_name" required />
+              </div>
+
+              <div class="col-12 useForm">
+                <input type="text" name="phone" placeholder="연락처" class="in_form_con" id="in_phone" required />
+              </div>
+
+              <div class="col-12 useForm">
                 <div class="select2 default_select" data-role="selectBox2">
                   <span date-value="optValue2" class="selected-option2">
                   </span>
@@ -152,11 +152,11 @@
                 </div>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 useForm">
                 <textarea id="in_content" name="subject" placeholder="문의 내용을 입력해주세요." required></textarea>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 useForm">
                 <div class="select3 default_select" data-role="selectBox3">
                   <span date-value="optValue3" class="selected-option3">
                   </span>
@@ -174,7 +174,7 @@
                 </div>
               </div>
 
-              <div class="col-12 mt-3">
+              <div class="col-12 mt-3 useForm">
                 <input type="checkbox" name="agree" id="check" name="checkYN" required />
                 <label for="check" class="check"></label>
                 <p class="agree-txt">
@@ -184,8 +184,21 @@
                 </p>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 useForm">
                 <button>문의하기</button>
+              </div>
+
+              <div class="col-12 notUseForm">
+                <div class="box">
+                  <div class="callBox">
+                    <img src="/assets/img/icon/call.png" width="24px" height="24px" alt="callIcon" />
+                  </div>
+                  <h3 class="branchName">OO OO점</h3>
+                  <p>문의 / 방문 예약은<br />아래의 연락처를 통해<br />신청해 주세요!</p>
+                  <div class="phoneNumberBox">
+                    <p class="phoneNumber">010-0000-0000</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1010,6 +1023,39 @@
         values1.innerHTML = innerValue1;
         $(".selected-option1").text(innerValue1);
         $("#branch").attr("value", opt1.value);
+
+
+
+        // 👉 신청 폼 사용하지 않는 지점 idx, 지점명, 전화번호를 적어주세요.
+        const notUseFormArr = [
+          {
+            idx: 100,
+            branchName: '서울 군자역점',
+            phone: "010-5846-0682"
+          }
+        ]
+
+        let found = false; // 일치하는 항목을 찾았는지 여부를 나타내는 변수
+
+        notUseFormArr.forEach((item) => {
+          if (item.idx == opt1.value) {
+            // 일치하는 항목을 찾은 경우
+            $(".useForm").css("display", "none");
+            $(".notUseForm").css("display", "block");
+            $(".notUseForm .box").css("display", "block");
+            $(".notUseForm .box .branchName").text(item.branchName);
+            $(".notUseForm .box .phoneNumber").text(item.phone);
+            found = true; // found 변수를 true로 설정하여 일치하는 항목을 찾았음을 나타냄
+            return; // 루프 종료
+          }
+        });
+
+        if (!found) {
+          // 일치하는 항목을 찾지 못한 경우
+          $(".useForm").css("display", "block");
+          $(".notUseForm").css("display", "none");
+          $(".notUseForm .box").css("display", "none");
+        }
       }
 
       opt1.addEventListener('click', changeValue1);
