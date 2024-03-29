@@ -246,12 +246,12 @@
 <script>
   // 👉 지점 추가 시
   const branches = [
-    { idx: 1, name: "인천 부평역점", openYN: 1, address: "인천 부평구 대정로66 다운타운일레븐 5층", phone: "032-504-2327", eventMentYN: 0 },
-    { idx: 2, name: "서울 군자역점", openYN: 1, address: "서울 광진구 천호대로 536 서림빌딩 지하 1층", phone: "02-6956-9800", eventMentYN: 0 },
-    { idx: 3, name: "부천 상동역점", openYN: 1, address: "경기 부천시 길주로 70 강산타운 8층", phone: "032-322-6160", eventMentYN: 0 },
-    { idx: 4, name: "안양 명학점", openYN: 1, address: "경기 안양시 만안구 덕천로 152번길 25 아이에스비즈타워 지하 2층", phone: "031-8086-4362", eventMentYN: 1, eventMent: "선착순 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=141" },
-    { idx: 5, name: "인천 갈산역점", openYN: 1, address: "인천 부평구 주부토로231 갈산홈프라자 4층", phone: "010-5855-9967", eventMentYN: 1, eventMent: "선착순 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=128" },
-    { idx: 6, name: "파주 운정역점", openYN: 1, openText: "3월 오픈 예정", address: "경기 파주시 경의로 1246 유은타워8차 10층", phone: "031-948-4880", eventMentYN: 0 },
+    { idx: 1, href: 1, name: "인천 부평역점", openYN: 1, address: "인천 부평구 대정로66 다운타운일레븐 5층", phone: "032-504-2327", eventMentYN: 0 },
+    { idx: 2, href: 2, name: "서울 군자역점", openYN: 1, address: "서울 광진구 천호대로 536 서림빌딩 지하 1층", phone: "02-6956-9800", eventMentYN: 0 },
+    { idx: 3, href: 3, name: "부천 상동역점", openYN: 1, address: "경기 부천시 길주로 70 강산타운 8층", phone: "032-322-6160", eventMentYN: 0 },
+    { idx: 4, href: 4, name: "안양 명학점", openYN: 1, address: "경기 안양시 만안구 덕천로 152번길 25 아이에스비즈타워 지하 2층", phone: "031-8086-4362", eventMentYN: 1, eventMent: "선착순 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=141" },
+    { idx: 5, href: 5, name: "인천 갈산역점", openYN: 1, address: "인천 부평구 주부토로231 갈산홈프라자 4층", phone: "010-5855-9967", eventMentYN: 1, eventMent: "선착순 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=128" },
+    { idx: 6, href: "#", name: "파주 운정역점", openYN: 1, address: "경기 파주시 경의로 1246 유은타워8차 10층", phone: "031-948-4880", eventMentYN: 1, eventMent: "오픈 기념 30% 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "https://sugarmancargo.com/event/eventdetail.html?idx=174" },
     // { idx: #, name: "인천 갈산역점", openYN: 0, openText: "3월 오픈 예정", address: "", phone: "", eventMentYN: 1, eventMent: "오픈 기념 40% 할인 이벤트를 진행 중이니 놓치지 마세요!", eventHref: "" },
   ];
 
@@ -261,7 +261,7 @@
     branchesHtml += '<div class="row d-flex align-items-center">';
     branchesHtml += '<div class="col-md-6 col-xs-6 mb-3 branch-list-once-box" style="' + "margin-top: 30px;" + '"">';
     if (Boolean(item.openYN)) {
-      branchesHtml += '<a href="/branch/branch' + String(item.idx) + '.html">';
+      branchesHtml += '<a href="' + item.href + '">';
       branchesHtml += '<img src="/assets/img/branch_list/branch_list_' + String(item.idx) + '@2x.jpg" alt="" class="img-fluid main-img">';
       branchesHtml += '</a>';
     } else {
